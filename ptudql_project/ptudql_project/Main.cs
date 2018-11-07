@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace ptudql_project
 {
-  public partial class Form1 : Form
+  public partial class Main : Form
   {
-    public Form1()
+    public Main()
     {
       InitializeComponent();
+      var Login = new Login();
+      Login.TopLevel = false;
+      //Login.Size = this.Size;
+      Login.Location = new Point(0, 0);
+      Controls.Add(Login);
+      Login.Show();
     }
   }
 }
