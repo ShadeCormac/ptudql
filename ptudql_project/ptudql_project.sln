@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ptudql_project", "ptudql_project\ptudql_project.csproj", "{AAF4CF8F-27BC-4DFA-90FF-428FDB95931B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAF4CF8F-27BC-4DFA-90FF-428FDB95931B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF4CF8F-27BC-4DFA-90FF-428FDB95931B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF4CF8F-27BC-4DFA-90FF-428FDB95931B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF4CF8F-27BC-4DFA-90FF-428FDB95931B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A60DD25-65D5-403F-A99F-FC23AE227006}
+	EndGlobalSection
+EndGlobal
