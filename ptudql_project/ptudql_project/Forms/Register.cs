@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ptudql_project.Utils;
 
 namespace ptudql_project
 {
@@ -15,6 +16,11 @@ namespace ptudql_project
     public Register()
     {
       InitializeComponent();
+    }
+
+    private void login_Click(object sender, EventArgs e)
+    {
+      Router.Navigate(ParentForm, new Login());
     }
   }
 }

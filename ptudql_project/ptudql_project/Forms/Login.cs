@@ -11,12 +11,21 @@ using ptudql_project.Utils;
 
 namespace ptudql_project
 {
-  public partial class Main : Form
+  public partial class Login : Form
   {
-    public Main()
+    public Login()
     {
       InitializeComponent();
-      Router.Navigate(this, new Login());
+    }
+
+    private void register_Click(object sender, EventArgs e)
+    {
+      Router.Navigate(ParentForm, new Register());
+    }
+
+    private void loginBtn_Click(object sender, EventArgs e)
+    {
+      Router.Navigate(ParentForm, new StudentLayout());
     }
   }
 }

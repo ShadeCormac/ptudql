@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ptudql_project.Utils;
 
-namespace ptudql_project
+namespace ptudql_project.CustomControls
 {
-  public partial class Main : Form
+  public partial class PaddingTextBox : UserControl
   {
-    public Main()
+    public string CustomText
+    {
+      get => textBox1.Text;
+      set { textBox1.Text = value; }
+    }
+
+    public PaddingTextBox()
     {
       InitializeComponent();
-      Router.Navigate(this, new Login());
     }
   }
 }

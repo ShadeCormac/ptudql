@@ -1,6 +1,6 @@
 ﻿namespace ptudql_project
 {
-  partial class Main
+  partial class TeacherLayout
   {
     /// <summary>
     /// Required designer variable.
@@ -30,14 +30,14 @@
     {
       this.SuspendLayout();
       // 
-      // Main
+      // TeacherLayout
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1264, 681);
-      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-      this.Name = "Main";
-      this.Text = "Quản lý thi trắc nghiệm";
+      this.ClientSize = new System.Drawing.Size(1080, 600);
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+      this.Name = "TeacherLayout";
+      this.Text = "TeacherLayout";
       this.ResumeLayout(false);
 
     }
@@ -45,4 +45,3 @@
     #endregion
   }
 }
-

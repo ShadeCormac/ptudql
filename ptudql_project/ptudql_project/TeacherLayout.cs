@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ptudql_project.Utils;
 
 namespace ptudql_project
 {
-  public partial class Main : Form
+  public partial class TeacherLayout : Form
   {
-    public Main()
+    public TeacherLayout()
     {
       InitializeComponent();
-      Router.Navigate(this, new Login());
     }
   }
 }

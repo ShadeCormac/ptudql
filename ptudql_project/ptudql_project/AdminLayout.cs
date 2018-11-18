@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ptudql_project
 {
-  public partial class Login : Form
+  public partial class AdminLayout : Form
   {
-    public Login()
+    public AdminLayout()
     {
       InitializeComponent();
-    }
-
-    private void label1_Click(object sender, EventArgs e)
-    {
-
     }
   }
 }
