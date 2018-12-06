@@ -108,6 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.CausesValidation = false;
             this.label2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label2.Location = new System.Drawing.Point(69, 336);
@@ -159,6 +160,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label1.Location = new System.Drawing.Point(110, 31);

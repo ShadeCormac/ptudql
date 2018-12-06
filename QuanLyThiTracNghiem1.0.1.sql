@@ -5,7 +5,7 @@ go
 
 create table TaiKhoan(
 	TenDangNhap varchar(20) primary key,
-	MatKhau varchar(20),
+	MatKhau nvarchar(255),
 	--1: admin, 2: Giáo viên, 3: học sinh
 	LoaiTK int
 )

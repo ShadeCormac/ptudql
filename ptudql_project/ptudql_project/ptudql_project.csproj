@@ -117,6 +117,7 @@
     <Compile Include="TeacherLayout.Designer.cs">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Router.cs" />
     <Compile Include="Utils\Validation.cs" />

@@ -30,14 +30,14 @@ namespace ptudql_project
 
     private void loginBtn_Click(object sender, EventArgs e)
     {
-            if (_username.Length == 0 || _password.Length == 0)
+            if (_username.Length < 6 || _password.Length < 6)
             {
                 errors.SetError((Control)sender, "Bạn phải nhập thông tin");
             }
             else
             {
                 errors.SetError((Control)sender, "");
-
+                //MessageBox.Show(string.Format($"{_username} { _password}" ));
                 //Router.ChangeForm(this, new StudentInfo());
             }
 

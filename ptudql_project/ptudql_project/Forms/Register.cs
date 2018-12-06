@@ -91,16 +91,40 @@ namespace ptudql_project
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (_username.Length == 0 || _password.Length == 0 || _rePassword.Length == 0)
+            if (_username.Length < 6 || _password.Length < 6 || _rePassword.Length < 6)
             {
                 errors.SetError((Control)sender, "Bạn phải nhập đủ thông tin");
-
             }
             else
             {
-                errors.SetError((Control)sender, "");
                 //must use crypto
-                //save to database
+                //use Validation class later
+
+                using (var ql = new QLTNDataContext())
+                {
+                    if (ql.TaiKhoans.Where(tk => tk.TenDangNhap == _username).Count() > 0)
+                    {
+                        errors.SetError((Control)sender, "Tên đăng nhập bị trùng");
+                    }
+                    else
+                    {
+                        if (!Validation.checkPassWord(_password, _rePassword))
+                        {
+                            errors.SetError((Control)sender, "Mật khẩu không trùng");
+                        }
+                        else
+                        {
+                            errors.SetError((Control)sender, "");
+                            //save to database
+                            TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3};
+                            ql.TaiKhoans.InsertOnSubmit(tk);
+                            ql.SubmitChanges();
+                        }
+                    }
+                }
+                
+               
+
             }
 
         }
