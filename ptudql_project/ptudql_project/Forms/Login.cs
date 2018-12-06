@@ -13,10 +13,11 @@ namespace ptudql_project
 {
   public partial class Login : Form
   {
-        private bool txtUsernameClick = false;
+       
         private ErrorProvider errors = null;
-        private bool txtPasswordClick = false;
-    public Login()
+        private string _username = "";
+        private string _password = "";
+        public Login()
     {
       InitializeComponent();
       errors = new ErrorProvider();
@@ -29,9 +30,19 @@ namespace ptudql_project
 
     private void loginBtn_Click(object sender, EventArgs e)
     {
-      Router.ChangeForm(this, new StudentInfo());
-            //check database?
-    }
+            if (_username.Length == 0 || _password.Length == 0)
+            {
+                errors.SetError((Control)sender, "Bạn phải nhập thông tin");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "");
+
+                //Router.ChangeForm(this, new StudentInfo());
+            }
+
+
+        }
 
       
         private void txtUsername_Validating(object sender, CancelEventArgs e)
@@ -73,29 +84,44 @@ namespace ptudql_project
 
         }
 
-        private void txtUsername_Click(object sender, EventArgs e)
-        {
-            if (txtUsernameClick == false)
-            {
-                this.txtUsername.Text = "";
-                txtUsernameClick = true;
-            }
-        }
+       
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //this.AutoValidate = AutoValidate.Disable;   
+            if (!e.Cancel)
+            {
+                DialogResult result = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
+        
+
+        private void label4_Click(object sender, EventArgs e)
         {
-            ((Control)sender).Select();
-            if (txtPasswordClick == false)
-            {
-                this.txtPassword.Text = "";
-                txtPasswordClick = true;
-            }
-            
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtUsername_Validated(object sender, EventArgs e)
+        {
+            this._username = ((TextBox)sender).Text;
+        }
+
+        private void txtPassword_Validated(object sender, EventArgs e)
+        {
+            this._password = ((TextBox)sender).Text;
         }
     }
 }

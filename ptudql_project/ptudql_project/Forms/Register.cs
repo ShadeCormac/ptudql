@@ -14,6 +14,9 @@ namespace ptudql_project
   public partial class Register : Form
   {
         private ErrorProvider errors = null;
+        private string _username = "";
+        private string _password = "";
+        private string _rePassword = "";
     public Register()
     {
       InitializeComponent();
@@ -88,7 +91,33 @@ namespace ptudql_project
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //save to database
+            if (_username.Length == 0 || _password.Length == 0 || _rePassword.Length == 0)
+            {
+                errors.SetError((Control)sender, "Bạn phải nhập đủ thông tin");
+
+            }
+            else
+            {
+                errors.SetError((Control)sender, "");
+                //must use crypto
+                //save to database
+            }
+
+        }
+
+        private void txtUsername_Validated(object sender, EventArgs e)
+        {
+            _username = ((TextBox)sender).Text;
+        }
+
+        private void txtPassword_Validated(object sender, EventArgs e)
+        {
+            _password = ((TextBox)sender).Text;
+        }
+
+        private void txtConfirmPassword_Validated(object sender, EventArgs e)
+        {
+            _rePassword = ((TextBox)sender).Text;
         }
     }
 }
