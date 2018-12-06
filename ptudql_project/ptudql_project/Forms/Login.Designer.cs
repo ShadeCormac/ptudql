@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.register = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.loginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -45,13 +45,15 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.CausesValidation = false;
             this.panel1.Controls.Add(this.register);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.loginBtn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtUsername);
+
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Location = new System.Drawing.Point(440, 150);
@@ -63,6 +65,9 @@
             // 
             this.register.AutoSize = true;
             this.register.BackColor = System.Drawing.Color.White;
+
+            this.register.CausesValidation = false;
+
             this.register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.register.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
@@ -84,22 +89,29 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Chưa có tài khoản?";
             // 
-            // textBox3
+
+            // txtPassword
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.Location = new System.Drawing.Point(60, 163);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(235, 20);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "Mật khẩu";
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.Location = new System.Drawing.Point(60, 163);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(10);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(235, 20);
+            this.txtPassword.TabIndex = 20;
+            this.txtPassword.TabStop = false;
+            this.txtPassword.Text = "********";
+            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
+
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
+            this.panel3.CausesValidation = false;
             this.panel3.Location = new System.Drawing.Point(50, 153);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 39);
@@ -116,7 +128,7 @@
             this.loginBtn.Location = new System.Drawing.Point(50, 218);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(257, 41);
-            this.loginBtn.TabIndex = 5;
+
             this.loginBtn.Text = "Đồng ý";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -132,21 +144,27 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng nhập";
             // 
-            // textBox1
+
+            // txtUsername
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Location = new System.Drawing.Point(61, 101);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Tên đăng nhập";
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtUsername.Location = new System.Drawing.Point(61, 101);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(10);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(235, 20);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabStop = false;
+            this.txtUsername.Text = "Tên đăng nhập";
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
+            this.panel2.CausesValidation = false;
             this.panel2.Location = new System.Drawing.Point(51, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(255, 39);
@@ -155,6 +173,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+
+            this.panel4.CausesValidation = false;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
@@ -165,13 +185,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -182,13 +207,13 @@
 
     private System.Windows.Forms.Panel panel1;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TextBox textBox3;
+    private System.Windows.Forms.TextBox txtPassword;
     private System.Windows.Forms.Panel panel3;
     private System.Windows.Forms.Button loginBtn;
     private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TextBox txtUsername;
     private System.Windows.Forms.Panel panel2;
     private System.Windows.Forms.Label register;
     private System.Windows.Forms.Panel panel4;
-  }
+    }
 }

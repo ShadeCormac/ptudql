@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -99,7 +100,15 @@
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Student\StudentInfo.cs">
+
+    <Compile Include="QLTN.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTN.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLayout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student\StudentInfo.Designer.cs">
@@ -147,8 +156,16 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
+
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="StudentLayout.resx">
+      <DependentUpon>StudentLayout.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherLayout.resx">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
@@ -162,6 +179,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLTN.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLTN.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -177,6 +199,9 @@
     <Content Include="Images\Icon\Test.png" />
     <Content Include="Images\Icon\Test1.png" />
     <Content Include="Images\Icon\TestTrial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

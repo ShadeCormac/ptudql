@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace ptudql_project.Utils
 {
-  class Router
+  public class Router
   {
         //public static void Navigate(Form parent, Form navigateTo)
         //{
