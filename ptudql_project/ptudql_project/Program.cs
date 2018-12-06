@@ -14,14 +14,9 @@ namespace ptudql_project
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
-            using (var db = new QLTNDataContext())
-            {
-                var row = db.CauHois.Select(item => item).ToList().First();
-                MessageBox.Show(row.NoiDung);
-            }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Login());
         }
     }
 }
