@@ -24,7 +24,7 @@ namespace ptudql_project
 
     private void register_Click(object sender, EventArgs e)
     {
-      Router.ChangeForm(this, new Register(), true);
+      Router.ChangeForm(this, new Register());
     }
 
     private void loginBtn_Click(object sender, EventArgs e)

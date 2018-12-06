@@ -30,15 +30,10 @@
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabForms = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -61,13 +56,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.paddingTextBox3 = new ptudql_project.CustomControls.PaddingTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.paddingTextBox2 = new ptudql_project.CustomControls.PaddingTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.paddingTextBox1 = new ptudql_project.CustomControls.PaddingTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
+            this.paddingTextBox3 = new ptudql_project.CustomControls.PaddingTextBox();
+            this.paddingTextBox2 = new ptudql_project.CustomControls.PaddingTextBox();
+            this.paddingTextBox1 = new ptudql_project.CustomControls.PaddingTextBox();
+            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
+            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabForms.SuspendLayout();
             this.tabInfo.SuspendLayout();
@@ -86,54 +86,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 720);
             this.panel1.TabIndex = 0;
-            // 
-            // sidebarButton1
-            // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
-            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
-            this.sidebarButton1.TabIndex = 3;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
             // 
             // tabForms
             // 
@@ -203,14 +155,6 @@
             this.button4.TabIndex = 20;
             this.button4.Text = "Lưu thay đổi";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // numberInputBox1
-            // 
-            this.numberInputBox1.Location = new System.Drawing.Point(169, 316);
-            this.numberInputBox1.MaxLength = 11;
-            this.numberInputBox1.Name = "numberInputBox1";
-            this.numberInputBox1.Size = new System.Drawing.Size(266, 26);
-            this.numberInputBox1.TabIndex = 19;
             // 
             // radioButton2
             // 
@@ -384,13 +328,13 @@
             this.tabChangePassword.Controls.Add(this.button2);
             this.tabChangePassword.Controls.Add(this.button1);
             this.tabChangePassword.Controls.Add(this.label13);
-            this.tabChangePassword.Controls.Add(this.paddingTextBox3);
             this.tabChangePassword.Controls.Add(this.label12);
-            this.tabChangePassword.Controls.Add(this.paddingTextBox2);
             this.tabChangePassword.Controls.Add(this.label11);
-            this.tabChangePassword.Controls.Add(this.paddingTextBox1);
             this.tabChangePassword.Controls.Add(this.panel3);
             this.tabChangePassword.Controls.Add(this.label10);
+            this.tabChangePassword.Controls.Add(this.paddingTextBox3);
+            this.tabChangePassword.Controls.Add(this.paddingTextBox2);
+            this.tabChangePassword.Controls.Add(this.paddingTextBox1);
             this.tabChangePassword.Location = new System.Drawing.Point(4, 29);
             this.tabChangePassword.Name = "tabChangePassword";
             this.tabChangePassword.Padding = new System.Windows.Forms.Padding(3);
@@ -436,16 +380,6 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Xác nhận vật khẩu mới";
             // 
-            // paddingTextBox3
-            // 
-            this.paddingTextBox3.BackColor = System.Drawing.Color.White;
-            this.paddingTextBox3.CustomText = "";
-            this.paddingTextBox3.Location = new System.Drawing.Point(322, 461);
-            this.paddingTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.paddingTextBox3.Name = "paddingTextBox3";
-            this.paddingTextBox3.Size = new System.Drawing.Size(397, 76);
-            this.paddingTextBox3.TabIndex = 11;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -457,16 +391,6 @@
             this.label12.TabIndex = 10;
             this.label12.Text = "Mật khẩu mới";
             // 
-            // paddingTextBox2
-            // 
-            this.paddingTextBox2.BackColor = System.Drawing.Color.White;
-            this.paddingTextBox2.CustomText = "";
-            this.paddingTextBox2.Location = new System.Drawing.Point(322, 316);
-            this.paddingTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.paddingTextBox2.Name = "paddingTextBox2";
-            this.paddingTextBox2.Size = new System.Drawing.Size(397, 86);
-            this.paddingTextBox2.TabIndex = 9;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -477,16 +401,6 @@
             this.label11.Size = new System.Drawing.Size(168, 24);
             this.label11.TabIndex = 8;
             this.label11.Text = "Mật khẩu hiện tại";
-            // 
-            // paddingTextBox1
-            // 
-            this.paddingTextBox1.BackColor = System.Drawing.Color.White;
-            this.paddingTextBox1.CustomText = "";
-            this.paddingTextBox1.Location = new System.Drawing.Point(322, 174);
-            this.paddingTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.paddingTextBox1.Name = "paddingTextBox1";
-            this.paddingTextBox1.Size = new System.Drawing.Size(397, 72);
-            this.paddingTextBox1.TabIndex = 5;
             // 
             // panel3
             // 
@@ -506,6 +420,92 @@
             this.label10.Size = new System.Drawing.Size(185, 31);
             this.label10.TabIndex = 4;
             this.label10.Text = "Đổi mật khẩu";
+            // 
+            // numberInputBox1
+            // 
+            this.numberInputBox1.Location = new System.Drawing.Point(169, 316);
+            this.numberInputBox1.MaxLength = 11;
+            this.numberInputBox1.Name = "numberInputBox1";
+            this.numberInputBox1.Size = new System.Drawing.Size(266, 26);
+            this.numberInputBox1.TabIndex = 19;
+            // 
+            // paddingTextBox3
+            // 
+            this.paddingTextBox3.BackColor = System.Drawing.Color.White;
+            this.paddingTextBox3.CustomText = "";
+            this.paddingTextBox3.Location = new System.Drawing.Point(322, 461);
+            this.paddingTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.paddingTextBox3.Name = "paddingTextBox3";
+            this.paddingTextBox3.Size = new System.Drawing.Size(397, 76);
+            this.paddingTextBox3.TabIndex = 11;
+            // 
+            // paddingTextBox2
+            // 
+            this.paddingTextBox2.BackColor = System.Drawing.Color.White;
+            this.paddingTextBox2.CustomText = "";
+            this.paddingTextBox2.Location = new System.Drawing.Point(322, 316);
+            this.paddingTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.paddingTextBox2.Name = "paddingTextBox2";
+            this.paddingTextBox2.Size = new System.Drawing.Size(397, 86);
+            this.paddingTextBox2.TabIndex = 9;
+            // 
+            // paddingTextBox1
+            // 
+            this.paddingTextBox1.BackColor = System.Drawing.Color.White;
+            this.paddingTextBox1.CustomText = "";
+            this.paddingTextBox1.Location = new System.Drawing.Point(322, 174);
+            this.paddingTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paddingTextBox1.Name = "paddingTextBox1";
+            this.paddingTextBox1.Size = new System.Drawing.Size(397, 72);
+            this.paddingTextBox1.TabIndex = 5;
+            // 
+            // sidebarButton1
+            // 
+            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
+            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
+            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
+            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
+            this.sidebarButton1.Name = "sidebarButton1";
+            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
+            this.sidebarButton1.TabIndex = 3;
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnUser.LabelText = "Thông tin cá nhân";
+            this.btnUser.Location = new System.Drawing.Point(0, 86);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(200, 110);
+            this.btnUser.TabIndex = 2;
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
             // 
             // StudentInfo
             // 
