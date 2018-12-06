@@ -30,15 +30,10 @@
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabForms = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -58,6 +53,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabChangePassword = new System.Windows.Forms.TabPage();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tbpassword = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -65,12 +66,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
+            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
+            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabForms.SuspendLayout();
             this.tabInfo.SuspendLayout();
@@ -90,58 +90,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 1108);
             this.panel1.TabIndex = 0;
-            // 
-            // sidebarButton1
-            // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(-20, 54);
-            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 754);
-            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(300, 169);
-            this.sidebarButton1.TabIndex = 3;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(-20, 54);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 132);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(300, 169);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(-20, 54);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 555);
-            this.btnThiThu.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(300, 169);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(-30, 54);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 340);
-            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(300, 169);
-            this.btnLamBaiThi.TabIndex = 0;
             // 
             // tabForms
             // 
@@ -215,15 +163,6 @@
             this.button4.TabIndex = 20;
             this.button4.Text = "Lưu thay đổi";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // numberInputBox1
-            // 
-            this.numberInputBox1.Location = new System.Drawing.Point(254, 486);
-            this.numberInputBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.numberInputBox1.MaxLength = 11;
-            this.numberInputBox1.Name = "numberInputBox1";
-            this.numberInputBox1.Size = new System.Drawing.Size(397, 35);
-            this.numberInputBox1.TabIndex = 19;
             // 
             // radioButton2
             // 
@@ -338,6 +277,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(397, 35);
             this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.CheckMail);
             // 
             // label4
             // 
@@ -357,6 +297,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(397, 35);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.CheckName);
             // 
             // label3
             // 
@@ -414,7 +355,7 @@
             // 
             this.tabChangePassword.Controls.Add(this.textBox6);
             this.tabChangePassword.Controls.Add(this.panel6);
-            this.tabChangePassword.Controls.Add(this.textBox4);
+            this.tabChangePassword.Controls.Add(this.tbpassword);
             this.tabChangePassword.Controls.Add(this.panel5);
             this.tabChangePassword.Controls.Add(this.txtPassword);
             this.tabChangePassword.Controls.Add(this.panel4);
@@ -433,6 +374,76 @@
             this.tabChangePassword.TabIndex = 1;
             this.tabChangePassword.Text = "Đổi mật khẩu";
             this.tabChangePassword.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F);
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox6.Location = new System.Drawing.Point(508, 674);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(15);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.PasswordChar = '*';
+            this.textBox6.Size = new System.Drawing.Size(585, 30);
+            this.textBox6.TabIndex = 26;
+            this.textBox6.TabStop = false;
+            this.textBox6.TextChanged += new System.EventHandler(this.CheckPassWord);
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.CausesValidation = false;
+            this.panel6.Location = new System.Drawing.Point(493, 658);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(615, 59);
+            this.panel6.TabIndex = 25;
+            // 
+            // tbpassword
+            // 
+            this.tbpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbpassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.tbpassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tbpassword.Location = new System.Drawing.Point(508, 485);
+            this.tbpassword.Margin = new System.Windows.Forms.Padding(15);
+            this.tbpassword.Name = "tbpassword";
+            this.tbpassword.PasswordChar = '*';
+            this.tbpassword.Size = new System.Drawing.Size(585, 30);
+            this.tbpassword.TabIndex = 24;
+            this.tbpassword.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.CausesValidation = false;
+            this.panel5.Location = new System.Drawing.Point(493, 469);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(615, 59);
+            this.panel5.TabIndex = 23;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.Location = new System.Drawing.Point(523, 290);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(15);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(569, 30);
+            this.txtPassword.TabIndex = 22;
+            this.txtPassword.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.CausesValidation = false;
+            this.panel4.Location = new System.Drawing.Point(493, 274);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(615, 62);
+            this.panel4.TabIndex = 21;
             // 
             // button2
             // 
@@ -519,74 +530,66 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Đổi mật khẩu";
             // 
-            // txtPassword
+            // numberInputBox1
             // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPassword.Location = new System.Drawing.Point(523, 290);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(15);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(569, 30);
-            this.txtPassword.TabIndex = 22;
-            this.txtPassword.TabStop = false;
+            this.numberInputBox1.Location = new System.Drawing.Point(254, 486);
+            this.numberInputBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numberInputBox1.MaxLength = 10;
+            this.numberInputBox1.Name = "numberInputBox1";
+            this.numberInputBox1.Size = new System.Drawing.Size(397, 35);
+            this.numberInputBox1.TabIndex = 19;
             // 
-            // panel4
+            // sidebarButton1
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.CausesValidation = false;
-            this.panel4.Location = new System.Drawing.Point(493, 274);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(615, 62);
-            this.panel4.TabIndex = 21;
+            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
+            this.sidebarButton1.LabelLocation = new System.Drawing.Point(-20, 54);
+            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
+            this.sidebarButton1.Location = new System.Drawing.Point(0, 754);
+            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.sidebarButton1.Name = "sidebarButton1";
+            this.sidebarButton1.Size = new System.Drawing.Size(300, 169);
+            this.sidebarButton1.TabIndex = 3;
             // 
-            // textBox4
+            // btnUser
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Location = new System.Drawing.Point(508, 485);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(15);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(585, 30);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.TabStop = false;
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            this.btnUser.LabelLocation = new System.Drawing.Point(-20, 54);
+            this.btnUser.LabelText = "Thông tin cá nhân";
+            this.btnUser.Location = new System.Drawing.Point(0, 132);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(300, 169);
+            this.btnUser.TabIndex = 2;
             // 
-            // panel5
+            // btnThiThu
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.CausesValidation = false;
-            this.panel5.Location = new System.Drawing.Point(493, 469);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(615, 59);
-            this.panel5.TabIndex = 23;
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(-20, 54);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 555);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(300, 169);
+            this.btnThiThu.TabIndex = 1;
             // 
-            // textBox6
+            // btnLamBaiThi
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox6.Location = new System.Drawing.Point(508, 674);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(15);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
-            this.textBox6.Size = new System.Drawing.Size(585, 30);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.CausesValidation = false;
-            this.panel6.Location = new System.Drawing.Point(493, 658);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(615, 59);
-            this.panel6.TabIndex = 25;
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(-30, 54);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 340);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(300, 169);
+            this.btnLamBaiThi.TabIndex = 0;
             // 
             // StudentInfo
             // 
@@ -646,7 +649,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbpassword;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel4;
