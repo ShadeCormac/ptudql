@@ -27,28 +27,33 @@ namespace ptudql_project.CustomControls
     }
     public string QuestText
     {
-      get => this.questBox.Text;
-      set => this.questBox.Text = value;
+      get
+            { return this.questBox.Text; }
+      set { this.questBox.Text = value; }
     }
     public string Ans1Text
     {
-      get => this.ans1.Text;
-      set => this.ans1.Text = value;
+      get
+            { return this.ans1.Text; }
+      set { this.ans1.Text = value; }
     }
     public string Ans2Text
     {
-      get => this.ans2.Text;
-      set => this.ans2.Text = value;
+      get
+            { return this.ans2.Text; }
+      set { this.ans2.Text = value; }
     }
     public string Ans3Text
     {
-      get => this.ans3.Text;
-      set => this.ans3.Text = value;
+      get
+            { return this.ans3.Text; }
+      set { this.ans3.Text = value; }
     }
     public string Ans4Text
     {
-      get => this.ans4.Text;
-      set => this.ans4.Text = value;
+      get
+            { return this.ans4.Text; }
+      set { this.ans4.Text = value; }
     }
   }
 }

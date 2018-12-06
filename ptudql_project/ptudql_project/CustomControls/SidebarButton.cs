@@ -14,20 +14,24 @@ namespace ptudql_project.CustomControls
   {
     public string LabelText
     {
-      get => label1.Text;
-      set => label1.Text = value;
+      get
+            { return label1.Text; }
+      set
+            {  label1.Text = value; }
     }
 
     public Point LabelLocation
     {
-      get => label1.Location;
-      set => label1.Location = value;
+      get
+            { return label1.Location; }
+      set { label1.Location = value; }
     }
 
     public Image CustomImage
     {
-      get => pictureBox1.Image;
-      set => pictureBox1.Image = value;
+      get
+            { return pictureBox1.Image; }
+      set { pictureBox1.Image = value; }
     }
 
     public SidebarButton()

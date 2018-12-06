@@ -14,7 +14,8 @@ namespace ptudql_project.CustomControls
   {
     public string CustomText
     {
-      get => textBox1.Text;
+      get
+            { return textBox1.Text; }
       set { textBox1.Text = value; }
     }
 

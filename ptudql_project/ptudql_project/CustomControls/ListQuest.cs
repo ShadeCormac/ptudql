@@ -24,8 +24,8 @@ namespace ptudql_project.CustomControls
 
     public long Counter
     {
-      get => _countDownTime;
-      set => _countDownTime = value;
+      get { return _countDownTime; }
+      set { _countDownTime = value; }
     }
 
     public ListQuest(List<Quest> questList) : this()
