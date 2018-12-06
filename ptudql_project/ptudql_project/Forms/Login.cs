@@ -37,8 +37,26 @@ namespace ptudql_project
             else
             {
                 errors.SetError((Control)sender, "");
-                //MessageBox.Show(string.Format($"{_username} { _password}" ));
-                //Router.ChangeForm(this, new StudentInfo());
+                using (var ql = new QLTNDataContext())
+                {
+                    var account = ql.TaiKhoans.Where(acc => acc.TenDangNhap == _username).FirstOrDefault();
+                    if (account == null)
+                    {
+                        MessageBox.Show("Tài khoản không tồn tại!");
+                    }
+                    else
+                    {
+                        if (!Crypto.passwordCompare(_password, account.MatKhau))
+                        {
+                            MessageBox.Show("mật khẩu sai");
+                        }
+                        else
+                        {
+                            Router.ChangeForm(this, new StudentInfo());
+                        }
+                    }
+                }
+                
             }
 
 
@@ -62,6 +80,11 @@ namespace ptudql_project
             {
                 errors.SetError(control, "");
             }
+            if (e.Cancel == true)
+            {
+                if (_username.Length > 0)
+                    _username = "";
+            }
         }
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
@@ -80,6 +103,11 @@ namespace ptudql_project
             else
             {
                 errors.SetError(control, "");
+            }
+            if (e.Cancel == true)
+            {
+                if (_password.Length > 0)
+                    _password = "";
             }
 
         }
