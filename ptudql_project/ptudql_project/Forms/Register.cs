@@ -20,7 +20,7 @@ namespace ptudql_project
 
     private void login_Click(object sender, EventArgs e)
     {
-      Router.Navigate(ParentForm, new Login());
+      Router.ChangeForm(this, new Login());
     }
   }
 }

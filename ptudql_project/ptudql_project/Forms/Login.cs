@@ -20,12 +20,12 @@ namespace ptudql_project
 
     private void register_Click(object sender, EventArgs e)
     {
-      Router.Navigate(ParentForm, new Register());
+      Router.ChangeForm(this, new Register(), true);
     }
 
     private void loginBtn_Click(object sender, EventArgs e)
     {
-      Router.Navigate(ParentForm, new StudentLayout());
+      Router.ChangeForm(this, new StudentInfo());
     }
   }
 }

@@ -58,6 +58,9 @@
     <Compile Include="CustomControls\ListQuest.Designer.cs">
       <DependentUpon>ListQuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\NumberInputBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomControls\PaddingTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,11 +99,11 @@
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentLayout.cs">
+    <Compile Include="Student\StudentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentLayout.Designer.cs">
-      <DependentUpon>StudentLayout.cs</DependentUpon>
+    <Compile Include="Student\StudentInfo.Designer.cs">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherLayout.cs">
       <SubType>Form</SubType>
@@ -144,8 +147,8 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentLayout.resx">
-      <DependentUpon>StudentLayout.cs</DependentUpon>
+    <EmbeddedResource Include="Student\StudentInfo.resx">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherLayout.resx">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
@@ -165,7 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="Student\" />
     <Folder Include="Teacher\" />
   </ItemGroup>
   <ItemGroup>

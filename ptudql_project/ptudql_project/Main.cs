@@ -16,7 +16,7 @@ namespace ptudql_project
     public Main()
     {
       InitializeComponent();
-      Router.Navigate(this, new Login());
+      //Router.ChangeForm(this, new Login());
     }
   }
 }
