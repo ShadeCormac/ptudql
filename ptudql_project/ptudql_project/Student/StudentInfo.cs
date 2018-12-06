@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.CustomControls;
+using ptudql_project.Utils;
 
-namespace ptudql_project
+namespace ptudql_project.Student
 {
     public partial class StudentInfo : Form
     {
@@ -48,6 +49,11 @@ namespace ptudql_project
 
             //tabControl1.TabPages.Clear();
             //tabControl1.TabPages.Add(lamBaiTracNghiemPage);
+        }
+
+        private void btnLamBaiThi_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new StudentContest());
         }
     }
 }

@@ -28,23 +28,6 @@ namespace ptudql_project.CustomControls
       set { _countDownTime = value; }
     }
 
-    public ListQuest(List<Quest> questList) : this()
-    {
-      // Add timer
-      
-      // Add list questions
-      int x = 0;
-      int y = 0;
-      foreach (var item in questList)
-      {
-        item.Location = new Point(x, y);
-        y += 200;
-      }
-      var lastItem = questList.Last();
-      lastItem.Size = new Size(lastItem.Size.Width, lastItem.Size.Height + 30);
-      this.panel1.Controls.AddRange(questList.ToArray());
-    }
-
     private void ListQuest_Load(object sender, EventArgs e)
     {
       timer = new Timer();

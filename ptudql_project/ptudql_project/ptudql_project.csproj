@@ -68,18 +68,13 @@
     <Compile Include="CustomControls\PaddingTextBox.Designer.cs">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\Quest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CustomControls\Quest.Designer.cs">
-      <DependentUpon>Quest.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomControls\SidebarButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomControls\SidebarButton.Designer.cs">
       <DependentUpon>SidebarButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\Question.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Student\StudentContest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentContest.Designer.cs">
+      <DependentUpon>StudentContest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\StudentInfo.Designer.cs">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </Compile>
@@ -128,9 +129,6 @@
     <EmbeddedResource Include="CustomControls\PaddingTextBox.resx">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\Quest.resx">
-      <DependentUpon>Quest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SidebarButton.resx">
       <DependentUpon>SidebarButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,12 +151,12 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentContest.resx">
+      <DependentUpon>StudentContest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="QLTN.dbml.layout">
-      <DependentUpon>QLTN.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="TeacherLayout.resx">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +173,9 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLTN.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
