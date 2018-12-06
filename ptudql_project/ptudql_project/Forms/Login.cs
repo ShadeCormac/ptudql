@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.Utils;
+using ptudql_project.Student;
 
 namespace ptudql_project
 {
@@ -23,10 +24,10 @@ namespace ptudql_project
       errors = new ErrorProvider();
     }
 
-    private void register_Click(object sender, EventArgs e)
-    {
-      Router.ChangeForm(this, new Register());
-    }
+        private void register_Click(object sender, EventArgs e)
+        {
+          Router.ChangeForm(this, new Register());
+        }
 
     private void loginBtn_Click(object sender, EventArgs e)
     {
@@ -62,7 +63,6 @@ namespace ptudql_project
 
         }
 
-      
         private void txtUsername_Validating(object sender, CancelEventArgs e)
         {
             Control control = sender as Control;

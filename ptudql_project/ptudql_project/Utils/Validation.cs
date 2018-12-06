@@ -27,18 +27,24 @@ namespace ptudql_project.Utils
             return (re.IsMatch(text));
         }
 
-        public static bool checkEmail(string mail)
+        public static bool isEmail(string email)
         {
-            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
-                    @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
-                    @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
-            return checkWithRegex(mail, strRegex);
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
+
 
         public static bool checkName(string name)
         {
-            string strRegex = @"(\d+|[.+-=_{}[\]|\"+"';:!@#$%^&*()`~?.,<>/\\])";
-            return checkWithRegex(name, strRegex);
+            string strRegex = @"(\d+|[.+-=_{}[\]|\"+ @"';:!@#$%^&*()`~?.,<>/\\])";
+            return !checkWithRegex(name, strRegex);
         }
 
         public static bool checkPassWord(string passWordchange, string passWordchanged)
