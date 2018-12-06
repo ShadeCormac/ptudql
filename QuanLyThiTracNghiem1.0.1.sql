@@ -46,7 +46,7 @@ create table DeThi(
 go
 
 create table CauHoi(
-	IdCauHoi int AUTO_INCREMENT primary key,
+	IdCauHoi int IDENTITY(1,1) primary key,
 	NoiDung nvarchar(max),
 	CauA nvarchar(max),
 	CauB nvarchar(max),
