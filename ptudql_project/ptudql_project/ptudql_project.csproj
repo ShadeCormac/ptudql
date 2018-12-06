@@ -100,19 +100,16 @@
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="Student\StudentInfo.cs">
-
     <Compile Include="QLTN.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
-    <Compile Include="StudentLayout.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Student\StudentInfo.Designer.cs">
       <DependentUpon>StudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentInfo.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="TeacherLayout.cs">
       <SubType>Form</SubType>
@@ -156,17 +153,12 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
-
+    </EmbeddedResource>
     <None Include="QLTN.dbml.layout">
       <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="StudentLayout.resx">
-      <DependentUpon>StudentLayout.cs</DependentUpon>
-
-    </EmbeddedResource>
     <EmbeddedResource Include="TeacherLayout.resx">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </EmbeddedResource>

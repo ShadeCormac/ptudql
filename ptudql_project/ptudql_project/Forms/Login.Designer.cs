@@ -53,7 +53,6 @@
             this.panel1.Controls.Add(this.loginBtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtUsername);
-
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Location = new System.Drawing.Point(440, 150);
@@ -65,9 +64,7 @@
             // 
             this.register.AutoSize = true;
             this.register.BackColor = System.Drawing.Color.White;
-
             this.register.CausesValidation = false;
-
             this.register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.register.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
@@ -89,7 +86,6 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Chưa có tài khoản?";
             // 
-
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -105,12 +101,10 @@
             this.txtPassword.Text = "********";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
-
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
             this.panel3.CausesValidation = false;
             this.panel3.Location = new System.Drawing.Point(50, 153);
             this.panel3.Name = "panel3";
@@ -128,7 +122,7 @@
             this.loginBtn.Location = new System.Drawing.Point(50, 218);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(257, 41);
-
+            this.loginBtn.TabIndex = 21;
             this.loginBtn.Text = "Đồng ý";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -144,7 +138,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng nhập";
             // 
-
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -163,7 +156,6 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
             this.panel2.CausesValidation = false;
             this.panel2.Location = new System.Drawing.Point(51, 91);
             this.panel2.Name = "panel2";
@@ -173,7 +165,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-
             this.panel4.CausesValidation = false;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -185,14 +176,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";

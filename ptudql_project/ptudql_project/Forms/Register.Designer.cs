@@ -33,7 +33,6 @@
             this.login = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-
             this.panel4.CausesValidation = false;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -62,7 +60,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
             this.panel1.CausesValidation = false;
             this.panel1.Controls.Add(this.login);
             this.panel1.Controls.Add(this.label5);
@@ -121,7 +118,6 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Xác nhận mật khẩu";
             // 
-
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -155,7 +151,6 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Mật khẩu";
             // 
-
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -180,7 +175,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-
             this.label2.CausesValidation = false;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -190,7 +184,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Tên đăng nhập";
             // 
-
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
@@ -210,7 +203,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -220,7 +212,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng ký";
             // 
-
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -245,14 +236,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
             this.Text = "Register";
