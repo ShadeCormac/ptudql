@@ -14,7 +14,9 @@ create table HocSinh(
 	TenTK varchar(20) references TaiKhoan(TenDangNhap) primary key,
 	Khoi varchar(10),
 	Lop varchar(10),
-	HoTen nvarchar(50)
+	HoTen nvarchar(50),
+	GioiTinh nvarchar(10),
+	Email varchar(50)
 )
 go
 create table GiaoVien(
