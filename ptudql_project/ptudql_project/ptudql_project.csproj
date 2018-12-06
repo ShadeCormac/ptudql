@@ -120,6 +120,7 @@
     </Compile>
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Router.cs" />
+    <Compile Include="Utils\Validation.cs" />
     <EmbeddedResource Include="AdminLayout.resx">
       <DependentUpon>AdminLayout.cs</DependentUpon>
     </EmbeddedResource>
