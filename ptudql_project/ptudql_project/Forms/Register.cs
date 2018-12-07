@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.Utils;
+using ptudql_project.DAO;
 
 namespace ptudql_project
 {
@@ -45,6 +46,10 @@ namespace ptudql_project
             {
                 errors.SetError(control, "");
             }
+            if (e.Cancel == true)
+            {
+                _username = "";
+            }
         }
 
         private void textBox2_Validating(object sender, CancelEventArgs e)
@@ -63,6 +68,10 @@ namespace ptudql_project
             else
             {
                 errors.SetError(control, "");
+            }
+            if (e.Cancel == true)
+            {
+                _password = "";
             }
         }
 
@@ -87,6 +96,10 @@ namespace ptudql_project
             {
                 errors.SetError(control, "");
             }
+            if (e.Cancel == true)
+            {
+                _rePassword = "";
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -99,32 +112,20 @@ namespace ptudql_project
             {
                 //must use crypto
                 //use Validation class later
-
-                using (var ql = new QLTNDataContext())
+                if (Account.isRegisterd(_username))
                 {
-                    if (ql.TaiKhoans.Where(tk => tk.TenDangNhap == _username).Count() > 0)
+                    if (!Validation.checkPassWord(_password, _rePassword))
                     {
-                        errors.SetError((Control)sender, "Tên đăng nhập bị trùng");
+                        errors.SetError((Control)sender, "Mật khẩu không trùng");
                     }
                     else
                     {
-                        if (!Validation.checkPassWord(_password, _rePassword))
-                        {
-                            errors.SetError((Control)sender, "Mật khẩu không trùng");
-                        }
-                        else
-                        {
-                            errors.SetError((Control)sender, "");
-                            //save to database
-                            TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3};
-                            ql.TaiKhoans.InsertOnSubmit(tk);
-                            ql.SubmitChanges();
-                        }
+                        errors.SetError((Control)sender, "");
+                        //save to database
+                        TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3 };
+                        Account.Register(tk);
                     }
                 }
-                
-               
-
             }
 
         }

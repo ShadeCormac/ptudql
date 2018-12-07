@@ -153,7 +153,7 @@
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(257, 41);
             this.loginBtn.TabIndex = 21;
-            this.loginBtn.Text = "Đồng ý";
+            this.loginBtn.Text = "Đăng nhập";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 

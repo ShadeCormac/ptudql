@@ -74,6 +74,7 @@
     <Compile Include="CustomControls\SidebarButton.Designer.cs">
       <DependentUpon>SidebarButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\Question.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>

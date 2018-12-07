@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.Utils;
 using ptudql_project.Student;
+using ptudql_project.DAO;
 
 namespace ptudql_project
 {
@@ -38,26 +39,22 @@ namespace ptudql_project
             else
             {
                 errors.SetError((Control)sender, "");
-                using (var ql = new QLTNDataContext())
+                if (!Account.isRegisterd(_username))
                 {
-                    var account = ql.TaiKhoans.Where(acc => acc.TenDangNhap == _username).FirstOrDefault();
-                    if (account == null)
+                    MessageBox.Show("Tài khoản không tồn tại!");
+                }
+                else
+                {
+                    if (!Crypto.passwordCompare(_password, Account.getPassword(_username)))
                     {
-                        MessageBox.Show("Tài khoản không tồn tại!");
+                        MessageBox.Show("mật khẩu sai");
                     }
                     else
                     {
-                        if (!Crypto.passwordCompare(_password, account.MatKhau))
-                        {
-                            MessageBox.Show("mật khẩu sai");
-                        }
-                        else
-                        {
-                            Router.ChangeForm(this, new StudentInfo());
-                        }
+                        Router.ChangeForm(this, new StudentInfo());
                     }
                 }
-                
+
             }
 
 

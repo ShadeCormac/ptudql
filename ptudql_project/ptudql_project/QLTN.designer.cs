@@ -22,7 +22,7 @@ namespace ptudql_project
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLThiTracNghiem")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLTN")]
 	public partial class QLTNDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -60,7 +60,7 @@ namespace ptudql_project
     #endregion
 		
 		public QLTNDataContext() : 
-				base(global::ptudql_project.Properties.Settings.Default.QLThiTracNghiemConnectionString, mappingSource)
+				base(global::ptudql_project.Properties.Settings.Default.QLTNConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
