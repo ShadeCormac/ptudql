@@ -37,6 +37,7 @@ namespace ptudql_project.Utils
 
         public static bool passwordCompare(string pass, string hashedPass)
         {
+            bool flag = true;
             byte[] hashBytes = Convert.FromBase64String(hashedPass);
             byte[] salt = new byte[16];
             Array.Copy(hashBytes, 0, salt, 0, 16);
@@ -46,10 +47,14 @@ namespace ptudql_project.Utils
                 for (int i = 0; i < hash.Length; ++i)
                 {
                     if (hashBytes[i + 16] != hash[i])
-                        return false;
+                    {
+                        flag = false;
+                        break;
+                    }
+                        
                 }
-                return true;
             }
+            return flag;
         }
     }
 }
