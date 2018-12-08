@@ -43,6 +43,7 @@ go
 create table DeThi(
 	IdDe varchar(10) primary key,
 	GVRaDe varchar(20) references GiaoVien(TenTK),
+	ThoiGian int
 	--chi tiết đề?
 )
 go
