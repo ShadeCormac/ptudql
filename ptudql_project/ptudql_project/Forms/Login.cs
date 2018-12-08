@@ -109,21 +109,10 @@ namespace ptudql_project
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!e.Cancel)
-            {
-                DialogResult result = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    e.Cancel = false;
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
+
         }
 
-        
+
 
         private void label4_Click(object sender, EventArgs e)
         {

@@ -145,6 +145,9 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="Student\StudentContest.resx">
       <DependentUpon>StudentContest.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,9 +170,6 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLTN.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="QLTN.dbml.layout">
-      <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

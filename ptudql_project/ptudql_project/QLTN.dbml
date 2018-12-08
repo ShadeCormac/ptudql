@@ -1,20 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLThiTracNghiem" Class="QLTNDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=lap12515\sqlexpress;Initial Catalog=QLThiTracNghiem;Integrated Security=True" SettingsObjectName="ptudql_project.Properties.Settings" SettingsPropertyName="QLThiTracNghiemConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-30N13CK\SQLEXPRESS;Initial Catalog=QLThiTracNghiem;Integrated Security=True" SettingsObjectName="ptudql_project.Properties.Settings" SettingsPropertyName="QLTracNghiemConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BoDeThi" Member="BoDeThis">
     <Type Name="BoDeThi">
       <Column Name="IdDe" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IdCauHoi" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="CauHoi_BoDeThi" Member="CauHoi" ThisKey="IdCauHoi" OtherKey="IdCauHoi" Type="CauHoi" IsForeignKey="true" />
       <Association Name="DeThi_BoDeThi" Member="DeThi" ThisKey="IdDe" OtherKey="IdDe" Type="DeThi" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
-    <Type Name="TaiKhoan">
-      <Column Name="TenDangNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MatKhau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="LoaiTK" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="TaiKhoan_GiaoVien" Member="GiaoVien" ThisKey="TenDangNhap" OtherKey="TenTK" Type="GiaoVien" Cardinality="One" />
-      <Association Name="TaiKhoan_HocSinh" Member="HocSinh" ThisKey="TenDangNhap" OtherKey="TenTK" Type="HocSinh" Cardinality="One" />
     </Type>
   </Table>
   <Table Name="dbo.CauHoi" Member="CauHois">
@@ -37,8 +28,8 @@
       <Column Name="IdKyThi" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Diem" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="DeThi_DanhSachThi" Member="DeThi" ThisKey="IdDe" OtherKey="IdDe" Type="DeThi" IsForeignKey="true" />
-      <Association Name="HocSinh_DanhSachThi" Member="HocSinh" ThisKey="TKHocSinh" OtherKey="TenTK" Type="HocSinh" IsForeignKey="true" />
       <Association Name="KyThi_DanhSachThi" Member="KyThi" ThisKey="IdKyThi" OtherKey="IDKyThi" Type="KyThi" IsForeignKey="true" />
+      <Association Name="HocSinh_DanhSachThi" Member="HocSinh" ThisKey="TKHocSinh" OtherKey="TenTK" Type="HocSinh" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DeThi" Member="DeThis">
@@ -59,16 +50,6 @@
       <Association Name="TaiKhoan_GiaoVien" Member="TaiKhoan" ThisKey="TenTK" OtherKey="TenDangNhap" Type="TaiKhoan" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.HocSinh" Member="HocSinhs">
-    <Type Name="HocSinh">
-      <Column Name="TenTK" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Khoi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="Lop" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="HocSinh_DanhSachThi" Member="DanhSachThis" ThisKey="TenTK" OtherKey="TKHocSinh" Type="DanhSachThi" />
-      <Association Name="TaiKhoan_HocSinh" Member="TaiKhoan" ThisKey="TenTK" OtherKey="TenDangNhap" Type="TaiKhoan" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.KyThi" Member="KyThis">
     <Type Name="KyThi">
       <Column Name="IDKyThi" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -79,12 +60,31 @@
       <Association Name="KyThi_KyThi_DeThi" Member="KyThi_DeThis" ThisKey="IDKyThi" OtherKey="IdKyThi" Type="KyThi_DeThi" />
     </Type>
   </Table>
+  <Table Name="dbo.HocSinh" Member="HocSinhs">
+    <Type Name="HocSinh">
+      <Column Name="TenTK" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Khoi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Lop" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="HocSinh_DanhSachThi" Member="DanhSachThis" ThisKey="TenTK" OtherKey="TKHocSinh" Type="DanhSachThi" />
+      <Association Name="TaiKhoan_HocSinh" Member="TaiKhoan" ThisKey="TenTK" OtherKey="TenDangNhap" Type="TaiKhoan" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.KyThi_DeThi" Member="KyThi_DeThis">
     <Type Name="KyThi_DeThi">
       <Column Name="IdDe" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IdKyThi" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="KyThi_KyThi_DeThi" Member="KyThi" ThisKey="IdKyThi" OtherKey="IDKyThi" Type="KyThi" IsForeignKey="true" />
       <Association Name="DeThi_KyThi_DeThi" Member="DeThi" ThisKey="IdDe" OtherKey="IdDe" Type="DeThi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="TenDangNhap" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="LoaiTK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TaiKhoan_GiaoVien" Member="GiaoVien" ThisKey="TenDangNhap" OtherKey="TenTK" Type="GiaoVien" Cardinality="One" />
+      <Association Name="TaiKhoan_HocSinh" Member="HocSinh" ThisKey="TenDangNhap" OtherKey="TenTK" Type="HocSinh" Cardinality="One" />
     </Type>
   </Table>
 </Database>
