@@ -130,6 +130,7 @@
             this.txtConfirmPassword.Size = new System.Drawing.Size(235, 20);
             this.txtConfirmPassword.TabIndex = 12;
             this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
+            this.txtConfirmPassword.Validated += new System.EventHandler(this.txtConfirmPassword_Validated);
             // 
             // panel5
             // 
@@ -163,6 +164,7 @@
             this.txtPassword.Size = new System.Drawing.Size(235, 20);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
+            this.txtPassword.Validated += new System.EventHandler(this.txtPassword_Validated);
             // 
             // panel3
             // 
@@ -206,7 +208,7 @@
             this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(125, 17);
+            this.label1.Location = new System.Drawing.Point(125, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 33);
             this.label1.TabIndex = 4;
@@ -223,6 +225,7 @@
             this.txtUsername.Size = new System.Drawing.Size(235, 20);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
+            this.txtUsername.Validated += new System.EventHandler(this.txtUsername_Validated);
             // 
             // panel2
             // 

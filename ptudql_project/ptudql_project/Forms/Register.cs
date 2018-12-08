@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.Utils;
+using ptudql_project.DAO;
 
 namespace ptudql_project
 {
   public partial class Register : Form
   {
         private ErrorProvider errors = null;
+        private string _username = "";
+        private string _password = "";
+        private string _rePassword = "";
     public Register()
     {
       InitializeComponent();
@@ -42,6 +46,10 @@ namespace ptudql_project
             {
                 errors.SetError(control, "");
             }
+            if (e.Cancel == true)
+            {
+                _username = "";
+            }
         }
 
         private void textBox2_Validating(object sender, CancelEventArgs e)
@@ -60,6 +68,10 @@ namespace ptudql_project
             else
             {
                 errors.SetError(control, "");
+            }
+            if (e.Cancel == true)
+            {
+                _password = "";
             }
         }
 
@@ -84,11 +96,53 @@ namespace ptudql_project
             {
                 errors.SetError(control, "");
             }
+            if (e.Cancel == true)
+            {
+                _rePassword = "";
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //save to database
+            if (_username.Length < 6 || _password.Length < 6 || _rePassword.Length < 6)
+            {
+                errors.SetError((Control)sender, "Bạn phải nhập đủ thông tin");
+            }
+            else
+            {
+                //must use crypto
+                //use Validation class later
+                if (Account.isRegisterd(_username))
+                {
+                    if (!Validation.checkPassWord(_password, _rePassword))
+                    {
+                        errors.SetError((Control)sender, "Mật khẩu không trùng");
+                    }
+                    else
+                    {
+                        errors.SetError((Control)sender, "");
+                        //save to database
+                        TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3 };
+                        Account.Register(tk);
+                    }
+                }
+            }
+
+        }
+
+        private void txtUsername_Validated(object sender, EventArgs e)
+        {
+            _username = ((TextBox)sender).Text;
+        }
+
+        private void txtPassword_Validated(object sender, EventArgs e)
+        {
+            _password = ((TextBox)sender).Text;
+        }
+
+        private void txtConfirmPassword_Validated(object sender, EventArgs e)
+        {
+            _rePassword = ((TextBox)sender).Text;
         }
     }
 }

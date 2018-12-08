@@ -1,4 +1,4 @@
-﻿namespace ptudql_project
+﻿namespace ptudql_project.Student
 {
   partial class StudentInfo
   {
@@ -30,15 +30,10 @@
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabForms = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -58,20 +53,38 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabChangePassword = new System.Windows.Forms.TabPage();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tbpassword = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.paddingTextBox3 = new ptudql_project.CustomControls.PaddingTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.paddingTextBox2 = new ptudql_project.CustomControls.PaddingTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.paddingTextBox1 = new ptudql_project.CustomControls.PaddingTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabTestSchedule = new System.Windows.Forms.TabPage();
+            this.tabContestResult = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
+            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
+            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabForms.SuspendLayout();
             this.tabInfo.SuspendLayout();
             this.tabChangePassword.SuspendLayout();
+            this.tabTestSchedule.SuspendLayout();
+            this.tabContestResult.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,67 +97,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 720);
+            this.panel1.Size = new System.Drawing.Size(200, 690);
             this.panel1.TabIndex = 0;
-            // 
-            // sidebarButton1
-            // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
-            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
-            this.sidebarButton1.TabIndex = 3;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
             // 
             // tabForms
             // 
             this.tabForms.Controls.Add(this.tabInfo);
             this.tabForms.Controls.Add(this.tabChangePassword);
+            this.tabForms.Controls.Add(this.tabTestSchedule);
+            this.tabForms.Controls.Add(this.tabContestResult);
             this.tabForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabForms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabForms.Location = new System.Drawing.Point(200, 0);
             this.tabForms.Name = "tabForms";
             this.tabForms.SelectedIndex = 0;
-            this.tabForms.Size = new System.Drawing.Size(1080, 720);
+            this.tabForms.Size = new System.Drawing.Size(1080, 690);
             this.tabForms.TabIndex = 1;
             // 
             // tabInfo
@@ -172,8 +139,8 @@
             this.tabInfo.Controls.Add(this.label1);
             this.tabInfo.Location = new System.Drawing.Point(4, 29);
             this.tabInfo.Name = "tabInfo";
-            this.tabInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInfo.Size = new System.Drawing.Size(1072, 687);
+            this.tabInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabInfo.Size = new System.Drawing.Size(1072, 657);
             this.tabInfo.TabIndex = 0;
             this.tabInfo.Text = "Thông tin cá nhân";
             this.tabInfo.UseVisualStyleBackColor = true;
@@ -204,21 +171,13 @@
             this.button4.Text = "Lưu thay đổi";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // numberInputBox1
-            // 
-            this.numberInputBox1.Location = new System.Drawing.Point(169, 316);
-            this.numberInputBox1.MaxLength = 11;
-            this.numberInputBox1.Name = "numberInputBox1";
-            this.numberInputBox1.Size = new System.Drawing.Size(266, 26);
-            this.numberInputBox1.TabIndex = 19;
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(752, 129);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(47, 24);
-            this.radioButton2.TabIndex = 18;
+            this.radioButton2.TabIndex = 6;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -229,7 +188,7 @@
             this.radioButton1.Location = new System.Drawing.Point(643, 131);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(60, 24);
-            this.radioButton1.TabIndex = 17;
+            this.radioButton1.TabIndex = 5;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nam";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -240,7 +199,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(266, 26);
-            this.textBox8.TabIndex = 16;
+            this.textBox8.TabIndex = 0;
             // 
             // label9
             // 
@@ -258,7 +217,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(266, 26);
-            this.textBox7.TabIndex = 14;
+            this.textBox7.TabIndex = 0;
             // 
             // label8
             // 
@@ -286,7 +245,7 @@
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(740, 136);
-            this.textBox5.TabIndex = 10;
+            this.textBox5.TabIndex = 4;
             // 
             // label6
             // 
@@ -313,7 +272,8 @@
             this.textBox3.Location = new System.Drawing.Point(169, 256);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(266, 26);
-            this.textBox3.TabIndex = 6;
+            this.textBox3.TabIndex = 2;
+            this.textBox3.TextChanged += new System.EventHandler(this.CheckMail);
             // 
             // label4
             // 
@@ -330,7 +290,8 @@
             this.textBox2.Location = new System.Drawing.Point(169, 192);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(266, 26);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.CheckName);
             // 
             // label3
             // 
@@ -367,7 +328,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(266, 26);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -381,23 +342,73 @@
             // 
             // tabChangePassword
             // 
+            this.tabChangePassword.Controls.Add(this.panel8);
+            this.tabChangePassword.Controls.Add(this.panel7);
+            this.tabChangePassword.Controls.Add(this.textBox6);
+            this.tabChangePassword.Controls.Add(this.panel6);
             this.tabChangePassword.Controls.Add(this.button2);
             this.tabChangePassword.Controls.Add(this.button1);
             this.tabChangePassword.Controls.Add(this.label13);
-            this.tabChangePassword.Controls.Add(this.paddingTextBox3);
             this.tabChangePassword.Controls.Add(this.label12);
-            this.tabChangePassword.Controls.Add(this.paddingTextBox2);
             this.tabChangePassword.Controls.Add(this.label11);
-            this.tabChangePassword.Controls.Add(this.paddingTextBox1);
             this.tabChangePassword.Controls.Add(this.panel3);
             this.tabChangePassword.Controls.Add(this.label10);
             this.tabChangePassword.Location = new System.Drawing.Point(4, 29);
             this.tabChangePassword.Name = "tabChangePassword";
-            this.tabChangePassword.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChangePassword.Size = new System.Drawing.Size(1072, 687);
+            this.tabChangePassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabChangePassword.Size = new System.Drawing.Size(1072, 657);
             this.tabChangePassword.TabIndex = 1;
             this.tabChangePassword.Text = "Đổi mật khẩu";
             this.tabChangePassword.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Calibri", 12F);
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox6.Location = new System.Drawing.Point(339, 438);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.PasswordChar = '*';
+            this.textBox6.Size = new System.Drawing.Size(390, 20);
+            this.textBox6.TabIndex = 24;
+            this.textBox6.TabStop = false;
+            this.textBox6.TextChanged += new System.EventHandler(this.CheckPassWord);
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.CausesValidation = false;
+            this.panel6.Location = new System.Drawing.Point(329, 428);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(411, 39);
+            this.panel6.TabIndex = 25;
+            // 
+            // tbpassword
+            // 
+            this.tbpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbpassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.tbpassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tbpassword.Location = new System.Drawing.Point(10, 10);
+            this.tbpassword.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.tbpassword.Name = "tbpassword";
+            this.tbpassword.PasswordChar = '*';
+            this.tbpassword.Size = new System.Drawing.Size(390, 20);
+            this.tbpassword.TabIndex = 23;
+            this.tbpassword.TabStop = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.Location = new System.Drawing.Point(10, 10);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(389, 20);
+            this.txtPassword.TabIndex = 22;
+            this.txtPassword.TabStop = false;
             // 
             // button2
             // 
@@ -405,9 +416,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(531, 568);
+            this.button2.Location = new System.Drawing.Point(543, 514);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 52);
+            this.button2.Size = new System.Drawing.Size(196, 42);
             this.button2.TabIndex = 14;
             this.button2.Text = "Làm mới";
             this.button2.UseVisualStyleBackColor = false;
@@ -418,9 +429,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(326, 568);
+            this.button1.Location = new System.Drawing.Point(329, 515);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 52);
+            this.button1.Size = new System.Drawing.Size(200, 42);
             this.button1.TabIndex = 13;
             this.button1.Text = "Lưu thay đổi";
             this.button1.UseVisualStyleBackColor = false;
@@ -430,63 +441,33 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label13.Location = new System.Drawing.Point(322, 429);
+            this.label13.Location = new System.Drawing.Point(325, 378);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(223, 24);
             this.label13.TabIndex = 12;
             this.label13.Text = "Xác nhận vật khẩu mới";
-            // 
-            // paddingTextBox3
-            // 
-            this.paddingTextBox3.BackColor = System.Drawing.Color.White;
-            this.paddingTextBox3.CustomText = "";
-            this.paddingTextBox3.Location = new System.Drawing.Point(322, 461);
-            this.paddingTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.paddingTextBox3.Name = "paddingTextBox3";
-            this.paddingTextBox3.Size = new System.Drawing.Size(397, 76);
-            this.paddingTextBox3.TabIndex = 11;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label12.Location = new System.Drawing.Point(322, 278);
+            this.label12.Location = new System.Drawing.Point(325, 260);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 24);
             this.label12.TabIndex = 10;
             this.label12.Text = "Mật khẩu mới";
-            // 
-            // paddingTextBox2
-            // 
-            this.paddingTextBox2.BackColor = System.Drawing.Color.White;
-            this.paddingTextBox2.CustomText = "";
-            this.paddingTextBox2.Location = new System.Drawing.Point(322, 316);
-            this.paddingTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.paddingTextBox2.Name = "paddingTextBox2";
-            this.paddingTextBox2.Size = new System.Drawing.Size(397, 86);
-            this.paddingTextBox2.TabIndex = 9;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label11.Location = new System.Drawing.Point(322, 143);
+            this.label11.Location = new System.Drawing.Point(325, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(168, 24);
             this.label11.TabIndex = 8;
             this.label11.Text = "Mật khẩu hiện tại";
-            // 
-            // paddingTextBox1
-            // 
-            this.paddingTextBox1.BackColor = System.Drawing.Color.White;
-            this.paddingTextBox1.CustomText = "";
-            this.paddingTextBox1.Location = new System.Drawing.Point(322, 174);
-            this.paddingTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.paddingTextBox1.Name = "paddingTextBox1";
-            this.paddingTextBox1.Size = new System.Drawing.Size(397, 72);
-            this.paddingTextBox1.TabIndex = 5;
             // 
             // panel3
             // 
@@ -507,11 +488,156 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Đổi mật khẩu";
             // 
+            // tabTestSchedule
+            // 
+            this.tabTestSchedule.Controls.Add(this.panel4);
+            this.tabTestSchedule.Controls.Add(this.label14);
+            this.tabTestSchedule.Location = new System.Drawing.Point(4, 29);
+            this.tabTestSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTestSchedule.Name = "tabTestSchedule";
+            this.tabTestSchedule.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTestSchedule.Size = new System.Drawing.Size(1072, 657);
+            this.tabTestSchedule.TabIndex = 2;
+            this.tabTestSchedule.Text = "Lịch thi";
+            this.tabTestSchedule.UseVisualStyleBackColor = true;
+            // 
+            // tabContestResult
+            // 
+            this.tabContestResult.Controls.Add(this.panel5);
+            this.tabContestResult.Controls.Add(this.label15);
+            this.tabContestResult.Location = new System.Drawing.Point(4, 29);
+            this.tabContestResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabContestResult.Name = "tabContestResult";
+            this.tabContestResult.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabContestResult.Size = new System.Drawing.Size(1072, 657);
+            this.tabContestResult.TabIndex = 3;
+            this.tabContestResult.Text = "Kết quả học tập";
+            this.tabContestResult.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.CausesValidation = false;
+            this.panel7.Controls.Add(this.txtPassword);
+            this.panel7.Location = new System.Drawing.Point(329, 192);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(411, 39);
+            this.panel7.TabIndex = 27;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.CausesValidation = false;
+            this.panel8.Controls.Add(this.tbpassword);
+            this.panel8.Location = new System.Drawing.Point(329, 307);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(411, 39);
+            this.panel8.TabIndex = 28;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.panel4.Location = new System.Drawing.Point(37, 81);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(993, 3);
+            this.panel4.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.label14.Location = new System.Drawing.Point(459, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(108, 31);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Lịch thi";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.panel5.Location = new System.Drawing.Point(38, 74);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(993, 3);
+            this.panel5.TabIndex = 7;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.label15.Location = new System.Drawing.Point(397, 26);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(218, 31);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Kết quả học tập";
+            // 
+            // numberInputBox1
+            // 
+            this.numberInputBox1.Location = new System.Drawing.Point(169, 316);
+            this.numberInputBox1.MaxLength = 10;
+            this.numberInputBox1.Name = "numberInputBox1";
+            this.numberInputBox1.Size = new System.Drawing.Size(266, 26);
+            this.numberInputBox1.TabIndex = 3;
+            // 
+            // sidebarButton1
+            // 
+            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
+            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
+            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
+            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
+            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sidebarButton1.Name = "sidebarButton1";
+            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
+            this.sidebarButton1.TabIndex = 3;
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnUser.LabelText = "Thông tin cá nhân";
+            this.btnUser.Location = new System.Drawing.Point(0, 86);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(200, 110);
+            this.btnUser.TabIndex = 2;
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
+            this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
+            // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 690);
             this.Controls.Add(this.tabForms);
             this.Controls.Add(this.panel1);
             this.Name = "StudentInfo";
@@ -522,6 +648,14 @@
             this.tabInfo.PerformLayout();
             this.tabChangePassword.ResumeLayout(false);
             this.tabChangePassword.PerformLayout();
+            this.tabTestSchedule.ResumeLayout(false);
+            this.tabTestSchedule.PerformLayout();
+            this.tabContestResult.ResumeLayout(false);
+            this.tabContestResult.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
     }
@@ -560,12 +694,23 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
-        private CustomControls.PaddingTextBox paddingTextBox3;
         private System.Windows.Forms.Label label12;
-        private CustomControls.PaddingTextBox paddingTextBox2;
         private System.Windows.Forms.Label label11;
-        private CustomControls.PaddingTextBox paddingTextBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
+
+        private System.Windows.Forms.TabPage tabTestSchedule;
+        private System.Windows.Forms.TabPage tabContestResult;
+
+        private System.Windows.Forms.TextBox tbpassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label15;
     }
 }

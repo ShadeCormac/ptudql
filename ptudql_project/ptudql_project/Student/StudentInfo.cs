@@ -8,18 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.CustomControls;
+using ptudql_project.Utils;
 
-namespace ptudql_project
+namespace ptudql_project.Student
 {
     public partial class StudentInfo : Form
     {
 
         //private SidebarButton activeBtn = null;
-
+        ErrorProvider errors = null;
         public StudentInfo()
         {
             InitializeComponent();
+            errors = new ErrorProvider();
             this.btnLamBaiThi.Click += lamBaiTracNghiem;
+
         }
 
         //private void changeColorBtn(object sender, EventArgs e)
@@ -48,6 +51,51 @@ namespace ptudql_project
 
             //tabControl1.TabPages.Clear();
             //tabControl1.TabPages.Add(lamBaiTracNghiemPage);
+        }
+
+        private void btnLamBaiThi_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new StudentContest());
+        }
+
+        private void CheckMail(object sender, EventArgs e)
+        {
+            //string mail = "nthiepgk123@gmail.com";
+            TextBox input = sender as TextBox;
+            if (Validation.isEmail(input.Text))
+            {
+                errors.SetError((Control)sender, "");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "Email không hợp lệ ! Kiểm tra lại");
+            }
+        }
+
+        private void CheckName(object sender, EventArgs e)
+        {
+            TextBox input = sender as TextBox;
+            if (Validation.checkName(input.Text))
+            {
+                errors.SetError((Control)sender, "");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
+            }
+        }
+
+        private void CheckPassWord(object sender, EventArgs e) 
+        {
+            TextBox input = sender as TextBox;
+            if (Validation.checkPassWord(input.Text,tbpassword.Text))
+            {
+                errors.SetError((Control)sender, "");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
+            }
         }
     }
 }

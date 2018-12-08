@@ -68,29 +68,19 @@
     <Compile Include="CustomControls\PaddingTextBox.Designer.cs">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\Quest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CustomControls\Quest.Designer.cs">
-      <DependentUpon>Quest.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomControls\SidebarButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomControls\SidebarButton.Designer.cs">
       <DependentUpon>SidebarButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\Account.cs" />
+    <Compile Include="DAO\Question.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Student\StudentContest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentContest.Designer.cs">
+      <DependentUpon>StudentContest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\StudentInfo.Designer.cs">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </Compile>
@@ -117,8 +113,10 @@
     <Compile Include="TeacherLayout.Designer.cs">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Router.cs" />
+    <Compile Include="Utils\Validation.cs" />
     <EmbeddedResource Include="AdminLayout.resx">
       <DependentUpon>AdminLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,17 +126,11 @@
     <EmbeddedResource Include="CustomControls\PaddingTextBox.resx">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\Quest.resx">
-      <DependentUpon>Quest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SidebarButton.resx">
       <DependentUpon>SidebarButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,12 +145,12 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentContest.resx">
+      <DependentUpon>StudentContest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="QLTN.dbml.layout">
-      <DependentUpon>QLTN.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="TeacherLayout.resx">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +167,9 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLTN.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
