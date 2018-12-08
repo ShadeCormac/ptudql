@@ -60,7 +60,7 @@ create table CauHoi(
 	CauTLDung char(1),
 	--1: Gíao viên tạo, 2: học sinh đề suất
 	LoaiCauHoi int,
-	DaDuyet int
+	DaDuyet int default 0
 )
 go
 

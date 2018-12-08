@@ -91,9 +91,9 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="QLTN.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>QLTN.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Student\RequestQuestion.cs">
       <SubType>Form</SubType>
@@ -176,9 +176,6 @@
     <EmbeddedResource Include="Teacher\TeacherMain.resx">
       <DependentUpon>TeacherMain.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="QLTN.dbml.layout">
-      <DependentUpon>QLTN.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="Student\RequestQuestion.resx">
       <DependentUpon>RequestQuestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,16 +201,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="QLTN.dbml">
+      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLTN.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="QLTN.dbml.layout">
       <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
