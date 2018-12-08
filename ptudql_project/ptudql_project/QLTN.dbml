@@ -27,6 +27,7 @@
       <Column Name="CauD" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="CauTLDung" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Column Name="LoaiCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaDuyet" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="CauHoi_BoDeThi" Member="BoDeThis" ThisKey="IdCauHoi" OtherKey="IdCauHoi" Type="BoDeThi" />
     </Type>
   </Table>
@@ -45,6 +46,7 @@
     <Type Name="DeThi">
       <Column Name="IdDe" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="GVRaDe" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DeThi_BoDeThi" Member="BoDeThis" ThisKey="IdDe" OtherKey="IdDe" Type="BoDeThi" />
       <Association Name="DeThi_DanhSachThi" Member="DanhSachThis" ThisKey="IdDe" OtherKey="IdDe" Type="DanhSachThi" />
       <Association Name="DeThi_KyThi_DeThi" Member="KyThi_DeThis" ThisKey="IdDe" OtherKey="IdDe" Type="KyThi_DeThi" />

@@ -125,6 +125,18 @@
     <Compile Include="TeacherLayout.Designer.cs">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\AddTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddTest.Designer.cs">
+      <DependentUpon>AddTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherMain.Designer.cs">
+      <DependentUpon>TeacherMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Router.cs" />
@@ -157,6 +169,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\AddTest.resx">
+      <DependentUpon>AddTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\TeacherMain.resx">
+      <DependentUpon>TeacherMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="QLTN.dbml.layout">
       <DependentUpon>QLTN.dbml</DependentUpon>
@@ -199,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="Teacher\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Icon\Database.png" />

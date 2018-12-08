@@ -56,14 +56,14 @@
         <elementListCompartment Id="aa32a77e-9ff1-4be8-ac6a-7724fa6dca98" absoluteBounds="9.015, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.25 : 6.375); (8.625 : 6); (8.625 : 4.59699625651042); (9 : 4.59699625651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 6.25); (8.625 : 5.875); (8.625 : 4.59699625651042); (8.72916666666667 : 4.59699625651041 : JumpStart); (8.89583333333333 : 4.59699625651042 : JumpEnd); (9 : 4.59699625651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLTNDataContext/CauHoi/CauHoi_BoDeThi" />
       <nodes>
         <classShapeMoniker Id="0ac8b5bb-ff8d-4327-b61c-8519c566367a" />
         <classShapeMoniker Id="853a0f53-7295-4e91-ae2a-455608656a8e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 4.23599812825521); (8.60416666666667 : 4.23599812825521 : JumpStart); (8.77083333333333 : 4.23599812825521 : JumpEnd); (9 : 4.23599812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 4.23599812825521); (8.72916666666667 : 4.23599812825521 : JumpStart); (8.89583333333333 : 4.23599812825521 : JumpEnd); (9 : 4.23599812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLTNDataContext/DeThi/DeThi_BoDeThi" />
       <nodes>
         <classShapeMoniker Id="52a3b824-8e3b-46af-8950-3ed30dc4120c" />

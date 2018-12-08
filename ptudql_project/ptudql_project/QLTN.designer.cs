@@ -22,7 +22,7 @@ namespace ptudql_project
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name= "QLThiTracNghiem")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLThiTracNghiem")]
 	public partial class QLTNDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -526,6 +526,8 @@ namespace ptudql_project
 		
 		private System.Nullable<int> _LoaiCauHoi;
 		
+		private System.Nullable<int> _DaDuyet;
+		
 		private EntitySet<BoDeThi> _BoDeThis;
 		
     #region Extensibility Method Definitions
@@ -548,6 +550,8 @@ namespace ptudql_project
     partial void OnCauTLDungChanged();
     partial void OnLoaiCauHoiChanging(System.Nullable<int> value);
     partial void OnLoaiCauHoiChanged();
+    partial void OnDaDuyetChanging(System.Nullable<int> value);
+    partial void OnDaDuyetChanged();
     #endregion
 		
 		public CauHoi()
@@ -712,6 +716,26 @@ namespace ptudql_project
 					this._LoaiCauHoi = value;
 					this.SendPropertyChanged("LoaiCauHoi");
 					this.OnLoaiCauHoiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DaDuyet", DbType="Int")]
+		public System.Nullable<int> DaDuyet
+		{
+			get
+			{
+				return this._DaDuyet;
+			}
+			set
+			{
+				if ((this._DaDuyet != value))
+				{
+					this.OnDaDuyetChanging(value);
+					this.SendPropertyChanging();
+					this._DaDuyet = value;
+					this.SendPropertyChanged("DaDuyet");
+					this.OnDaDuyetChanged();
 				}
 			}
 		}
@@ -1029,6 +1053,8 @@ namespace ptudql_project
 		
 		private string _GVRaDe;
 		
+		private System.Nullable<int> _ThoiGian;
+		
 		private EntitySet<BoDeThi> _BoDeThis;
 		
 		private EntitySet<DanhSachThi> _DanhSachThis;
@@ -1045,6 +1071,8 @@ namespace ptudql_project
     partial void OnIdDeChanged();
     partial void OnGVRaDeChanging(string value);
     partial void OnGVRaDeChanged();
+    partial void OnThoiGianChanging(System.Nullable<int> value);
+    partial void OnThoiGianChanged();
     #endregion
 		
 		public DeThi()
@@ -1096,6 +1124,26 @@ namespace ptudql_project
 					this._GVRaDe = value;
 					this.SendPropertyChanged("GVRaDe");
 					this.OnGVRaDeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="Int")]
+		public System.Nullable<int> ThoiGian
+		{
+			get
+			{
+				return this._ThoiGian;
+			}
+			set
+			{
+				if ((this._ThoiGian != value))
+				{
+					this.OnThoiGianChanging(value);
+					this.SendPropertyChanging();
+					this._ThoiGian = value;
+					this.SendPropertyChanged("ThoiGian");
+					this.OnThoiGianChanged();
 				}
 			}
 		}

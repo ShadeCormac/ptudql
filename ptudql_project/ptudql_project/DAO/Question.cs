@@ -17,5 +17,14 @@ namespace ptudql_project.DAO
                         select cauHoi).Take(40).ToList();
             }
         }
+
+        public static void AddRequest(CauHoi request)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                db.CauHois.InsertOnSubmit(request);
+                db.SubmitChanges();
+            }
+        }
     }
 }
