@@ -53,10 +53,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabChangePassword = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tbpassword = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.tbpassword = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -65,11 +67,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.tabTestSchedule = new System.Windows.Forms.TabPage();
-            this.tabContestResult = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.tabContestResult = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.numberInputBox1 = new ptudql_project.CustomControls.NumberInputBox();
@@ -81,10 +81,10 @@
             this.tabForms.SuspendLayout();
             this.tabInfo.SuspendLayout();
             this.tabChangePassword.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.tabTestSchedule.SuspendLayout();
             this.tabContestResult.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,7 +139,7 @@
             this.tabInfo.Controls.Add(this.label1);
             this.tabInfo.Location = new System.Drawing.Point(4, 29);
             this.tabInfo.Name = "tabInfo";
-            this.tabInfo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabInfo.Padding = new System.Windows.Forms.Padding(3);
             this.tabInfo.Size = new System.Drawing.Size(1072, 657);
             this.tabInfo.TabIndex = 0;
             this.tabInfo.Text = "Thông tin cá nhân";
@@ -355,11 +355,57 @@
             this.tabChangePassword.Controls.Add(this.label10);
             this.tabChangePassword.Location = new System.Drawing.Point(4, 29);
             this.tabChangePassword.Name = "tabChangePassword";
-            this.tabChangePassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabChangePassword.Padding = new System.Windows.Forms.Padding(3);
             this.tabChangePassword.Size = new System.Drawing.Size(1072, 657);
             this.tabChangePassword.TabIndex = 1;
             this.tabChangePassword.Text = "Đổi mật khẩu";
             this.tabChangePassword.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.CausesValidation = false;
+            this.panel8.Controls.Add(this.tbpassword);
+            this.panel8.Location = new System.Drawing.Point(329, 307);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(411, 39);
+            this.panel8.TabIndex = 28;
+            // 
+            // tbpassword
+            // 
+            this.tbpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbpassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.tbpassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tbpassword.Location = new System.Drawing.Point(10, 10);
+            this.tbpassword.Margin = new System.Windows.Forms.Padding(10);
+            this.tbpassword.Name = "tbpassword";
+            this.tbpassword.PasswordChar = '*';
+            this.tbpassword.Size = new System.Drawing.Size(390, 20);
+            this.tbpassword.TabIndex = 23;
+            this.tbpassword.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.CausesValidation = false;
+            this.panel7.Controls.Add(this.txtPassword);
+            this.panel7.Location = new System.Drawing.Point(329, 192);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(411, 39);
+            this.panel7.TabIndex = 27;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.Location = new System.Drawing.Point(10, 10);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(10);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(389, 20);
+            this.txtPassword.TabIndex = 22;
+            this.txtPassword.TabStop = false;
             // 
             // textBox6
             // 
@@ -367,7 +413,7 @@
             this.textBox6.Font = new System.Drawing.Font("Calibri", 12F);
             this.textBox6.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.textBox6.Location = new System.Drawing.Point(339, 438);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(10);
             this.textBox6.Name = "textBox6";
             this.textBox6.PasswordChar = '*';
             this.textBox6.Size = new System.Drawing.Size(390, 20);
@@ -383,32 +429,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(411, 39);
             this.panel6.TabIndex = 25;
-            // 
-            // tbpassword
-            // 
-            this.tbpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbpassword.Font = new System.Drawing.Font("Calibri", 12F);
-            this.tbpassword.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.tbpassword.Location = new System.Drawing.Point(10, 10);
-            this.tbpassword.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.tbpassword.Name = "tbpassword";
-            this.tbpassword.PasswordChar = '*';
-            this.tbpassword.Size = new System.Drawing.Size(390, 20);
-            this.tbpassword.TabIndex = 23;
-            this.tbpassword.TabStop = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPassword.Location = new System.Drawing.Point(10, 10);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(389, 20);
-            this.txtPassword.TabIndex = 22;
-            this.txtPassword.TabStop = false;
             // 
             // button2
             // 
@@ -493,46 +513,13 @@
             this.tabTestSchedule.Controls.Add(this.panel4);
             this.tabTestSchedule.Controls.Add(this.label14);
             this.tabTestSchedule.Location = new System.Drawing.Point(4, 29);
-            this.tabTestSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTestSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.tabTestSchedule.Name = "tabTestSchedule";
-            this.tabTestSchedule.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTestSchedule.Padding = new System.Windows.Forms.Padding(2);
             this.tabTestSchedule.Size = new System.Drawing.Size(1072, 657);
             this.tabTestSchedule.TabIndex = 2;
             this.tabTestSchedule.Text = "Lịch thi";
             this.tabTestSchedule.UseVisualStyleBackColor = true;
-            // 
-            // tabContestResult
-            // 
-            this.tabContestResult.Controls.Add(this.panel5);
-            this.tabContestResult.Controls.Add(this.label15);
-            this.tabContestResult.Location = new System.Drawing.Point(4, 29);
-            this.tabContestResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabContestResult.Name = "tabContestResult";
-            this.tabContestResult.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabContestResult.Size = new System.Drawing.Size(1072, 657);
-            this.tabContestResult.TabIndex = 3;
-            this.tabContestResult.Text = "Kết quả học tập";
-            this.tabContestResult.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.CausesValidation = false;
-            this.panel7.Controls.Add(this.txtPassword);
-            this.panel7.Location = new System.Drawing.Point(329, 192);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(411, 39);
-            this.panel7.TabIndex = 27;
-            // 
-            // panel8
-            // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.CausesValidation = false;
-            this.panel8.Controls.Add(this.tbpassword);
-            this.panel8.Location = new System.Drawing.Point(329, 307);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(411, 39);
-            this.panel8.TabIndex = 28;
             // 
             // panel4
             // 
@@ -552,6 +539,19 @@
             this.label14.Size = new System.Drawing.Size(108, 31);
             this.label14.TabIndex = 6;
             this.label14.Text = "Lịch thi";
+            // 
+            // tabContestResult
+            // 
+            this.tabContestResult.Controls.Add(this.panel5);
+            this.tabContestResult.Controls.Add(this.label15);
+            this.tabContestResult.Location = new System.Drawing.Point(4, 29);
+            this.tabContestResult.Margin = new System.Windows.Forms.Padding(2);
+            this.tabContestResult.Name = "tabContestResult";
+            this.tabContestResult.Padding = new System.Windows.Forms.Padding(2);
+            this.tabContestResult.Size = new System.Drawing.Size(1072, 657);
+            this.tabContestResult.TabIndex = 3;
+            this.tabContestResult.Text = "Kết quả học tập";
+            this.tabContestResult.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -592,6 +592,9 @@
             this.sidebarButton1.Name = "sidebarButton1";
             this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
             this.sidebarButton1.TabIndex = 3;
+            this.sidebarButton1.Load += new System.EventHandler(this.sidebarButton1_Load);
+            this.sidebarButton1.Click += new System.EventHandler(this.sidebarButton1_Click);
+            this.sidebarButton1.DoubleClick += new System.EventHandler(this.sidebarButton1_DoubleClick);
             // 
             // btnUser
             // 
@@ -631,7 +634,9 @@
             this.btnLamBaiThi.Name = "btnLamBaiThi";
             this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
             this.btnLamBaiThi.TabIndex = 0;
+            this.btnLamBaiThi.Load += new System.EventHandler(this.btnLamBaiThi_Load);
             this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
+            this.btnLamBaiThi.DoubleClick += new System.EventHandler(this.btnLamBaiThi_DoubleClick);
             // 
             // StudentInfo
             // 
@@ -648,14 +653,14 @@
             this.tabInfo.PerformLayout();
             this.tabChangePassword.ResumeLayout(false);
             this.tabChangePassword.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.tabTestSchedule.ResumeLayout(false);
             this.tabTestSchedule.PerformLayout();
             this.tabContestResult.ResumeLayout(false);
             this.tabContestResult.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
     }
