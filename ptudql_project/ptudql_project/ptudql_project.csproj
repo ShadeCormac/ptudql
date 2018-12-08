@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminLayout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminLayout.Designer.cs">
-      <DependentUpon>AdminLayout.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomControls\ListQuest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,12 +113,6 @@
     <Compile Include="Student\StudentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherLayout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TeacherLayout.Designer.cs">
-      <DependentUpon>TeacherLayout.cs</DependentUpon>
-    </Compile>
     <Compile Include="Teacher\AddTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +130,6 @@
     <Compile Include="Utils\Router.cs" />
     <Compile Include="Utils\MyTimer.cs" />
     <Compile Include="Utils\Validation.cs" />
-    <EmbeddedResource Include="AdminLayout.resx">
-      <DependentUpon>AdminLayout.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ListQuest.resx">
       <DependentUpon>ListQuest.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,9 +172,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TeacherLayout.resx">
-      <DependentUpon>TeacherLayout.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
