@@ -29,11 +29,13 @@ namespace ptudql_project
 
     private void loginBtn_Click(object sender, EventArgs e)
     {
-      Router.ChangeForm(this, new StudentInfo());
-            //check database?
-    }
 
-      
+            //check database?
+
+            Router.ChangeForm(this, new StudentInfo());
+        }
+
+
         private void txtUsername_Validating(object sender, CancelEventArgs e)
         {
             Control control = sender as Control;
