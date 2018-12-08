@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace ptudql_project.Utils
 {
-  static class Extension
-  {
-    public static string toTimeString(this long seconds)
+    static class Extension
     {
-      var hours = seconds / 3600;
-      seconds -= hours * 3600;
-      var minutes = seconds / 60;
-      seconds -= minutes * 60;
-      return $"{hours.ToString("00")}:{minutes.ToString("00")}:{seconds.ToString("00")}";
+        public static string toTimeString(this long seconds)
+        {
+            var hours = seconds / 3600;
+            seconds -= hours * 3600;
+            var minutes = seconds / 60;
+            seconds -= minutes * 60;
+            if (hours != 0)
+            {
+                return $"{hours.ToString("00")}:{minutes.ToString("00")}:{seconds.ToString("00")}";
+            }
+            return $"{minutes.ToString("00")}:{seconds.ToString("00")}";
+        }
     }
-  }
 }

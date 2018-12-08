@@ -107,6 +107,12 @@
     <Compile Include="Student\StudentContest.Designer.cs">
       <DependentUpon>StudentContest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student\StudentContestResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentContestResult.Designer.cs">
+      <DependentUpon>StudentContestResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\StudentInfo.Designer.cs">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </Compile>
@@ -122,6 +128,7 @@
     <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Router.cs" />
+    <Compile Include="Utils\MyTimer.cs" />
     <Compile Include="Utils\Validation.cs" />
     <EmbeddedResource Include="AdminLayout.resx">
       <DependentUpon>AdminLayout.cs</DependentUpon>
@@ -159,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentContest.resx">
       <DependentUpon>StudentContest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentContestResult.resx">
+      <DependentUpon>StudentContestResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
