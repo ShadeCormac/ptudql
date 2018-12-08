@@ -113,12 +113,6 @@
     <Compile Include="TeacherLayout.Designer.cs">
       <DependentUpon>TeacherLayout.cs</DependentUpon>
     </Compile>
-    <Compile Include="temp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="temp.Designer.cs">
-      <DependentUpon>temp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Router.cs" />
@@ -150,9 +144,6 @@
     </Compile>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="temp.resx">
-      <DependentUpon>temp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentContest.resx">
       <DependentUpon>StudentContest.cs</DependentUpon>
