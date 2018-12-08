@@ -95,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Student\RequestQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\RequestQuestion.Designer.cs">
+      <DependentUpon>RequestQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\StudentContest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Student\RequestQuestion.resx">
+      <DependentUpon>RequestQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentContest.resx">
       <DependentUpon>StudentContest.cs</DependentUpon>

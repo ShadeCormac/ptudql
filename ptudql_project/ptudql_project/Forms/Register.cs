@@ -112,7 +112,7 @@ namespace ptudql_project
             {
                 //must use crypto
                 //use Validation class later
-                if (Account.isRegisterd(_username))
+                if (!Account.isRegisterd(_username))
                 {
                     if (!Validation.checkPassWord(_password, _rePassword))
                     {
@@ -125,6 +125,10 @@ namespace ptudql_project
                         TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3 };
                         Account.Register(tk);
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Ten tai khoan da ton tai");
                 }
             }
 

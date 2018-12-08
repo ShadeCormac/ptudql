@@ -97,5 +97,30 @@ namespace ptudql_project.Student
                 errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
             }
         }
+
+        private void btnLamBaiThi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLamBaiThi_DoubleClick(object sender, EventArgs e)
+        {
+            //Router.ChangeForm(this, )
+        }
+
+        private void sidebarButton1_Load(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new RequestQuestion());
+        }
+
+        private void sidebarButton1_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void sidebarButton1_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new RequestQuestion());
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace ptudql_project.Student
                 
             }
         }
+
+        private void tabListQuestion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

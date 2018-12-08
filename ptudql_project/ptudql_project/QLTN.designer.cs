@@ -22,7 +22,7 @@ namespace ptudql_project
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLThiTracNghiem")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name= "QLThiTracNghiem")]
 	public partial class QLTNDataContext : System.Data.Linq.DataContext
 	{
 		
