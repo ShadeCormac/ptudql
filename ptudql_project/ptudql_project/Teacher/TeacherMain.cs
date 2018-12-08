@@ -53,13 +53,7 @@ namespace ptudql_project.Teacher
         private void CbbTestId_SelectedIndexChanged(object sender, EventArgs e)
         {
             //load lai ds cac cau hoi cua de thi
-            using (var db = new QLTNDataContext())
-            {
-                this.dgvQuestions.DataSource = db.BoDeThis
-                    .Where(quest => quest.IdDe == cbbTestId.SelectedValue.ToString())
-                    .Join(db.CauHois, quest => quest.IdCauHoi, ch => ch.IdCauHoi,
-                    (quest, ch) => ch).ToList();
-            }
+            this.dgvQuestions.DataSource = Test.loadQuestions(cbbTestId.SelectedValue.ToString());
         }
 
         void LoadStudents()
@@ -72,9 +66,6 @@ namespace ptudql_project.Teacher
             Router.ChangeForm(this, new AddTest());
         }
 
-        private void dgvQuestions_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

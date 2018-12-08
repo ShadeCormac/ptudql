@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Linq;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ptudql_project.DAO
 {
-    public class Question
+    public partial class Question
     {
         public static List<CauHoi> LoadQuestion()
         {
@@ -24,6 +25,14 @@ namespace ptudql_project.DAO
             {
                 db.CauHois.InsertOnSubmit(request);
                 db.SubmitChanges();
+            }
+        }
+
+        public static BindingList<CauHoi> GetAllQuestions()
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return new BindingList<CauHoi>(db.CauHois.ToList());
             }
         }
     }

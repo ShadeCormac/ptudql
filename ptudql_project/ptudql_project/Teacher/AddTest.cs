@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ptudql_project.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +13,19 @@ namespace ptudql_project.Teacher
 {
     public partial class AddTest : Form
     {
-        List<string> listQuestions = null;
+        BindingList<string> listQuestions = null;
         public AddTest()
         {
-            listQuestions = new List<string>();
+            listQuestions = new BindingList<string>();
             InitializeComponent();
         }
 
         private void AddTest_Load(object sender, EventArgs e)
         {
-            using(var db = new QLTNDataContext())
-            {
-                var data = db.CauHois;
-                this.dgvQuestions.DataSource = data;
-            }
+            var allQuestions = Question.GetAllQuestions();
+            this.dgvQuestions.DataSource = allQuestions;
+            this.lbAddedQuestion.DataSource = listQuestions;
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -33,38 +33,26 @@ namespace ptudql_project.Teacher
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
-            if (txtBoDeThi.Text == "")
-            {
-                MessageBox.Show("Chưa nhập bộ đề thi", "Thông báo");
-                return;
-            }
-            else if(nipTime.Text == "")
-            {
-                MessageBox.Show("Chưa nhập thời gian", "Thông báo");
-                return;
-            }
            if(dgvQuestions.SelectedRows.Count==0)
             { return; }
            else
             {
+                var tempList = listQuestions.ToList();
                 foreach(DataGridViewRow question in dgvQuestions.SelectedRows)
                 {
+                    string questionId = question.Cells["IdCauHoi"].Value.ToString();
                     //MessageBox.Show(question.Cells["IdCauHoi"].Value.ToString());
-                    listQuestions.Add(question.Cells["IdCauHoi"].Value.ToString());
+                    if (!tempList.Contains(questionId))
+                        listQuestions.Add(questionId);
                 }
-                listQuestions = listQuestions.Distinct().ToList();
+                
             }
 
             
         }
-
+        
         private void btnCreateTest_Click(object sender, EventArgs e)
         {
             if (txtBoDeThi.Text == "")
@@ -77,39 +65,37 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Chưa nhập thời gian", "Thông báo");
                 return;
             }
-            else
+            else if (Test.isExisted(txtBoDeThi.Text))
             {
-                using (var db = new QLTNDataContext())
-                {
-                    var result = db.DeThis.Where(dethi => dethi.IdDe == txtBoDeThi.Text).SingleOrDefault();
-                    if (result != null)
-                    {
-                        MessageBox.Show("Mã đề đã tồn tại", "Thông báo");
-                        return;
-                    }
-                }
+                MessageBox.Show("Mã đề thi đã tồn tại", "Thông báo");
+                return;
             }
-            using (var create = new QLTNDataContext())
+
+            Test.create(new DeThi()
             {
-                create.DeThis.InsertOnSubmit(new DeThi()
+                GVRaDe = "giaovien",
+                IdDe = txtBoDeThi.Text,
+                ThoiGian = int.Parse(nipTime.Text)
+            });
+
+            BoDeThi bdt = null;
+            List<BoDeThi> bdtList = new List<BoDeThi>();
+            foreach (string quest in listQuestions)
+            {
+                bdt = new BoDeThi
                 {
-                    GVRaDe = "giaovien",
-                    IdDe = txtBoDeThi.Text,
-                    ThoiGian = 20//int.Parse(nipTime.Text)
-                });
-                foreach (string quest in listQuestions)
-                {
-                    create.BoDeThis.InsertOnSubmit(new BoDeThi
-                    {
-                        IdCauHoi = int.Parse(quest),
-                        IdDe = txtBoDeThi.Text
-                    });
-                }
-                create.SubmitChanges();
-                //create.add
-                MessageBox.Show("Bạn đã thêm thành công");
-                //ResetInput(checkedButton);
+                    IdCauHoi = int.Parse(quest),
+                    IdDe = txtBoDeThi.Text
+                };
+                bdtList.Add(bdt);
             }
+            Test.addQuestions(bdtList);
+
+            MessageBox.Show("Bạn đã thêm thành công");
+            this.nipTime.Text = "";
+            this.listQuestions.Clear();
+            this.txtBoDeThi.Text = "";
+
         }
     }
 }

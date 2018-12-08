@@ -35,29 +35,29 @@ namespace ptudql_project
     {
             //Router.ChangeForm(this, new StudentInfo());
             Router.ChangeForm(this, new TeacherMain());
-            // if (_username.Length < 6 || _password.Length < 6)
-            // {
-            //     errors.SetError((Control)sender, "Bạn phải nhập thông tin");
-            // }
-            // else
-            // {
-            //     errors.SetError((Control)sender, "");
-            //     if (!Account.isRegisterd(_username))
-            //     {
-            //         MessageBox.Show("Tài khoản không tồn tại!");
-            //     }
-            //     else
-            //     {
-            //         if (!Crypto.passwordCompare(_password, Account.getPassword(_username)))
-            //         {
-            //             MessageBox.Show("mật khẩu sai");
-            //         }
-            //         else
-            //         {
-            //             Router.ChangeForm(this, new StudentInfo());
-            //         }
-            //     }
-            // }
+            if (_username.Length < 6 || _password.Length < 6)
+            {
+                errors.SetError((Control)sender, "Bạn phải nhập thông tin");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "");
+                if (!Account.isRegisterd(_username))
+                {
+                    MessageBox.Show("Tài khoản không tồn tại!");
+                }
+                else
+                {
+                    if (!Crypto.passwordCompare(_password, Account.getPassword(_username)))
+                    {
+                        MessageBox.Show("mật khẩu sai");
+                    }
+                    else
+                    {
+                        Router.ChangeForm(this, new StudentInfo());
+                    }
+                }
+            }
         }
         private void txtUsername_Validating(object sender, CancelEventArgs e)
         {
