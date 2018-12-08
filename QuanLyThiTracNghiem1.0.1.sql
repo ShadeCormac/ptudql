@@ -37,7 +37,9 @@ create table KyThi(
 	TenKyThi nvarchar(50),
 	SLThamGia int, 
 	--cho biết là kỳ thi thử/ôn tập hay là thi thật
-	LoaiKyThi int
+	LoaiKyThi int,
+	ThoiGianBatDau datetime,
+	ThoiGianKetThuc datetime
 )
 go
 create table DeThi(
@@ -57,7 +59,8 @@ create table CauHoi(
 	CauD nvarchar(max),
 	CauTLDung char(1),
 	--1: Gíao viên tạo, 2: học sinh đề suất
-	LoaiCauHoi int
+	LoaiCauHoi int,
+	DaDuyet int
 )
 go
 

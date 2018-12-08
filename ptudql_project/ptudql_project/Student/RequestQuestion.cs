@@ -69,7 +69,8 @@ namespace ptudql_project.Student
                 CauC = txtCauC.Text,
                 CauD = txtCauD.Text,
                 CauTLDung = checkedButton.Text.ToLower().ToCharArray().FirstOrDefault(),
-                LoaiCauHoi = 2
+                LoaiCauHoi = 2,
+                DaDuyet = 0
             };
             Question.AddRequest(requestQuest);
             MessageBox.Show("Bạn đã thêm thành công");
