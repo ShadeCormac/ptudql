@@ -30,12 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qlCauHoi = new System.Windows.Forms.TabPage();
+            this.txtCauDung = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtA = new System.Windows.Forms.TextBox();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
+            this.txtD = new System.Windows.Forms.TextBox();
+            this.txtNoiDung = new System.Windows.Forms.TextBox();
+            this.btnSaveChanges = new System.Windows.Forms.Button();
             this.dgvAllQuest = new System.Windows.Forms.DataGridView();
             this.qlDeThi = new System.Windows.Forms.TabPage();
             this.btnDeleteTest = new System.Windows.Forms.Button();
@@ -47,6 +56,10 @@
             this.qlKyThi = new System.Windows.Forms.TabPage();
             this.qlKyThiThu = new System.Windows.Forms.TabPage();
             this.qlHocSinh = new System.Windows.Forms.TabPage();
+            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
+            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.qlCauHoi.SuspendLayout();
@@ -68,58 +81,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 657);
             this.panel1.TabIndex = 1;
             // 
-            // sidebarButton1
-            // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
-            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
-            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
-            this.sidebarButton1.TabIndex = 3;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
-            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
-            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.qlCauHoi);
@@ -137,21 +98,151 @@
             // 
             // qlCauHoi
             // 
+            this.qlCauHoi.Controls.Add(this.txtCauDung);
+            this.qlCauHoi.Controls.Add(this.label6);
+            this.qlCauHoi.Controls.Add(this.label5);
+            this.qlCauHoi.Controls.Add(this.label4);
+            this.qlCauHoi.Controls.Add(this.label3);
+            this.qlCauHoi.Controls.Add(this.label2);
+            this.qlCauHoi.Controls.Add(this.label1);
+            this.qlCauHoi.Controls.Add(this.txtA);
+            this.qlCauHoi.Controls.Add(this.txtB);
+            this.qlCauHoi.Controls.Add(this.txtC);
+            this.qlCauHoi.Controls.Add(this.txtD);
+            this.qlCauHoi.Controls.Add(this.txtNoiDung);
+            this.qlCauHoi.Controls.Add(this.btnSaveChanges);
             this.qlCauHoi.Controls.Add(this.dgvAllQuest);
             this.qlCauHoi.Location = new System.Drawing.Point(4, 22);
             this.qlCauHoi.Name = "qlCauHoi";
             this.qlCauHoi.Padding = new System.Windows.Forms.Padding(3);
-            this.qlCauHoi.Size = new System.Drawing.Size(781, 630);
+            this.qlCauHoi.Size = new System.Drawing.Size(917, 631);
             this.qlCauHoi.TabIndex = 0;
             this.qlCauHoi.Text = "Câu hỏi";
             this.qlCauHoi.UseVisualStyleBackColor = true;
             // 
+            // txtCauDung
+            // 
+            this.txtCauDung.Location = new System.Drawing.Point(725, 477);
+            this.txtCauDung.MaxLength = 1;
+            this.txtCauDung.Multiline = true;
+            this.txtCauDung.Name = "txtCauDung";
+            this.txtCauDung.Size = new System.Drawing.Size(52, 45);
+            this.txtCauDung.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(722, 461);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Câu Đúng";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(502, 533);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Câu D";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(269, 533);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Câu C";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(502, 461);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Câu B";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(269, 461);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Câu A";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 461);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Nội dung";
+            // 
+            // txtA
+            // 
+            this.txtA.Location = new System.Drawing.Point(272, 477);
+            this.txtA.Multiline = true;
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(184, 45);
+            this.txtA.TabIndex = 7;
+            // 
+            // txtB
+            // 
+            this.txtB.Location = new System.Drawing.Point(505, 477);
+            this.txtB.Multiline = true;
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(184, 45);
+            this.txtB.TabIndex = 6;
+            // 
+            // txtC
+            // 
+            this.txtC.Location = new System.Drawing.Point(272, 549);
+            this.txtC.Multiline = true;
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(184, 45);
+            this.txtC.TabIndex = 5;
+            // 
+            // txtD
+            // 
+            this.txtD.Location = new System.Drawing.Point(505, 549);
+            this.txtD.Multiline = true;
+            this.txtD.Name = "txtD";
+            this.txtD.Size = new System.Drawing.Size(184, 45);
+            this.txtD.TabIndex = 4;
+            // 
+            // txtNoiDung
+            // 
+            this.txtNoiDung.Location = new System.Drawing.Point(26, 477);
+            this.txtNoiDung.Multiline = true;
+            this.txtNoiDung.Name = "txtNoiDung";
+            this.txtNoiDung.Size = new System.Drawing.Size(184, 45);
+            this.txtNoiDung.TabIndex = 2;
+            // 
+            // btnSaveChanges
+            // 
+            this.btnSaveChanges.Location = new System.Drawing.Point(66, 549);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(112, 31);
+            this.btnSaveChanges.TabIndex = 1;
+            this.btnSaveChanges.Text = "Lưu thay đổi";
+            this.btnSaveChanges.UseVisualStyleBackColor = true;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
+            // 
             // dgvAllQuest
             // 
+            this.dgvAllQuest.AllowUserToAddRows = false;
+            this.dgvAllQuest.AllowUserToDeleteRows = false;
             this.dgvAllQuest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllQuest.Location = new System.Drawing.Point(30, 81);
+            this.dgvAllQuest.Location = new System.Drawing.Point(26, 0);
             this.dgvAllQuest.Name = "dgvAllQuest";
-            this.dgvAllQuest.Size = new System.Drawing.Size(570, 407);
+            this.dgvAllQuest.ReadOnly = true;
+            this.dgvAllQuest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAllQuest.Size = new System.Drawing.Size(883, 444);
             this.dgvAllQuest.TabIndex = 0;
             // 
             // qlDeThi
@@ -230,7 +321,7 @@
             // 
             this.qlKyThi.Location = new System.Drawing.Point(4, 22);
             this.qlKyThi.Name = "qlKyThi";
-            this.qlKyThi.Size = new System.Drawing.Size(781, 630);
+            this.qlKyThi.Size = new System.Drawing.Size(917, 631);
             this.qlKyThi.TabIndex = 2;
             this.qlKyThi.Text = "Kỳ thi";
             this.qlKyThi.UseVisualStyleBackColor = true;
@@ -239,7 +330,7 @@
             // 
             this.qlKyThiThu.Location = new System.Drawing.Point(4, 22);
             this.qlKyThiThu.Name = "qlKyThiThu";
-            this.qlKyThiThu.Size = new System.Drawing.Size(781, 630);
+            this.qlKyThiThu.Size = new System.Drawing.Size(917, 631);
             this.qlKyThiThu.TabIndex = 3;
             this.qlKyThiThu.Text = "Kỳ thi thử";
             this.qlKyThiThu.UseVisualStyleBackColor = true;
@@ -248,10 +339,62 @@
             // 
             this.qlHocSinh.Location = new System.Drawing.Point(4, 22);
             this.qlHocSinh.Name = "qlHocSinh";
-            this.qlHocSinh.Size = new System.Drawing.Size(781, 630);
+            this.qlHocSinh.Size = new System.Drawing.Size(917, 631);
             this.qlHocSinh.TabIndex = 4;
             this.qlHocSinh.Text = "Học sinh";
             this.qlHocSinh.UseVisualStyleBackColor = true;
+            // 
+            // sidebarButton1
+            // 
+            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
+            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
+            this.sidebarButton1.LabelText = "Thêm câu hỏi";
+            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
+            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sidebarButton1.Name = "sidebarButton1";
+            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
+            this.sidebarButton1.TabIndex = 3;
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnUser.LabelText = "Thông tin cá nhân";
+            this.btnUser.Location = new System.Drawing.Point(0, 86);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(200, 110);
+            this.btnUser.TabIndex = 2;
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
             // 
             // TeacherMain
             // 
@@ -265,6 +408,7 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.qlCauHoi.ResumeLayout(false);
+            this.qlCauHoi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllQuest)).EndInit();
             this.qlDeThi.ResumeLayout(false);
             this.qlDeThi.PerformLayout();
@@ -293,5 +437,18 @@
         private System.Windows.Forms.DataGridView dgvAllQuest;
         private System.Windows.Forms.Button btnDeleteTest;
         private System.Windows.Forms.Button btnAddTest;
+        private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.TextBox txtNoiDung;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.TextBox txtB;
+        private System.Windows.Forms.TextBox txtC;
+        private System.Windows.Forms.TextBox txtD;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCauDung;
+        private System.Windows.Forms.Label label6;
     }
 }

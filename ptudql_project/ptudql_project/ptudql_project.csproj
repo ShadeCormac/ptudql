@@ -49,22 +49,30 @@
   <ItemGroup>
     <Compile Include="CustomControls\ListQuest.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="CustomControls\ListQuest.Designer.cs" />
+    <Compile Include="CustomControls\ListQuest.Designer.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="CustomControls\NumberInputBox.cs">
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\PaddingTextBox.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\PaddingTextBox.Designer.cs">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\SidebarButton.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\SidebarButton.Designer.cs">
       <DependentUpon>SidebarButton.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\Question.cs" />
@@ -129,12 +137,16 @@
     <Compile Include="Utils\Router.cs" />
     <Compile Include="Utils\MyTimer.cs" />
     <Compile Include="Utils\Validation.cs" />
-    <EmbeddedResource Include="CustomControls\ListQuest.resx" />
+    <EmbeddedResource Include="CustomControls\ListQuest.resx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\PaddingTextBox.resx">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SidebarButton.resx">
       <DependentUpon>SidebarButton.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

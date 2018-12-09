@@ -14,40 +14,66 @@ namespace ptudql_project.Teacher
 {
     public partial class TeacherMain : Form
     {
+        private BindingList<CauHoi> _trackingList = null;
         public TeacherMain()
         {
             InitializeComponent();
+            _trackingList = new BindingList<CauHoi>();
+            LoadQuestionsForm();
+            LoadQuestForm();
+            BindTxt();
+        }
+
+        private void BindTxt()
+        {
+            txtNoiDung.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "NoiDung");
+            txtA.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauA");
+            txtB.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauB");
+            txtC.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauC");
+            txtD.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauD");
+            txtCauDung.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauTLDung");
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (this.tabControl1.SelectedTab.Text) {
-                case "Đề thi":
-                    LoadQuestForm();
-                    break;
-                case "Câu hỏi":
-                    LoadQuestionsForm();
-                    break;
+            //switch (this.tabControl1.SelectedTab.Text) {
+            //    case "Đề thi":
+            //        LoadQuestForm();
+            //        break;
+            //    case "Câu hỏi":
+            //        LoadQuestionsForm();
+            //        break;
                 
-            }
+            //}
         }
         void LoadQuestionsForm()
         {
-            var data = Question.LoadQuestion();
-            this.dgvAllQuest.DataSource = data;
+            if (this.dgvAllQuest.DataSource == null)
+            {
+                var data = Question.GetAllQuestions();
+                data.ListChanged += Data_ListChanged;
+                
+                this.dgvAllQuest.DataSource = data;
+            }
+            
+        }
+
+        private void Data_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            if (e.ListChangedType == ListChangedType.ItemChanged)
+            {
+                var list = this.dgvAllQuest.DataSource as BindingList<CauHoi>;
+                if(!_trackingList.Contains(list[e.NewIndex]))
+                    _trackingList.Add(list[e.NewIndex]);
+            }
         }
 
         void LoadQuestForm()
         {
+            var q = Question.GetAllQuestions();
+            q.ListChanged += Data_ListChanged;
+            this.dgvAllQuest.DataSource = q;
             
-            using (var db = new QLTNDataContext())
-            {
-                var Tests = db.DeThis.Select(dt => dt.IdDe).Distinct();
-                this.cbbTestId.DataSource = Tests;
-                this.cbbTestId.SelectedIndexChanged += CbbTestId_SelectedIndexChanged;
-               
-            }
-
         }
 
         private void CbbTestId_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,7 +84,7 @@ namespace ptudql_project.Teacher
 
         void LoadStudents()
         {
-
+            
         }
 
         private void btnAddTest_Click(object sender, EventArgs e)
@@ -66,6 +92,15 @@ namespace ptudql_project.Teacher
             Router.ChangeForm(this, new AddTest());
         }
 
-       
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            if (_trackingList.Count > 0)
+            {
+                Question.SaveChanges(_trackingList.OrderBy(q => q.IdCauHoi).ToList());
+                _trackingList.Clear();
+                MessageBox.Show("Đã cập nhật thành công", "Thông báo");
+            }
+            
+        }
     }
 }
