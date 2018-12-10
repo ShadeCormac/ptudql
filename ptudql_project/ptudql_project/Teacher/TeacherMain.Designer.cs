@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qlCauHoi = new System.Windows.Forms.TabPage();
+            this.btnRemoveQuest = new System.Windows.Forms.Button();
+            this.btnAddQuest = new System.Windows.Forms.Button();
             this.txtCauDung = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -93,17 +95,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbKyThi = new System.Windows.Forms.ComboBox();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
-            this.btnAddQuest = new System.Windows.Forms.Button();
-            this.btnRemoveQuest = new System.Windows.Forms.Button();
             this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
+            this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
             this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
             this.btnUser = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
             this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
-            this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.qlCauHoi.SuspendLayout();
@@ -171,6 +171,30 @@
             this.qlCauHoi.TabIndex = 0;
             this.qlCauHoi.Text = "Câu hỏi";
             this.qlCauHoi.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveQuest
+            // 
+            this.btnRemoveQuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnRemoveQuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveQuest.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveQuest.Location = new System.Drawing.Point(244, 549);
+            this.btnRemoveQuest.Name = "btnRemoveQuest";
+            this.btnRemoveQuest.Size = new System.Drawing.Size(85, 45);
+            this.btnRemoveQuest.TabIndex = 16;
+            this.btnRemoveQuest.Text = "Xóa";
+            this.btnRemoveQuest.UseVisualStyleBackColor = false;
+            // 
+            // btnAddQuest
+            // 
+            this.btnAddQuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnAddQuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddQuest.ForeColor = System.Drawing.Color.White;
+            this.btnAddQuest.Location = new System.Drawing.Point(26, 549);
+            this.btnAddQuest.Name = "btnAddQuest";
+            this.btnAddQuest.Size = new System.Drawing.Size(85, 45);
+            this.btnAddQuest.TabIndex = 15;
+            this.btnAddQuest.Text = "Thêm";
+            this.btnAddQuest.UseVisualStyleBackColor = false;
             // 
             // txtCauDung
             // 
@@ -302,7 +326,6 @@
             this.dgvAllQuest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllQuest.Size = new System.Drawing.Size(883, 444);
             this.dgvAllQuest.TabIndex = 0;
-            this.dgvAllQuest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllQuest_CellContentClick);
             // 
             // qlDeThi
             // 
@@ -484,6 +507,7 @@
             // 
             this.txtNameExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameExam.Location = new System.Drawing.Point(368, 367);
+            this.txtNameExam.MaxLength = 50;
             this.txtNameExam.Name = "txtNameExam";
             this.txtNameExam.Size = new System.Drawing.Size(175, 24);
             this.txtNameExam.TabIndex = 52;
@@ -557,7 +581,6 @@
             this.dgvExam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvExam.Size = new System.Drawing.Size(906, 247);
             this.dgvExam.TabIndex = 46;
-            this.dgvExam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExam_CellContentClick);
             // 
             // panel4
             // 
@@ -673,6 +696,7 @@
             // 
             this.txtNameExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameExamTest.Location = new System.Drawing.Point(363, 371);
+            this.txtNameExamTest.MaxLength = 50;
             this.txtNameExamTest.Name = "txtNameExamTest";
             this.txtNameExamTest.Size = new System.Drawing.Size(175, 24);
             this.txtNameExamTest.TabIndex = 35;
@@ -688,9 +712,11 @@
             // 
             // IDExamTest
             // 
+            this.IDExamTest.Enabled = false;
             this.IDExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDExamTest.Location = new System.Drawing.Point(90, 371);
             this.IDExamTest.Name = "IDExamTest";
+            this.IDExamTest.ReadOnly = true;
             this.IDExamTest.Size = new System.Drawing.Size(105, 24);
             this.IDExamTest.TabIndex = 33;
             // 
@@ -727,6 +753,7 @@
             this.btnUpdateExamTest.TabIndex = 30;
             this.btnUpdateExamTest.Text = "Sửa kỳ thi thử";
             this.btnUpdateExamTest.UseVisualStyleBackColor = false;
+            this.btnUpdateExamTest.Click += new System.EventHandler(this.btnUpdateExamTest_Click);
             // 
             // btnAddExamTest
             // 
@@ -819,38 +846,16 @@
             this.dgvHocSinh.GridColor = System.Drawing.Color.Black;
             this.dgvHocSinh.Location = new System.Drawing.Point(3, 64);
             this.dgvHocSinh.Name = "dgvHocSinh";
+            this.dgvHocSinh.ReadOnly = true;
             this.dgvHocSinh.Size = new System.Drawing.Size(906, 559);
             this.dgvHocSinh.TabIndex = 0;
-            // 
-            // btnAddQuest
-            // 
-            this.btnAddQuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnAddQuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddQuest.ForeColor = System.Drawing.Color.White;
-            this.btnAddQuest.Location = new System.Drawing.Point(26, 549);
-            this.btnAddQuest.Name = "btnAddQuest";
-            this.btnAddQuest.Size = new System.Drawing.Size(85, 45);
-            this.btnAddQuest.TabIndex = 15;
-            this.btnAddQuest.Text = "Thêm";
-            this.btnAddQuest.UseVisualStyleBackColor = false;
-            // 
-            // btnRemoveQuest
-            // 
-            this.btnRemoveQuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnRemoveQuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveQuest.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveQuest.Location = new System.Drawing.Point(244, 549);
-            this.btnRemoveQuest.Name = "btnRemoveQuest";
-            this.btnRemoveQuest.Size = new System.Drawing.Size(85, 45);
-            this.btnRemoveQuest.TabIndex = 16;
-            this.btnRemoveQuest.Text = "Xóa";
-            this.btnRemoveQuest.UseVisualStyleBackColor = false;
             // 
             // KyThi
             // 
             this.KyThi.DataPropertyName = "KyThi";
             this.KyThi.HeaderText = "Column1";
             this.KyThi.Name = "KyThi";
+            this.KyThi.ReadOnly = true;
             this.KyThi.Visible = false;
             // 
             // DeThi
@@ -858,6 +863,7 @@
             this.DeThi.DataPropertyName = "DeThi";
             this.DeThi.HeaderText = "Column1";
             this.DeThi.Name = "DeThi";
+            this.DeThi.ReadOnly = true;
             this.DeThi.Visible = false;
             // 
             // HocSinh
@@ -865,15 +871,26 @@
             this.HocSinh.DataPropertyName = "HocSinh";
             this.HocSinh.HeaderText = "Column1";
             this.HocSinh.Name = "HocSinh";
+            this.HocSinh.ReadOnly = true;
             this.HocSinh.Visible = false;
             // 
             // txtParticipants
             // 
             this.txtParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParticipants.Location = new System.Drawing.Point(368, 460);
+            this.txtParticipants.MaxLength = 3;
             this.txtParticipants.Name = "txtParticipants";
             this.txtParticipants.Size = new System.Drawing.Size(175, 26);
             this.txtParticipants.TabIndex = 62;
+            // 
+            // txtParicipantsTest
+            // 
+            this.txtParicipantsTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParicipantsTest.Location = new System.Drawing.Point(363, 464);
+            this.txtParicipantsTest.MaxLength = 3;
+            this.txtParicipantsTest.Name = "txtParicipantsTest";
+            this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
+            this.txtParicipantsTest.TabIndex = 63;
             // 
             // sidebarButton1
             // 
@@ -926,14 +943,6 @@
             this.btnLamBaiThi.Name = "btnLamBaiThi";
             this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
             this.btnLamBaiThi.TabIndex = 0;
-            // 
-            // txtParicipantsTest
-            // 
-            this.txtParicipantsTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParicipantsTest.Location = new System.Drawing.Point(363, 464);
-            this.txtParicipantsTest.Name = "txtParicipantsTest";
-            this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
-            this.txtParicipantsTest.TabIndex = 63;
             // 
             // TeacherMain
             // 

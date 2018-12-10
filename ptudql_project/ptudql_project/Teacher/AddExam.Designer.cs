@@ -131,9 +131,9 @@
             // 
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(587, 212);
+            this.label13.Location = new System.Drawing.Point(557, 212);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 26);
+            this.label13.Size = new System.Drawing.Size(160, 26);
             this.label13.TabIndex = 32;
             this.label13.Text = "Loại kỳ thi";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,9 +162,9 @@
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(590, 125);
+            this.label11.Location = new System.Drawing.Point(560, 125);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 26);
+            this.label11.Size = new System.Drawing.Size(160, 26);
             this.label11.TabIndex = 28;
             this.label11.Text = "Tên kỳ thi";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,7 +234,7 @@
             // 
             this.txtParticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParticipant.Location = new System.Drawing.Point(254, 212);
-            this.txtParticipant.MaxLength = 999;
+            this.txtParticipant.MaxLength = 3;
             this.txtParticipant.Name = "txtParticipant";
             this.txtParticipant.Size = new System.Drawing.Size(266, 26);
             this.txtParticipant.TabIndex = 43;
