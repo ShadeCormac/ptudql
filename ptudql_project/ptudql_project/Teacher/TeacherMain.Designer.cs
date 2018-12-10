@@ -105,7 +105,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 657);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tabControl1
             // 
@@ -145,7 +145,7 @@
             this.qlCauHoi.TabIndex = 0;
             this.qlCauHoi.Text = "Câu hỏi";
             this.qlCauHoi.UseVisualStyleBackColor = true;
-            this.qlCauHoi.Click += new System.EventHandler(this.qlCauHoi_Click);
+            //this.qlCauHoi.Click += new System.EventHandler(this.qlCauHoi_Click);
             // 
             // txtCauDung
             // 
@@ -156,7 +156,7 @@
             this.txtCauDung.Size = new System.Drawing.Size(52, 45);
             this.txtCauDung.TabIndex = 14;
             this.txtCauDung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCauDung.TextChanged += new System.EventHandler(this.txtCauDung_TextChanged);
+            //this.txtCauDung.TextChanged += new System.EventHandler(this.txtCauDung_TextChanged);
             // 
             // label6
             // 
@@ -166,7 +166,7 @@
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Câu Đúng";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -176,7 +176,7 @@
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Câu D";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -186,7 +186,7 @@
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Câu C";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -196,7 +196,7 @@
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Câu B";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -206,7 +206,7 @@
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Câu A";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+           // this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -216,7 +216,7 @@
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Nội dung";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            ///this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtA
             // 
@@ -225,7 +225,7 @@
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(184, 45);
             this.txtA.TabIndex = 7;
-            this.txtA.TextChanged += new System.EventHandler(this.txtA_TextChanged);
+            //this.txtA.TextChanged += new System.EventHandler(this.txtA_TextChanged);
             // 
             // txtB
             // 
@@ -234,7 +234,7 @@
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(184, 45);
             this.txtB.TabIndex = 6;
-            this.txtB.TextChanged += new System.EventHandler(this.txtB_TextChanged);
+            //this.txtB.TextChanged += new System.EventHandler(this.txtB_TextChanged);
             // 
             // txtC
             // 
@@ -243,7 +243,7 @@
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(184, 45);
             this.txtC.TabIndex = 5;
-            this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
+            //this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
             // 
             // txtD
             // 
@@ -252,7 +252,7 @@
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(184, 45);
             this.txtD.TabIndex = 4;
-            this.txtD.TextChanged += new System.EventHandler(this.txtD_TextChanged);
+            //this.txtD.TextChanged += new System.EventHandler(this.txtD_TextChanged);
             // 
             // txtNoiDung
             // 
@@ -261,7 +261,7 @@
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(410, 45);
             this.txtNoiDung.TabIndex = 2;
-            this.txtNoiDung.TextChanged += new System.EventHandler(this.txtNoiDung_TextChanged);
+            //this.txtNoiDung.TextChanged += new System.EventHandler(this.txtNoiDung_TextChanged);
             // 
             // btnSaveChanges
             // 
@@ -288,7 +288,7 @@
             this.dgvAllQuest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllQuest.Size = new System.Drawing.Size(883, 444);
             this.dgvAllQuest.TabIndex = 0;
-            this.dgvAllQuest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllQuest_CellContentClick);
+            //this.dgvAllQuest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllQuest_CellContentClick);
             // 
             // qlDeThi
             // 
@@ -305,7 +305,7 @@
             this.qlDeThi.TabIndex = 1;
             this.qlDeThi.Text = "Đề thi";
             this.qlDeThi.UseVisualStyleBackColor = true;
-            this.qlDeThi.Click += new System.EventHandler(this.qlDeThi_Click);
+            //this.qlDeThi.Click += new System.EventHandler(this.qlDeThi_Click);
             // 
             // btnDeleteTest
             // 
@@ -315,7 +315,7 @@
             this.btnDeleteTest.TabIndex = 10;
             this.btnDeleteTest.Text = "button2";
             this.btnDeleteTest.UseVisualStyleBackColor = true;
-            this.btnDeleteTest.Click += new System.EventHandler(this.btnDeleteTest_Click);
+            //this.btnDeleteTest.Click += new System.EventHandler(this.btnDeleteTest_Click);
             // 
             // btnAddTest
             // 
@@ -335,7 +335,7 @@
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.Size = new System.Drawing.Size(603, 398);
             this.dgvQuestions.TabIndex = 8;
-            this.dgvQuestions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuestions_CellContentClick);
+            //this.dgvQuestions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuestions_CellContentClick);
             // 
             // cbbTestId
             // 
@@ -354,7 +354,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(993, 3);
             this.panel3.TabIndex = 5;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            //this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label10
             // 
@@ -366,7 +366,7 @@
             this.label10.Size = new System.Drawing.Size(91, 31);
             this.label10.TabIndex = 6;
             this.label10.Text = "Đề thi";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            //this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // qlKyThiThu
             // 
@@ -394,7 +394,7 @@
             this.qlKyThiThu.TabIndex = 3;
             this.qlKyThiThu.Text = "Kỳ thi thử";
             this.qlKyThiThu.UseVisualStyleBackColor = true;
-            this.qlKyThiThu.Click += new System.EventHandler(this.qlKyThiThu_Click);
+            //this.qlKyThiThu.Click += new System.EventHandler(this.qlKyThiThu_Click);
             // 
             // txtTimeEnd
             // 
@@ -403,7 +403,7 @@
             this.txtTimeEnd.Name = "txtTimeEnd";
             this.txtTimeEnd.Size = new System.Drawing.Size(194, 24);
             this.txtTimeEnd.TabIndex = 43;
-            this.txtTimeEnd.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            //this.txtTimeEnd.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label15
             // 
@@ -414,7 +414,7 @@
             this.label15.TabIndex = 42;
             this.label15.Text = "Thời gian kết thúc";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            //this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // txtTimeStar
             // 
@@ -423,7 +423,7 @@
             this.txtTimeStar.Name = "txtTimeStar";
             this.txtTimeStar.Size = new System.Drawing.Size(194, 24);
             this.txtTimeStar.TabIndex = 41;
-            this.txtTimeStar.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            //this.txtTimeStar.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label14
             // 
@@ -434,7 +434,7 @@
             this.label14.TabIndex = 40;
             this.label14.Text = "Thời gian bắt đầu";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            //this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // txtTypeExam
             // 
@@ -444,7 +444,7 @@
             this.txtTypeExam.ReadOnly = true;
             this.txtTypeExam.Size = new System.Drawing.Size(105, 24);
             this.txtTypeExam.TabIndex = 39;
-            this.txtTypeExam.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            //this.txtTypeExam.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label13
             // 
@@ -454,7 +454,7 @@
             this.label13.Size = new System.Drawing.Size(80, 23);
             this.label13.TabIndex = 38;
             this.label13.Text = "Loại kỳ thi";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            ///this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // txtParticipants
             // 
@@ -463,7 +463,7 @@
             this.txtParticipants.Name = "txtParticipants";
             this.txtParticipants.Size = new System.Drawing.Size(175, 24);
             this.txtParticipants.TabIndex = 37;
-            this.txtParticipants.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            //this.txtParticipants.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label12
             // 
@@ -474,7 +474,7 @@
             this.label12.TabIndex = 36;
             this.label12.Text = "Số lượng tham gia";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            //this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txtNameExam
             // 
@@ -483,7 +483,7 @@
             this.txtNameExam.Name = "txtNameExam";
             this.txtNameExam.Size = new System.Drawing.Size(175, 24);
             this.txtNameExam.TabIndex = 35;
-            this.txtNameExam.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.txtNameExam.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label11
             // 
@@ -493,7 +493,7 @@
             this.label11.Size = new System.Drawing.Size(100, 23);
             this.label11.TabIndex = 34;
             this.label11.Text = "Tên  Kỳ Thi";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            //this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtIDExam
             // 
@@ -502,7 +502,7 @@
             this.txtIDExam.Name = "txtIDExam";
             this.txtIDExam.Size = new System.Drawing.Size(105, 24);
             this.txtIDExam.TabIndex = 33;
-            this.txtIDExam.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.txtIDExam.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
             // 
@@ -512,7 +512,7 @@
             this.label9.Size = new System.Drawing.Size(70, 23);
             this.label9.TabIndex = 32;
             this.label9.Text = "ID Kỳ Thi";
-            this.label9.Click += new System.EventHandler(this.label9_Click_1);
+            //this.label9.Click += new System.EventHandler(this.label9_Click_1);
             // 
             // btnRemoveExamTest
             // 
@@ -525,7 +525,7 @@
             this.btnRemoveExamTest.TabIndex = 31;
             this.btnRemoveExamTest.Text = "Xóa kỳ thi thử";
             this.btnRemoveExamTest.UseVisualStyleBackColor = false;
-            this.btnRemoveExamTest.Click += new System.EventHandler(this.button3_Click);
+            //this.btnRemoveExamTest.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnUpdateExamTest
             // 
@@ -538,7 +538,7 @@
             this.btnUpdateExamTest.TabIndex = 30;
             this.btnUpdateExamTest.Text = "Sửa kỳ thi thử";
             this.btnUpdateExamTest.UseVisualStyleBackColor = false;
-            this.btnUpdateExamTest.Click += new System.EventHandler(this.button2_Click);
+            //this.btnUpdateExamTest.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddExamTest
             // 
@@ -562,7 +562,7 @@
             this.dgvExamTest.Name = "dgvExamTest";
             this.dgvExamTest.Size = new System.Drawing.Size(906, 247);
             this.dgvExamTest.TabIndex = 28;
-            this.dgvExamTest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            //this.dgvExamTest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -571,7 +571,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(993, 3);
             this.panel2.TabIndex = 26;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label7
             // 
@@ -583,7 +583,7 @@
             this.label7.Size = new System.Drawing.Size(137, 31);
             this.label7.TabIndex = 27;
             this.label7.Text = "Kỳ thi thử";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            //this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // qlHocSinh
             // 
@@ -607,7 +607,7 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Chọn kỳ thi";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cbKyThi
             // 
@@ -630,7 +630,7 @@
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(906, 559);
             this.dgvHocSinh.TabIndex = 0;
-            this.dgvHocSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellContentClick);
+            //this.dgvHocSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellContentClick);
             // 
             // sidebarButton1
             // 
@@ -644,7 +644,7 @@
             this.sidebarButton1.Name = "sidebarButton1";
             this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
             this.sidebarButton1.TabIndex = 3;
-            this.sidebarButton1.Load += new System.EventHandler(this.sidebarButton1_Load);
+            //this.sidebarButton1.Load += new System.EventHandler(this.sidebarButton1_Load);
             // 
             // btnUser
             // 
@@ -658,7 +658,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(200, 110);
             this.btnUser.TabIndex = 2;
-            this.btnUser.Load += new System.EventHandler(this.btnUser_Load);
+            //this.btnUser.Load += new System.EventHandler(this.btnUser_Load);
             // 
             // btnThiThu
             // 
@@ -672,7 +672,7 @@
             this.btnThiThu.Name = "btnThiThu";
             this.btnThiThu.Size = new System.Drawing.Size(200, 110);
             this.btnThiThu.TabIndex = 1;
-            this.btnThiThu.Load += new System.EventHandler(this.btnThiThu_Load);
+            //this.btnThiThu.Load += new System.EventHandler(this.btnThiThu_Load);
             // 
             // btnLamBaiThi
             // 
@@ -686,7 +686,7 @@
             this.btnLamBaiThi.Name = "btnLamBaiThi";
             this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
             this.btnLamBaiThi.TabIndex = 0;
-            this.btnLamBaiThi.Load += new System.EventHandler(this.btnLamBaiThi_Load);
+            //this.btnLamBaiThi.Load += new System.EventHandler(this.btnLamBaiThi_Load);
             // 
             // qlKyThi
             // 
@@ -696,7 +696,7 @@
             this.qlKyThi.TabIndex = 2;
             this.qlKyThi.Text = "Kỳ thi";
             this.qlKyThi.UseVisualStyleBackColor = true;
-            this.qlKyThi.Click += new System.EventHandler(this.qlKyThi_Click);
+            //this.qlKyThi.Click += new System.EventHandler(this.qlKyThi_Click);
             // 
             // TeacherMain
             // 
