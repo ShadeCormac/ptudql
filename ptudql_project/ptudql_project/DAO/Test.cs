@@ -16,7 +16,7 @@ namespace ptudql_project.DAO
                 return (db.DeThis.Where(test => test.IdDe == testId).SingleOrDefault() == null) ? false : true;
             }
         }
-        public static void create(DeThi test)
+        public static void Create(DeThi test)
         {
             using (var db = new QLTNDataContext())
             {
@@ -30,6 +30,14 @@ namespace ptudql_project.DAO
             {
                 db.BoDeThis.InsertAllOnSubmit(bdtList);
                 db.SubmitChanges();
+            }
+        }
+
+        public static List<string> getAllTestId()
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return db.DeThis.Select(d => d.IdDe).ToList();
             }
         }
 

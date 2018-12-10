@@ -98,6 +98,7 @@
             this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtQuestId = new System.Windows.Forms.TextBox();
             this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
             this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
             this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
@@ -148,6 +149,7 @@
             // 
             // qlCauHoi
             // 
+            this.qlCauHoi.Controls.Add(this.txtQuestId);
             this.qlCauHoi.Controls.Add(this.btnRemoveQuest);
             this.qlCauHoi.Controls.Add(this.btnAddQuest);
             this.qlCauHoi.Controls.Add(this.txtCauDung);
@@ -183,6 +185,7 @@
             this.btnRemoveQuest.TabIndex = 16;
             this.btnRemoveQuest.Text = "Xóa";
             this.btnRemoveQuest.UseVisualStyleBackColor = false;
+            this.btnRemoveQuest.Click += new System.EventHandler(this.btnRemoveQuest_Click);
             // 
             // btnAddQuest
             // 
@@ -349,7 +352,7 @@
             this.btnDeleteTest.Name = "btnDeleteTest";
             this.btnDeleteTest.Size = new System.Drawing.Size(144, 55);
             this.btnDeleteTest.TabIndex = 10;
-            this.btnDeleteTest.Text = "button2";
+            this.btnDeleteTest.Text = "Xoá đề thi";
             this.btnDeleteTest.UseVisualStyleBackColor = true;
             // 
             // btnAddTest
@@ -874,6 +877,14 @@
             this.HocSinh.ReadOnly = true;
             this.HocSinh.Visible = false;
             // 
+            // txtQuestId
+            // 
+            this.txtQuestId.Location = new System.Drawing.Point(26, 600);
+            this.txtQuestId.Name = "txtQuestId";
+            this.txtQuestId.Size = new System.Drawing.Size(85, 20);
+            this.txtQuestId.TabIndex = 17;
+            this.txtQuestId.Visible = false;
+            // 
             // txtParticipants
             // 
             this.txtParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -953,6 +964,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "TeacherMain";
             this.Text = "TeacherMain";
+            this.Load += new System.EventHandler(this.TeacherMain_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.qlCauHoi.ResumeLayout(false);
@@ -1050,5 +1062,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HocSinh;
         private CustomControls.NumberInputBox txtParticipants;
         private CustomControls.NumberInputBox txtParicipantsTest;
+        private System.Windows.Forms.TextBox txtQuestId;
     }
 }

@@ -24,56 +24,71 @@ namespace ptudql_project.Teacher
             _trackingList = new BindingList<CauHoi>();
             _trackingExamList = new BindingList<KyThi>();
             _trackingTestExamList = new BindingList<KyThi>();
-            LoadQuestionsForm();
-            LoadQuestForm();
-            BindTxt();
+            
+        }
 
-            //LoadStudentRecords();
-            LoadListExam();
-            LoadExam();
-            LoadExamTest();
-            //BindExamTxt();
+        private void UnbindExamTxt()
+        {
+            IdExam.DataBindings.Clear(); 
+            txtNameExam.DataBindings.Clear();    
+            txtParticipants.DataBindings.Clear();           
+            txtTypeExam.DataBindings.Clear();
+            txtTimeStart.DataBindings.Clear();         
+            txtTimeEnd.DataBindings.Clear();
+            
+        }
 
+        private void UnbindTestExamTxt()
+        {
+            IDExamTest.DataBindings.Clear();
+            txtNameExamTest.DataBindings.Clear();
+            txtParicipantsTest.DataBindings.Clear();
+            txtTypeExamTest.DataBindings.Clear();
+            txtTimeStartTest.DataBindings.Clear();
+            txtTimeEndTest.DataBindings.Clear();
         }
 
         private void BindExamTxt()
         {
-            dgvExam.DataBindings.Clear();
+            UnbindExamTxt();
+            //dgvExam.DataBindings.Clear();
             var dgv = dgvExam.DataSource as BindingList<KyThi>;
 
             dgv.ListChanged += Dgv_ListChanged;
-
-            IdExam.DataBindings.Clear();
+            
             IdExam.DataBindings.Add("Text", dgv, "IDKyThi");
-            txtNameExam.DataBindings.Clear();
+            
             txtNameExam.DataBindings.Add("Text", dgv, "TenKyThi");
-            txtParticipants.DataBindings.Clear();
+           
             txtParticipants.DataBindings.Add("Text", dgv, "SLThamGia");
-            txtTypeExam.DataBindings.Clear();
+            
             txtTypeExam.DataBindings.Add("Text", dgv, "LoaiKyThi");
-            txtTimeStart.DataBindings.Clear();
+            
             txtTimeStart.DataBindings.Add("Text", dgv, "ThoiGianBatDau");
-            txtTimeEnd.DataBindings.Clear();
+            
             txtTimeEnd.DataBindings.Add("Text", dgv, "ThoiGianKetThuc");
 
         }
+
+        
+
         private void BindTestExamTxt()
         {
             dgvExamTest.DataBindings.Clear();
             var dgv = dgvExamTest.DataSource as BindingList<KyThi>;
             dgv.ListChanged += Dgv_ListChanged1;
+            UnbindTestExamTxt();
 
-            IDExamTest.DataBindings.Clear();
             IDExamTest.DataBindings.Add("Text", dgv, "IDKyThi");
-            txtNameExamTest.DataBindings.Clear();
+
             txtNameExamTest.DataBindings.Add("Text", dgv, "TenKyThi");
-            txtParicipantsTest.DataBindings.Clear();
+
             txtParicipantsTest.DataBindings.Add("Text", dgv, "SLThamGia");
-            txtTypeExamTest.DataBindings.Clear();
+
             txtTypeExamTest.DataBindings.Add("Text", dgv, "LoaiKyThi");
-            txtTimeStartTest.DataBindings.Clear();
+
             txtTimeStartTest.DataBindings.Add("Text", dgv, "ThoiGianBatDau");
-            txtTimeEndTest.DataBindings.Clear();
+
             txtTimeEndTest.DataBindings.Add("Text", dgv, "ThoiGianKetThuc");
         }
         private void Dgv_ListChanged1(object sender, ListChangedEventArgs e)
@@ -97,12 +112,14 @@ namespace ptudql_project.Teacher
         }
         private void BindTxt()
         {
-            txtNoiDung.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "NoiDung");
-            txtA.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauA");
-            txtB.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauB");
-            txtC.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauC");
-            txtD.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauD");
-            txtCauDung.DataBindings.Add("Text", dgvAllQuest.DataSource as BindingList<CauHoi>, "CauTLDung");
+            var bl = dgvAllQuest.DataSource as BindingList<CauHoi>;
+            txtQuestId.DataBindings.Add("Text", bl, "IdCauHoi");
+            txtNoiDung.DataBindings.Add("Text", bl, "NoiDung");
+            txtA.DataBindings.Add("Text", bl, "CauA");
+            txtB.DataBindings.Add("Text", bl, "CauB");
+            txtC.DataBindings.Add("Text", bl, "CauC");
+            txtD.DataBindings.Add("Text", bl, "CauD");
+            txtCauDung.DataBindings.Add("Text", bl, "CauTLDung");
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,7 +136,7 @@ namespace ptudql_project.Teacher
         }
         void LoadQuestionsForm()
         {
-            if (this.dgvAllQuest.DataSource == null)
+            
             {
                 var data = Question.GetAllQuestions();
                 data.ListChanged += Data_ListChanged;
@@ -132,7 +149,7 @@ namespace ptudql_project.Teacher
         {
             this.dgvExam.DataSource = DAO.Exam.LoadExam();
             BindExamTxt();
-
+            
         }
         void LoadExamTest()
         {
@@ -181,13 +198,6 @@ namespace ptudql_project.Teacher
             }
         }
 
-        void LoadQuestForm()
-        {
-            var q = Question.GetAllQuestions();
-            q.ListChanged += Data_ListChanged;
-            this.dgvAllQuest.DataSource = q;
-
-        }
 
         private void CbbTestId_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -195,10 +205,6 @@ namespace ptudql_project.Teacher
             this.dgvQuestions.DataSource = Test.loadQuestions(cbbTestId.SelectedValue.ToString());
         }
 
-        void LoadStudents()
-        {
-
-        }
 
         private void btnAddTest_Click(object sender, EventArgs e)
         {
@@ -268,7 +274,7 @@ namespace ptudql_project.Teacher
                 bl.Remove(removeItem);
                 MessageBox.Show("Đã xóa thành công", "Thông báo");
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
 
                 MessageBox.Show("Xóa không thành công", "Thông báo");
@@ -296,9 +302,8 @@ namespace ptudql_project.Teacher
                 bl.Remove(removeItem);
                 MessageBox.Show("Đã xóa thành công", "Thông báo");
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-
                 MessageBox.Show("Xóa không thành công", "Thông báo");
             }
 
@@ -312,6 +317,46 @@ namespace ptudql_project.Teacher
                 _trackingExamList.Clear();
                 MessageBox.Show("Đã cập nhật thành công", "Thông báo");
             }
+        }
+
+        private void TeacherMain_Load(object sender, EventArgs e)
+        {
+            LoadQuestionsForm();
+            BindTxt();
+            //LoadStudentRecords();
+            LoadListExam();
+            LoadExam();
+            LoadExamTest();
+            BindExamTxt();
+            BindTestExamTxt();
+            LoadTests();
+        }
+
+        private void btnRemoveQuest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id;
+                foreach (DataGridViewRow row in this.dgvAllQuest.SelectedRows)
+                {
+                    id = (int)row.Cells["IdCauHoi"].Value;
+                    Question.Remove(id);
+                }
+                
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Xoá không thành công");
+            }
+            MessageBox.Show("Xoá thành công");
+            LoadQuestionsForm();
+        }
+
+        private void LoadTests()
+        {
+            this.cbbTestId.DataSource = Test.getAllTestId();
+            this.dgvQuestions.DataSource = Test.loadQuestions(this.cbbTestId.SelectedItem.ToString());
+            
         }
     }
 }

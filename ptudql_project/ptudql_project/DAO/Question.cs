@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Linq;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,6 +56,27 @@ namespace ptudql_project.DAO
                     uul[i].CauTLDung = updatedList[i].CauTLDung;
                 }
                 db.SubmitChanges();
+            }
+        }
+
+        public static void Remove(int IdQuestion)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                try
+                {
+                    var question = db.CauHois.Where(q => q.IdCauHoi == IdQuestion).Single();
+                    foreach (BoDeThi bdt in question.BoDeThis)
+                    {
+                        db.BoDeThis.DeleteOnSubmit(bdt);
+                    }
+                    db.CauHois.DeleteOnSubmit(question);
+                    db.SubmitChanges();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
             }
         }
 

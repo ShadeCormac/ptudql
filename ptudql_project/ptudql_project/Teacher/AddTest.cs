@@ -71,7 +71,7 @@ namespace ptudql_project.Teacher
                 return;
             }
 
-            Test.create(new DeThi()
+            Test.Create(new DeThi()
             {
                 GVRaDe = "giaovien",
                 IdDe = txtBoDeThi.Text,
