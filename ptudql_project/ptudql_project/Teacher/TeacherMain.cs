@@ -22,6 +22,9 @@ namespace ptudql_project.Teacher
             LoadQuestionsForm();
             LoadQuestForm();
             BindTxt();
+            //LoadStudentRecords();
+            LoadListExam();
+
         }
 
         private void BindTxt()
@@ -58,6 +61,38 @@ namespace ptudql_project.Teacher
             
         }
 
+        void LoadStudentRecords()
+        {
+            if (this.dgvHocSinh.DataSource == null)
+            {
+                this.dgvHocSinh.DataSource = DAO.Student.LoadStudent();
+               
+            }
+
+        }
+        void LoadListExam()
+        {
+            //if (this.cbKyThi.DataSource == null)
+            {
+                List<string> examList = DAO.Student.LoadListExam();
+                this.cbKyThi.Items.Add("ALL");
+                foreach (string exam in examList)
+                {
+                    this.cbKyThi.Items.Add(exam);
+                }
+
+                if (cbKyThi.SelectedItem == null || cbKyThi.SelectedItem.ToString() == "ALL")
+                {
+                    this.dgvHocSinh.DataSource = DAO.Student.LoadStudent();
+                }
+                else
+                {
+                    this.dgvHocSinh.DataSource = DAO.Student.LoadListExamStudents(cbKyThi.SelectedText.ToString());
+                }
+            }
+
+        }
+
         private void Data_ListChanged(object sender, ListChangedEventArgs e)
         {
             if (e.ListChangedType == ListChangedType.ItemChanged)
@@ -89,7 +124,7 @@ namespace ptudql_project.Teacher
 
         private void btnAddTest_Click(object sender, EventArgs e)
         {
-            Router.ChangeForm(this, new AddTest());
+            Router.ChangeForm(this, new AddTest(),true);
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
@@ -101,6 +136,24 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Đã cập nhật thành công", "Thông báo");
             }
             
+        }
+
+        private void qlHocSinh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbKyThi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbKyThi.SelectedItem.ToString() != "ALL")
+            {
+                this.dgvHocSinh.DataSource = DAO.Student.LoadListExamStudents(cbKyThi.SelectedItem.ToString());
+            }
+            else
+            {
+
+                this.dgvHocSinh.DataSource = DAO.Student.LoadStudent();
+            }
         }
     }
 }

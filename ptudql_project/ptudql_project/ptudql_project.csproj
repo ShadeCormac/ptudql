@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\Question.cs" />
+    <Compile Include="DAO\Student.cs" />
     <Compile Include="DAO\Test.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>

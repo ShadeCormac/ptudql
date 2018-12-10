@@ -56,6 +56,9 @@
             this.qlKyThi = new System.Windows.Forms.TabPage();
             this.qlKyThiThu = new System.Windows.Forms.TabPage();
             this.qlHocSinh = new System.Windows.Forms.TabPage();
+            this.dgvHocSinh = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbKyThi = new System.Windows.Forms.ComboBox();
             this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
             this.btnUser = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
@@ -66,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllQuest)).BeginInit();
             this.qlDeThi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
+            this.qlHocSinh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -237,6 +242,7 @@
             // 
             this.dgvAllQuest.AllowUserToAddRows = false;
             this.dgvAllQuest.AllowUserToDeleteRows = false;
+            this.dgvAllQuest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllQuest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllQuest.Location = new System.Drawing.Point(26, 0);
             this.dgvAllQuest.Name = "dgvAllQuest";
@@ -282,6 +288,7 @@
             // 
             // dgvQuestions
             // 
+            this.dgvQuestions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuestions.Location = new System.Drawing.Point(44, 122);
             this.dgvQuestions.Name = "dgvQuestions";
@@ -337,12 +344,48 @@
             // 
             // qlHocSinh
             // 
+            this.qlHocSinh.Controls.Add(this.label8);
+            this.qlHocSinh.Controls.Add(this.cbKyThi);
+            this.qlHocSinh.Controls.Add(this.dgvHocSinh);
             this.qlHocSinh.Location = new System.Drawing.Point(4, 22);
             this.qlHocSinh.Name = "qlHocSinh";
             this.qlHocSinh.Size = new System.Drawing.Size(917, 631);
             this.qlHocSinh.TabIndex = 4;
             this.qlHocSinh.Text = "Học sinh";
             this.qlHocSinh.UseVisualStyleBackColor = true;
+            this.qlHocSinh.Click += new System.EventHandler(this.qlHocSinh_Click);
+            // 
+            // dgvHocSinh
+            // 
+            this.dgvHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHocSinh.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHocSinh.GridColor = System.Drawing.Color.White;
+            this.dgvHocSinh.Location = new System.Drawing.Point(3, 64);
+            this.dgvHocSinh.Name = "dgvHocSinh";
+            this.dgvHocSinh.Size = new System.Drawing.Size(906, 559);
+            this.dgvHocSinh.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Location = new System.Drawing.Point(464, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 23);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Chọn kỳ thi";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbKyThi
+            // 
+            this.cbKyThi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKyThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKyThi.FormattingEnabled = true;
+            this.cbKyThi.Location = new System.Drawing.Point(630, 24);
+            this.cbKyThi.Name = "cbKyThi";
+            this.cbKyThi.Size = new System.Drawing.Size(279, 24);
+            this.cbKyThi.TabIndex = 3;
+            this.cbKyThi.SelectedIndexChanged += new System.EventHandler(this.cbKyThi_SelectedIndexChanged);
             // 
             // sidebarButton1
             // 
@@ -413,6 +456,8 @@
             this.qlDeThi.ResumeLayout(false);
             this.qlDeThi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).EndInit();
+            this.qlHocSinh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,5 +495,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCauDung;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgvHocSinh;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbKyThi;
     }
 }

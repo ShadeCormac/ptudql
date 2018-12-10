@@ -76,5 +76,16 @@ namespace ptudql_project.Properties {
                 return ((string)(this["QLThiTracNghiemConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-BQLC9T6\\SQLEXPRESS;Initial Catalog=QLThiTracNghiem;Integrated" +
+            " Security=True")]
+        public string QLThiTracNghiemConnectionString3 {
+            get {
+                return ((string)(this["QLThiTracNghiemConnectionString3"]));
+            }
+        }
     }
 }
