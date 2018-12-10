@@ -75,6 +75,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DAO\Account.cs" />
+    <Compile Include="DAO\Exam.cs" />
     <Compile Include="DAO\Question.cs" />
     <Compile Include="DAO\Student.cs" />
     <Compile Include="DAO\Test.cs" />

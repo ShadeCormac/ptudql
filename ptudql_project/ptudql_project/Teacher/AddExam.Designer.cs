@@ -28,70 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnCreateExam = new System.Windows.Forms.Button();
+            this.txtTimeEnd = new System.Windows.Forms.TextBox();
+            this.txtTimeStart = new System.Windows.Forms.TextBox();
+            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTypeExam = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNameExam = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdExam = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtParticipant = new ptudql_project.CustomControls.NumberInputBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCreateExam
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(357, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(294, 62);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Tạo kỳ thi";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCreateExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnCreateExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateExam.ForeColor = System.Drawing.Color.White;
+            this.btnCreateExam.Location = new System.Drawing.Point(357, 486);
+            this.btnCreateExam.Name = "btnCreateExam";
+            this.btnCreateExam.Size = new System.Drawing.Size(294, 62);
+            this.btnCreateExam.TabIndex = 40;
+            this.btnCreateExam.Text = "Tạo kỳ thi";
+            this.btnCreateExam.UseVisualStyleBackColor = false;
+            this.btnCreateExam.Click += new System.EventHandler(this.btnCreateExam_Click);
             // 
-            // textBox6
+            // txtTimeEnd
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(587, 395);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(366, 26);
-            this.textBox6.TabIndex = 39;
+            this.txtTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeEnd.Location = new System.Drawing.Point(748, 395);
+            this.txtTimeEnd.Name = "txtTimeEnd";
+            this.txtTimeEnd.Size = new System.Drawing.Size(205, 26);
+            this.txtTimeEnd.TabIndex = 39;
             // 
-            // textBox5
+            // txtTimeStart
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(587, 300);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(366, 26);
-            this.textBox5.TabIndex = 38;
+            this.txtTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeStart.Location = new System.Drawing.Point(748, 300);
+            this.txtTimeStart.Name = "txtTimeStart";
+            this.txtTimeStart.Size = new System.Drawing.Size(205, 26);
+            this.txtTimeStart.TabIndex = 38;
             // 
-            // dateTimePicker2
+            // dtpTimeEnd
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(254, 395);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(266, 26);
-            this.dateTimePicker2.TabIndex = 37;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.dtpTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeEnd.Location = new System.Drawing.Point(254, 395);
+            this.dtpTimeEnd.Name = "dtpTimeEnd";
+            this.dtpTimeEnd.Size = new System.Drawing.Size(266, 26);
+            this.dtpTimeEnd.TabIndex = 37;
+            this.dtpTimeEnd.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
-            // dateTimePicker1
+            // dtpTimeStart
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(251, 300);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(266, 26);
-            this.dateTimePicker1.TabIndex = 36;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeStart.Location = new System.Drawing.Point(251, 300);
+            this.dtpTimeStart.Name = "dtpTimeStart";
+            this.dtpTimeStart.Size = new System.Drawing.Size(266, 26);
+            this.dtpTimeStart.TabIndex = 36;
+            this.dtpTimeStart.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label15
             // 
@@ -101,7 +104,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(160, 26);
             this.label15.TabIndex = 35;
-            this.label15.Text = "Thời gian kết thúc";
+            this.label15.Text = "Ngày kết thúc";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -112,17 +115,17 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(160, 26);
             this.label14.TabIndex = 34;
-            this.label14.Text = "Thời gian bắt đầu";
+            this.label14.Text = "Ngày bắt đầu";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // txtTypeExam
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(748, 212);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(205, 26);
-            this.textBox4.TabIndex = 33;
+            this.txtTypeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeExam.Location = new System.Drawing.Point(748, 212);
+            this.txtTypeExam.Name = "txtTypeExam";
+            this.txtTypeExam.ReadOnly = true;
+            this.txtTypeExam.Size = new System.Drawing.Size(205, 26);
+            this.txtTypeExam.TabIndex = 33;
             // 
             // label13
             // 
@@ -135,14 +138,6 @@
             this.label13.Text = "Loại kỳ thi";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(254, 212);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(266, 26);
-            this.textBox3.TabIndex = 31;
-            // 
             // label12
             // 
             this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -154,13 +149,14 @@
             this.label12.Text = "Số lượng tham gia";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtNameExam
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(748, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 26);
-            this.textBox2.TabIndex = 29;
+            this.txtNameExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameExam.Location = new System.Drawing.Point(748, 125);
+            this.txtNameExam.MaxLength = 50;
+            this.txtNameExam.Name = "txtNameExam";
+            this.txtNameExam.Size = new System.Drawing.Size(205, 26);
+            this.txtNameExam.TabIndex = 29;
             // 
             // label11
             // 
@@ -173,13 +169,14 @@
             this.label11.Text = "Tên kỳ thi";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtIdExam
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(254, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 26);
-            this.textBox1.TabIndex = 27;
+            this.txtIdExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdExam.Location = new System.Drawing.Point(254, 125);
+            this.txtIdExam.MaxLength = 10;
+            this.txtIdExam.Name = "txtIdExam";
+            this.txtIdExam.Size = new System.Drawing.Size(266, 26);
+            this.txtIdExam.TabIndex = 27;
             // 
             // label9
             // 
@@ -207,9 +204,40 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.label7.Location = new System.Drawing.Point(438, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 31);
+            this.label7.Size = new System.Drawing.Size(142, 31);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Kỳ thi thử";
+            this.label7.Text = "Tạo kỳ thi";
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(557, 395);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 26);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Thời gian bắt đầu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(557, 300);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 26);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Thời gian bắt đầu";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtParticipant
+            // 
+            this.txtParticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParticipant.Location = new System.Drawing.Point(254, 212);
+            this.txtParticipant.MaxLength = 999;
+            this.txtParticipant.Name = "txtParticipant";
+            this.txtParticipant.Size = new System.Drawing.Size(266, 26);
+            this.txtParticipant.TabIndex = 43;
             // 
             // AddExam
             // 
@@ -217,20 +245,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1021, 568);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtParticipant);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCreateExam);
+            this.Controls.Add(this.txtTimeEnd);
+            this.Controls.Add(this.txtTimeStart);
+            this.Controls.Add(this.dtpTimeEnd);
+            this.Controls.Add(this.dtpTimeStart);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTypeExam);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNameExam);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIdExam);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label7);
@@ -244,22 +274,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnCreateExam;
+        private System.Windows.Forms.TextBox txtTimeEnd;
+        private System.Windows.Forms.TextBox txtTimeStart;
+        private System.Windows.Forms.DateTimePicker dtpTimeEnd;
+        private System.Windows.Forms.DateTimePicker dtpTimeStart;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTypeExam;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNameExam;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdExam;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private CustomControls.NumberInputBox txtParticipant;
     }
 }
