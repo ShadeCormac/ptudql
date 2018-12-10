@@ -155,5 +155,15 @@ namespace ptudql_project.Teacher
                 this.dgvHocSinh.DataSource = DAO.Student.LoadStudent();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new AddExam(), true);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

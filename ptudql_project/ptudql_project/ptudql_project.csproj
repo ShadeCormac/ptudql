@@ -121,6 +121,12 @@
     <Compile Include="Student\StudentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Teacher\AddExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddExam.Designer.cs">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\AddTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     <None Include="QLTN.dbml.layout">
       <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Teacher\AddExam.resx">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher\AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>
     </EmbeddedResource>

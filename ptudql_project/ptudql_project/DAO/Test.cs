@@ -21,7 +21,7 @@ namespace ptudql_project.DAO
             using (var db = new QLTNDataContext())
             {
                 db.DeThis.InsertOnSubmit(test);
-                db.SubmitChanges();
+                //db.SubmitChanges();
             }
         }
         public static void addQuestions(List<BoDeThi> bdtList)
