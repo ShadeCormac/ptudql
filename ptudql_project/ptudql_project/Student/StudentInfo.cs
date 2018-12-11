@@ -110,17 +110,12 @@ namespace ptudql_project.Student
 
         private void sidebarButton1_Load(object sender, EventArgs e)
         {
-            Router.ChangeForm(this, new RequestQuestion());
+            Router.ChangeForm(this, new RequestQuestion("Đóng góp câu hỏi"));
         }
 
         private void sidebarButton1_DoubleClick(object sender, EventArgs e)
         {
             
-        }
-
-        private void sidebarButton1_Click(object sender, EventArgs e)
-        {
-            Router.ChangeForm(this, new RequestQuestion());
         }
     }
 }

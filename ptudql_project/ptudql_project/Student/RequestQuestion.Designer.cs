@@ -52,6 +52,7 @@
             this.rbCauC = new System.Windows.Forms.RadioButton();
             this.rbCauD = new System.Windows.Forms.RadioButton();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -287,7 +288,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(463, 463);
+            this.btnSubmit.Location = new System.Drawing.Point(497, 465);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(230, 23);
             this.btnSubmit.TabIndex = 21;
@@ -295,11 +296,21 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(497, 532);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(230, 30);
+            this.btnImport.TabIndex = 22;
+            this.btnImport.Text = "Nhập dữ liệu từ excel";
+            this.btnImport.UseVisualStyleBackColor = true;
+            // 
             // RequestQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 642);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.rbCauD);
             this.Controls.Add(this.rbCauC);
@@ -352,5 +363,6 @@
         private System.Windows.Forms.RadioButton rbCauC;
         private System.Windows.Forms.RadioButton rbCauD;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnImport;
     }
 }

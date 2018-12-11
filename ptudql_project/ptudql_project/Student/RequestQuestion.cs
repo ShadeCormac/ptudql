@@ -13,9 +13,11 @@ namespace ptudql_project.Student
 {
     public partial class RequestQuestion : Form
     {
-        public RequestQuestion()
+        public RequestQuestion(string label)
         {
             InitializeComponent();
+            this.label2.Text = label;
+            this.btnImport.Visible = (label == "Thêm câu hỏi") ? true : false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -68,8 +70,8 @@ namespace ptudql_project.Student
                 CauB = txtCauB.Text,
                 CauC = txtCauC.Text,
                 CauD = txtCauD.Text,
-                CauTLDung = checkedButton.Text.ToLower().ToCharArray().FirstOrDefault(),
-                LoaiCauHoi = 2,
+                CauTLDung = checkedButton.Text.ToLower().ToCharArray().First(),
+                LoaiCauHoi = (this.label2.Text == "Thêm câu hỏi")? 1 : 2,
                 DaDuyet = 0
             };
             Question.AddRequest(requestQuest);

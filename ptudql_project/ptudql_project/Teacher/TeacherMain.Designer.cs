@@ -30,8 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddQuestion = new ptudql_project.CustomControls.SidebarButton();
+            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qlCauHoi = new System.Windows.Forms.TabPage();
+            this.txtQuestId = new System.Windows.Forms.TextBox();
             this.btnRemoveQuest = new System.Windows.Forms.Button();
             this.btnAddQuest = new System.Windows.Forms.Button();
             this.txtCauDung = new System.Windows.Forms.TextBox();
@@ -56,6 +61,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.qlKyThi = new System.Windows.Forms.TabPage();
+            this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
             this.IdExam = new System.Windows.Forms.TextBox();
             this.txtTimeEnd = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -74,6 +80,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.qlKyThiThu = new System.Windows.Forms.TabPage();
+            this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
             this.txtTimeEndTest = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtTimeStartTest = new System.Windows.Forms.TextBox();
@@ -98,13 +105,6 @@
             this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtQuestId = new System.Windows.Forms.TextBox();
-            this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
-            this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.qlCauHoi.SuspendLayout();
@@ -122,7 +122,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel1.Controls.Add(this.sidebarButton1);
+            this.panel1.Controls.Add(this.btnAddQuestion);
             this.panel1.Controls.Add(this.btnUser);
             this.panel1.Controls.Add(this.btnThiThu);
             this.panel1.Controls.Add(this.btnLamBaiThi);
@@ -131,6 +131,60 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 657);
             this.panel1.TabIndex = 1;
+            // 
+            // btnAddQuestion
+            // 
+            this.btnAddQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnAddQuestion.CustomImage")));
+            this.btnAddQuestion.LabelLocation = new System.Drawing.Point(45, 83);
+            this.btnAddQuestion.LabelText = "Thêm câu hỏi";
+            this.btnAddQuestion.Location = new System.Drawing.Point(0, 490);
+            this.btnAddQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(200, 110);
+            this.btnAddQuestion.TabIndex = 3;
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnUser.LabelText = "Thông tin cá nhân";
+            this.btnUser.Location = new System.Drawing.Point(0, 86);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(200, 110);
+            this.btnUser.TabIndex = 2;
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
+            this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
             // 
             // tabControl1
             // 
@@ -174,6 +228,14 @@
             this.qlCauHoi.Text = "Câu hỏi";
             this.qlCauHoi.UseVisualStyleBackColor = true;
             // 
+            // txtQuestId
+            // 
+            this.txtQuestId.Location = new System.Drawing.Point(10, 563);
+            this.txtQuestId.Name = "txtQuestId";
+            this.txtQuestId.Size = new System.Drawing.Size(10, 20);
+            this.txtQuestId.TabIndex = 17;
+            this.txtQuestId.Visible = false;
+            // 
             // btnRemoveQuest
             // 
             this.btnRemoveQuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
@@ -198,6 +260,7 @@
             this.btnAddQuest.TabIndex = 15;
             this.btnAddQuest.Text = "Thêm";
             this.btnAddQuest.UseVisualStyleBackColor = false;
+            this.btnAddQuest.Click += new System.EventHandler(this.btnAddQuest_Click);
             // 
             // txtCauDung
             // 
@@ -430,6 +493,15 @@
             this.qlKyThi.Text = "Kỳ thi";
             this.qlKyThi.UseVisualStyleBackColor = true;
             // 
+            // txtParticipants
+            // 
+            this.txtParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParticipants.Location = new System.Drawing.Point(368, 460);
+            this.txtParticipants.MaxLength = 3;
+            this.txtParticipants.Name = "txtParticipants";
+            this.txtParticipants.Size = new System.Drawing.Size(175, 26);
+            this.txtParticipants.TabIndex = 62;
+            // 
             // IdExam
             // 
             this.IdExam.Enabled = false;
@@ -630,6 +702,15 @@
             this.qlKyThiThu.TabIndex = 3;
             this.qlKyThiThu.Text = "Kỳ thi thử";
             this.qlKyThiThu.UseVisualStyleBackColor = true;
+            // 
+            // txtParicipantsTest
+            // 
+            this.txtParicipantsTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParicipantsTest.Location = new System.Drawing.Point(363, 464);
+            this.txtParicipantsTest.MaxLength = 3;
+            this.txtParicipantsTest.Name = "txtParicipantsTest";
+            this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
+            this.txtParicipantsTest.TabIndex = 63;
             // 
             // txtTimeEndTest
             // 
@@ -877,84 +958,6 @@
             this.HocSinh.ReadOnly = true;
             this.HocSinh.Visible = false;
             // 
-            // txtQuestId
-            // 
-            this.txtQuestId.Location = new System.Drawing.Point(26, 600);
-            this.txtQuestId.Name = "txtQuestId";
-            this.txtQuestId.Size = new System.Drawing.Size(85, 20);
-            this.txtQuestId.TabIndex = 17;
-            this.txtQuestId.Visible = false;
-            // 
-            // txtParticipants
-            // 
-            this.txtParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParticipants.Location = new System.Drawing.Point(368, 460);
-            this.txtParticipants.MaxLength = 3;
-            this.txtParticipants.Name = "txtParticipants";
-            this.txtParticipants.Size = new System.Drawing.Size(175, 26);
-            this.txtParticipants.TabIndex = 62;
-            // 
-            // txtParicipantsTest
-            // 
-            this.txtParicipantsTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParicipantsTest.Location = new System.Drawing.Point(363, 464);
-            this.txtParicipantsTest.MaxLength = 3;
-            this.txtParicipantsTest.Name = "txtParicipantsTest";
-            this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
-            this.txtParicipantsTest.TabIndex = 63;
-            // 
-            // sidebarButton1
-            // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
-            this.sidebarButton1.LabelText = "Thêm câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
-            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
-            this.sidebarButton1.TabIndex = 3;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
-            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
-            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
-            // 
             // TeacherMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -988,7 +991,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CustomControls.SidebarButton sidebarButton1;
+        private CustomControls.SidebarButton btnAddQuestion;
         private CustomControls.SidebarButton btnUser;
         private CustomControls.SidebarButton btnThiThu;
         private CustomControls.SidebarButton btnLamBaiThi;

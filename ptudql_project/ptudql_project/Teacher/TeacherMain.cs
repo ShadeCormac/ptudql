@@ -1,4 +1,5 @@
 ﻿using ptudql_project.DAO;
+using ptudql_project.Student;
 using ptudql_project.Utils;
 using System;
 using System.Collections.Generic;
@@ -357,6 +358,22 @@ namespace ptudql_project.Teacher
             this.cbbTestId.DataSource = Test.getAllTestId();
             this.dgvQuestions.DataSource = Test.loadQuestions(this.cbbTestId.SelectedItem.ToString());
             
+        }
+
+
+        private void btnAddQuest_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new RequestQuestion("Thêm câu hỏi"), true);
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new RequestQuestion("Thêm câu hỏi"), true);
+        }
+
+        private void btnLamBaiThi_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new StudentContest(), true);
         }
     }
 }
