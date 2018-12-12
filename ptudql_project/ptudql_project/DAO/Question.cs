@@ -35,7 +35,19 @@ namespace ptudql_project.DAO
             using (var db = new QLTNDataContext())
             {
                 
-                return new BindingList<CauHoi>(db.CauHois.ToList());
+                return new BindingList<CauHoi>(db.CauHois
+                    .Where(c => (c.DaDuyet == 1 && c.LoaiCauHoi == 2) || c.LoaiCauHoi == 1)
+                    .ToList());
+            }
+        }
+
+        public static BindingList<CauHoi> GetAllRequestedQuestions()
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return new BindingList<CauHoi>(db.CauHois
+                    .Where(c => c.LoaiCauHoi == 2 && c.DaDuyet == 0)
+                    .ToList());
             }
         }
 
@@ -80,6 +92,15 @@ namespace ptudql_project.DAO
             }
         }
 
-        
+        public static void Accept(int questId)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                var quest = db.CauHois
+                    .Where(q => q.IdCauHoi == questId)
+                    .Single().DaDuyet = 1;
+                db.SubmitChanges();
+            }
+        }    
     }
 }

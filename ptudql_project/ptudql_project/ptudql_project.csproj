@@ -134,6 +134,12 @@
     <Compile Include="Teacher\AddTest.Designer.cs">
       <DependentUpon>AddTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\FilterQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\FilterQuestion.Designer.cs">
+      <DependentUpon>FilterQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\TeacherMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\FilterQuestion.resx">
+      <DependentUpon>FilterQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\TeacherMain.resx">
       <DependentUpon>TeacherMain.cs</DependentUpon>

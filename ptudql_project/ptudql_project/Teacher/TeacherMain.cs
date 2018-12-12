@@ -409,5 +409,10 @@ namespace ptudql_project.Teacher
             addForm.FormClosed += AddForm_FormClosed1;
             Router.ChangeForm(this, addForm, true);
         }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new FilterQuestion(), true);
+        }
     }
 }
