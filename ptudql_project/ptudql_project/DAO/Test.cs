@@ -108,5 +108,17 @@ namespace ptudql_project.DAO
             }
 
         }
+
+        public static void Update(DeThi test)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                var oldTest = db.DeThis.Where(t => t.IdDe == test.IdDe).Single();
+                oldTest.ThoiGian = test.ThoiGian;
+                oldTest.GVRaDe = test.GVRaDe;
+                oldTest.DoKho = test.DoKho;
+                db.SubmitChanges();
+            }
+        }
     }
 }

@@ -13,7 +13,9 @@ namespace ptudql_project.Teacher
 {
     public partial class AddTest : Form
     {
+        List<Tuple<int, string>> diffList = null;
         BindingList<string> listQuestions = null;
+
         public AddTest()
         {
             listQuestions = new BindingList<string>();
@@ -45,6 +47,23 @@ namespace ptudql_project.Teacher
             }
             var allQuestions = Question.GetAllQuestions();
             this.dgvQuestions.DataSource = allQuestions;
+            diffList = new List<Tuple<int, string>>
+            {
+                new Tuple<int, string> (1, "Dễ"),
+                new Tuple<int, string> (2, "Trung bình"),
+                new Tuple<int, string> (3, "Khó"),
+                new Tuple<int, string> (4, "Cực khó"),
+            };
+            this.cbbDifficulty.DataSource = diffList;
+            this.cbbDifficulty.DisplayMember = "item2";
+            this.cbbDifficulty.ValueMember = "item1";
+            this.listQuestions.ListChanged += ListQuestions_ListChanged;
+            this.lbCount.Text = $"Tông số câu hỏi hiện tại: {this.listQuestions.Count}.";
+        }
+
+        private void ListQuestions_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            this.lbCount.Text = $"Tông số câu hỏi hiện tại: {this.listQuestions.Count}.";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,6 +93,7 @@ namespace ptudql_project.Teacher
 
         private void btnCreateTest_Click(object sender, EventArgs e)
         {
+            
             if (txtBoDeThi.Text == "")
             {
                 MessageBox.Show("Chưa nhập bộ đề thi", "Thông báo");
@@ -89,22 +109,58 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Mã đề thi đã tồn tại", "Thông báo");
                 return;
             }
+            int value = int.Parse(cbbDifficulty.SelectedValue.ToString());
+            switch (value)
+            {
+                case 1:
+                    if (listQuestions.Count != 20)
+                    {
+                        MessageBox.Show("Mức độ dễ là 20 câu hỏi.");
+                        return; 
+                    }
+                    break;
+                case 2:
+                    if (listQuestions.Count != 30)
+                    {
+                        MessageBox.Show("Mức độ trung bình là 30 câu hỏi.");
+                        return;
+                    }
+                    break;
+                case 3:
+                    if (listQuestions.Count != 40)
+                    {
+                        MessageBox.Show("Mức độ khó là 40 câu hỏi.");
+                        return;
+                    }
+                    break;
+                case 4:
+                    if (listQuestions.Count != 50)
+                    {
+                        MessageBox.Show("Mức độ cực khó là 50 câu hỏi.");
+                        return;
+                    }
+                    break;
+                
+            }
 
-
+            var test = new DeThi()
+            {
+                GVRaDe = "giaovien1",
+                IdDe = txtBoDeThi.Text,
+                ThoiGian = int.Parse(nipTime.Text),
+                DoKho = value
+            };
 
             if (btnCreateTest.Text == "Lưu thay đổi")
             {
                 //Test.removeQuestion
+                Test.Update(test);
                 Test.removeQuestions(this.txtBoDeThi.Text);
+                
             }
             else
             {
-                Test.Create(new DeThi()
-                {
-                    GVRaDe = "gv00001",
-                    IdDe = txtBoDeThi.Text,
-                    ThoiGian = int.Parse(nipTime.Text)
-                });
+                Test.Create(test);
             }          
                 BoDeThi bdt = null;
                 List<BoDeThi> bdtList = new List<BoDeThi>();

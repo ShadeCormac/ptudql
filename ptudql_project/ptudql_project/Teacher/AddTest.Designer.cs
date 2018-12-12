@@ -49,13 +49,16 @@
             this.nipTime = new ptudql_project.CustomControls.NumberInputBox();
             this.lbAddedQuestion = new System.Windows.Forms.ListBox();
             this.btnRemoveQuest = new System.Windows.Forms.Button();
+            this.cbbDifficulty = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 114);
+            this.label1.Location = new System.Drawing.Point(105, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -63,7 +66,7 @@
             // 
             // txtBoDeThi
             // 
-            this.txtBoDeThi.Location = new System.Drawing.Point(291, 111);
+            this.txtBoDeThi.Location = new System.Drawing.Point(178, 107);
             this.txtBoDeThi.Name = "txtBoDeThi";
             this.txtBoDeThi.Size = new System.Drawing.Size(201, 20);
             this.txtBoDeThi.TabIndex = 1;
@@ -187,7 +190,7 @@
             // 
             // btnAddQuestion
             // 
-            this.btnAddQuestion.Location = new System.Drawing.Point(261, 473);
+            this.btnAddQuestion.Location = new System.Drawing.Point(258, 482);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(158, 52);
             this.btnAddQuestion.TabIndex = 11;
@@ -197,7 +200,7 @@
             // 
             // btnCreateTest
             // 
-            this.btnCreateTest.Location = new System.Drawing.Point(721, 473);
+            this.btnCreateTest.Location = new System.Drawing.Point(734, 482);
             this.btnCreateTest.Name = "btnCreateTest";
             this.btnCreateTest.Size = new System.Drawing.Size(168, 52);
             this.btnCreateTest.TabIndex = 12;
@@ -208,7 +211,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(605, 114);
+            this.label3.Location = new System.Drawing.Point(695, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 13;
@@ -216,7 +219,7 @@
             // 
             // nipTime
             // 
-            this.nipTime.Location = new System.Drawing.Point(689, 111);
+            this.nipTime.Location = new System.Drawing.Point(779, 110);
             this.nipTime.Name = "nipTime";
             this.nipTime.Size = new System.Drawing.Size(101, 20);
             this.nipTime.TabIndex = 14;
@@ -224,7 +227,7 @@
             // lbAddedQuestion
             // 
             this.lbAddedQuestion.FormattingEnabled = true;
-            this.lbAddedQuestion.Location = new System.Drawing.Point(670, 158);
+            this.lbAddedQuestion.Location = new System.Drawing.Point(680, 158);
             this.lbAddedQuestion.Name = "lbAddedQuestion";
             this.lbAddedQuestion.Size = new System.Drawing.Size(263, 277);
             this.lbAddedQuestion.TabIndex = 15;
@@ -239,11 +242,40 @@
             this.btnRemoveQuest.UseVisualStyleBackColor = true;
             this.btnRemoveQuest.Click += new System.EventHandler(this.btnRemoveQuest_Click);
             // 
+            // cbbDifficulty
+            // 
+            this.cbbDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDifficulty.FormattingEnabled = true;
+            this.cbbDifficulty.Location = new System.Drawing.Point(497, 107);
+            this.cbbDifficulty.Name = "cbbDifficulty";
+            this.cbbDifficulty.Size = new System.Drawing.Size(121, 21);
+            this.cbbDifficulty.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(428, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Mức độ đề:";
+            // 
+            // lbCount
+            // 
+            this.lbCount.AutoSize = true;
+            this.lbCount.Location = new System.Drawing.Point(776, 455);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(0, 13);
+            this.lbCount.TabIndex = 20;
+            // 
             // AddTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 568);
+            this.Controls.Add(this.lbCount);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbbDifficulty);
             this.Controls.Add(this.btnRemoveQuest);
             this.Controls.Add(this.lbAddedQuestion);
             this.Controls.Add(this.nipTime);
@@ -288,5 +320,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DaDuyet;
         private System.Windows.Forms.ListBox lbAddedQuestion;
         private System.Windows.Forms.Button btnRemoveQuest;
+        private System.Windows.Forms.ComboBox cbbDifficulty;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbCount;
     }
 }
