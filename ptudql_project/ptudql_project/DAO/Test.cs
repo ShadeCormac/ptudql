@@ -21,7 +21,7 @@ namespace ptudql_project.DAO
             using (var db = new QLTNDataContext())
             {
                 db.DeThis.InsertOnSubmit(test);
-                //db.SubmitChanges();
+                db.SubmitChanges();
             }
         }
         public static void addQuestions(List<BoDeThi> bdtList)
@@ -51,6 +51,49 @@ namespace ptudql_project.DAO
                     quest => quest.IdCauHoi,
                     (bdt, quest) => quest).ToList());
             }
+        }
+
+        public static BindingList<string> loadQuestionsId(string testId)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return new BindingList<string>(db.BoDeThis.Where(bdt => bdt.IdDe == testId)
+                    .Join(db.CauHois,
+                    bdt => bdt.IdCauHoi,
+                    quest => quest.IdCauHoi,
+                    (bdt, quest) => quest.IdCauHoi.ToString()).ToList());
+            }
+        }
+
+        public static int? getTime(string testId)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return db.DeThis.Where(d => d.IdDe == testId).Single().ThoiGian;
+            }
+        }
+        public static void Remove(string testId)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                var test = db.DeThis.Where(t => t.IdDe == testId).Single();
+                
+                foreach (KyThi_DeThi tx in test.KyThi_DeThis)
+                {
+                    db.KyThi_DeThis.DeleteOnSubmit(tx);
+                }
+                foreach (BoDeThi b in test.BoDeThis)
+                {
+                    db.BoDeThis.DeleteOnSubmit(b);
+                }
+                foreach (DanhSachThi d in test.DanhSachThis)
+                {
+                    db.DanhSachThis.DeleteOnSubmit(d);
+                }
+                db.DeThis.DeleteOnSubmit(test);
+                db.SubmitChanges();
+            }
+
         }
     }
 }

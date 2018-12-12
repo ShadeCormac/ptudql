@@ -48,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.nipTime = new ptudql_project.CustomControls.NumberInputBox();
             this.lbAddedQuestion = new System.Windows.Forms.ListBox();
+            this.btnRemoveQuest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,11 +229,22 @@
             this.lbAddedQuestion.Size = new System.Drawing.Size(263, 277);
             this.lbAddedQuestion.TabIndex = 15;
             // 
+            // btnRemoveQuest
+            // 
+            this.btnRemoveQuest.Location = new System.Drawing.Point(589, 289);
+            this.btnRemoveQuest.Name = "btnRemoveQuest";
+            this.btnRemoveQuest.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveQuest.TabIndex = 16;
+            this.btnRemoveQuest.Text = "Xóa câu hỏi";
+            this.btnRemoveQuest.UseVisualStyleBackColor = true;
+            this.btnRemoveQuest.Click += new System.EventHandler(this.btnRemoveQuest_Click);
+            // 
             // AddTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 568);
+            this.Controls.Add(this.btnRemoveQuest);
             this.Controls.Add(this.lbAddedQuestion);
             this.Controls.Add(this.nipTime);
             this.Controls.Add(this.label3);
@@ -275,5 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauHoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DaDuyet;
         private System.Windows.Forms.ListBox lbAddedQuestion;
+        private System.Windows.Forms.Button btnRemoveQuest;
     }
 }

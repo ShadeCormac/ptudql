@@ -209,7 +209,15 @@ namespace ptudql_project.Teacher
 
         private void btnAddTest_Click(object sender, EventArgs e)
         {
-            Router.ChangeForm(this, new AddTest(), true);
+            var addForm = new AddTest();
+            addForm.FormClosed += AddForm_FormClosed1;
+            Router.ChangeForm(this, addForm, true);
+
+        }
+
+        private void AddForm_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            LoadTests();
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
@@ -355,8 +363,13 @@ namespace ptudql_project.Teacher
 
         private void LoadTests()
         {
-            this.cbbTestId.DataSource = Test.getAllTestId();
-            this.dgvQuestions.DataSource = Test.loadQuestions(this.cbbTestId.SelectedItem.ToString());
+            
+            {
+                this.cbbTestId.DataSource = Test.getAllTestId();
+                if (this.cbbTestId.Items.Count != 0)
+                    this.dgvQuestions.DataSource = Test.loadQuestions(this.cbbTestId.SelectedItem.ToString());
+                else this.dgvQuestions.DataSource = null;
+            }
             
         }
 
@@ -374,6 +387,27 @@ namespace ptudql_project.Teacher
         private void btnLamBaiThi_Click(object sender, EventArgs e)
         {
             Router.ChangeForm(this, new StudentContest(), true);
+        }
+
+        private void btnDeleteTest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Test.Remove(cbbTestId.SelectedItem.ToString());
+                MessageBox.Show("Xóa thành công", "Thông báo");
+                LoadTests();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Xóa không thành công","Thông báo");
+            }
+        }
+
+        private void btnEditTest_Click(object sender, EventArgs e)
+        {
+            var addForm = new AddTest(this.cbbTestId.SelectedItem.ToString());
+            addForm.FormClosed += AddForm_FormClosed1;
+            Router.ChangeForm(this, addForm, true);
         }
     }
 }

@@ -19,13 +19,31 @@ namespace ptudql_project.Teacher
             listQuestions = new BindingList<string>();
             InitializeComponent();
         }
+        public AddTest(string testId)
+        {
+            listQuestions = new BindingList<string>();
+            InitializeComponent();
+            this.txtBoDeThi.Text = testId;
+            this.txtBoDeThi.Enabled = false;
+            //this.txtBoDeThi.ReadOnly = true; 
+            LoadListQuests(testId);
+        }
+
+        private void LoadListQuests(string testId)
+        {
+            listQuestions = Test.loadQuestionsId(testId);
+            this.nipTime.Text = Test.getTime(testId).ToString();
+        }
 
         private void AddTest_Load(object sender, EventArgs e)
         {
+            if (this.lbAddedQuestion.Items.Count == 0)
+            {
+                this.lbAddedQuestion.DataSource = listQuestions;
+
+            }
             var allQuestions = Question.GetAllQuestions();
             this.dgvQuestions.DataSource = allQuestions;
-            this.lbAddedQuestion.DataSource = listQuestions;
-            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -73,7 +91,7 @@ namespace ptudql_project.Teacher
 
             Test.Create(new DeThi()
             {
-                GVRaDe = "giaovien",
+                GVRaDe = "gv00001",
                 IdDe = txtBoDeThi.Text,
                 ThoiGian = int.Parse(nipTime.Text)
             });
@@ -96,6 +114,11 @@ namespace ptudql_project.Teacher
             this.listQuestions.Clear();
             this.txtBoDeThi.Text = "";
 
+        }
+
+        private void btnRemoveQuest_Click(object sender, EventArgs e)
+        {
+            this.listQuestions.Remove(this.lbAddedQuestion.SelectedItem.ToString());
         }
     }
 }
