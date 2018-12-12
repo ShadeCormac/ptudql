@@ -27,6 +27,7 @@ namespace ptudql_project.Teacher
             this.txtBoDeThi.Enabled = false;
             //this.txtBoDeThi.ReadOnly = true; 
             LoadListQuests(testId);
+            this.btnCreateTest.Text = "Lưu thay đổi";
         }
 
         private void LoadListQuests(string testId)
@@ -70,7 +71,7 @@ namespace ptudql_project.Teacher
 
             
         }
-        
+
         private void btnCreateTest_Click(object sender, EventArgs e)
         {
             if (txtBoDeThi.Text == "")
@@ -83,37 +84,52 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Chưa nhập thời gian", "Thông báo");
                 return;
             }
-            else if (Test.isExisted(txtBoDeThi.Text))
+            else if (Test.isExisted(txtBoDeThi.Text) && this.btnCreateTest.Text != "Lưu thay đổi")
             {
                 MessageBox.Show("Mã đề thi đã tồn tại", "Thông báo");
                 return;
             }
 
-            Test.Create(new DeThi()
-            {
-                GVRaDe = "gv00001",
-                IdDe = txtBoDeThi.Text,
-                ThoiGian = int.Parse(nipTime.Text)
-            });
 
-            BoDeThi bdt = null;
-            List<BoDeThi> bdtList = new List<BoDeThi>();
-            foreach (string quest in listQuestions)
+
+            if (btnCreateTest.Text == "Lưu thay đổi")
             {
-                bdt = new BoDeThi
-                {
-                    IdCauHoi = int.Parse(quest),
-                    IdDe = txtBoDeThi.Text
-                };
-                bdtList.Add(bdt);
+                //Test.removeQuestion
+                Test.removeQuestions(this.txtBoDeThi.Text);
             }
-            Test.addQuestions(bdtList);
-
-            MessageBox.Show("Bạn đã thêm thành công");
-            this.nipTime.Text = "";
-            this.listQuestions.Clear();
-            this.txtBoDeThi.Text = "";
-
+            else
+            {
+                Test.Create(new DeThi()
+                {
+                    GVRaDe = "gv00001",
+                    IdDe = txtBoDeThi.Text,
+                    ThoiGian = int.Parse(nipTime.Text)
+                });
+            }          
+                BoDeThi bdt = null;
+                List<BoDeThi> bdtList = new List<BoDeThi>();
+                foreach (string quest in listQuestions)
+                {
+                    bdt = new BoDeThi
+                    {
+                        IdCauHoi = int.Parse(quest),
+                        IdDe = txtBoDeThi.Text
+                    };
+                    bdtList.Add(bdt);
+                }
+                Test.addQuestions(bdtList);
+            if (btnCreateTest.Text == "Lưu thay đổi")
+            {
+                MessageBox.Show("Lưu thay đổi thành công");
+            }
+            else
+            {
+                MessageBox.Show("Bạn đã thêm thành công");
+            
+                this.nipTime.Text = "";
+                this.listQuestions.Clear();
+                this.txtBoDeThi.Text = "";
+            }
         }
 
         private void btnRemoveQuest_Click(object sender, EventArgs e)

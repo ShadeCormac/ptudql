@@ -189,7 +189,7 @@
             // 
             this.btnAddQuestion.Location = new System.Drawing.Point(261, 473);
             this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(136, 23);
+            this.btnAddQuestion.Size = new System.Drawing.Size(158, 52);
             this.btnAddQuestion.TabIndex = 11;
             this.btnAddQuestion.Text = "Thêm câu hỏi";
             this.btnAddQuestion.UseVisualStyleBackColor = true;
@@ -197,9 +197,9 @@
             // 
             // btnCreateTest
             // 
-            this.btnCreateTest.Location = new System.Drawing.Point(689, 473);
+            this.btnCreateTest.Location = new System.Drawing.Point(721, 473);
             this.btnCreateTest.Name = "btnCreateTest";
-            this.btnCreateTest.Size = new System.Drawing.Size(136, 23);
+            this.btnCreateTest.Size = new System.Drawing.Size(168, 52);
             this.btnCreateTest.TabIndex = 12;
             this.btnCreateTest.Text = "Tạo đề thi";
             this.btnCreateTest.UseVisualStyleBackColor = true;

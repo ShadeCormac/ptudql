@@ -72,6 +72,19 @@ namespace ptudql_project.DAO
                 return db.DeThis.Where(d => d.IdDe == testId).Single().ThoiGian;
             }
         }
+
+        public static void removeQuestions(string testId)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                var test = db.DeThis.Where(t => t.IdDe == testId).Single();
+                foreach (BoDeThi b in test.BoDeThis)
+                {
+                    db.BoDeThis.DeleteOnSubmit(b);
+                }
+                db.SubmitChanges();
+            }
+        }
         public static void Remove(string testId)
         {
             using (var db = new QLTNDataContext())
