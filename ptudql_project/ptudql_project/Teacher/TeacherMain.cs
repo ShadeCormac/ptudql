@@ -293,6 +293,12 @@ namespace ptudql_project.Teacher
 
         private void btnUpdateExam_Click(object sender, EventArgs e)
         {
+            //if (_trackingExamList.Count > 0)
+            //{
+            //    Exam.SaveChanges(_trackingExamList.OrderBy(exam => exam.IDKyThi).ToList());
+            //    _trackingExamList.Clear();
+            //    MessageBox.Show("Đã cập nhật thành công", "Thông báo");
+            //}
             if (_trackingExamList.Count > 0)
             {
                 Exam.SaveChanges(_trackingExamList.OrderBy(exam => exam.IDKyThi).ToList());
