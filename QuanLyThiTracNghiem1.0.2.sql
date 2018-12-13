@@ -41,8 +41,7 @@ create table KyThi(
 	--cho biết là kỳ thi thử/ôn tập hay là thi thật
 	LoaiKyThi int,
 	ThoiGianBatDau datetime,
-	ThoiGianKetThuc datetime,
-	DoKho int
+	ThoiGianKetThuc datetime
 )
 go
 create table DeThi(
