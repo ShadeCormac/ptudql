@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\Exam.cs" />
+    <Compile Include="DAO\Exam_Test.cs" />
     <Compile Include="DAO\Question.cs" />
     <Compile Include="DAO\Student.cs" />
     <Compile Include="DAO\Test.cs" />
@@ -134,6 +135,12 @@
     <Compile Include="Teacher\AddTest.Designer.cs">
       <DependentUpon>AddTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\DetailsExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\DetailsExam.Designer.cs">
+      <DependentUpon>DetailsExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\FilterQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\DetailsExam.resx">
+      <DependentUpon>DetailsExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\FilterQuestion.resx">
       <DependentUpon>FilterQuestion.cs</DependentUpon>

@@ -28,7 +28,14 @@ namespace ptudql_project.DAO
                                                select kyThi).Where(kyThi => kyThi.LoaiKyThi == 2).ToList());
             }
         }
-
+        public static BindingList<string> LoadIdTest(string idExam)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                db.DeferredLoadingEnabled = false;
+                return new BindingList<string>(db.KyThi_DeThis.Where(deThi => deThi.IdKyThi == idExam).Select(d => d.IdDe).ToList());
+            }
+        }
         public static void Insert(KyThi exam)
         {
             using (var db = new QLTNDataContext())

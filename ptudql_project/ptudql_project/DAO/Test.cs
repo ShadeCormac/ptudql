@@ -64,7 +64,13 @@ namespace ptudql_project.DAO
                     (bdt, quest) => quest.IdCauHoi.ToString()).ToList());
             }
         }
-
+        public static BindingList<string> loadQuestionsId()
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return new BindingList<string>(db.DeThis.Select(d => d.IdDe).ToList());
+            }
+        }
         public static int? getTime(string testId)
         {
             using (var db = new QLTNDataContext())

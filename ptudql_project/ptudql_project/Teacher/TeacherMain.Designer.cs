@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qlCauHoi = new System.Windows.Forms.TabPage();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.txtQuestId = new System.Windows.Forms.TextBox();
             this.btnRemoveQuest = new System.Windows.Forms.Button();
             this.btnAddQuest = new System.Windows.Forms.Button();
@@ -102,11 +103,11 @@
             this.HocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
             this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
+            this.btnDetailsExam = new System.Windows.Forms.Button();
             this.btnAddQuestion = new ptudql_project.CustomControls.SidebarButton();
             this.btnUser = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
             this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.qlCauHoi.SuspendLayout();
@@ -176,6 +177,19 @@
             this.qlCauHoi.TabIndex = 0;
             this.qlCauHoi.Text = "Câu hỏi";
             this.qlCauHoi.UseVisualStyleBackColor = true;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.Location = new System.Drawing.Point(293, 549);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(85, 45);
+            this.btnFilter.TabIndex = 18;
+            this.btnFilter.Text = "Duyệt";
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtQuestId
             // 
@@ -351,6 +365,7 @@
             this.qlDeThi.Controls.Add(this.cbbTestId);
             this.qlDeThi.Controls.Add(this.panel3);
             this.qlDeThi.Controls.Add(this.label10);
+            this.qlDeThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qlDeThi.Location = new System.Drawing.Point(4, 22);
             this.qlDeThi.Name = "qlDeThi";
             this.qlDeThi.Padding = new System.Windows.Forms.Padding(3);
@@ -361,32 +376,41 @@
             // 
             // btnEditTest
             // 
-            this.btnEditTest.Location = new System.Drawing.Point(332, 548);
+            this.btnEditTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnEditTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTest.ForeColor = System.Drawing.Color.White;
+            this.btnEditTest.Location = new System.Drawing.Point(236, 543);
             this.btnEditTest.Name = "btnEditTest";
             this.btnEditTest.Size = new System.Drawing.Size(144, 55);
             this.btnEditTest.TabIndex = 11;
             this.btnEditTest.Text = "Sửa đề thi";
-            this.btnEditTest.UseVisualStyleBackColor = true;
+            this.btnEditTest.UseVisualStyleBackColor = false;
             this.btnEditTest.Click += new System.EventHandler(this.btnEditTest_Click);
             // 
             // btnDeleteTest
             // 
-            this.btnDeleteTest.Location = new System.Drawing.Point(503, 548);
+            this.btnDeleteTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnDeleteTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTest.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteTest.Location = new System.Drawing.Point(465, 543);
             this.btnDeleteTest.Name = "btnDeleteTest";
             this.btnDeleteTest.Size = new System.Drawing.Size(144, 55);
             this.btnDeleteTest.TabIndex = 10;
             this.btnDeleteTest.Text = "Xoá đề thi";
-            this.btnDeleteTest.UseVisualStyleBackColor = true;
+            this.btnDeleteTest.UseVisualStyleBackColor = false;
             this.btnDeleteTest.Click += new System.EventHandler(this.btnDeleteTest_Click);
             // 
             // btnAddTest
             // 
-            this.btnAddTest.Location = new System.Drawing.Point(143, 548);
+            this.btnAddTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTest.ForeColor = System.Drawing.Color.White;
+            this.btnAddTest.Location = new System.Drawing.Point(7, 543);
             this.btnAddTest.Name = "btnAddTest";
             this.btnAddTest.Size = new System.Drawing.Size(144, 55);
             this.btnAddTest.TabIndex = 9;
             this.btnAddTest.Text = "Thêm đề thi mới";
-            this.btnAddTest.UseVisualStyleBackColor = true;
+            this.btnAddTest.UseVisualStyleBackColor = false;
             this.btnAddTest.Click += new System.EventHandler(this.btnAddTest_Click);
             // 
             // dgvQuestions
@@ -395,18 +419,18 @@
             this.dgvQuestions.AllowUserToDeleteRows = false;
             this.dgvQuestions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuestions.Location = new System.Drawing.Point(44, 122);
+            this.dgvQuestions.Location = new System.Drawing.Point(6, 123);
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.ReadOnly = true;
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(603, 398);
+            this.dgvQuestions.Size = new System.Drawing.Size(885, 398);
             this.dgvQuestions.TabIndex = 8;
             // 
             // cbbTestId
             // 
             this.cbbTestId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTestId.FormattingEnabled = true;
-            this.cbbTestId.Location = new System.Drawing.Point(44, 81);
+            this.cbbTestId.Location = new System.Drawing.Point(6, 82);
             this.cbbTestId.Name = "cbbTestId";
             this.cbbTestId.Size = new System.Drawing.Size(121, 21);
             this.cbbTestId.TabIndex = 7;
@@ -433,6 +457,7 @@
             // 
             // qlKyThi
             // 
+            this.qlKyThi.Controls.Add(this.btnDetailsExam);
             this.qlKyThi.Controls.Add(this.txtParticipants);
             this.qlKyThi.Controls.Add(this.IdExam);
             this.qlKyThi.Controls.Add(this.txtTimeEnd);
@@ -566,9 +591,9 @@
             this.btnRemoveExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnRemoveExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveExam.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveExam.Location = new System.Drawing.Point(694, 538);
+            this.btnRemoveExam.Location = new System.Drawing.Point(467, 538);
             this.btnRemoveExam.Name = "btnRemoveExam";
-            this.btnRemoveExam.Size = new System.Drawing.Size(208, 49);
+            this.btnRemoveExam.Size = new System.Drawing.Size(175, 49);
             this.btnRemoveExam.TabIndex = 49;
             this.btnRemoveExam.Text = "Xóa kỳ thi";
             this.btnRemoveExam.UseVisualStyleBackColor = false;
@@ -579,9 +604,9 @@
             this.btnUpdateExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnUpdateExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateExam.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateExam.Location = new System.Drawing.Point(356, 538);
+            this.btnUpdateExam.Location = new System.Drawing.Point(240, 538);
             this.btnUpdateExam.Name = "btnUpdateExam";
-            this.btnUpdateExam.Size = new System.Drawing.Size(208, 49);
+            this.btnUpdateExam.Size = new System.Drawing.Size(175, 49);
             this.btnUpdateExam.TabIndex = 48;
             this.btnUpdateExam.Text = "Sửa kỳ thi";
             this.btnUpdateExam.UseVisualStyleBackColor = false;
@@ -594,7 +619,7 @@
             this.btnAddExam.ForeColor = System.Drawing.Color.White;
             this.btnAddExam.Location = new System.Drawing.Point(22, 538);
             this.btnAddExam.Name = "btnAddExam";
-            this.btnAddExam.Size = new System.Drawing.Size(208, 49);
+            this.btnAddExam.Size = new System.Drawing.Size(175, 49);
             this.btnAddExam.TabIndex = 47;
             this.btnAddExam.Text = "Thêm kỳ thi ";
             this.btnAddExam.UseVisualStyleBackColor = false;
@@ -923,6 +948,19 @@
             this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
             this.txtParicipantsTest.TabIndex = 63;
             // 
+            // btnDetailsExam
+            // 
+            this.btnDetailsExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnDetailsExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailsExam.ForeColor = System.Drawing.Color.White;
+            this.btnDetailsExam.Location = new System.Drawing.Point(717, 538);
+            this.btnDetailsExam.Name = "btnDetailsExam";
+            this.btnDetailsExam.Size = new System.Drawing.Size(175, 49);
+            this.btnDetailsExam.TabIndex = 63;
+            this.btnDetailsExam.Text = "Chi tiết kỳ thi";
+            this.btnDetailsExam.UseVisualStyleBackColor = false;
+            this.btnDetailsExam.Click += new System.EventHandler(this.btnDetailsExam_Click);
+            // 
             // btnAddQuestion
             // 
             this.btnAddQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
@@ -976,19 +1014,6 @@
             this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
             this.btnLamBaiThi.TabIndex = 0;
             this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Location = new System.Drawing.Point(293, 549);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(85, 45);
-            this.btnFilter.TabIndex = 18;
-            this.btnFilter.Text = "Duyệt";
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // TeacherMain
             // 
@@ -1100,5 +1125,6 @@
         private System.Windows.Forms.TextBox txtQuestId;
         private System.Windows.Forms.Button btnEditTest;
         private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.Button btnDetailsExam;
     }
 }

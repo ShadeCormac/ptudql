@@ -25,18 +25,18 @@ namespace ptudql_project.Teacher
             _trackingList = new BindingList<CauHoi>();
             _trackingExamList = new BindingList<KyThi>();
             _trackingTestExamList = new BindingList<KyThi>();
-            
+
         }
 
         private void UnbindExamTxt()
         {
-            IdExam.DataBindings.Clear(); 
-            txtNameExam.DataBindings.Clear();    
-            txtParticipants.DataBindings.Clear();           
+            IdExam.DataBindings.Clear();
+            txtNameExam.DataBindings.Clear();
+            txtParticipants.DataBindings.Clear();
             txtTypeExam.DataBindings.Clear();
-            txtTimeStart.DataBindings.Clear();         
+            txtTimeStart.DataBindings.Clear();
             txtTimeEnd.DataBindings.Clear();
-            
+
         }
 
         private void UnbindTestExamTxt()
@@ -51,46 +51,59 @@ namespace ptudql_project.Teacher
 
         private void BindExamTxt()
         {
-            UnbindExamTxt();
-            //dgvExam.DataBindings.Clear();
-            var dgv = dgvExam.DataSource as BindingList<KyThi>;
+            try
+            {
+                UnbindExamTxt();
+                //dgvExam.DataBindings.Clear();
+                var dgv = dgvExam.DataSource as BindingList<KyThi>;
 
-            dgv.ListChanged += Dgv_ListChanged;
-            
-            IdExam.DataBindings.Add("Text", dgv, "IDKyThi");
-            
-            txtNameExam.DataBindings.Add("Text", dgv, "TenKyThi");
-           
-            txtParticipants.DataBindings.Add("Text", dgv, "SLThamGia");
-            
-            txtTypeExam.DataBindings.Add("Text", dgv, "LoaiKyThi");
-            
-            txtTimeStart.DataBindings.Add("Text", dgv, "ThoiGianBatDau");
-            
-            txtTimeEnd.DataBindings.Add("Text", dgv, "ThoiGianKetThuc");
+                dgv.ListChanged += Dgv_ListChanged;
 
+                IdExam.DataBindings.Add("Text", dgv, "IDKyThi");
+
+                txtNameExam.DataBindings.Add("Text", dgv, "TenKyThi");
+
+                txtParticipants.DataBindings.Add("Text", dgv, "SLThamGia", true);
+
+                txtTypeExam.DataBindings.Add("Text", dgv, "LoaiKyThi", true);
+
+                txtTimeStart.DataBindings.Add("Text", dgv, "ThoiGianBatDau", true);
+
+                txtTimeEnd.DataBindings.Add("Text", dgv, "ThoiGianKetThuc", true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi", "Thông báo");
+            }
         }
 
-        
+
 
         private void BindTestExamTxt()
         {
-            dgvExamTest.DataBindings.Clear();
-            var dgv = dgvExamTest.DataSource as BindingList<KyThi>;
-            dgv.ListChanged += Dgv_ListChanged1;
-            UnbindTestExamTxt();
+            try
+            {
+                dgvExamTest.DataBindings.Clear();
+                var dgv = dgvExamTest.DataSource as BindingList<KyThi>;
+                dgv.ListChanged += Dgv_ListChanged1;
+                UnbindTestExamTxt();
 
-            IDExamTest.DataBindings.Add("Text", dgv, "IDKyThi");
+                IDExamTest.DataBindings.Add("Text", dgv, "IDKyThi");
 
-            txtNameExamTest.DataBindings.Add("Text", dgv, "TenKyThi");
+                txtNameExamTest.DataBindings.Add("Text", dgv, "TenKyThi");
 
-            txtParicipantsTest.DataBindings.Add("Text", dgv, "SLThamGia");
+                txtParicipantsTest.DataBindings.Add("Text", dgv, "SLThamGia", true);
 
-            txtTypeExamTest.DataBindings.Add("Text", dgv, "LoaiKyThi");
+                txtTypeExamTest.DataBindings.Add("Text", dgv, "LoaiKyThi", true);
 
-            txtTimeStartTest.DataBindings.Add("Text", dgv, "ThoiGianBatDau");
+                txtTimeStartTest.DataBindings.Add("Text", dgv, "ThoiGianBatDau", true);
 
-            txtTimeEndTest.DataBindings.Add("Text", dgv, "ThoiGianKetThuc");
+                txtTimeEndTest.DataBindings.Add("Text", dgv, "ThoiGianKetThuc", true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi", "Thông báo");
+            }
         }
         private void Dgv_ListChanged1(object sender, ListChangedEventArgs e)
         {
@@ -125,19 +138,11 @@ namespace ptudql_project.Teacher
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //switch (this.tabControl1.SelectedTab.Text) {
-            //    case "Đề thi":
-            //        LoadQuestForm();
-            //        break;
-            //    case "Câu hỏi":
-            //        LoadQuestionsForm();
-            //        break;
 
-            //}
         }
         void LoadQuestionsForm()
         {
-            
+
             {
                 var data = Question.GetAllQuestions();
                 data.ListChanged += Data_ListChanged;
@@ -150,8 +155,8 @@ namespace ptudql_project.Teacher
         {
             this.dgvExam.DataSource = DAO.Exam.LoadExam();
             BindExamTxt();
-            
         }
+
         void LoadExamTest()
         {
             this.dgvExamTest.DataSource = DAO.Exam.LoadExamTest();
@@ -293,12 +298,6 @@ namespace ptudql_project.Teacher
 
         private void btnUpdateExam_Click(object sender, EventArgs e)
         {
-            //if (_trackingExamList.Count > 0)
-            //{
-            //    Exam.SaveChanges(_trackingExamList.OrderBy(exam => exam.IDKyThi).ToList());
-            //    _trackingExamList.Clear();
-            //    MessageBox.Show("Đã cập nhật thành công", "Thông báo");
-            //}
             if (_trackingExamList.Count > 0)
             {
                 Exam.SaveChanges(_trackingExamList.OrderBy(exam => exam.IDKyThi).ToList());
@@ -345,6 +344,7 @@ namespace ptudql_project.Teacher
             BindExamTxt();
             BindTestExamTxt();
             LoadTests();
+
         }
 
         private void btnRemoveQuest_Click(object sender, EventArgs e)
@@ -357,7 +357,7 @@ namespace ptudql_project.Teacher
                     id = (int)row.Cells["IdCauHoi"].Value;
                     Question.Remove(id);
                 }
-                
+
             }
             catch (SqlException)
             {
@@ -369,16 +369,16 @@ namespace ptudql_project.Teacher
 
         private void LoadTests()
         {
-            
+
             {
                 this.cbbTestId.DataSource = Test.getAllTestId();
                 if (this.cbbTestId.Items.Count != 0)
                     this.dgvQuestions.DataSource = Test.loadQuestions(this.cbbTestId.SelectedItem.ToString());
                 else this.dgvQuestions.DataSource = null;
             }
-            
-        }
 
+        }
+        
 
         private void btnAddQuest_Click(object sender, EventArgs e)
         {
@@ -403,9 +403,9 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Xóa thành công", "Thông báo");
                 LoadTests();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Xóa không thành công","Thông báo");
+                MessageBox.Show("Xóa không thành công", "Thông báo");
             }
         }
 
@@ -419,6 +419,11 @@ namespace ptudql_project.Teacher
         private void btnFilter_Click(object sender, EventArgs e)
         {
             Router.ChangeForm(this, new FilterQuestion(), true);
+        }
+
+        private void btnDetailsExam_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new DetailsExam(dgvExam.CurrentRow.Cells["IDKyThi"].Value.ToString()),true);
         }
     }
 }
