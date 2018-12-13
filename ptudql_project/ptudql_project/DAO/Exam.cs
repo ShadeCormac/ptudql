@@ -77,17 +77,16 @@ namespace ptudql_project.DAO
                 var item = db.KyThis.Where(exam => exam.IDKyThi == id).SingleOrDefault();
                 if (item != null)
                 {
-                    try
+                    foreach (var k in item.KyThi_DeThis)
                     {
-                        db.KyThis.DeleteOnSubmit(item);
-
-                        db.SubmitChanges();
+                        db.KyThi_DeThis.DeleteOnSubmit(k);
                     }
-                    catch (SqlException ex)
+                    foreach (var d in item.DanhSachThis)
                     {
-                        throw ex;
+                        db.DanhSachThis.DeleteOnSubmit(d);
                     }
-                    
+                    db.KyThis.DeleteOnSubmit(item);
+                    db.SubmitChanges();
                 }
             }
         }

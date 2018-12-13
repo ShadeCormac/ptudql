@@ -75,7 +75,9 @@ namespace ptudql_project.Teacher
             {
                 idTest.Add(this.lBIdTest.Items[i].ToString());
             }
-            Exam_Test.UpdateTests(lbIdExam.Text, idTest);
+            Exam_Test.removeTests(lbIdExam.Text);
+            Exam_Test.insertTests(lbIdExam.Text, idTest);
+            MessageBox.Show("Cập nhập thành công", "Thông báo");
         }
     }
 }
