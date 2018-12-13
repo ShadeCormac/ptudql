@@ -108,7 +108,7 @@ namespace ptudql_project.Student
                 try
                 {
                     Import import = new Import(@filePath);
-                    var list = import.importStudent();
+                    var list = import.importQuestions();
                     import.Cleanup();
                     Question.Import(list);
                     MessageBox.Show("Thêm thành công");

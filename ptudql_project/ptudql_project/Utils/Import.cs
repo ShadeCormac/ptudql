@@ -23,7 +23,7 @@ namespace ptudql_project.Utils
             _xlworksheet = _xlWorkbook.Sheets[1];
             _xlRange = _xlworksheet.UsedRange;
         }
-        public List<CauHoi> importStudent()
+        public List<CauHoi> importQuestions()
         {
             _row = _xlRange.Rows.Count;
             _col = _xlRange.Columns.Count;
