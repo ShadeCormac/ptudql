@@ -12,6 +12,27 @@ namespace ptudql_project.DAO
 {
     public partial class Question
     {
+        public static void Import(List<CauHoi> listQuests)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                foreach (CauHoi q in listQuests)
+                {
+                    if (db.CauHois.Where(quest => quest
+                     .NoiDung
+                     .CompareTo(q.NoiDung) == 0)
+                     .SingleOrDefault() != null)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        db.CauHois.InsertOnSubmit(q);
+                    }
+                }
+                db.SubmitChanges();
+            }
+        }
         public static List<CauHoi> LoadQuestion()
         {
             using(var db = new QLTNDataContext())

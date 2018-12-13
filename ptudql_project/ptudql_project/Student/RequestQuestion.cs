@@ -1,9 +1,11 @@
 ﻿using ptudql_project.DAO;
+using ptudql_project.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +96,28 @@ namespace ptudql_project.Student
         private void txtNoiDung_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            int size = -1;
+            DialogResult result = ofdImport.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string filePath = ofdImport.FileName;
+                try
+                {
+                    Import import = new Import(@filePath);
+                    var list = import.importStudent();
+                    import.Cleanup();
+                    Question.Import(list);
+                    MessageBox.Show("Thêm thành công");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi...");
+                }
+            }
         }
     }
 }

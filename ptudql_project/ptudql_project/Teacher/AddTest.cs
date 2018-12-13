@@ -145,7 +145,7 @@ namespace ptudql_project.Teacher
 
             var test = new DeThi()
             {
-                GVRaDe = "giaovien1",
+                GVRaDe = "giaovien",
                 IdDe = txtBoDeThi.Text,
                 ThoiGian = int.Parse(nipTime.Text),
                 DoKho = value
