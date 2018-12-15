@@ -54,18 +54,26 @@ namespace ptudql_project.Teacher
 
         private void btnAddIdTest_Click(object sender, EventArgs e)
         {
-            BindingList<string> leftList = this.lBAllIdTest.DataSource as BindingList<string>;
-            BindingList<string> rightList = this.lBIdTest.DataSource as BindingList<string>;
-            rightList.Add(this.lBAllIdTest.SelectedItem.ToString());
-            leftList.Remove(this.lBAllIdTest.SelectedItem.ToString());         
+            if (this.lBAllIdTest.SelectedItem != null)
+            {
+                BindingList<string> leftList = this.lBAllIdTest.DataSource as BindingList<string>;
+                BindingList<string> rightList = this.lBIdTest.DataSource as BindingList<string>;
+                if(!rightList.Contains(this.lBAllIdTest.SelectedItem.ToString()))
+                    rightList.Add(this.lBAllIdTest.SelectedItem.ToString());
+                leftList.Remove(this.lBAllIdTest.SelectedItem.ToString());
+            }  
         }
 
         private void btnRemoveIdTest_Click(object sender, EventArgs e)
         {
-            BindingList<string> leftList = this.lBAllIdTest.DataSource as BindingList<string>;
-            BindingList<string> rightList = this.lBIdTest.DataSource as BindingList<string>;
-            leftList.Add(this.lBIdTest.SelectedItem.ToString());
-            rightList.Remove(this.lBIdTest.SelectedItem.ToString());
+            if (this.lBIdTest.SelectedItem != null)
+            {
+                BindingList<string> leftList = this.lBAllIdTest.DataSource as BindingList<string>;
+                BindingList<string> rightList = this.lBIdTest.DataSource as BindingList<string>;
+                if(!leftList.Contains(this.lBIdTest.SelectedItem.ToString()))
+                    leftList.Add(this.lBIdTest.SelectedItem.ToString());
+                rightList.Remove(this.lBIdTest.SelectedItem.ToString());
+            } 
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
