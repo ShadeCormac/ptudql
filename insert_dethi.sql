@@ -6,10 +6,10 @@ insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien2', 'giaovien
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien3', 'giaovien3', 2)
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien4', 'giaovien4', 2)
 
-insert into GiaoVien(TenTK, Ten) values('giaovien1', N'Giáo viên 1')
-insert into GiaoVien(TenTK, Ten) values('giaovien2', N'Giáo viên 2')
-insert into GiaoVien(TenTK, Ten) values('giaovien3', N'Giáo viên 3')
-insert into GiaoVien(TenTK, Ten) values('giaovien4', N'Giáo viên 4')
+insert into GiaoVien(TenTK, HoTen) values('giaovien1', N'Giáo viên 1')
+insert into GiaoVien(TenTK, HoTen) values('giaovien2', N'Giáo viên 2')
+insert into GiaoVien(TenTK, HoTen) values('giaovien3', N'Giáo viên 3')
+insert into GiaoVien(TenTK, HoTen) values('giaovien4', N'Giáo viên 4')
 
 declare cur cursor for
 select IdCauHoi
