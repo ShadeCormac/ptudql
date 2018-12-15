@@ -34,6 +34,7 @@ namespace ptudql_project
     private void loginBtn_Click(object sender, EventArgs e)
     {
             //Router.ChangeForm(this, new StudentInfo());
+            Session.AccountName = "giaovien1";
             Router.ChangeForm(this, new TeacherMain());
             if (_username.Length < 6 || _password.Length < 6)
             {
@@ -54,7 +55,25 @@ namespace ptudql_project
                     }
                     else
                     {
-                        Router.ChangeForm(this, new StudentInfo());
+                        Session.AccountName = _username;
+                        Session.AccountType = Account.getAccountType(_username);
+                        switch (Session.AccountType)
+                        {
+                            case 1:
+                                //Router.ChangeForm(this, new AdminMain());
+                                break;
+                            case 2:
+                                Router.ChangeForm(this, new TeacherMain());
+                                break;
+                            case 3:
+                                Router.ChangeForm(this, new StudentInfo());
+                                break;
+                            default:
+                                MessageBox.Show("Đã xảy ra lỗi..", "Thông báo");
+                                this.Close();
+                                break;
+                        }
+                        
                     }
                 }
             }

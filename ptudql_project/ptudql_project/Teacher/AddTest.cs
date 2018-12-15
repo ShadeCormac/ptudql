@@ -1,4 +1,5 @@
 ﻿using ptudql_project.DAO;
+using ptudql_project.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -145,7 +146,7 @@ namespace ptudql_project.Teacher
 
             var test = new DeThi()
             {
-                GVRaDe = "giaovien",
+                GVRaDe = Session.AccountName,
                 IdDe = txtBoDeThi.Text,
                 ThoiGian = int.Parse(nipTime.Text),
                 DoKho = value

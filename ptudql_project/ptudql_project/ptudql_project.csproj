@@ -158,6 +158,7 @@
     <Compile Include="Utils\Import.cs" />
     <Compile Include="Utils\Router.cs" />
     <Compile Include="Utils\MyTimer.cs" />
+    <Compile Include="Utils\Session.cs" />
     <Compile Include="Utils\Validation.cs" />
     <EmbeddedResource Include="CustomControls\ListQuest.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
