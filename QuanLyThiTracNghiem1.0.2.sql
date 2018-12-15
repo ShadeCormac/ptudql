@@ -23,7 +23,9 @@ create table HocSinh(
 go
 create table GiaoVien(
 	TenTK varchar(20) references TaiKhoan(TenDangNhap) primary key,
-	Ten nvarchar(50)
+	HoTen nvarchar(50),
+	GioiTinh nvarchar(10),
+	Email varchar(50)
 	--cần thêm gì nữa?
 )
 go
@@ -81,7 +83,8 @@ create table DanhSachThi(
 	TKHocSinh varchar(20) references HocSinh(TenTK),
 	IdDe varchar(10) references DeThi(IdDe),
 	IdKyThi varchar(10) references KyThi(IdKyThi),
-	primary key(TKHocSinh, IdDe, IdKyThi), 
+	LanThi int,
+	primary key(TKHocSinh, IdDe, IdKyThi, LanThi), 
 	Diem float
 )
 go
