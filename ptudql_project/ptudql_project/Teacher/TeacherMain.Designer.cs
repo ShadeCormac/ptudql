@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddQuestion = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qlCauHoi = new System.Windows.Forms.TabPage();
             this.btnFilter = new System.Windows.Forms.Button();
@@ -60,11 +56,9 @@
             this.btnAddTest = new System.Windows.Forms.Button();
             this.dgvQuestions = new System.Windows.Forms.DataGridView();
             this.cbbTestId = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.qlKyThi = new System.Windows.Forms.TabPage();
             this.btnDetailsExam = new System.Windows.Forms.Button();
-            this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
             this.IdExam = new System.Windows.Forms.TextBox();
             this.txtTimeEnd = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -83,7 +77,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.qlKyThiThu = new System.Windows.Forms.TabPage();
-            this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
             this.txtTimeEndTest = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtTimeStartTest = new System.Windows.Forms.TextBox();
@@ -99,7 +92,6 @@
             this.btnUpdateExamTest = new System.Windows.Forms.Button();
             this.btnAddExamTest = new System.Windows.Forms.Button();
             this.dgvExamTest = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.qlHocSinh = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -108,6 +100,17 @@
             this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDetailsExamTest = new System.Windows.Forms.Button();
+            this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
+            this.txtParicipantsTest = new ptudql_project.CustomControls.NumberInputBox();
+            this.btnAddQuestion = new ptudql_project.CustomControls.SidebarButton();
+            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.qlCauHoi.SuspendLayout();
@@ -134,60 +137,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 657);
             this.panel1.TabIndex = 1;
-            // 
-            // btnAddQuestion
-            // 
-            this.btnAddQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnAddQuestion.CustomImage")));
-            this.btnAddQuestion.LabelLocation = new System.Drawing.Point(45, 83);
-            this.btnAddQuestion.LabelText = "Thêm câu hỏi";
-            this.btnAddQuestion.Location = new System.Drawing.Point(0, 490);
-            this.btnAddQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(200, 110);
-            this.btnAddQuestion.TabIndex = 3;
-            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
-            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
-            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
-            this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
             // 
             // tabControl1
             // 
@@ -412,12 +361,12 @@
             // 
             // qlDeThi
             // 
+            this.qlDeThi.Controls.Add(this.panel3);
             this.qlDeThi.Controls.Add(this.btnEditTest);
             this.qlDeThi.Controls.Add(this.btnDeleteTest);
             this.qlDeThi.Controls.Add(this.btnAddTest);
             this.qlDeThi.Controls.Add(this.dgvQuestions);
             this.qlDeThi.Controls.Add(this.cbbTestId);
-            this.qlDeThi.Controls.Add(this.panel3);
             this.qlDeThi.Controls.Add(this.label10);
             this.qlDeThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qlDeThi.Location = new System.Drawing.Point(4, 22);
@@ -433,7 +382,7 @@
             this.btnEditTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnEditTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTest.ForeColor = System.Drawing.Color.White;
-            this.btnEditTest.Location = new System.Drawing.Point(391, 548);
+            this.btnEditTest.Location = new System.Drawing.Point(368, 548);
             this.btnEditTest.Name = "btnEditTest";
             this.btnEditTest.Size = new System.Drawing.Size(144, 55);
             this.btnEditTest.TabIndex = 11;
@@ -446,7 +395,7 @@
             this.btnDeleteTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnDeleteTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTest.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTest.Location = new System.Drawing.Point(620, 548);
+            this.btnDeleteTest.Location = new System.Drawing.Point(693, 548);
             this.btnDeleteTest.Name = "btnDeleteTest";
             this.btnDeleteTest.Size = new System.Drawing.Size(144, 55);
             this.btnDeleteTest.TabIndex = 10;
@@ -459,7 +408,7 @@
             this.btnAddTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnAddTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTest.ForeColor = System.Drawing.Color.White;
-            this.btnAddTest.Location = new System.Drawing.Point(162, 548);
+            this.btnAddTest.Location = new System.Drawing.Point(71, 548);
             this.btnAddTest.Name = "btnAddTest";
             this.btnAddTest.Size = new System.Drawing.Size(144, 55);
             this.btnAddTest.TabIndex = 9;
@@ -473,37 +422,29 @@
             this.dgvQuestions.AllowUserToDeleteRows = false;
             this.dgvQuestions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuestions.Location = new System.Drawing.Point(6, 123);
+            this.dgvQuestions.Location = new System.Drawing.Point(8, 116);
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.ReadOnly = true;
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(885, 398);
+            this.dgvQuestions.Size = new System.Drawing.Size(901, 398);
             this.dgvQuestions.TabIndex = 8;
             // 
             // cbbTestId
             // 
             this.cbbTestId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTestId.FormattingEnabled = true;
-            this.cbbTestId.Location = new System.Drawing.Point(6, 82);
+            this.cbbTestId.Location = new System.Drawing.Point(9, 77);
             this.cbbTestId.Name = "cbbTestId";
             this.cbbTestId.Size = new System.Drawing.Size(121, 21);
             this.cbbTestId.TabIndex = 7;
             this.cbbTestId.SelectedIndexChanged += new System.EventHandler(this.CbbTestId_SelectedIndexChanged);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel3.Location = new System.Drawing.Point(3, 72);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(993, 3);
-            this.panel3.TabIndex = 5;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label10.Location = new System.Drawing.Point(385, 23);
+            this.label10.Location = new System.Drawing.Point(362, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 31);
             this.label10.TabIndex = 6;
@@ -512,10 +453,10 @@
             // qlKyThi
             // 
             this.qlKyThi.Controls.Add(this.btnDetailsExam);
-            this.qlKyThi.Controls.Add(this.txtParticipants);
             this.qlKyThi.Controls.Add(this.IdExam);
             this.qlKyThi.Controls.Add(this.txtTimeEnd);
             this.qlKyThi.Controls.Add(this.label16);
+            this.qlKyThi.Controls.Add(this.panel4);
             this.qlKyThi.Controls.Add(this.txtTimeStart);
             this.qlKyThi.Controls.Add(this.label17);
             this.qlKyThi.Controls.Add(this.txtTypeExam);
@@ -528,8 +469,8 @@
             this.qlKyThi.Controls.Add(this.btnUpdateExam);
             this.qlKyThi.Controls.Add(this.btnAddExam);
             this.qlKyThi.Controls.Add(this.dgvExam);
-            this.qlKyThi.Controls.Add(this.panel4);
             this.qlKyThi.Controls.Add(this.label22);
+            this.qlKyThi.Controls.Add(this.txtParticipants);
             this.qlKyThi.Location = new System.Drawing.Point(4, 22);
             this.qlKyThi.Name = "qlKyThi";
             this.qlKyThi.Size = new System.Drawing.Size(917, 631);
@@ -550,20 +491,11 @@
             this.btnDetailsExam.UseVisualStyleBackColor = false;
             this.btnDetailsExam.Click += new System.EventHandler(this.btnDetailsExam_Click);
             // 
-            // txtParticipants
-            // 
-            this.txtParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParticipants.Location = new System.Drawing.Point(368, 460);
-            this.txtParticipants.MaxLength = 3;
-            this.txtParticipants.Name = "txtParticipants";
-            this.txtParticipants.Size = new System.Drawing.Size(175, 26);
-            this.txtParticipants.TabIndex = 62;
-            // 
             // IdExam
             // 
             this.IdExam.Enabled = false;
             this.IdExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdExam.Location = new System.Drawing.Point(95, 367);
+            this.IdExam.Location = new System.Drawing.Point(85, 357);
             this.IdExam.MaxLength = 10;
             this.IdExam.Name = "IdExam";
             this.IdExam.ReadOnly = true;
@@ -573,7 +505,7 @@
             // txtTimeEnd
             // 
             this.txtTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeEnd.Location = new System.Drawing.Point(708, 457);
+            this.txtTimeEnd.Location = new System.Drawing.Point(698, 449);
             this.txtTimeEnd.Name = "txtTimeEnd";
             this.txtTimeEnd.Size = new System.Drawing.Size(194, 24);
             this.txtTimeEnd.TabIndex = 60;
@@ -581,7 +513,7 @@
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(578, 455);
+            this.label16.Location = new System.Drawing.Point(568, 447);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(131, 31);
             this.label16.TabIndex = 59;
@@ -591,7 +523,7 @@
             // txtTimeStart
             // 
             this.txtTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeStart.Location = new System.Drawing.Point(708, 367);
+            this.txtTimeStart.Location = new System.Drawing.Point(698, 357);
             this.txtTimeStart.Name = "txtTimeStart";
             this.txtTimeStart.Size = new System.Drawing.Size(194, 24);
             this.txtTimeStart.TabIndex = 58;
@@ -599,7 +531,7 @@
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(565, 362);
+            this.label17.Location = new System.Drawing.Point(555, 352);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(163, 35);
             this.label17.TabIndex = 57;
@@ -610,7 +542,7 @@
             // 
             this.txtTypeExam.Enabled = false;
             this.txtTypeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeExam.Location = new System.Drawing.Point(95, 458);
+            this.txtTypeExam.Location = new System.Drawing.Point(85, 450);
             this.txtTypeExam.Name = "txtTypeExam";
             this.txtTypeExam.ReadOnly = true;
             this.txtTypeExam.Size = new System.Drawing.Size(105, 24);
@@ -619,7 +551,7 @@
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(19, 461);
+            this.label18.Location = new System.Drawing.Point(9, 453);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(80, 23);
             this.label18.TabIndex = 55;
@@ -628,7 +560,7 @@
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(237, 447);
+            this.label19.Location = new System.Drawing.Point(225, 438);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(133, 47);
             this.label19.TabIndex = 53;
@@ -638,7 +570,7 @@
             // txtNameExam
             // 
             this.txtNameExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameExam.Location = new System.Drawing.Point(368, 367);
+            this.txtNameExam.Location = new System.Drawing.Point(358, 357);
             this.txtNameExam.MaxLength = 50;
             this.txtNameExam.Name = "txtNameExam";
             this.txtNameExam.Size = new System.Drawing.Size(175, 24);
@@ -647,7 +579,7 @@
             // label20
             // 
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(284, 370);
+            this.label20.Location = new System.Drawing.Point(272, 360);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(100, 23);
             this.label20.TabIndex = 51;
@@ -656,7 +588,7 @@
             // label21
             // 
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(27, 370);
+            this.label21.Location = new System.Drawing.Point(17, 360);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(70, 23);
             this.label21.TabIndex = 50;
@@ -667,7 +599,7 @@
             this.btnRemoveExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnRemoveExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveExam.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveExam.Location = new System.Drawing.Point(467, 538);
+            this.btnRemoveExam.Location = new System.Drawing.Point(483, 538);
             this.btnRemoveExam.Name = "btnRemoveExam";
             this.btnRemoveExam.Size = new System.Drawing.Size(175, 49);
             this.btnRemoveExam.TabIndex = 49;
@@ -680,7 +612,7 @@
             this.btnUpdateExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnUpdateExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateExam.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateExam.Location = new System.Drawing.Point(240, 538);
+            this.btnUpdateExam.Location = new System.Drawing.Point(250, 538);
             this.btnUpdateExam.Name = "btnUpdateExam";
             this.btnUpdateExam.Size = new System.Drawing.Size(175, 49);
             this.btnUpdateExam.TabIndex = 48;
@@ -717,9 +649,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel4.Location = new System.Drawing.Point(8, 61);
+            this.panel4.Location = new System.Drawing.Point(3, 53);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(993, 3);
+            this.panel4.Size = new System.Drawing.Size(911, 3);
             this.panel4.TabIndex = 44;
             // 
             // label22
@@ -735,6 +667,8 @@
             // 
             // qlKyThiThu
             // 
+            this.qlKyThiThu.Controls.Add(this.panel2);
+            this.qlKyThiThu.Controls.Add(this.btnDetailsExamTest);
             this.qlKyThiThu.Controls.Add(this.txtParicipantsTest);
             this.qlKyThiThu.Controls.Add(this.txtTimeEndTest);
             this.qlKyThiThu.Controls.Add(this.label15);
@@ -751,7 +685,6 @@
             this.qlKyThiThu.Controls.Add(this.btnUpdateExamTest);
             this.qlKyThiThu.Controls.Add(this.btnAddExamTest);
             this.qlKyThiThu.Controls.Add(this.dgvExamTest);
-            this.qlKyThiThu.Controls.Add(this.panel2);
             this.qlKyThiThu.Controls.Add(this.label7);
             this.qlKyThiThu.Location = new System.Drawing.Point(4, 22);
             this.qlKyThiThu.Name = "qlKyThiThu";
@@ -760,19 +693,10 @@
             this.qlKyThiThu.Text = "Kỳ thi thử";
             this.qlKyThiThu.UseVisualStyleBackColor = true;
             // 
-            // txtParicipantsTest
-            // 
-            this.txtParicipantsTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParicipantsTest.Location = new System.Drawing.Point(363, 464);
-            this.txtParicipantsTest.MaxLength = 3;
-            this.txtParicipantsTest.Name = "txtParicipantsTest";
-            this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
-            this.txtParicipantsTest.TabIndex = 63;
-            // 
             // txtTimeEndTest
             // 
             this.txtTimeEndTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeEndTest.Location = new System.Drawing.Point(703, 460);
+            this.txtTimeEndTest.Location = new System.Drawing.Point(698, 449);
             this.txtTimeEndTest.Name = "txtTimeEndTest";
             this.txtTimeEndTest.Size = new System.Drawing.Size(194, 24);
             this.txtTimeEndTest.TabIndex = 43;
@@ -780,7 +704,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(573, 458);
+            this.label15.Location = new System.Drawing.Point(568, 447);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(131, 31);
             this.label15.TabIndex = 42;
@@ -790,7 +714,7 @@
             // txtTimeStartTest
             // 
             this.txtTimeStartTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeStartTest.Location = new System.Drawing.Point(703, 371);
+            this.txtTimeStartTest.Location = new System.Drawing.Point(698, 357);
             this.txtTimeStartTest.Name = "txtTimeStartTest";
             this.txtTimeStartTest.Size = new System.Drawing.Size(194, 24);
             this.txtTimeStartTest.TabIndex = 41;
@@ -798,7 +722,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(560, 366);
+            this.label14.Location = new System.Drawing.Point(555, 352);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(163, 35);
             this.label14.TabIndex = 40;
@@ -808,7 +732,7 @@
             // txtTypeExamTest
             // 
             this.txtTypeExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeExamTest.Location = new System.Drawing.Point(90, 461);
+            this.txtTypeExamTest.Location = new System.Drawing.Point(85, 450);
             this.txtTypeExamTest.Name = "txtTypeExamTest";
             this.txtTypeExamTest.ReadOnly = true;
             this.txtTypeExamTest.Size = new System.Drawing.Size(105, 24);
@@ -817,7 +741,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 464);
+            this.label13.Location = new System.Drawing.Point(9, 453);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(80, 23);
             this.label13.TabIndex = 38;
@@ -826,7 +750,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(232, 450);
+            this.label12.Location = new System.Drawing.Point(225, 438);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(133, 47);
             this.label12.TabIndex = 36;
@@ -836,7 +760,7 @@
             // txtNameExamTest
             // 
             this.txtNameExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameExamTest.Location = new System.Drawing.Point(363, 371);
+            this.txtNameExamTest.Location = new System.Drawing.Point(358, 357);
             this.txtNameExamTest.MaxLength = 50;
             this.txtNameExamTest.Name = "txtNameExamTest";
             this.txtNameExamTest.Size = new System.Drawing.Size(175, 24);
@@ -845,7 +769,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(279, 374);
+            this.label11.Location = new System.Drawing.Point(272, 360);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(100, 23);
             this.label11.TabIndex = 34;
@@ -855,7 +779,7 @@
             // 
             this.IDExamTest.Enabled = false;
             this.IDExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDExamTest.Location = new System.Drawing.Point(90, 371);
+            this.IDExamTest.Location = new System.Drawing.Point(85, 357);
             this.IDExamTest.Name = "IDExamTest";
             this.IDExamTest.ReadOnly = true;
             this.IDExamTest.Size = new System.Drawing.Size(105, 24);
@@ -864,7 +788,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 373);
+            this.label9.Location = new System.Drawing.Point(17, 360);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 23);
             this.label9.TabIndex = 32;
@@ -875,9 +799,9 @@
             this.btnRemoveExamTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnRemoveExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveExamTest.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveExamTest.Location = new System.Drawing.Point(689, 541);
+            this.btnRemoveExamTest.Location = new System.Drawing.Point(483, 538);
             this.btnRemoveExamTest.Name = "btnRemoveExamTest";
-            this.btnRemoveExamTest.Size = new System.Drawing.Size(208, 49);
+            this.btnRemoveExamTest.Size = new System.Drawing.Size(175, 49);
             this.btnRemoveExamTest.TabIndex = 31;
             this.btnRemoveExamTest.Text = "Xóa kỳ thi thử";
             this.btnRemoveExamTest.UseVisualStyleBackColor = false;
@@ -888,9 +812,9 @@
             this.btnUpdateExamTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnUpdateExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateExamTest.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateExamTest.Location = new System.Drawing.Point(351, 541);
+            this.btnUpdateExamTest.Location = new System.Drawing.Point(250, 538);
             this.btnUpdateExamTest.Name = "btnUpdateExamTest";
-            this.btnUpdateExamTest.Size = new System.Drawing.Size(208, 49);
+            this.btnUpdateExamTest.Size = new System.Drawing.Size(175, 49);
             this.btnUpdateExamTest.TabIndex = 30;
             this.btnUpdateExamTest.Text = "Sửa kỳ thi thử";
             this.btnUpdateExamTest.UseVisualStyleBackColor = false;
@@ -901,9 +825,9 @@
             this.btnAddExamTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
             this.btnAddExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddExamTest.ForeColor = System.Drawing.Color.White;
-            this.btnAddExamTest.Location = new System.Drawing.Point(17, 541);
+            this.btnAddExamTest.Location = new System.Drawing.Point(22, 538);
             this.btnAddExamTest.Name = "btnAddExamTest";
-            this.btnAddExamTest.Size = new System.Drawing.Size(208, 49);
+            this.btnAddExamTest.Size = new System.Drawing.Size(175, 49);
             this.btnAddExamTest.TabIndex = 29;
             this.btnAddExamTest.Text = "Thêm kỳ thi thử";
             this.btnAddExamTest.UseVisualStyleBackColor = false;
@@ -914,7 +838,7 @@
             this.dgvExamTest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvExamTest.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvExamTest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExamTest.Location = new System.Drawing.Point(5, 89);
+            this.dgvExamTest.Location = new System.Drawing.Point(9, 86);
             this.dgvExamTest.MultiSelect = false;
             this.dgvExamTest.Name = "dgvExamTest";
             this.dgvExamTest.ReadOnly = true;
@@ -922,20 +846,12 @@
             this.dgvExamTest.Size = new System.Drawing.Size(906, 247);
             this.dgvExamTest.TabIndex = 28;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel2.Location = new System.Drawing.Point(3, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(993, 3);
-            this.panel2.TabIndex = 26;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label7.Location = new System.Drawing.Point(386, 18);
+            this.label7.Location = new System.Drawing.Point(362, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 31);
             this.label7.TabIndex = 27;
@@ -943,6 +859,8 @@
             // 
             // qlHocSinh
             // 
+            this.qlHocSinh.Controls.Add(this.panel5);
+            this.qlHocSinh.Controls.Add(this.label23);
             this.qlHocSinh.Controls.Add(this.label8);
             this.qlHocSinh.Controls.Add(this.cbKyThi);
             this.qlHocSinh.Controls.Add(this.dgvHocSinh);
@@ -957,7 +875,7 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Location = new System.Drawing.Point(464, 25);
+            this.label8.Location = new System.Drawing.Point(486, 77);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 23);
             this.label8.TabIndex = 4;
@@ -969,7 +887,7 @@
             this.cbKyThi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKyThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbKyThi.FormattingEnabled = true;
-            this.cbKyThi.Location = new System.Drawing.Point(630, 24);
+            this.cbKyThi.Location = new System.Drawing.Point(630, 77);
             this.cbKyThi.Name = "cbKyThi";
             this.cbKyThi.Size = new System.Drawing.Size(279, 24);
             this.cbKyThi.TabIndex = 3;
@@ -985,10 +903,10 @@
             this.DeThi,
             this.HocSinh});
             this.dgvHocSinh.GridColor = System.Drawing.Color.Black;
-            this.dgvHocSinh.Location = new System.Drawing.Point(3, 64);
+            this.dgvHocSinh.Location = new System.Drawing.Point(8, 116);
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.ReadOnly = true;
-            this.dgvHocSinh.Size = new System.Drawing.Size(906, 559);
+            this.dgvHocSinh.Size = new System.Drawing.Size(906, 484);
             this.dgvHocSinh.TabIndex = 0;
             // 
             // KyThi
@@ -1015,6 +933,126 @@
             this.HocSinh.ReadOnly = true;
             this.HocSinh.Visible = false;
             // 
+            // btnDetailsExamTest
+            // 
+            this.btnDetailsExamTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnDetailsExamTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailsExamTest.ForeColor = System.Drawing.Color.White;
+            this.btnDetailsExamTest.Location = new System.Drawing.Point(717, 538);
+            this.btnDetailsExamTest.Name = "btnDetailsExamTest";
+            this.btnDetailsExamTest.Size = new System.Drawing.Size(175, 49);
+            this.btnDetailsExamTest.TabIndex = 64;
+            this.btnDetailsExamTest.Text = "Chi tiết kỳ thi";
+            this.btnDetailsExamTest.UseVisualStyleBackColor = false;
+            this.btnDetailsExamTest.Click += new System.EventHandler(this.btnDetailsExamTest_Click);
+            // 
+            // txtParticipants
+            // 
+            this.txtParticipants.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParticipants.Location = new System.Drawing.Point(358, 452);
+            this.txtParticipants.MaxLength = 3;
+            this.txtParticipants.Name = "txtParticipants";
+            this.txtParticipants.Size = new System.Drawing.Size(175, 26);
+            this.txtParticipants.TabIndex = 62;
+            // 
+            // txtParicipantsTest
+            // 
+            this.txtParicipantsTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParicipantsTest.Location = new System.Drawing.Point(358, 452);
+            this.txtParicipantsTest.MaxLength = 3;
+            this.txtParicipantsTest.Name = "txtParicipantsTest";
+            this.txtParicipantsTest.Size = new System.Drawing.Size(175, 26);
+            this.txtParicipantsTest.TabIndex = 63;
+            // 
+            // btnAddQuestion
+            // 
+            this.btnAddQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnAddQuestion.CustomImage")));
+            this.btnAddQuestion.LabelLocation = new System.Drawing.Point(45, 83);
+            this.btnAddQuestion.LabelText = "Thêm câu hỏi";
+            this.btnAddQuestion.Location = new System.Drawing.Point(0, 490);
+            this.btnAddQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(200, 110);
+            this.btnAddQuestion.TabIndex = 3;
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnUser.LabelText = "Thông tin cá nhân";
+            this.btnUser.Location = new System.Drawing.Point(0, 86);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(200, 110);
+            this.btnUser.TabIndex = 2;
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
+            this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.label23.Location = new System.Drawing.Point(362, 12);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(231, 31);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Quản lý học sinh";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.panel3.Location = new System.Drawing.Point(3, 53);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(911, 3);
+            this.panel3.TabIndex = 45;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.panel2.Location = new System.Drawing.Point(3, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(911, 3);
+            this.panel2.TabIndex = 65;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.panel5.Location = new System.Drawing.Point(3, 53);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(911, 3);
+            this.panel5.TabIndex = 45;
+            // 
             // TeacherMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1040,6 +1078,7 @@
             this.qlKyThiThu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamTest)).EndInit();
             this.qlHocSinh.ResumeLayout(false);
+            this.qlHocSinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.ResumeLayout(false);
 
@@ -1058,7 +1097,6 @@
         private System.Windows.Forms.TabPage qlKyThiThu;
         private System.Windows.Forms.TabPage qlHocSinh;
         private System.Windows.Forms.ComboBox cbbTestId;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvQuestions;
         private System.Windows.Forms.DataGridView dgvAllQuest;
@@ -1081,7 +1119,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbKyThi;
         private System.Windows.Forms.DataGridView dgvExamTest;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRemoveExamTest;
         private System.Windows.Forms.Button btnUpdateExamTest;
@@ -1126,5 +1163,10 @@
         private System.Windows.Forms.Button btnEditTest;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnDetailsExam;
+        private System.Windows.Forms.Button btnDetailsExamTest;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label23;
     }
 }

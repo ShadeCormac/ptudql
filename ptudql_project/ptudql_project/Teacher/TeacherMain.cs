@@ -425,5 +425,10 @@ namespace ptudql_project.Teacher
         {
             Router.ChangeForm(this, new DetailsExam(dgvExam.CurrentRow.Cells["IDKyThi"].Value.ToString()),true);
         }
+
+        private void btnDetailsExamTest_Click(object sender, EventArgs e)
+        {
+            Router.ChangeForm(this, new DetailsExam(dgvExamTest.CurrentRow.Cells["IDKyThi"].Value.ToString()), true);
+        }
     }
 }
