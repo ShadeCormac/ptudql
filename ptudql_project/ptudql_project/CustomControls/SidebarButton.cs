@@ -14,23 +14,19 @@ namespace ptudql_project.CustomControls
   {
     public string LabelText
     {
-      get
-            { return label1.Text; }
-      set
-            {  label1.Text = value; }
+      get { return label1.Text; }
+      set {  label1.Text = value; }
     }
 
     public Point LabelLocation
     {
-      get
-            { return label1.Location; }
+      get { return label1.Location; }
       set { label1.Location = value; }
     }
 
     public Image CustomImage
     {
-      get
-            { return pictureBox1.Image; }
+      get { return pictureBox1.Image; }
       set { pictureBox1.Image = value; }
     }
 

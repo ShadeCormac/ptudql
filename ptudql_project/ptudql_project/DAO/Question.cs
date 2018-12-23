@@ -18,6 +18,17 @@ namespace ptudql_project.DAO
             }
         }
 
+        public static List<CauHoi> getByDeThi(string idDeThi)
+        {
+            using(var db = new QLTNDataContext())
+            {
+                return (from bd in db.BoDeThis
+                join c in db.CauHois on bd.IdCauHoi equals c.IdCauHoi
+                where bd.IdDe == idDeThi
+                select c).ToList();
+            }
+        }
+
         public static void AddRequest(CauHoi request)
         {
             using (var db = new QLTNDataContext())
