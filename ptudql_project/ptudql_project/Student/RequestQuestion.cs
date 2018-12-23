@@ -100,7 +100,6 @@ namespace ptudql_project.Student
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            int size = -1;
             DialogResult result = ofdImport.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {

@@ -71,7 +71,7 @@ namespace ptudql_project.Teacher
 
                 txtTimeEnd.DataBindings.Add("Text", dgv, "ThoiGianKetThuc", true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
@@ -100,7 +100,7 @@ namespace ptudql_project.Teacher
 
                 txtTimeEndTest.DataBindings.Add("Text", dgv, "ThoiGianKetThuc", true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
@@ -403,7 +403,7 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Xóa thành công", "Thông báo");
                 LoadTests();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Xóa không thành công", "Thông báo");
             }
@@ -430,5 +430,15 @@ namespace ptudql_project.Teacher
         {
             Router.ChangeForm(this, new DetailsExam(dgvExamTest.CurrentRow.Cells["IDKyThi"].Value.ToString()), true);
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+                Export export = new Export();
+                var list = DAO.Question.GetAllQuestions().ToList();
+                export.ExportQuestions(list);
+                Question.Import(list); 
+                MessageBox.Show("Xuất thành công");      
+        }
+
     }
 }

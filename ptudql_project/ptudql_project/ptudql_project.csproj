@@ -154,6 +154,7 @@
       <DependentUpon>TeacherMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Crypto.cs" />
+    <Compile Include="Utils\Export.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Import.cs" />
     <Compile Include="Utils\Router.cs" />
