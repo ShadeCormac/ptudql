@@ -33,7 +33,7 @@ namespace ptudql_project.Utils
         public static void ChangeForm(Form currentForm, Form nextForm, bool turnBackAble = false)
         {
             nextForm.Location = currentForm.Location;
-            nextForm.StartPosition = FormStartPosition.Manual;
+            nextForm.StartPosition = FormStartPosition.CenterScreen;
             if (turnBackAble)
             {
                 nextForm.FormClosing += delegate { currentForm.Show(); };

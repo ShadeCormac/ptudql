@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.CustomControls;
 using ptudql_project.Utils;
+using ptudql_project.DAO;
 
 namespace ptudql_project.Student
 {
@@ -16,46 +17,22 @@ namespace ptudql_project.Student
     {
 
         //private SidebarButton activeBtn = null;
+        private string username = "test";
+
+        private List<string> lstIdKyThi;
+        private List<DanhSachThi> lstDST;
+
         ErrorProvider errors = null;
+
         public StudentInfo()
         {
             InitializeComponent();
             errors = new ErrorProvider();
-            this.btnLamBaiThi.Click += lamBaiTracNghiem;
 
-        }
-
-        //private void changeColorBtn(object sender, EventArgs e)
-        //{
-        //  SidebarButton btn = (SidebarButton)sender;
-        //  if (activeBtn != null)
-        //  {
-        //    activeBtn.BackColor = Color.FromArgb(53, 152, 220);
-        //  }
-        //  btn.BackColor = Color.FromArgb(48, 124, 176);
-        //  activeBtn = btn;
-        //}
-
-        private void lamBaiTracNghiem(object sender, EventArgs e)
-        {
-            //List<Quest> listQuest = new List<Quest>();
-            //for(int i = 1; i <= 20; i++)
-            //{
-            //Quest quest = new Quest($"Câu hỏi {i}", "Đáp án 1", "Đáp án 2", "Đáp án 3", "Đáp án 4");
-            //listQuest.Add(quest);
-            //}
-            //ListQuest listQuestControl = new ListQuest(listQuest);
-
-            //TabPage lamBaiTracNghiemPage = new TabPage("Làm bài trắc nghiệm");
-            //lamBaiTracNghiemPage.Controls.Add(listQuestControl);
-
-            //tabControl1.TabPages.Clear();
-            //tabControl1.TabPages.Add(lamBaiTracNghiemPage);
-        }
-
-        private void btnLamBaiThi_Click(object sender, EventArgs e)
-        {
-            Router.ChangeForm(this, new StudentContest());
+            var routingHandler = StudentRouter.routingBuilder(this);
+            btnLamBaiThi.Click += routingHandler;
+            btnRequestQuestion.Click += routingHandler;
+            btnThiThu.Click += routingHandler;
         }
 
         private void CheckMail(object sender, EventArgs e)
@@ -98,24 +75,38 @@ namespace ptudql_project.Student
             }
         }
 
-        private void btnLamBaiThi_Load(object sender, EventArgs e)
+        private void LoadKQHT()
         {
-
-        }
-
-        private void btnLamBaiThi_DoubleClick(object sender, EventArgs e)
-        {
-            //Router.ChangeForm(this, )
-        }
-
-        private void sidebarButton1_Load(object sender, EventArgs e)
-        {
-            Router.ChangeForm(this, new RequestQuestion("Đóng góp câu hỏi"));
-        }
-
-        private void sidebarButton1_DoubleClick(object sender, EventArgs e)
-        {
+            lstDST = Contest.getListContestResult(1, username);
+            lstIdKyThi = Contest.getListIdKyThiFromDST(lstDST);
             
+            lstIdKyThi.Insert(0, "Tất cả");
+
+            cbKyThiFilter.Items.Clear();
+            cbKyThiFilter.Items.AddRange(lstIdKyThi.ToArray());
+            cbKyThiFilter.SelectedIndex = 0;
+            dgvKQHT.DataSource = lstDST;
+        }
+
+        private void tabForms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabForms.SelectedTab == tabForms.TabPages["tabContestResult"])
+            {
+                LoadKQHT();
+            }
+        }
+
+        private void cbKyThiFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var idx = cbKyThiFilter.SelectedIndex;
+            
+            if (idx == 0)
+            {
+                dgvKQHT.DataSource = lstDST;
+                return;
+            }
+
+            dgvKQHT.DataSource = lstDST.Where(dst => dst.IdKyThi.Equals(lstIdKyThi[idx])).ToList();
         }
     }
 }

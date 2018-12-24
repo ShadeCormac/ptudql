@@ -5,11 +5,13 @@ insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien1', 'giaovien
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien2', 'giaovien2', 2)
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien3', 'giaovien3', 2)
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien4', 'giaovien4', 2)
+insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('test', 'test', 1)
 
 insert into GiaoVien(TenTK, HoTen) values('giaovien1', N'Giáo viên 1')
 insert into GiaoVien(TenTK, HoTen) values('giaovien2', N'Giáo viên 2')
 insert into GiaoVien(TenTK, HoTen) values('giaovien3', N'Giáo viên 3')
 insert into GiaoVien(TenTK, HoTen) values('giaovien4', N'Giáo viên 4')
+insert into HocSinh(TenTK, HoTen) values('test', N'Test')
 
 declare cur cursor for
 select IdCauHoi
@@ -46,7 +48,7 @@ begin
 	begin
 		insert into DeThi(IdDe, GVRaDe, DoKho,ThoiGian) values(@IdDe, 'giaovien'+cast(@numGV as varchar(10)), @numGV,40)
 		insert into KyThi(IDKyThi,TenKyThi,SLThamGia,LoaiKyThi,ThoiGianBatDau,ThoiGianKetThuc) 
-							values('KT'+@IdDe, @tenKyThi,0,@numDe%2,GETDATE(),'31/12/2018')
+							values('KT'+@IdDe, @tenKyThi,0,1+@numDe%2,GETDATE(),'31/12/2018')
 		insert into KyThi_DeThi(IdDe, IdKyThi) values(@IdDe,'KT'+@IdDe)
 	end
 

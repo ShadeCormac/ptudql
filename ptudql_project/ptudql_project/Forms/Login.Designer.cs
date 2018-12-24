@@ -59,9 +59,9 @@
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Location = new System.Drawing.Point(440, 129);
+            this.panel1.Location = new System.Drawing.Point(460, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 432);
+            this.panel1.Size = new System.Drawing.Size(360, 432);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

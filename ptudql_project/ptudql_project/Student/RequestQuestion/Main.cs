@@ -20,6 +20,10 @@ namespace ptudql_project.Student
             InitializeComponent();
             this.label2.Text = label;
             this.btnImport.Visible = (label == "Thêm câu hỏi") ? true : false;
+            var routingHandler = StudentRouter.routingBuilder(this);
+            btnInfo.Click += routingHandler;
+            btnThiThu.Click += routingHandler;
+            btnLamBaiThi.Click += routingHandler;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

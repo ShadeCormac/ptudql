@@ -1,4 +1,6 @@
-﻿create database QLThiTracNghiem
+﻿use master
+go
+create database QLThiTracNghiem
 go
 use QLThiTracNghiem
 go
@@ -46,8 +48,8 @@ go
 create table DeThi(
 	IdDe varchar(10) primary key,
 	GVRaDe varchar(20) references GiaoVien(TenTK),
-	ThoiGian int
-	--chi tiết đề?
+	ThoiGian int,
+	DoKho int
 )
 go
 
@@ -64,8 +66,6 @@ create table CauHoi(
 	DaDuyet int default 0
 )
 go
-
-
 
 create table KyThi_DeThi(
 	IdDe varchar(10) references DeThi(IdDe),
