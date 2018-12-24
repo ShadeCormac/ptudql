@@ -33,28 +33,42 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvQuestions = new System.Windows.Forms.DataGridView();
+            this.IdCauHoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.B = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CauTLDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiCauHoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DaDuyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.btnCreateTest = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.nipTime = new ptudql_project.CustomControls.NumberInputBox();
+            this.lbAddedQuestion = new System.Windows.Forms.ListBox();
+            this.btnRemoveQuest = new System.Windows.Forms.Button();
+            this.cbbDifficulty = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 79);
+            this.label1.Location = new System.Drawing.Point(105, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Bộ đề thi:";
+            this.label1.Text = "Mã đề thi:";
             // 
             // txtBoDeThi
             // 
-            this.txtBoDeThi.Location = new System.Drawing.Point(10, 109);
+            this.txtBoDeThi.Location = new System.Drawing.Point(178, 107);
             this.txtBoDeThi.Name = "txtBoDeThi";
-            this.txtBoDeThi.Size = new System.Drawing.Size(243, 20);
+            this.txtBoDeThi.Size = new System.Drawing.Size(201, 20);
             this.txtBoDeThi.TabIndex = 1;
             this.txtBoDeThi.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -81,19 +95,94 @@
             // 
             this.dgvQuestions.AllowUserToAddRows = false;
             this.dgvQuestions.AllowUserToDeleteRows = false;
+            this.dgvQuestions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuestions.Location = new System.Drawing.Point(10, 158);
+            this.dgvQuestions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdCauHoi,
+            this.NoiDung,
+            this.A,
+            this.B,
+            this.C,
+            this.D,
+            this.CauTLDung,
+            this.LoaiCauHoi,
+            this.DaDuyet});
+            this.dgvQuestions.Location = new System.Drawing.Point(15, 158);
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.ReadOnly = true;
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(526, 275);
+            this.dgvQuestions.Size = new System.Drawing.Size(559, 275);
             this.dgvQuestions.TabIndex = 9;
-            this.dgvQuestions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // IdCauHoi
+            // 
+            this.IdCauHoi.DataPropertyName = "IdCauHoi";
+            this.IdCauHoi.HeaderText = "ID câu hỏi";
+            this.IdCauHoi.Name = "IdCauHoi";
+            this.IdCauHoi.ReadOnly = true;
+            // 
+            // NoiDung
+            // 
+            this.NoiDung.DataPropertyName = "NoiDung";
+            this.NoiDung.HeaderText = "Nội dung";
+            this.NoiDung.Name = "NoiDung";
+            this.NoiDung.ReadOnly = true;
+            // 
+            // A
+            // 
+            this.A.DataPropertyName = "CauA";
+            this.A.HeaderText = "Câu A";
+            this.A.Name = "A";
+            this.A.ReadOnly = true;
+            // 
+            // B
+            // 
+            this.B.DataPropertyName = "CauB";
+            this.B.HeaderText = "Câu B";
+            this.B.Name = "B";
+            this.B.ReadOnly = true;
+            // 
+            // C
+            // 
+            this.C.DataPropertyName = "CauC";
+            this.C.HeaderText = "Câu C";
+            this.C.Name = "C";
+            this.C.ReadOnly = true;
+            // 
+            // D
+            // 
+            this.D.DataPropertyName = "CauD";
+            this.D.HeaderText = "Câu D";
+            this.D.Name = "D";
+            this.D.ReadOnly = true;
+            // 
+            // CauTLDung
+            // 
+            this.CauTLDung.DataPropertyName = "CauTLDung";
+            this.CauTLDung.HeaderText = "Câu đúng";
+            this.CauTLDung.Name = "CauTLDung";
+            this.CauTLDung.ReadOnly = true;
+            // 
+            // LoaiCauHoi
+            // 
+            this.LoaiCauHoi.DataPropertyName = "LoaiCauHoi";
+            this.LoaiCauHoi.HeaderText = "LoaiCauHoi";
+            this.LoaiCauHoi.Name = "LoaiCauHoi";
+            this.LoaiCauHoi.ReadOnly = true;
+            this.LoaiCauHoi.Visible = false;
+            // 
+            // DaDuyet
+            // 
+            this.DaDuyet.DataPropertyName = "DaDuyet";
+            this.DaDuyet.HeaderText = "DaDuyet";
+            this.DaDuyet.Name = "DaDuyet";
+            this.DaDuyet.ReadOnly = true;
+            this.DaDuyet.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 142);
+            this.label2.Location = new System.Drawing.Point(12, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 10;
@@ -101,9 +190,9 @@
             // 
             // btnAddQuestion
             // 
-            this.btnAddQuestion.Location = new System.Drawing.Point(160, 473);
+            this.btnAddQuestion.Location = new System.Drawing.Point(258, 482);
             this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(136, 23);
+            this.btnAddQuestion.Size = new System.Drawing.Size(158, 52);
             this.btnAddQuestion.TabIndex = 11;
             this.btnAddQuestion.Text = "Thêm câu hỏi";
             this.btnAddQuestion.UseVisualStyleBackColor = true;
@@ -111,9 +200,9 @@
             // 
             // btnCreateTest
             // 
-            this.btnCreateTest.Location = new System.Drawing.Point(343, 473);
+            this.btnCreateTest.Location = new System.Drawing.Point(734, 482);
             this.btnCreateTest.Name = "btnCreateTest";
-            this.btnCreateTest.Size = new System.Drawing.Size(136, 23);
+            this.btnCreateTest.Size = new System.Drawing.Size(168, 52);
             this.btnCreateTest.TabIndex = 12;
             this.btnCreateTest.Text = "Tạo đề thi";
             this.btnCreateTest.UseVisualStyleBackColor = true;
@@ -122,7 +211,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(299, 79);
+            this.label3.Location = new System.Drawing.Point(695, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 13;
@@ -130,16 +219,65 @@
             // 
             // nipTime
             // 
-            this.nipTime.Location = new System.Drawing.Point(293, 109);
+            this.nipTime.Location = new System.Drawing.Point(779, 110);
             this.nipTime.Name = "nipTime";
-            this.nipTime.Size = new System.Drawing.Size(243, 20);
+            this.nipTime.Size = new System.Drawing.Size(101, 20);
             this.nipTime.TabIndex = 14;
+            // 
+            // lbAddedQuestion
+            // 
+            this.lbAddedQuestion.FormattingEnabled = true;
+            this.lbAddedQuestion.Location = new System.Drawing.Point(680, 158);
+            this.lbAddedQuestion.Name = "lbAddedQuestion";
+            this.lbAddedQuestion.Size = new System.Drawing.Size(263, 277);
+            this.lbAddedQuestion.TabIndex = 15;
+            // 
+            // btnRemoveQuest
+            // 
+            this.btnRemoveQuest.Location = new System.Drawing.Point(589, 289);
+            this.btnRemoveQuest.Name = "btnRemoveQuest";
+            this.btnRemoveQuest.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveQuest.TabIndex = 16;
+            this.btnRemoveQuest.Text = "Xóa câu hỏi";
+            this.btnRemoveQuest.UseVisualStyleBackColor = true;
+            this.btnRemoveQuest.Click += new System.EventHandler(this.btnRemoveQuest_Click);
+            // 
+            // cbbDifficulty
+            // 
+            this.cbbDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDifficulty.FormattingEnabled = true;
+            this.cbbDifficulty.Location = new System.Drawing.Point(497, 107);
+            this.cbbDifficulty.Name = "cbbDifficulty";
+            this.cbbDifficulty.Size = new System.Drawing.Size(121, 21);
+            this.cbbDifficulty.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(428, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Mức độ đề:";
+            // 
+            // lbCount
+            // 
+            this.lbCount.AutoSize = true;
+            this.lbCount.Location = new System.Drawing.Point(776, 455);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(0, 13);
+            this.lbCount.TabIndex = 20;
             // 
             // AddTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 524);
+            this.ClientSize = new System.Drawing.Size(1021, 568);
+            this.Controls.Add(this.lbCount);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbbDifficulty);
+            this.Controls.Add(this.btnRemoveQuest);
+            this.Controls.Add(this.lbAddedQuestion);
             this.Controls.Add(this.nipTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCreateTest);
@@ -171,5 +309,19 @@
         private System.Windows.Forms.Button btnCreateTest;
         private System.Windows.Forms.Label label3;
         private CustomControls.NumberInputBox nipTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCauHoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NoiDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn A;
+        private System.Windows.Forms.DataGridViewTextBoxColumn B;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C;
+        private System.Windows.Forms.DataGridViewTextBoxColumn D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CauTLDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauHoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DaDuyet;
+        private System.Windows.Forms.ListBox lbAddedQuestion;
+        private System.Windows.Forms.Button btnRemoveQuest;
+        private System.Windows.Forms.ComboBox cbbDifficulty;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbCount;
     }
 }

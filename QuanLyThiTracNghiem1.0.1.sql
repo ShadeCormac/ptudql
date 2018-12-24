@@ -39,6 +39,7 @@ create table KyThi(
 	TenKyThi nvarchar(50),
 	SLThamGia int, 
 	--cho biết là kỳ thi thử/ôn tập hay là thi thật
+	-- 1: thi thật, 2 thi thử/ôn tập
 	LoaiKyThi int,
 	ThoiGianBatDau datetime,
 	ThoiGianKetThuc datetime

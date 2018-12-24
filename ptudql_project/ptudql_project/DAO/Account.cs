@@ -30,5 +30,12 @@ namespace ptudql_project.DAO
                 return db.TaiKhoans.Where(account => account.TenDangNhap == userName).Single().MatKhau;
             }
         }
+        public static int getAccountType(string username)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return (int)db.TaiKhoans.Where(acc => acc.TenDangNhap == username).Single().LoaiTK;
+            }
+        }
     }
 }
