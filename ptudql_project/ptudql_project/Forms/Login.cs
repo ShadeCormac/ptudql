@@ -34,8 +34,8 @@ namespace ptudql_project
     private void loginBtn_Click(object sender, EventArgs e)
     {
             //Router.ChangeForm(this, new StudentInfo());
-            Session.AccountName = "giaovien1";
-            Router.ChangeForm(this, new TeacherMain());
+            //Session.AccountName = "giaovien1";
+            //Router.ChangeForm(this, new TeacherMain());
             if (_username.Length < 6 || _password.Length < 6)
             {
                 errors.SetError((Control)sender, "Bạn phải nhập thông tin");

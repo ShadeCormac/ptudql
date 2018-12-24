@@ -53,8 +53,8 @@
             this.rbCauD = new System.Windows.Forms.RadioButton();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            //this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
+            //this.btnUser = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
             this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
@@ -316,29 +316,29 @@
             // 
             // sidebarButton1
             // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
-            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
-            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
-            this.sidebarButton1.TabIndex = 3;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
+            //this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            //this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
+            //this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
+            //this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
+            //this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
+            //this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            //this.sidebarButton1.Name = "sidebarButton1";
+            //this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
+            //this.sidebarButton1.TabIndex = 3;
+            //// 
+            //// btnUser
+            //// 
+            //this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            //this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            //this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            //this.btnUser.LabelText = "Thông tin cá nhân";
+            //this.btnUser.Location = new System.Drawing.Point(0, 86);
+            //this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            //this.btnUser.Name = "btnUser";
+            //this.btnUser.Size = new System.Drawing.Size(200, 110);
+            //this.btnUser.TabIndex = 2;
             // 
             // btnThiThu
             // 

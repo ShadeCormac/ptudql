@@ -124,6 +124,7 @@ namespace ptudql_project
                         //save to database
                         TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3 };
                         Account.Register(tk);
+
                         MessageBox.Show("Đăng ký thành công.", "Thông báo");
                     }
                 }

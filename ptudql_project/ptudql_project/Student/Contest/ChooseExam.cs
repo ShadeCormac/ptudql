@@ -14,7 +14,7 @@ namespace ptudql_project.Student
 {
     public partial class ChooseExam : Form
     {
-        private string username = "test";
+        private string username = Session.AccountName;
         private KyThi contest;
         private DeThi[] listExam;
 

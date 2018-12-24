@@ -23,7 +23,7 @@ namespace ptudql_project.Student
         private KyThi contest;
         private long maxSecond;
         private long currSecond;
-        private string username = "test";
+        private string username = Session.AccountName;
         private bool isTrial;
         private bool isSubmited = false;
         private MyTimer timer;

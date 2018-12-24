@@ -11,7 +11,7 @@ namespace ptudql_project.Student
 {
     partial class StudentContest
     {
-        private string username = "test";
+        private string username = Session.AccountName;
         private List<KyThi> listContest;
         private bool isChooseExam = false;
 
