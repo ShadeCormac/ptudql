@@ -23,7 +23,9 @@ create table HocSinh(
 go
 create table GiaoVien(
 	TenTK varchar(20) references TaiKhoan(TenDangNhap) primary key,
-	Ten nvarchar(50)
+	HoTen nvarchar(50),
+	GioiTinh nvarchar(10),
+	Email varchar(50)
 	--cần thêm gì nữa?
 )
 go
@@ -39,7 +41,6 @@ create table KyThi(
 	TenKyThi nvarchar(50),
 	SLThamGia int, 
 	--cho biết là kỳ thi thử/ôn tập hay là thi thật
-	-- 1: thi thật, 2 thi thử/ôn tập
 	LoaiKyThi int,
 	ThoiGianBatDau datetime,
 	ThoiGianKetThuc datetime
@@ -48,8 +49,12 @@ go
 create table DeThi(
 	IdDe varchar(10) primary key,
 	GVRaDe varchar(20) references GiaoVien(TenTK),
-	ThoiGian int,
-	DoKho int
+	DoKho int,
+	ThoiGian int
+	-- 1: De (20 câu / 40 phút)
+	-- 2: Trung Binh (30 câu / 40 phút)
+	-- 3: Kho (40 câu / 40 phút)
+	-- 4: Cuc kho (50 câu / 40 phút)
 )
 go
 
@@ -63,7 +68,7 @@ create table CauHoi(
 	CauTLDung char(1),
 	--1: Gíao viên tạo, 2: học sinh đề suất
 	LoaiCauHoi int,
-	DaDuyet int default 0
+	DaDuyet int default 1
 )
 go
 
@@ -78,7 +83,8 @@ create table DanhSachThi(
 	TKHocSinh varchar(20) references HocSinh(TenTK),
 	IdDe varchar(10) references DeThi(IdDe),
 	IdKyThi varchar(10) references KyThi(IdKyThi),
-	primary key(TKHocSinh, IdDe, IdKyThi), 
+	LanThi int,
+	primary key(TKHocSinh, IdDe, IdKyThi, LanThi), 
 	Diem float
 )
 go

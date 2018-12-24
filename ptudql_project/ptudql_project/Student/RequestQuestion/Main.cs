@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,15 @@ namespace ptudql_project.Student
 {
     public partial class RequestQuestion : Form
     {
-        public RequestQuestion()
+        public RequestQuestion(string label)
         {
             InitializeComponent();
+            this.label2.Text = label;
+            this.btnImport.Visible = (label == "Thêm câu hỏi") ? true : false;
+            var routingHandler = StudentRouter.routingBuilder(this);
+            btnInfo.Click += routingHandler;
+            btnThiThu.Click += routingHandler;
+            btnLamBaiThi.Click += routingHandler;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -69,8 +76,8 @@ namespace ptudql_project.Student
                 CauB = txtCauB.Text,
                 CauC = txtCauC.Text,
                 CauD = txtCauD.Text,
-                CauTLDung = checkedButton.Text.ToLower().ToCharArray().FirstOrDefault(),
-                LoaiCauHoi = 2,
+                CauTLDung = checkedButton.Text.ToLower().ToCharArray().First(),
+                LoaiCauHoi = (this.label2.Text == "Thêm câu hỏi")? 1 : 2,
                 DaDuyet = 0
             };
             Question.AddRequest(requestQuest);
@@ -93,6 +100,27 @@ namespace ptudql_project.Student
         private void txtNoiDung_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            DialogResult result = ofdImport.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string filePath = ofdImport.FileName;
+                try
+                {
+                    Import import = new Import(@filePath);
+                    var list = import.importQuestions();
+                    import.Cleanup();
+                    Question.Import(list);
+                    MessageBox.Show("Thêm thành công");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi...");
+                }
+            }
         }
     }
 }

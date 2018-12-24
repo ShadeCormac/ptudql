@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,30 +74,42 @@
     </Compile>
     <Compile Include="CustomControls\ListQuest.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\ListQuest.Designer.cs">
-      <DependentUpon>ListQuest.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\NumberInputBox.cs">
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\PaddingTextBox.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\PaddingTextBox.Designer.cs">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\SidebarButton.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CustomControls\SidebarButton.Designer.cs">
       <DependentUpon>SidebarButton.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\BindingsList.cs" />
     <Compile Include="DAO\Question.cs" />
     <Compile Include="DAO\StudentDAO.cs" />
     <Compile Include="DAO\TeacherDAO.cs" />
+    <Compile Include="DAO\Exam.cs" />
+    <Compile Include="DAO\Exam_Test.cs" />
+    <Compile Include="DAO\Contest.cs" />
+    <Compile Include="DAO\Question.cs" />
+    <Compile Include="DAO\Student.cs" />
+    <Compile Include="DAO\Test.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,29 +129,60 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Student\RequestQuestion.cs">
+    <Compile Include="Student\Contest\ChooseExam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\RequestQuestion.Designer.cs">
-      <DependentUpon>RequestQuestion.cs</DependentUpon>
+    <Compile Include="Student\Contest\ChooseExam.Designer.cs">
+      <DependentUpon>ChooseExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student\StudentContest.cs">
+    <Compile Include="Student\Contest\DoExam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\StudentContest.Designer.cs">
-      <DependentUpon>StudentContest.cs</DependentUpon>
+    <Compile Include="Student\Contest\DoExam.Designer.cs">
+      <DependentUpon>DoExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student\StudentContestResult.cs">
+    <Compile Include="Student\Contest\TabChooseContest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\StudentContestResult.Designer.cs">
-      <DependentUpon>StudentContestResult.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Student\StudentInfo.Designer.cs">
-      <DependentUpon>StudentInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Student\StudentInfo.cs">
+    <Compile Include="Student\RequestQuestion\Main.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\RequestQuestion\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Contest\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Contest\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Contest\ResultDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Contest\ResultDialog.Designer.cs">
+      <DependentUpon>ResultDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Info\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Info\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentRouter.cs" />
+    <Compile Include="Student\TrialContest\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\TrialContest\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\TrialContest\TabChooseContest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddExam.Designer.cs">
+      <DependentUpon>AddExam.cs</DependentUpon>
     </Compile>
     <Compile Include="Teacher\AddTest.cs">
       <SubType>Form</SubType>
@@ -146,17 +190,32 @@
     <Compile Include="Teacher\AddTest.Designer.cs">
       <DependentUpon>AddTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\DetailsExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\DetailsExam.Designer.cs">
+      <DependentUpon>DetailsExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\FilterQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\FilterQuestion.Designer.cs">
+      <DependentUpon>FilterQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\TeacherMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Teacher\TeacherMain.Designer.cs">
       <DependentUpon>TeacherMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\BackupData.cs" />
     <Compile Include="Utils\Crypto.cs" />
+    <Compile Include="Utils\Export.cs" />
     <Compile Include="Utils\Extension.cs" />
     <Compile Include="Utils\Import.cs" />
     <Compile Include="Utils\Router.cs" />
     <Compile Include="Utils\MyTimer.cs" />
+    <Compile Include="Utils\Session.cs" />
     <Compile Include="Utils\Validation.cs" />
     <EmbeddedResource Include="Admin\addUser.resx">
       <DependentUpon>addUser.cs</DependentUpon>
@@ -171,13 +230,15 @@
       <DependentUpon>updateTeacherInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ListQuest.resx">
-      <DependentUpon>ListQuest.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\PaddingTextBox.resx">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SidebarButton.resx">
       <DependentUpon>SidebarButton.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -195,24 +256,47 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Teacher\AddExam.resx">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Contest\ChooseExam.resx">
+      <DependentUpon>ChooseExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Contest\DoExam.resx">
+      <DependentUpon>DoExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\TrialContest\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher\AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\DetailsExam.resx">
+      <DependentUpon>DetailsExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\FilterQuestion.resx">
+      <DependentUpon>FilterQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\TeacherMain.resx">
       <DependentUpon>TeacherMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\RequestQuestion.resx">
-      <DependentUpon>RequestQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="Student\RequestQuestion\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\StudentContest.resx">
-      <DependentUpon>StudentContest.cs</DependentUpon>
+    <EmbeddedResource Include="Student\Contest\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\StudentContestResult.resx">
-      <DependentUpon>StudentContestResult.cs</DependentUpon>
+    <EmbeddedResource Include="Student\Contest\ResultDialog.resx">
+      <DependentUpon>ResultDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\StudentInfo.resx">
-      <DependentUpon>StudentInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Student\Info\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\DanhSachThi.datasource" />
+    <None Include="Properties\DataSources\KyThi.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -275,6 +359,35 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

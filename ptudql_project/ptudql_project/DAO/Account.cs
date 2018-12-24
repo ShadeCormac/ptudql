@@ -63,6 +63,7 @@ namespace ptudql_project.DAO
                 return db.TaiKhoans.Where(account => account.TenDangNhap == userName).Single().MatKhau;
             }
         }
+
         public static BindingList<TaiKhoan> GetAll()
         {
             using (var db = new QLTNDataContext())
@@ -70,8 +71,6 @@ namespace ptudql_project.DAO
                 return new BindingList<TaiKhoan>(db.TaiKhoans.ToList());
             }
         }
-
-        
 
         public static bool deleteAccount(string username)
         {
@@ -158,5 +157,12 @@ namespace ptudql_project.DAO
         //        }
         //    }
         //}
+        public static int getAccountType(string username)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                return (int)db.TaiKhoans.Where(acc => acc.TenDangNhap == username).Single().LoaiTK;
+            }
+        }
     }
 }

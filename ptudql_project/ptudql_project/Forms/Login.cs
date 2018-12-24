@@ -34,30 +34,49 @@ namespace ptudql_project
     private void loginBtn_Click(object sender, EventArgs e)
     {
             //Router.ChangeForm(this, new StudentInfo());
-            Router.ChangeForm(this, new TeacherMain());
-            // if (_username.Length < 6 || _password.Length < 6)
-            // {
-            //     errors.SetError((Control)sender, "Bạn phải nhập thông tin");
-            // }
-            // else
-            // {
-            //     errors.SetError((Control)sender, "");
-            //     if (!Account.isRegisterd(_username))
-            //     {
-            //         MessageBox.Show("Tài khoản không tồn tại!");
-            //     }
-            //     else
-            //     {
-            //         if (!Crypto.passwordCompare(_password, Account.getPassword(_username)))
-            //         {
-            //             MessageBox.Show("mật khẩu sai");
-            //         }
-            //         else
-            //         {
-            //             Router.ChangeForm(this, new StudentInfo());
-            //         }
-            //     }
-            // }
+            //Session.AccountName = "giaovien1";
+            //Router.ChangeForm(this, new TeacherMain());
+            if (_username.Length < 6 || _password.Length < 6)
+            {
+                errors.SetError((Control)sender, "Bạn phải nhập thông tin");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "");
+                if (!Account.isRegisterd(_username))
+                {
+                    MessageBox.Show("Tài khoản không tồn tại!");
+                }
+                else
+                {
+                    if (!Crypto.passwordCompare(_password, Account.getPassword(_username)))
+                    {
+                        MessageBox.Show("mật khẩu sai");
+                    }
+                    else
+                    {
+                        Session.AccountName = _username;
+                        Session.AccountType = Account.getAccountType(_username);
+                        switch (Session.AccountType)
+                        {
+                            case 1:
+                                //Router.ChangeForm(this, new AdminMain());
+                                break;
+                            case 2:
+                                Router.ChangeForm(this, new TeacherMain());
+                                break;
+                            case 3:
+                                Router.ChangeForm(this, new StudentInfo());
+                                break;
+                            default:
+                                MessageBox.Show("Đã xảy ra lỗi..", "Thông báo");
+                                this.Close();
+                                break;
+                        }
+                        
+                    }
+                }
+            }
         }
         private void txtUsername_Validating(object sender, CancelEventArgs e)
         {

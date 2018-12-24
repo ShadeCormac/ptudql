@@ -23,12 +23,11 @@ namespace ptudql_project.Utils
             _xlworksheet = _xlWorkbook.Sheets[1];
             _xlRange = _xlworksheet.UsedRange;
         }
-        public List<CauHoi> importStudent()
+        public List<CauHoi> importQuestions()
         {
             _row = _xlRange.Rows.Count;
             _col = _xlRange.Columns.Count;
             return Loop(_row, _col);
-
         }
 
         public List<TaiKhoan> importAccount()
@@ -76,16 +75,14 @@ namespace ptudql_project.Utils
         private List<CauHoi> Loop(int row, int col)
         {
             CauHoi curQuest = null;
-
+          
             List<CauHoi> list = new List<CauHoi>();
             for (int i = 2; i <= row; i++)
             {
-                if (_xlRange[i, 6] != null && _xlRange.Cells[i, 6].Value2 != null)
-
+                if (_xlRange[i, 6] != null && _xlRange.Cells[i,6].Value2 != null)
                 {
                     if (_xlRange.Cells[i, 6].Value2.Length != 1)
                     {
-
                         continue;
                     }
                     curQuest = new CauHoi()

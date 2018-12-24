@@ -25,10 +25,15 @@ namespace ptudql_project.Utils
             _timer.Start();
         }
 
+        public void Stop()
+        {
+            _timer.Stop();
+        }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             _second--;
-            if (_second == 0)
+            if (_second <= 0)
             {
                 _timer.Stop();
                 onMyTimerStop(_second);

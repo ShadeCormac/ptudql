@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestQuestion));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnRequestQuestion = new ptudql_project.CustomControls.SidebarButton();
+            this.btnInfo = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
             this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.txtNoiDung = new System.Windows.Forms.TextBox();
@@ -52,14 +52,20 @@
             this.rbCauC = new System.Windows.Forms.RadioButton();
             this.rbCauD = new System.Windows.Forms.RadioButton();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
+            //this.sidebarButton1 = new ptudql_project.CustomControls.SidebarButton();
+            //this.btnUser = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
+            this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel1.Controls.Add(this.sidebarButton1);
-            this.panel1.Controls.Add(this.btnUser);
+            this.panel1.Controls.Add(this.btnRequestQuestion);
+            this.panel1.Controls.Add(this.btnInfo);
             this.panel1.Controls.Add(this.btnThiThu);
             this.panel1.Controls.Add(this.btnLamBaiThi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -68,31 +74,32 @@
             this.panel1.Size = new System.Drawing.Size(200, 642);
             this.panel1.TabIndex = 1;
             // 
-            // sidebarButton1
+            // btnRequestQuestion
             // 
-            this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
-            this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
-            this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
-            this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
-            this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sidebarButton1.Name = "sidebarButton1";
-            this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
-            this.sidebarButton1.TabIndex = 3;
+            this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnRequestQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRequestQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnRequestQuestion.CustomImage")));
+            this.btnRequestQuestion.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnRequestQuestion.LabelText = "Đóng góp câu hỏi";
+            this.btnRequestQuestion.Location = new System.Drawing.Point(0, 490);
+            this.btnRequestQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRequestQuestion.Name = "btnRequestQuestion";
+            this.btnRequestQuestion.Size = new System.Drawing.Size(200, 110);
+            this.btnRequestQuestion.TabIndex = 3;
             // 
-            // btnUser
+            // btnInfo
             // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.CustomImage")));
+            this.btnInfo.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnInfo.LabelText = "Thông tin cá nhân";
+            this.btnInfo.Location = new System.Drawing.Point(0, 86);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(200, 110);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.Tag = "Info";
             // 
             // btnThiThu
             // 
@@ -106,6 +113,7 @@
             this.btnThiThu.Name = "btnThiThu";
             this.btnThiThu.Size = new System.Drawing.Size(200, 110);
             this.btnThiThu.TabIndex = 1;
+            this.btnThiThu.Tag = "TrialContest";
             // 
             // btnLamBaiThi
             // 
@@ -119,6 +127,7 @@
             this.btnLamBaiThi.Name = "btnLamBaiThi";
             this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
             this.btnLamBaiThi.TabIndex = 0;
+            this.btnLamBaiThi.Tag = "Contest";
             // 
             // txtNoiDung
             // 
@@ -287,7 +296,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(463, 463);
+            this.btnSubmit.Location = new System.Drawing.Point(497, 465);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(230, 23);
             this.btnSubmit.TabIndex = 21;
@@ -295,11 +304,78 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(497, 532);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(230, 30);
+            this.btnImport.TabIndex = 22;
+            this.btnImport.Text = "Nhập dữ liệu từ excel";
+            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // sidebarButton1
+            // 
+            //this.sidebarButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            //this.sidebarButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.sidebarButton1.CustomImage = ((System.Drawing.Image)(resources.GetObject("sidebarButton1.CustomImage")));
+            //this.sidebarButton1.LabelLocation = new System.Drawing.Point(30, 83);
+            //this.sidebarButton1.LabelText = "Đóng góp câu hỏi";
+            //this.sidebarButton1.Location = new System.Drawing.Point(0, 490);
+            //this.sidebarButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            //this.sidebarButton1.Name = "sidebarButton1";
+            //this.sidebarButton1.Size = new System.Drawing.Size(200, 110);
+            //this.sidebarButton1.TabIndex = 3;
+            //// 
+            //// btnUser
+            //// 
+            //this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            //this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
+            //this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
+            //this.btnUser.LabelText = "Thông tin cá nhân";
+            //this.btnUser.Location = new System.Drawing.Point(0, 86);
+            //this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            //this.btnUser.Name = "btnUser";
+            //this.btnUser.Size = new System.Drawing.Size(200, 110);
+            //this.btnUser.TabIndex = 2;
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
+            // 
+            // ofdImport
+            // 
+            this.ofdImport.FileName = "openFileDialog1";
+            // 
             // RequestQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 642);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.rbCauD);
             this.Controls.Add(this.rbCauC);
@@ -330,8 +406,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CustomControls.SidebarButton sidebarButton1;
-        private CustomControls.SidebarButton btnUser;
+        private CustomControls.SidebarButton btnRequestQuestion;
+        private CustomControls.SidebarButton btnInfo;
         private CustomControls.SidebarButton btnThiThu;
         private CustomControls.SidebarButton btnLamBaiThi;
         private System.Windows.Forms.TextBox txtNoiDung;
@@ -352,5 +428,7 @@
         private System.Windows.Forms.RadioButton rbCauC;
         private System.Windows.Forms.RadioButton rbCauD;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.OpenFileDialog ofdImport;
     }
 }
