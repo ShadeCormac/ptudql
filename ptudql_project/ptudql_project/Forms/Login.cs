@@ -11,6 +11,7 @@ using ptudql_project.Utils;
 using ptudql_project.Student;
 using ptudql_project.DAO;
 using ptudql_project.Teacher;
+using ptudql_project.Admin;
 
 namespace ptudql_project
 {
@@ -60,7 +61,7 @@ namespace ptudql_project
                         switch (Session.AccountType)
                         {
                             case 1:
-                                //Router.ChangeForm(this, new AdminMain());
+                                Router.ChangeForm(this, new AdminMain());
                                 break;
                             case 2:
                                 Router.ChangeForm(this, new TeacherMain());

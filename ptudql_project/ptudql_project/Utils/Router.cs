@@ -30,6 +30,9 @@ namespace ptudql_project.Utils
         //  parent.Controls.Add(navigateTo);
         //  navigateTo.Show();
         //}
+
+        private static Dictionary<string, bool> isShow = new Dictionary<string, bool>();
+
         public static void ChangeForm(Form currentForm, Form nextForm, bool turnBackAble = false)
         {
             nextForm.Location = currentForm.Location;
@@ -47,9 +50,21 @@ namespace ptudql_project.Utils
         }
         public static void ShowFormDialog(Form currentForm, Form frm)
         {
-            frm.Location = currentForm.Location;
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            string frmName = frm.Text;
+
+            if (isShow.ContainsKey(frmName) && isShow[frmName])
+            {
+                MessageBox.Show("Form này đang được mở", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                frm.Location = currentForm.Location;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                isShow[frmName] = true;
+                frm.FormClosed += (o, e) => isShow[frmName] = false;
+                frm.Show();
+
+            }
         }
     }
 }

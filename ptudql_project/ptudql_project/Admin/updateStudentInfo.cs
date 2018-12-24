@@ -29,7 +29,7 @@ namespace ptudql_project.Admin
         {
             InitializeComponent();
 
-            hs = StudentDAO.getInfo(username);
+            hs = DAO.Student.getInfo(username);
             txtAccount.Text = hs.TenTK;
             txtKhoi.Text = hs.Khoi;
             txtLop.Text = hs.Lop;
@@ -127,7 +127,7 @@ namespace ptudql_project.Admin
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if (StudentDAO.SaveInfo(hs))
+            if (DAO.Student.SaveInfo(hs))
             {
                 MessageBox.Show("Cập nhật thông tài khoản thành công", "Thông báo");
             }

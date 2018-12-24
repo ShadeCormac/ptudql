@@ -151,6 +151,7 @@
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(200, 110);
             this.btnAddQuestion.TabIndex = 3;
+            this.btnAddQuestion.Load += new System.EventHandler(this.btnAddQuestion_Load);
             this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // btnUser

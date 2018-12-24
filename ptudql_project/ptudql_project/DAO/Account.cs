@@ -33,26 +33,16 @@ namespace ptudql_project.DAO
             using (var db = new QLTNDataContext())
             {
                 db.TaiKhoans.InsertOnSubmit(account);
-               // db.SubmitChanges();
-                if (account.LoaiTK == 3)
-                {
-                    HocSinh newHS = new HocSinh
-                    {
-                        TenTK = account.TenDangNhap,
-                       
-                    };
-                    db.HocSinhs.InsertOnSubmit(newHS);
-                }
-                else if (account.LoaiTK == 2)
-                {
-                    GiaoVien newGV = new GiaoVien
-                    {
-                        TenTK = account.TenDangNhap,
-                                   
-                    };
-                    db.GiaoViens.InsertOnSubmit(newGV);
-                }
                 db.SubmitChanges();
+            }
+
+            if (account.LoaiTK == 3)
+            {
+                DAO.Student.Insert(account);
+            }
+            else if (account.LoaiTK == 2)
+            {
+                TeacherDAO.Insert(account);
             }
         }
 

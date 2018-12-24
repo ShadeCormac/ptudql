@@ -17,7 +17,7 @@ namespace ptudql_project.Student
     {
 
         //private SidebarButton activeBtn = null;
-        private string username = "test";
+        private string username = Session.AccountName;
 
         private List<string> lstIdKyThi;
         private List<DanhSachThi> lstDST;

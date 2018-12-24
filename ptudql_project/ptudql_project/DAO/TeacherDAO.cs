@@ -40,5 +40,19 @@ namespace ptudql_project.DAO
                 return false;
             }
         }
+
+        public static void Insert(TaiKhoan account)
+        {
+            using(var db = new QLTNDataContext())
+            {
+                GiaoVien newGV = new GiaoVien
+                {
+                    TenTK = account.TenDangNhap,
+
+                };
+                db.GiaoViens.InsertOnSubmit(newGV);
+                db.SubmitChanges();
+            }
+        }
     }
 }

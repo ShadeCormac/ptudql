@@ -20,7 +20,7 @@ namespace ptudql_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMain());
+            Application.Run(new Login());
         }
     }
 }

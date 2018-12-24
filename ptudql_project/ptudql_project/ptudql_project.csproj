@@ -101,8 +101,6 @@
     </Compile>
     <Compile Include="DAO\Account.cs" />
     <Compile Include="DAO\BindingsList.cs" />
-    <Compile Include="DAO\Question.cs" />
-    <Compile Include="DAO\StudentDAO.cs" />
     <Compile Include="DAO\TeacherDAO.cs" />
     <Compile Include="DAO\Exam.cs" />
     <Compile Include="DAO\Exam_Test.cs" />

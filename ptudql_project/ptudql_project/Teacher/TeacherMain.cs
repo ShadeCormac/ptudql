@@ -378,16 +378,15 @@ namespace ptudql_project.Teacher
             }
 
         }
-        
-
-        private void btnAddQuest_Click(object sender, EventArgs e)
-        {
-            Router.ChangeForm(this, new RequestQuestion("Thêm câu hỏi"), true);
-        }
 
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
-            Router.ChangeForm(this, new RequestQuestion("Thêm câu hỏi"), true);
+            Router.ShowFormDialog(this, new RequestQuestion("Thêm câu hỏi"));
+        }
+
+        private void btnAddQuest_Click(object sender, EventArgs e)
+        {
+            Router.ShowFormDialog(this, new RequestQuestion("Thêm câu hỏi"));
         }
 
         private void btnLamBaiThi_Click(object sender, EventArgs e)
@@ -440,5 +439,9 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Xuất thành công");      
         }
 
+        private void btnAddQuestion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
