@@ -86,7 +86,7 @@
             this.btnInfo.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.CustomImage")));
             this.btnInfo.LabelLocation = new System.Drawing.Point(30, 83);
             this.btnInfo.LabelText = "Thông tin cá nhân";
-            this.btnInfo.Location = new System.Drawing.Point(0, 86);
+            this.btnInfo.Location = new System.Drawing.Point(0, 87);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(200, 110);
             this.btnInfo.TabIndex = 2;

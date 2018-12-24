@@ -17,7 +17,7 @@ namespace ptudql_project.Student
     {
 
         //private SidebarButton activeBtn = null;
-        private string username = "test";
+        private string username = Session.AccountName;
 
         private List<string> lstIdKyThi;
         private List<DanhSachThi> lstDST;
@@ -107,6 +107,11 @@ namespace ptudql_project.Student
             }
 
             dgvKQHT.DataSource = lstDST.Where(dst => dst.IdKyThi.Equals(lstIdKyThi[idx])).ToList();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -27,7 +27,7 @@ namespace ptudql_project.Student
                         Router.ChangeForm(currentForm, new StudentInfo());
                         break;
                     case "RequestQuestion":
-                        Router.ChangeForm(currentForm, new RequestQuestion("Đóng góp câu hỏi"));
+                        Router.ShowFormDialog(currentForm, new RequestQuestion("Đóng góp câu hỏi"));
                         break;
                 }
             };

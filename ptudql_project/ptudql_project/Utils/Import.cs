@@ -28,7 +28,13 @@ namespace ptudql_project.Utils
             _row = _xlRange.Rows.Count;
             _col = _xlRange.Columns.Count;
             return Loop(_row, _col);
-           
+        }
+
+        public List<TaiKhoan> importAccount()
+        {
+            _row = _xlRange.Rows.Count;
+            _col = _xlRange.Columns.Count;
+            return LoopAccount(_row, _col);
         }
 
         public void Cleanup()
@@ -43,6 +49,29 @@ namespace ptudql_project.Utils
             Marshal.ReleaseComObject(_xlApp);
         }
 
+        private List<TaiKhoan> LoopAccount(int row, int col)
+        {
+            TaiKhoan curAccount = null;
+
+            List<TaiKhoan> list = new List<TaiKhoan>();
+            for (int i = 2; i <= row; i++)
+            {
+                if (_xlRange[i, 3] != null && _xlRange.Cells[i, 3].Value2 != null)
+
+                {
+                    
+                    curAccount = new TaiKhoan()
+                    {
+                        TenDangNhap = _xlRange.Cells[i, 1].Value2,
+                        MatKhau = Crypto.hashPassword(_xlRange.Cells[i, 2].Value2.ToString()),
+                        LoaiTK = int.Parse(_xlRange.Cells[i, 3].Value2.ToString())
+                    };
+                    list.Add(curAccount);
+                }
+            }
+            return list;
+        }
+
         private List<CauHoi> Loop(int row, int col)
         {
             CauHoi curQuest = null;
@@ -51,11 +80,9 @@ namespace ptudql_project.Utils
             for (int i = 2; i <= row; i++)
             {
                 if (_xlRange[i, 6] != null && _xlRange.Cells[i,6].Value2 != null)
-
                 {
                     if (_xlRange.Cells[i, 6].Value2.Length != 1)
                     {
-                        
                         continue;
                     }
                     curQuest = new CauHoi()
