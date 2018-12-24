@@ -47,6 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\addUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\addUser.Designer.cs">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\updateStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\updateStudentInfo.Designer.cs">
+      <DependentUpon>updateStudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\updateTeacherInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\updateTeacherInfo.Designer.cs">
+      <DependentUpon>updateTeacherInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ListQuest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,7 +93,10 @@
       <DependentUpon>SidebarButton.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\Account.cs" />
+    <Compile Include="DAO\BindingsList.cs" />
     <Compile Include="DAO\Question.cs" />
+    <Compile Include="DAO\StudentDAO.cs" />
+    <Compile Include="DAO\TeacherDAO.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,9 +112,9 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="QLTN.designer.cs">
-      <DependentUpon>QLTN.dbml</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
     <Compile Include="Student\RequestQuestion.cs">
       <SubType>Form</SubType>
@@ -127,9 +154,22 @@
     </Compile>
     <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Extension.cs" />
+    <Compile Include="Utils\Import.cs" />
     <Compile Include="Utils\Router.cs" />
     <Compile Include="Utils\MyTimer.cs" />
     <Compile Include="Utils\Validation.cs" />
+    <EmbeddedResource Include="Admin\addUser.resx">
+      <DependentUpon>addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\updateStudentInfo.resx">
+      <DependentUpon>updateStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\updateTeacherInfo.resx">
+      <DependentUpon>updateTeacherInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ListQuest.resx">
       <DependentUpon>ListQuest.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,9 +223,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="QLTN.dbml">
-      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLTN.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="QLTN.dbml.layout">
       <DependentUpon>QLTN.dbml</DependentUpon>
@@ -197,7 +237,33 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Icon\Database.png" />

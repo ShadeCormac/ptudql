@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ptudql_project.DAO;
+using ptudql_project.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,115 +9,104 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ptudql_project.Utils;
-using ptudql_project.DAO;
 
-namespace ptudql_project
+namespace ptudql_project.Admin
 {
-  public partial class Register : Form
-  {
+    public partial class addUser : Form
+    {
         private ErrorProvider errors = null;
         private string _username = "";
         private string _password = "";
         private string _rePassword = "";
-    public Register()
-    {
-        InitializeComponent();
-        errors = new ErrorProvider();
-    }
+        private int _loaiTK;
 
-    private void login_Click(object sender, EventArgs e)
-    {
-      Router.ChangeForm(this, new Login());
-    }
+        public event Action AddUserSuccess;
 
-        private void textBox1_Validating(object sender, CancelEventArgs e)
+        public addUser()
+        {
+            InitializeComponent();
+            errors = new ErrorProvider();
+            InitCbbPermission();
+        }
+
+        void InitCbbPermission()
+        {
+            var cbbList = new[] { new { value = 1, name = "Admin" }, new { value = 2, name = "Teacher" }, new { value = 3, name = "Student" } }.ToList();
+
+            this.cbDecent.DisplayMember = "name";
+            this.cbDecent.ValueMember = "value";
+            this.cbDecent.DataSource = cbbList;
+        }
+
+        private void txtAccount_Validating(object sender, CancelEventArgs e)
         {
             Control control = sender as Control;
             if (control.Text.Length == 0)
             {
                 errors.SetError(control, "Tên tài khoản không được trống");
-                e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Tên tài khoản ít nhất 6 kí tự");
-                e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-
-            if (e.Cancel == true)
-            {
-                _username = "";
-            }
         }
 
-        private void textBox2_Validating(object sender, CancelEventArgs e)
+        private void txtPass_Validating(object sender, CancelEventArgs e)
         {
             Control control = sender as Control;
             if (control.Text.Length == 0)
             {
                 errors.SetError(control, "Mật khẩu không được trống");
-                e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Mật khẩu ít nhất 6 kí tự");
-                e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-            if (e.Cancel == true)
-            {
-                _password = "";
-            }
         }
 
-        private void textBox3_Validating(object sender, CancelEventArgs e)
+        private void txtrePass_Validating(object sender, CancelEventArgs e)
         {
             Control control = sender as Control;
             if (control.Text.Length == 0)
             {
                 errors.SetError(control, "Mật khẩu không được trống");
-                e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Mật khẩu ít nhất 6 kí tự");
-                e.Cancel = true;
-            } else if (txtPassword.Text != control.Text)
+            }
+            else if (txtPass.Text != control.Text)
             {
                 errors.SetError(control, "Mật khẩu nhập lại phải trùng khớp");
-                e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-            if (e.Cancel == true)
-            {
-                _rePassword = "";
-            }
         }
+
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            //must use crypto
+            //use Validation class later
             if (_username.Length < 6 || _password.Length < 6 || _rePassword.Length < 6)
             {
                 errors.SetError((Control)sender, "Bạn phải nhập đủ thông tin");
             }
             else
             {
-                //must use crypto
-                //use Validation class later
-                if (!Account.isRegisterd(_username))
+                if (!Account.isRegisterd(txtAccount.Text))
                 {
-                    if (!Validation.checkPassWord(_password, _rePassword))
+                    if (!Validation.checkPassWord(txtPass.Text, txtrePass.Text))
                     {
                         errors.SetError((Control)sender, "Mật khẩu không trùng");
                     }
@@ -123,8 +114,9 @@ namespace ptudql_project
                     {
                         errors.SetError((Control)sender, "");
                         //save to database
-                        TaiKhoan tk = new TaiKhoan { TenDangNhap = _username, MatKhau = Crypto.hashPassword(_password), LoaiTK = 3 };
-                        Account.Register(tk);
+                        TaiKhoan tk = new TaiKhoan { TenDangNhap = txtAccount.Text, MatKhau = Crypto.hashPassword(txtPass.Text), LoaiTK = (int)cbDecent.SelectedValue };
+                        Account.Register_admin(tk);
+                        AddUserSuccess();
                     }
                 }
                 else
@@ -132,20 +124,20 @@ namespace ptudql_project
                     MessageBox.Show("Ten tai khoan da ton tai");
                 }
             }
-
         }
 
-        private void txtUsername_Validated(object sender, EventArgs e)
+
+        private void txtAccount_Validated(object sender, EventArgs e)
         {
             _username = ((TextBox)sender).Text;
         }
 
-        private void txtPassword_Validated(object sender, EventArgs e)
+        private void txtPass_Validated(object sender, EventArgs e)
         {
             _password = ((TextBox)sender).Text;
         }
 
-        private void txtConfirmPassword_Validated(object sender, EventArgs e)
+        private void txtrePass_Validated(object sender, EventArgs e)
         {
             _rePassword = ((TextBox)sender).Text;
         }

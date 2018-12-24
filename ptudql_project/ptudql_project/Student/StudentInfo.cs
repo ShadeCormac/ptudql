@@ -122,5 +122,10 @@ namespace ptudql_project.Student
         {
             Router.ChangeForm(this, new RequestQuestion());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

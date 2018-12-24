@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ptudql_project.Admin;
+using ptudql_project.Student;
+using ptudql_project.Teacher;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +19,7 @@ namespace ptudql_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new AdminMain());
         }
     }
 }

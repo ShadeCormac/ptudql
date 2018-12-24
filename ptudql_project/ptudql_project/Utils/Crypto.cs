@@ -31,8 +31,6 @@ namespace ptudql_project.Utils
                 }
                
             }
-            
-
         }
 
         public static bool passwordCompare(string pass, string hashedPass)
