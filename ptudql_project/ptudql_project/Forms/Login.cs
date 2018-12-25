@@ -37,6 +37,10 @@ namespace ptudql_project
             //Router.ChangeForm(this, new StudentInfo());
             //Session.AccountName = "giaovien1";
             //Router.ChangeForm(this, new TeacherMain());
+
+            _username = txtUsername.Text;
+            _password = txtPassword.Text;
+
             if (_username.Length < 6 || _password.Length < 6)
             {
                 errors.SetError((Control)sender, "Bạn phải nhập thông tin");
@@ -85,22 +89,22 @@ namespace ptudql_project
             if (control.Text.Length == 0 || control.Text == "Tên đăng nhập")
             {
                 errors.SetError(control, "Tên tài khoản không được trống");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Tên tài khoản ít nhất 6 kí tự");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-            if (e.Cancel == true)
-            {
-                if (_username.Length > 0)
-                    _username = "";
-            }
+            //if (e.Cancel == true)
+            //{
+            //    if (_username.Length > 0)
+            //        _username = "";
+            //}
         }
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
@@ -109,22 +113,22 @@ namespace ptudql_project
             if (control.Text.Length == 0 || control.Text == "********")
             {
                 errors.SetError(control, "Mật khẩu không được trống");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Mật khẩu có ít nhất 6 kí tự");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-            if (e.Cancel == true)
-            {
-                if (_password.Length > 0)
-                    _password = "";
-            }
+            //if (e.Cancel == true)
+            //{
+            //    if (_password.Length > 0)
+            //        _password = "";
+            //}
 
         }
 

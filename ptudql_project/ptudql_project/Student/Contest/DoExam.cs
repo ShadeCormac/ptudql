@@ -40,6 +40,12 @@ namespace ptudql_project.Student
 
         public Action completeExamHandler;
 
+        private Color ansColor = Color.FromArgb(26, 188, 156);
+        private Color wrongColor = ColorTranslator.FromHtml("#e74c3c");
+        private Color chooseColor = Color.FromArgb(106, 111, 251);
+        private Font bold = new Font("Calibri", 12, FontStyle.Bold);
+        private Font regular = new Font("Calibri", 12, FontStyle.Regular);
+
         public DoExam()
         {
             InitializeComponent();
@@ -260,6 +266,7 @@ namespace ptudql_project.Student
                 foreach (var txtAns in dictTxtAns)
                 {
                     changeColor(txtAns.Value, Color.White, Color.Black);
+                    txtAns.Value.Font = regular;
                 }
 
                 if (isSubmited)
@@ -290,7 +297,8 @@ namespace ptudql_project.Student
         private void LoadCorrectAns()
         {
             var ans = listQuest[NumQuest].CauTLDung;
-            changeColor(dictTxtAns[ans.ToString()], Color.Red, Color.White);
+            changeColor(dictTxtAns[ans.ToString()], Color.White, ansColor);
+            dictTxtAns[ans.ToString()].Font = bold;
         }
 
         private void goiY_Click(object sender, EventArgs e)
@@ -301,8 +309,9 @@ namespace ptudql_project.Student
         private void ChangeColorTreeNode(int idx)
         {
             // Doi mau tree view node
-            tvListQuest.Nodes[idx].ForeColor = Color.DodgerBlue;
-            tvListQuest.Nodes[idx].NodeFont = new Font("Calibri", 12, FontStyle.Bold);
+            //tvListQuest.Nodes[idx].ForeColor = rightColor;
+            tvListQuest.Nodes[idx].BackColor = ansColor;
+            tvListQuest.Nodes[idx].NodeFont = bold;
         }
 
         private void rdbAnsInput_CheckedChanged(object sender, EventArgs e)
@@ -320,13 +329,15 @@ namespace ptudql_project.Student
             {
                 // Xoa mau text box cu~
                 changeColor(currentTxtAns, Color.White, Color.Black);
+                currentTxtAns.Font = regular;
             }
 
             if (ans != string.Empty)
             {
                 ChangeColorTreeNode(NumQuest);
                 // Doi mau text box
-                changeColor(dictTxtAns[ans], Color.DodgerBlue, Color.White);
+                changeColor(dictTxtAns[ans], Color.White, chooseColor);
+                dictTxtAns[ans].Font = bold;
                 currentTxtAns = dictTxtAns[ans];
             }
 
@@ -380,8 +391,8 @@ namespace ptudql_project.Student
                 int idx = (int)node.Tag;
                 bool isCorrect = listAnsInput[idx] == listQuest[idx].CauTLDung.ToString();
 
-                node.NodeFont = new Font("Calibri", 12, FontStyle.Bold);
-                node.ForeColor = isCorrect ? Color.Green : Color.Red;
+                node.NodeFont = bold;
+                node.BackColor = isCorrect ? ansColor : wrongColor;
             }
 
             LoadCorrectAns();
@@ -418,7 +429,6 @@ namespace ptudql_project.Student
                 if (isTrial)
                 {
                     ShowAns();
-                    panelTips.Visible = true;
                 }
 
                 string path = $"temp\\{username}_{contest.IDKyThi}_{exam.IdDe}.json";

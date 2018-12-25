@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentContest));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRequestQuestion = new ptudql_project.CustomControls.SidebarButton();
             this.btnInfo = new ptudql_project.CustomControls.SidebarButton();
@@ -37,7 +39,7 @@
             this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabForms = new System.Windows.Forms.TabControl();
             this.tabChooseContest = new System.Windows.Forms.TabPage();
-            this.btnDoContest = new System.Windows.Forms.Button();
+            this.btnDoContest = new System.Windows.Forms.PictureBox();
             this.dgvListContest = new System.Windows.Forms.DataGridView();
             this.IDKyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +51,14 @@
             this.panel1.SuspendLayout();
             this.tabForms.SuspendLayout();
             this.tabChooseContest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDoContest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.panel1.Controls.Add(this.btnRequestQuestion);
             this.panel1.Controls.Add(this.btnInfo);
             this.panel1.Controls.Add(this.btnThiThu);
@@ -68,12 +71,12 @@
             // 
             // btnRequestQuestion
             // 
-            this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.btnRequestQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRequestQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnRequestQuestion.CustomImage")));
             this.btnRequestQuestion.LabelLocation = new System.Drawing.Point(30, 83);
             this.btnRequestQuestion.LabelText = "Đóng góp câu hỏi";
-            this.btnRequestQuestion.Location = new System.Drawing.Point(0, 490);
+            this.btnRequestQuestion.Location = new System.Drawing.Point(0, 403);
             this.btnRequestQuestion.Name = "btnRequestQuestion";
             this.btnRequestQuestion.Size = new System.Drawing.Size(200, 110);
             this.btnRequestQuestion.TabIndex = 3;
@@ -81,12 +84,12 @@
             // 
             // btnInfo
             // 
-            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInfo.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.CustomImage")));
             this.btnInfo.LabelLocation = new System.Drawing.Point(30, 83);
             this.btnInfo.LabelText = "Thông tin cá nhân";
-            this.btnInfo.Location = new System.Drawing.Point(0, 87);
+            this.btnInfo.Location = new System.Drawing.Point(0, 0);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(200, 110);
             this.btnInfo.TabIndex = 2;
@@ -94,12 +97,12 @@
             // 
             // btnThiThu
             // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
             this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
             this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
+            this.btnThiThu.Location = new System.Drawing.Point(0, 274);
             this.btnThiThu.Name = "btnThiThu";
             this.btnThiThu.Size = new System.Drawing.Size(200, 110);
             this.btnThiThu.TabIndex = 1;
@@ -107,12 +110,12 @@
             // 
             // btnLamBaiThi
             // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(86)))), ((int)(((byte)(194)))));
             this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
             this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
             this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 134);
             this.btnLamBaiThi.Name = "btnLamBaiThi";
             this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
             this.btnLamBaiThi.TabIndex = 0;
@@ -147,16 +150,13 @@
             // 
             // btnDoContest
             // 
-            this.btnDoContest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnDoContest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoContest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoContest.ForeColor = System.Drawing.Color.White;
-            this.btnDoContest.Location = new System.Drawing.Point(870, 607);
+            this.btnDoContest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoContest.Image = ((System.Drawing.Image)(resources.GetObject("btnDoContest.Image")));
+            this.btnDoContest.Location = new System.Drawing.Point(748, 617);
             this.btnDoContest.Name = "btnDoContest";
-            this.btnDoContest.Size = new System.Drawing.Size(178, 52);
-            this.btnDoContest.TabIndex = 22;
-            this.btnDoContest.Text = "Làm bài thi";
-            this.btnDoContest.UseVisualStyleBackColor = false;
+            this.btnDoContest.Size = new System.Drawing.Size(300, 40);
+            this.btnDoContest.TabIndex = 3;
+            this.btnDoContest.TabStop = false;
             this.btnDoContest.Click += new System.EventHandler(this.btnDoContest_Click);
             // 
             // dgvListContest
@@ -164,6 +164,15 @@
             this.dgvListContest.AllowUserToAddRows = false;
             this.dgvListContest.AllowUserToDeleteRows = false;
             this.dgvListContest.AutoGenerateColumns = false;
+            this.dgvListContest.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListContest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListContest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListContest.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDKyThi,
@@ -171,13 +180,22 @@
             this.ThoiGianBatDau,
             this.ThoiGianKetThuc});
             this.dgvListContest.DataSource = this.kyThiBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListContest.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListContest.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.dgvListContest.Location = new System.Drawing.Point(38, 97);
             this.dgvListContest.Name = "dgvListContest";
             this.dgvListContest.ReadOnly = true;
             this.dgvListContest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListContest.Size = new System.Drawing.Size(1010, 504);
             this.dgvListContest.TabIndex = 2;
-            this.dgvListContest.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnDoContest_Click);
+            this.dgvListContest.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btnDoContest_Click);
             // 
             // IDKyThi
             // 
@@ -218,7 +236,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.panel2.ForeColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(38, 67);
             this.panel2.Name = "panel2";
@@ -228,11 +246,11 @@
             // lbChooseContestTitle
             // 
             this.lbChooseContestTitle.AutoSize = true;
-            this.lbChooseContestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChooseContestTitle.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbChooseContestTitle.Location = new System.Drawing.Point(419, 23);
+            this.lbChooseContestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChooseContestTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(86)))), ((int)(((byte)(194)))));
+            this.lbChooseContestTitle.Location = new System.Drawing.Point(32, 23);
             this.lbChooseContestTitle.Name = "lbChooseContestTitle";
-            this.lbChooseContestTitle.Size = new System.Drawing.Size(238, 31);
+            this.lbChooseContestTitle.Size = new System.Drawing.Size(257, 31);
             this.lbChooseContestTitle.TabIndex = 0;
             this.lbChooseContestTitle.Text = "Kỳ thi đang diễn ra";
             // 
@@ -249,6 +267,7 @@
             this.tabForms.ResumeLayout(false);
             this.tabChooseContest.ResumeLayout(false);
             this.tabChooseContest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDoContest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -268,10 +287,10 @@
         private System.Windows.Forms.Label lbChooseContestTitle;
         private System.Windows.Forms.DataGridView dgvListContest;
         private System.Windows.Forms.BindingSource kyThiBindingSource;
-        private System.Windows.Forms.Button btnDoContest;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDKyThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenKyThiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBatDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianKetThuc;
+        private System.Windows.Forms.PictureBox btnDoContest;
     }
 }

@@ -62,18 +62,18 @@ namespace ptudql_project.Student
             }
         }
 
-        private void CheckPassWord(object sender, EventArgs e) 
-        {
-            TextBox input = sender as TextBox;
-            if (Validation.checkPassWord(input.Text,tbpassword.Text))
-            {
-                errors.SetError((Control)sender, "");
-            }
-            else
-            {
-                errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
-            }
-        }
+        //private void CheckPassWord(object sender, EventArgs e) 
+        //{
+        //    TextBox input = sender as TextBox;
+        //    if (Validation.checkPassWord(input.Text,tbpassword.Text))
+        //    {
+        //        errors.SetError((Control)sender, "");
+        //    }
+        //    else
+        //    {
+        //        errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
+        //    }
+        //}
 
         private void LoadKQHT()
         {
@@ -109,9 +109,9 @@ namespace ptudql_project.Student
             dgvKQHT.DataSource = lstDST.Where(dst => dst.IdKyThi.Equals(lstIdKyThi[idx])).ToList();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
+            Router.ShowFormDialog(this, new ChangePassword());
         }
     }
 }

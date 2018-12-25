@@ -35,22 +35,22 @@ namespace ptudql_project
             if (control.Text.Length == 0)
             {
                 errors.SetError(control, "Tên tài khoản không được trống");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Tên tài khoản ít nhất 6 kí tự");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
 
-            if (e.Cancel == true)
-            {
-                _username = "";
-            }
+            //if (e.Cancel == true)
+            //{
+            //    _username = "";
+            //}
         }
 
         private void textBox2_Validating(object sender, CancelEventArgs e)
@@ -59,21 +59,21 @@ namespace ptudql_project
             if (control.Text.Length == 0)
             {
                 errors.SetError(control, "Mật khẩu không được trống");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Mật khẩu ít nhất 6 kí tự");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-            if (e.Cancel == true)
-            {
-                _password = "";
-            }
+            //if (e.Cancel == true)
+            //{
+            //    _password = "";
+            //}
         }
 
         private void textBox3_Validating(object sender, CancelEventArgs e)
@@ -82,29 +82,33 @@ namespace ptudql_project
             if (control.Text.Length == 0)
             {
                 errors.SetError(control, "Mật khẩu không được trống");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else if (control.Text.Length < 6)
             {
                 errors.SetError(control, "Mật khẩu ít nhất 6 kí tự");
-                e.Cancel = true;
+                //e.Cancel = true;
             } else if (txtPassword.Text != control.Text)
             {
                 errors.SetError(control, "Mật khẩu nhập lại phải trùng khớp");
-                e.Cancel = true;
+                //e.Cancel = true;
             }
             else
             {
                 errors.SetError(control, "");
             }
-            if (e.Cancel == true)
-            {
-                _rePassword = "";
-            }
+            //if (e.Cancel == true)
+            //{
+            //    _rePassword = "";
+            //}
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            _username = txtUsername.Text;
+            _password = txtPassword.Text;
+            _rePassword = txtConfirmPassword.Text;
+
             if (_username.Length < 6 || _password.Length < 6 || _rePassword.Length < 6)
             {
                 errors.SetError((Control)sender, "Bạn phải nhập đủ thông tin");
@@ -127,6 +131,7 @@ namespace ptudql_project
                         Account.Register(tk);
                         DAO.Student.Insert(tk);
                         MessageBox.Show("Đăng ký thành công.", "Thông báo");
+                        Router.ChangeForm(this, new Login());
                     }
                 }
                 else

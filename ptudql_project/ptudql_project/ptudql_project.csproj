@@ -79,6 +79,12 @@
     <Compile Include="CustomControls\ListQuest.Designer.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="CustomControls\MyButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\MyButton.Designer.cs">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\NumberInputBox.cs">
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="Student\Contest\TabChooseContest.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Info\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Info\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Student\RequestQuestion\Main.cs">
       <SubType>Form</SubType>
@@ -230,6 +242,9 @@
     <EmbeddedResource Include="CustomControls\ListQuest.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\MyButton.resx">
+      <DependentUpon>MyButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\PaddingTextBox.resx">
       <DependentUpon>PaddingTextBox.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -254,9 +269,9 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="QLTN.dbml.layout">
-      <DependentUpon>QLTN.dbml</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Student\Info\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher\AddExam.resx">
       <DependentUpon>AddExam.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +366,10 @@
     <None Include="Images\Icon\Database.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\Icon\TextArea.png" />
+    <None Include="Images\Icon\TextBoxDisable.png" />
+    <None Include="Images\Icon\TextBox.png" />
+    <None Include="Images\Icon\congcong.png" />
     <Content Include="Images\Icon\Test.png" />
     <Content Include="Images\Icon\Test1.png" />
     <Content Include="Images\Icon\TestTrial.png" />
