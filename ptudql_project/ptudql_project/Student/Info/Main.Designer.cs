@@ -40,10 +40,6 @@
             this.lbKyThiFilter = new System.Windows.Forms.Label();
             this.cbKyThiFilter = new System.Windows.Forms.ComboBox();
             this.dgvKQHT = new System.Windows.Forms.DataGridView();
-            this.idKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -77,6 +73,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabForms = new System.Windows.Forms.TabControl();
+            this.idKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRequestQuestion = new ptudql_project.CustomControls.SidebarButton();
             this.btnInfo = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
@@ -85,7 +85,6 @@
             this.tabContestResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKQHT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tabInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
@@ -98,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,7 +145,7 @@
             this.lbKyThiFilter.AutoSize = true;
             this.lbKyThiFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbKyThiFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.lbKyThiFilter.Location = new System.Drawing.Point(24, 87);
+            this.lbKyThiFilter.Location = new System.Drawing.Point(24, 101);
             this.lbKyThiFilter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbKyThiFilter.Name = "lbKyThiFilter";
             this.lbKyThiFilter.Size = new System.Drawing.Size(60, 24);
@@ -156,7 +156,7 @@
             // 
             this.cbKyThiFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbKyThiFilter.FormattingEnabled = true;
-            this.cbKyThiFilter.Location = new System.Drawing.Point(108, 88);
+            this.cbKyThiFilter.Location = new System.Drawing.Point(108, 102);
             this.cbKyThiFilter.Margin = new System.Windows.Forms.Padding(2);
             this.cbKyThiFilter.Name = "cbKyThiFilter";
             this.cbKyThiFilter.Size = new System.Drawing.Size(270, 28);
@@ -193,7 +193,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKQHT.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKQHT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.dgvKQHT.Location = new System.Drawing.Point(29, 149);
+            this.dgvKQHT.Location = new System.Drawing.Point(29, 163);
             this.dgvKQHT.Margin = new System.Windows.Forms.Padding(2);
             this.dgvKQHT.Name = "dgvKQHT";
             this.dgvKQHT.ReadOnly = true;
@@ -211,39 +211,14 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvKQHT.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvKQHT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKQHT.Size = new System.Drawing.Size(1000, 438);
+            this.dgvKQHT.Size = new System.Drawing.Size(1022, 462);
             this.dgvKQHT.TabIndex = 9;
-            // 
-            // idKyThiDataGridViewTextBoxColumn
-            // 
-            this.idKyThiDataGridViewTextBoxColumn.DataPropertyName = "IdKyThi";
-            this.idKyThiDataGridViewTextBoxColumn.HeaderText = "Mã kỳ thi";
-            this.idKyThiDataGridViewTextBoxColumn.Name = "idKyThiDataGridViewTextBoxColumn";
-            this.idKyThiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idDeDataGridViewTextBoxColumn
-            // 
-            this.idDeDataGridViewTextBoxColumn.DataPropertyName = "IdDe";
-            this.idDeDataGridViewTextBoxColumn.HeaderText = "Mã đề";
-            this.idDeDataGridViewTextBoxColumn.Name = "idDeDataGridViewTextBoxColumn";
-            this.idDeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diemDataGridViewTextBoxColumn
-            // 
-            this.diemDataGridViewTextBoxColumn.DataPropertyName = "Diem";
-            this.diemDataGridViewTextBoxColumn.HeaderText = "Điểm";
-            this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
-            this.diemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // danhSachThiBindingSource
-            // 
-            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.panel5.Location = new System.Drawing.Point(29, 52);
+            this.panel5.Location = new System.Drawing.Point(27, 64);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1022, 1);
@@ -254,7 +229,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.label15.Location = new System.Drawing.Point(21, 15);
+            this.label15.Location = new System.Drawing.Point(21, 20);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(218, 31);
@@ -264,7 +239,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::ptudql_project.Properties.Resources.TextBox;
-            this.pictureBox8.Location = new System.Drawing.Point(92, 82);
+            this.pictureBox8.Location = new System.Drawing.Point(92, 96);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(300, 40);
             this.pictureBox8.TabIndex = 12;
@@ -611,6 +586,31 @@
             this.tabForms.TabIndex = 1;
             this.tabForms.SelectedIndexChanged += new System.EventHandler(this.tabForms_SelectedIndexChanged);
             // 
+            // idKyThiDataGridViewTextBoxColumn
+            // 
+            this.idKyThiDataGridViewTextBoxColumn.DataPropertyName = "IdKyThi";
+            this.idKyThiDataGridViewTextBoxColumn.HeaderText = "Mã kỳ thi";
+            this.idKyThiDataGridViewTextBoxColumn.Name = "idKyThiDataGridViewTextBoxColumn";
+            this.idKyThiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDeDataGridViewTextBoxColumn
+            // 
+            this.idDeDataGridViewTextBoxColumn.DataPropertyName = "IdDe";
+            this.idDeDataGridViewTextBoxColumn.HeaderText = "Mã đề";
+            this.idDeDataGridViewTextBoxColumn.Name = "idDeDataGridViewTextBoxColumn";
+            this.idDeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diemDataGridViewTextBoxColumn
+            // 
+            this.diemDataGridViewTextBoxColumn.DataPropertyName = "Diem";
+            this.diemDataGridViewTextBoxColumn.HeaderText = "Điểm";
+            this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
+            this.diemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // danhSachThiBindingSource
+            // 
+            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
+            // 
             // btnRequestQuestion
             // 
             this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
@@ -679,7 +679,6 @@
             this.tabContestResult.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKQHT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
@@ -693,6 +692,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
             this.ResumeLayout(false);
 
     }

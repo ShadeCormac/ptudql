@@ -28,7 +28,7 @@ create table GiaoVien(
 	HoTen nvarchar(50),
 	GioiTinh nvarchar(10),
 	Email varchar(50),
-	SoDienThoai varchar(11).
+	SoDienThoai varchar(11),
 	DiaChi nvarchar(100)
 	
 	--cần thêm gì nữa?

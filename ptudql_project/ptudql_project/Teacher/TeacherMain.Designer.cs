@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddQuestion = new ptudql_project.CustomControls.SidebarButton();
-            this.btnUser = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
+            this.btnHome = new ptudql_project.CustomControls.SidebarButton();
+            this.btnStudentFeature = new ptudql_project.CustomControls.SidebarButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.qlCauHoi = new System.Windows.Forms.TabPage();
             this.btnExport = new System.Windows.Forms.Button();
@@ -128,71 +126,41 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel1.Controls.Add(this.btnAddQuestion);
-            this.panel1.Controls.Add(this.btnUser);
-            this.panel1.Controls.Add(this.btnThiThu);
-            this.panel1.Controls.Add(this.btnLamBaiThi);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.btnStudentFeature);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 672);
             this.panel1.TabIndex = 1;
             // 
-            // btnAddQuestion
+            // btnHome
             // 
-            this.btnAddQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnAddQuestion.CustomImage")));
-            this.btnAddQuestion.LabelLocation = new System.Drawing.Point(45, 83);
-            this.btnAddQuestion.LabelText = "Thêm câu hỏi";
-            this.btnAddQuestion.Location = new System.Drawing.Point(0, 490);
-            this.btnAddQuestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(200, 110);
-            this.btnAddQuestion.TabIndex = 3;
-            this.btnAddQuestion.Load += new System.EventHandler(this.btnAddQuestion_Load);
-            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(86)))), ((int)(((byte)(194)))));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnHome.CustomImage")));
+            this.btnHome.LabelLocation = new System.Drawing.Point(55, 83);
+            this.btnHome.LabelText = "Trang chủ";
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(200, 110);
+            this.btnHome.TabIndex = 2;
             // 
-            // btnUser
+            // btnStudentFeature
             // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(124)))), ((int)(((byte)(176)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImage")));
-            this.btnUser.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnUser.LabelText = "Thông tin cá nhân";
-            this.btnUser.Location = new System.Drawing.Point(0, 86);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(200, 110);
-            this.btnUser.TabIndex = 2;
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 361);
-            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 221);
-            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
-            this.btnLamBaiThi.Click += new System.EventHandler(this.btnLamBaiThi_Click);
+            this.btnStudentFeature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.btnStudentFeature.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudentFeature.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnStudentFeature.CustomImage")));
+            this.btnStudentFeature.LabelLocation = new System.Drawing.Point(7, 83);
+            this.btnStudentFeature.LabelText = "Chức năng của học sinh";
+            this.btnStudentFeature.Location = new System.Drawing.Point(0, 135);
+            this.btnStudentFeature.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStudentFeature.Name = "btnStudentFeature";
+            this.btnStudentFeature.Size = new System.Drawing.Size(200, 110);
+            this.btnStudentFeature.TabIndex = 0;
+            this.btnStudentFeature.Click += new System.EventHandler(this.btnStudentFeature_Click);
             // 
             // tabControl1
             // 
@@ -1103,10 +1071,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CustomControls.SidebarButton btnAddQuestion;
-        private CustomControls.SidebarButton btnUser;
-        private CustomControls.SidebarButton btnThiThu;
-        private CustomControls.SidebarButton btnLamBaiThi;
+        private CustomControls.SidebarButton btnHome;
+        private CustomControls.SidebarButton btnStudentFeature;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage qlCauHoi;
         private System.Windows.Forms.TabPage qlDeThi;

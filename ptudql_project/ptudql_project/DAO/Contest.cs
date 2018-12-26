@@ -18,7 +18,7 @@ namespace ptudql_project.DAO
                     .Where(k => k.LoaiKyThi == type 
                         && now >= k.ThoiGianBatDau && now <= k.ThoiGianKetThuc 
                         && (k.LoaiKyThi != 1 || (
-                            k.DanhSachThis.Where(dst => dst.TKHocSinh == username).Count() <
+                            k.DanhSachThis.Where(dst => dst.TKThi == username).Count() <
                             k.KyThi_DeThis.Count
                         ))).ToList();
             }
@@ -39,7 +39,7 @@ namespace ptudql_project.DAO
             {
                 return (from dst in db.DanhSachThis
                         join k in db.KyThis on dst.IdKyThi equals k.IDKyThi
-                        where k.LoaiKyThi == type && dst.TKHocSinh == username
+                        where k.LoaiKyThi == type && dst.TKThi == username
                         select dst).ToList();
             }
         }
@@ -58,7 +58,7 @@ namespace ptudql_project.DAO
                 try
                 {
                     DanhSachThi dst = new DanhSachThi();
-                    dst.TKHocSinh = username;
+                    dst.TKThi = username;
                     dst.IdDe = idDe;
                     dst.IdKyThi = idKyThi;
                     dst.Diem = Math.Round(score, 2);
@@ -68,7 +68,7 @@ namespace ptudql_project.DAO
                     if (isTrial)
                     {
                         lanThi = db.DanhSachThis
-                            .Where(d => d.IdDe == idDe && d.IdKyThi == idKyThi && d.TKHocSinh == username)
+                            .Where(d => d.IdDe == idDe && d.IdKyThi == idKyThi && d.TKThi == username)
                             .DefaultIfEmpty()
                             .Max(d => d == null ? 0 : d.LanThi) + 1;
                     }

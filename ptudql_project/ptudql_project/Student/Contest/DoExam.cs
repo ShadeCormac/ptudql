@@ -70,6 +70,7 @@ namespace ptudql_project.Student
             {
                 lbGoiY.Visible = false;
                 pbGoiY.Visible = false;
+                panelTips.Visible = false;
             }
         }
 

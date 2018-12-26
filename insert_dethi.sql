@@ -1,17 +1,15 @@
 use QLThiTracNghiem
 go
 
-insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien1', 'giaovien1', 2)
-insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien2', 'giaovien2', 2)
-insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien3', 'giaovien3', 2)
-insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien4', 'giaovien4', 2)
-insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('test', 'test', 1)
+insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien1', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2) -- MK: 123123
+insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien2', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2)
+insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien3', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2)
+insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien4', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2)
 
 insert into GiaoVien(TenTK, HoTen) values('giaovien1', N'Giáo viên 1')
 insert into GiaoVien(TenTK, HoTen) values('giaovien2', N'Giáo viên 2')
 insert into GiaoVien(TenTK, HoTen) values('giaovien3', N'Giáo viên 3')
 insert into GiaoVien(TenTK, HoTen) values('giaovien4', N'Giáo viên 4')
-insert into HocSinh(TenTK, HoTen) values('test', N'Test')
 
 declare cur cursor for
 select IdCauHoi
@@ -65,3 +63,9 @@ deallocate cur
 -- 2: Trung Binh (30 câu / 40 phút)
 -- 3: Kho (40 câu / 40 phút)
 -- 4: Cuc kho (50 câu / 40 phút)
+
+-- Đề thi này chỉ có 3 câu => xóa
+delete KyThi_DeThi where IdKyThi=N'KTQS14'
+delete KyThi where IDKyThi=N'KTQS14'
+delete BoDeThi where IdDe=N'QS14'
+delete DeThi where IdDe=N'QS14'

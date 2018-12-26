@@ -28,268 +28,348 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNoiDung = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestQuestion));
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCauB = new System.Windows.Forms.TextBox();
+            this.rbCauA = new System.Windows.Forms.RadioButton();
+            this.rbCauB = new System.Windows.Forms.RadioButton();
+            this.rbCauC = new System.Windows.Forms.RadioButton();
+            this.rbCauD = new System.Windows.Forms.RadioButton();
+            this.ofdImport = new System.Windows.Forms.OpenFileDialog();
+            this.myButton1 = new ptudql_project.CustomControls.MyButton();
+            this.btnImport = new ptudql_project.CustomControls.MyButton();
+            this.txtCauD = new System.Windows.Forms.TextBox();
             this.txtCauC = new System.Windows.Forms.TextBox();
             this.txtCauA = new System.Windows.Forms.TextBox();
-            this.txtCauD = new System.Windows.Forms.TextBox();
+            this.txtNoiDung = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.conAnsA = new System.Windows.Forms.PictureBox();
+            this.conAnsC = new System.Windows.Forms.PictureBox();
+            this.txtCauB = new System.Windows.Forms.TextBox();
+            this.conAnsD = new System.Windows.Forms.PictureBox();
+            this.conAnsB = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rbCauA = new System.Windows.Forms.RadioButton();
-            this.rbCauB = new System.Windows.Forms.RadioButton();
-            this.rbCauC = new System.Windows.Forms.RadioButton();
-            this.rbCauD = new System.Windows.Forms.RadioButton();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.ofdImport = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsB)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtNoiDung
-            // 
-            this.txtNoiDung.Location = new System.Drawing.Point(138, 77);
-            this.txtNoiDung.Multiline = true;
-            this.txtNoiDung.Name = "txtNoiDung";
-            this.txtNoiDung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtNoiDung.Size = new System.Drawing.Size(589, 55);
-            this.txtNoiDung.TabIndex = 2;
-            this.txtNoiDung.TextChanged += new System.EventHandler(this.txtNoiDung_TextChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel2.Location = new System.Drawing.Point(31, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 3);
-            this.panel2.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label2.Location = new System.Drawing.Point(302, 9);
+            this.label2.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label2.Location = new System.Drawing.Point(416, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 31);
+            this.label2.Size = new System.Drawing.Size(208, 33);
             this.label2.TabIndex = 5;
             this.label2.Text = "Đóng góp câu hỏi";
-            // 
-            // txtCauB
-            // 
-            this.txtCauB.Location = new System.Drawing.Point(138, 212);
-            this.txtCauB.Multiline = true;
-            this.txtCauB.Name = "txtCauB";
-            this.txtCauB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCauB.Size = new System.Drawing.Size(589, 38);
-            this.txtCauB.TabIndex = 6;
-            // 
-            // txtCauC
-            // 
-            this.txtCauC.Location = new System.Drawing.Point(138, 273);
-            this.txtCauC.Multiline = true;
-            this.txtCauC.Name = "txtCauC";
-            this.txtCauC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCauC.Size = new System.Drawing.Size(589, 38);
-            this.txtCauC.TabIndex = 7;
-            // 
-            // txtCauA
-            // 
-            this.txtCauA.Location = new System.Drawing.Point(138, 154);
-            this.txtCauA.Multiline = true;
-            this.txtCauA.Name = "txtCauA";
-            this.txtCauA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCauA.Size = new System.Drawing.Size(589, 38);
-            this.txtCauA.TabIndex = 8;
-            // 
-            // txtCauD
-            // 
-            this.txtCauD.Location = new System.Drawing.Point(138, 334);
-            this.txtCauD.Multiline = true;
-            this.txtCauD.Name = "txtCauD";
-            this.txtCauD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCauD.Size = new System.Drawing.Size(589, 38);
-            this.txtCauD.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Nội dung câu hỏi:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Câu A:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 352);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Câu D:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Câu B:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 410);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Câu đáp án đúng:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 289);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Câu C:";
             // 
             // rbCauA
             // 
             this.rbCauA.AutoSize = true;
-            this.rbCauA.Location = new System.Drawing.Point(137, 408);
+            this.rbCauA.Location = new System.Drawing.Point(48, 259);
             this.rbCauA.Name = "rbCauA";
-            this.rbCauA.Size = new System.Drawing.Size(32, 17);
+            this.rbCauA.Size = new System.Drawing.Size(14, 13);
             this.rbCauA.TabIndex = 17;
             this.rbCauA.TabStop = true;
-            this.rbCauA.Text = "A";
             this.rbCauA.UseVisualStyleBackColor = true;
             this.rbCauA.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // rbCauB
             // 
             this.rbCauB.AutoSize = true;
-            this.rbCauB.Location = new System.Drawing.Point(308, 408);
+            this.rbCauB.Location = new System.Drawing.Point(47, 357);
             this.rbCauB.Name = "rbCauB";
-            this.rbCauB.Size = new System.Drawing.Size(32, 17);
+            this.rbCauB.Size = new System.Drawing.Size(14, 13);
             this.rbCauB.TabIndex = 18;
             this.rbCauB.TabStop = true;
-            this.rbCauB.Text = "B";
             this.rbCauB.UseVisualStyleBackColor = true;
             this.rbCauB.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // rbCauC
             // 
             this.rbCauC.AutoSize = true;
-            this.rbCauC.Location = new System.Drawing.Point(499, 408);
+            this.rbCauC.Location = new System.Drawing.Point(47, 451);
             this.rbCauC.Name = "rbCauC";
-            this.rbCauC.Size = new System.Drawing.Size(32, 17);
+            this.rbCauC.Size = new System.Drawing.Size(14, 13);
             this.rbCauC.TabIndex = 19;
             this.rbCauC.TabStop = true;
-            this.rbCauC.Text = "C\r\n";
             this.rbCauC.UseVisualStyleBackColor = true;
             // 
             // rbCauD
             // 
             this.rbCauD.AutoSize = true;
-            this.rbCauD.Location = new System.Drawing.Point(671, 408);
+            this.rbCauD.Location = new System.Drawing.Point(48, 543);
             this.rbCauD.Name = "rbCauD";
-            this.rbCauD.Size = new System.Drawing.Size(33, 17);
+            this.rbCauD.Size = new System.Drawing.Size(14, 13);
             this.rbCauD.TabIndex = 20;
             this.rbCauD.TabStop = true;
-            this.rbCauD.Text = "D";
             this.rbCauD.UseVisualStyleBackColor = true;
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Location = new System.Drawing.Point(308, 456);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(230, 23);
-            this.btnSubmit.TabIndex = 21;
-            this.btnSubmit.Text = "Gửi câu hỏi";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.Location = new System.Drawing.Point(308, 523);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(230, 30);
-            this.btnImport.TabIndex = 22;
-            this.btnImport.Text = "Nhập dữ liệu từ excel";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // ofdImport
             // 
             this.ofdImport.FileName = "openFileDialog1";
             // 
+            // myButton1
+            // 
+            this.myButton1.Location = new System.Drawing.Point(667, 606);
+            this.myButton1.MyLabel = "Gửi câu hỏi";
+            this.myButton1.MyLabelLocation = new System.Drawing.Point(100, 10);
+            this.myButton1.Name = "myButton1";
+            this.myButton1.Size = new System.Drawing.Size(300, 40);
+            this.myButton1.TabIndex = 21;
+            this.myButton1.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(310, 606);
+            this.btnImport.MyLabel = "Nhập từ excel";
+            this.btnImport.MyLabelLocation = new System.Drawing.Point(95, 10);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(300, 40);
+            this.btnImport.TabIndex = 22;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // txtCauD
+            // 
+            this.txtCauD.BackColor = System.Drawing.Color.White;
+            this.txtCauD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCauD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCauD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCauD.Location = new System.Drawing.Point(91, 527);
+            this.txtCauD.Multiline = true;
+            this.txtCauD.Name = "txtCauD";
+            this.txtCauD.ReadOnly = true;
+            this.txtCauD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCauD.Size = new System.Drawing.Size(860, 44);
+            this.txtCauD.TabIndex = 69;
+            // 
+            // txtCauC
+            // 
+            this.txtCauC.BackColor = System.Drawing.Color.White;
+            this.txtCauC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCauC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCauC.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCauC.Location = new System.Drawing.Point(91, 435);
+            this.txtCauC.Multiline = true;
+            this.txtCauC.Name = "txtCauC";
+            this.txtCauC.ReadOnly = true;
+            this.txtCauC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCauC.Size = new System.Drawing.Size(860, 44);
+            this.txtCauC.TabIndex = 68;
+            // 
+            // txtCauA
+            // 
+            this.txtCauA.BackColor = System.Drawing.Color.White;
+            this.txtCauA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCauA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCauA.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCauA.Location = new System.Drawing.Point(91, 243);
+            this.txtCauA.Multiline = true;
+            this.txtCauA.Name = "txtCauA";
+            this.txtCauA.ReadOnly = true;
+            this.txtCauA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCauA.Size = new System.Drawing.Size(860, 44);
+            this.txtCauA.TabIndex = 66;
+            // 
+            // txtNoiDung
+            // 
+            this.txtNoiDung.BackColor = System.Drawing.Color.White;
+            this.txtNoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNoiDung.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoiDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.txtNoiDung.Location = new System.Drawing.Point(91, 115);
+            this.txtNoiDung.Multiline = true;
+            this.txtNoiDung.Name = "txtNoiDung";
+            this.txtNoiDung.ReadOnly = true;
+            this.txtNoiDung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNoiDung.Size = new System.Drawing.Size(860, 86);
+            this.txtNoiDung.TabIndex = 65;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(78, 108);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(888, 100);
+            this.pictureBox1.TabIndex = 70;
+            this.pictureBox1.TabStop = false;
+            // 
+            // conAnsA
+            // 
+            this.conAnsA.Image = ((System.Drawing.Image)(resources.GetObject("conAnsA.Image")));
+            this.conAnsA.Location = new System.Drawing.Point(79, 238);
+            this.conAnsA.Name = "conAnsA";
+            this.conAnsA.Size = new System.Drawing.Size(888, 55);
+            this.conAnsA.TabIndex = 71;
+            this.conAnsA.TabStop = false;
+            // 
+            // conAnsC
+            // 
+            this.conAnsC.Image = ((System.Drawing.Image)(resources.GetObject("conAnsC.Image")));
+            this.conAnsC.Location = new System.Drawing.Point(79, 430);
+            this.conAnsC.Name = "conAnsC";
+            this.conAnsC.Size = new System.Drawing.Size(888, 55);
+            this.conAnsC.TabIndex = 73;
+            this.conAnsC.TabStop = false;
+            // 
+            // txtCauB
+            // 
+            this.txtCauB.BackColor = System.Drawing.Color.White;
+            this.txtCauB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCauB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCauB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCauB.Location = new System.Drawing.Point(91, 340);
+            this.txtCauB.Multiline = true;
+            this.txtCauB.Name = "txtCauB";
+            this.txtCauB.ReadOnly = true;
+            this.txtCauB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCauB.Size = new System.Drawing.Size(860, 44);
+            this.txtCauB.TabIndex = 67;
+            // 
+            // conAnsD
+            // 
+            this.conAnsD.Image = ((System.Drawing.Image)(resources.GetObject("conAnsD.Image")));
+            this.conAnsD.Location = new System.Drawing.Point(79, 522);
+            this.conAnsD.Name = "conAnsD";
+            this.conAnsD.Size = new System.Drawing.Size(888, 55);
+            this.conAnsD.TabIndex = 74;
+            this.conAnsD.TabStop = false;
+            // 
+            // conAnsB
+            // 
+            this.conAnsB.Image = ((System.Drawing.Image)(resources.GetObject("conAnsB.Image")));
+            this.conAnsB.Location = new System.Drawing.Point(79, 335);
+            this.conAnsB.Name = "conAnsB";
+            this.conAnsB.Size = new System.Drawing.Size(888, 55);
+            this.conAnsB.TabIndex = 72;
+            this.conAnsB.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label1.Location = new System.Drawing.Point(75, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 22);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Nội dung câu hỏi";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label3.Location = new System.Drawing.Point(75, 213);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 22);
+            this.label3.TabIndex = 76;
+            this.label3.Text = "Đáp án A";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label4.Location = new System.Drawing.Point(75, 310);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 22);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "Đáp án B";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label5.Location = new System.Drawing.Point(75, 405);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 22);
+            this.label5.TabIndex = 78;
+            this.label5.Text = "Đáp án C";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label6.Location = new System.Drawing.Point(75, 497);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 22);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Đáp án D";
+            // 
             // RequestQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 642);
-            this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.rbCauD);
-            this.Controls.Add(this.rbCauC);
-            this.Controls.Add(this.rbCauB);
-            this.Controls.Add(this.rbCauA);
-            this.Controls.Add(this.label7);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(995, 681);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCauD);
-            this.Controls.Add(this.txtCauA);
             this.Controls.Add(this.txtCauC);
-            this.Controls.Add(this.txtCauB);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCauA);
             this.Controls.Add(this.txtNoiDung);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.conAnsA);
+            this.Controls.Add(this.conAnsC);
+            this.Controls.Add(this.txtCauB);
+            this.Controls.Add(this.conAnsD);
+            this.Controls.Add(this.conAnsB);
+            this.Controls.Add(this.btnImport);
+            this.Controls.Add(this.myButton1);
+            this.Controls.Add(this.rbCauD);
+            this.Controls.Add(this.rbCauC);
+            this.Controls.Add(this.rbCauB);
+            this.Controls.Add(this.rbCauA);
+            this.Controls.Add(this.label2);
             this.Name = "RequestQuestion";
             this.Text = "RequestQuestion";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conAnsB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtNoiDung;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCauB;
+        private System.Windows.Forms.RadioButton rbCauA;
+        private System.Windows.Forms.RadioButton rbCauB;
+        private System.Windows.Forms.RadioButton rbCauC;
+        private System.Windows.Forms.RadioButton rbCauD;
+        private System.Windows.Forms.OpenFileDialog ofdImport;
+        private CustomControls.MyButton myButton1;
+        private CustomControls.MyButton btnImport;
+        private System.Windows.Forms.TextBox txtCauD;
         private System.Windows.Forms.TextBox txtCauC;
         private System.Windows.Forms.TextBox txtCauA;
-        private System.Windows.Forms.TextBox txtCauD;
+        private System.Windows.Forms.TextBox txtNoiDung;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox conAnsA;
+        private System.Windows.Forms.PictureBox conAnsC;
+        private System.Windows.Forms.TextBox txtCauB;
+        private System.Windows.Forms.PictureBox conAnsD;
+        private System.Windows.Forms.PictureBox conAnsB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton rbCauA;
-        private System.Windows.Forms.RadioButton rbCauB;
-        private System.Windows.Forms.RadioButton rbCauC;
-        private System.Windows.Forms.RadioButton rbCauD;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.OpenFileDialog ofdImport;
     }
 }

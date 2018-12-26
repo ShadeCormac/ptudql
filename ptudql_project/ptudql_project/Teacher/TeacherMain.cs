@@ -439,9 +439,9 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Xuất thành công");      
         }
 
-        private void btnAddQuestion_Load(object sender, EventArgs e)
+        private void btnStudentFeature_Click(object sender, EventArgs e)
         {
-
+            Router.ChangeForm(this, new StudentInfo(), true);
         }
     }
 }

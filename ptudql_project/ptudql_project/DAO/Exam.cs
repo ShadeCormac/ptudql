@@ -100,7 +100,7 @@ namespace ptudql_project.DAO
                                 where kd.IdKyThi == contest.IDKyThi
                                 && (contest.LoaiKyThi != 1 ||
                                     d.DanhSachThis
-                                    .Where(dst => dst.TKHocSinh == username
+                                    .Where(dst => dst.TKThi == username
                                                 & dst.IdKyThi == contest.IDKyThi)
                                     .Count() == 0)
                                 select d).ToList();
