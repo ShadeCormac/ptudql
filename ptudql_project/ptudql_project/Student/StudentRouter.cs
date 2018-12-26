@@ -15,7 +15,7 @@ namespace ptudql_project.Student
             return (object sender, EventArgs e) =>
             {
                 var btn = sender as Control;
-                switch (btn.Tag)
+                switch (btn.Tag as string)
                 {
                     case "Contest":
                         Router.ChangeForm(currentForm, new StudentContest());

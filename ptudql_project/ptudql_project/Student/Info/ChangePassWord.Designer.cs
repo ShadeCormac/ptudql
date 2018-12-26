@@ -36,7 +36,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtOldPass = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(300, 40);
             this.btnRegister.TabIndex = 30;
+            this.btnRegister.Load += new System.EventHandler(this.btnRegister_Load);
             // 
             // label5
             // 
@@ -138,16 +139,16 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Đổi mật khẩu";
             // 
-            // txtUsername
+            // txtOldPass
             // 
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtUsername.Location = new System.Drawing.Point(58, 170);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(10);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(273, 20);
-            this.txtUsername.TabIndex = 21;
+            this.txtOldPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOldPass.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtOldPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtOldPass.Location = new System.Drawing.Point(58, 170);
+            this.txtOldPass.Margin = new System.Windows.Forms.Padding(10);
+            this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.Size = new System.Drawing.Size(273, 20);
+            this.txtOldPass.TabIndex = 21;
             // 
             // pictureBox2
             // 
@@ -190,7 +191,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtOldPass);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
@@ -214,7 +215,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtOldPass;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;

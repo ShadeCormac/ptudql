@@ -1,7 +1,6 @@
 using ptudql_project.Admin;
 using ptudql_project.Student;
 using ptudql_project.Teacher;
-using ptudql_project.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;

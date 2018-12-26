@@ -36,6 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabContestResult = new System.Windows.Forms.TabPage();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lbKyThiFilter = new System.Windows.Forms.Label();
             this.cbKyThiFilter = new System.Windows.Forms.ComboBox();
             this.dgvKQHT = new System.Windows.Forms.DataGridView();
@@ -45,22 +46,25 @@
             this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tabInfo = new System.Windows.Forms.TabPage();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.PictureBox();
+            this.btnChangePassword = new System.Windows.Forms.PictureBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGrade = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txtAccountName = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,19 +77,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabForms = new System.Windows.Forms.TabControl();
-            this.btnChangePassword = new System.Windows.Forms.PictureBox();
-            this.btnUpdate = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnRequestQuestion = new ptudql_project.CustomControls.SidebarButton();
             this.btnInfo = new ptudql_project.CustomControls.SidebarButton();
             this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
             this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabContestResult.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKQHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tabInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -94,10 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabForms.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChangePassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,6 +130,15 @@
             this.tabContestResult.TabIndex = 3;
             this.tabContestResult.Text = "Kết quả học tập";
             this.tabContestResult.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(781, 64);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(0, 0);
+            this.pictureBox9.TabIndex = 13;
+            this.pictureBox9.TabStop = false;
             // 
             // lbKyThiFilter
             // 
@@ -252,25 +261,34 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Kết quả học tập";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::ptudql_project.Properties.Resources.TextBox;
+            this.pictureBox8.Location = new System.Drawing.Point(92, 82);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox8.TabIndex = 12;
+            this.pictureBox8.TabStop = false;
+            // 
             // tabInfo
             // 
             this.tabInfo.Controls.Add(this.btnUpdate);
             this.tabInfo.Controls.Add(this.btnChangePassword);
-            this.tabInfo.Controls.Add(this.textBox6);
-            this.tabInfo.Controls.Add(this.textBox3);
+            this.tabInfo.Controls.Add(this.txtAddress);
+            this.tabInfo.Controls.Add(this.txtClass);
             this.tabInfo.Controls.Add(this.pictureBox3);
-            this.tabInfo.Controls.Add(this.textBox2);
+            this.tabInfo.Controls.Add(this.txtGrade);
             this.tabInfo.Controls.Add(this.pictureBox2);
-            this.tabInfo.Controls.Add(this.textBox7);
-            this.tabInfo.Controls.Add(this.textBox5);
-            this.tabInfo.Controls.Add(this.textBox4);
-            this.tabInfo.Controls.Add(this.textBox1);
+            this.tabInfo.Controls.Add(this.txtPhone);
+            this.tabInfo.Controls.Add(this.txtEmail);
+            this.tabInfo.Controls.Add(this.txtFullName);
+            this.tabInfo.Controls.Add(this.txtAccountName);
             this.tabInfo.Controls.Add(this.pictureBox6);
             this.tabInfo.Controls.Add(this.pictureBox5);
             this.tabInfo.Controls.Add(this.pictureBox4);
             this.tabInfo.Controls.Add(this.pictureBox1);
-            this.tabInfo.Controls.Add(this.radioButton2);
-            this.tabInfo.Controls.Add(this.radioButton1);
+            this.tabInfo.Controls.Add(this.rbFemale);
+            this.tabInfo.Controls.Add(this.rbMale);
             this.tabInfo.Controls.Add(this.label9);
             this.tabInfo.Controls.Add(this.label8);
             this.tabInfo.Controls.Add(this.label7);
@@ -291,24 +309,46 @@
             this.tabInfo.Text = "Thông tin cá nhân";
             this.tabInfo.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // btnUpdate
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox6.Location = new System.Drawing.Point(416, 402);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(620, 110);
-            this.textBox6.TabIndex = 35;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(754, 566);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(300, 40);
+            this.btnUpdate.TabIndex = 38;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // textBox3
+            // btnChangePassword
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox3.Location = new System.Drawing.Point(776, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(265, 19);
-            this.textBox3.TabIndex = 34;
+            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
+            this.btnChangePassword.Location = new System.Drawing.Point(394, 566);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(300, 40);
+            this.btnChangePassword.TabIndex = 37;
+            this.btnChangePassword.TabStop = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtAddress.Location = new System.Drawing.Point(416, 402);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(620, 110);
+            this.txtAddress.TabIndex = 35;
+            // 
+            // txtClass
+            // 
+            this.txtClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtClass.Location = new System.Drawing.Point(776, 162);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(265, 19);
+            this.txtClass.TabIndex = 34;
             // 
             // pictureBox3
             // 
@@ -319,14 +359,14 @@
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox2
+            // txtGrade
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox2.Location = new System.Drawing.Point(416, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 19);
-            this.textBox2.TabIndex = 32;
+            this.txtGrade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtGrade.Location = new System.Drawing.Point(416, 162);
+            this.txtGrade.Name = "txtGrade";
+            this.txtGrade.Size = new System.Drawing.Size(265, 19);
+            this.txtGrade.TabIndex = 32;
             // 
             // pictureBox2
             // 
@@ -337,42 +377,46 @@
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox7
+            // txtPhone
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox7.Location = new System.Drawing.Point(771, 278);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(265, 19);
-            this.textBox7.TabIndex = 30;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtPhone.Location = new System.Drawing.Point(771, 278);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(265, 19);
+            this.txtPhone.TabIndex = 30;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
-            // textBox5
+            // txtEmail
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox5.Location = new System.Drawing.Point(416, 278);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(265, 19);
-            this.textBox5.TabIndex = 29;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtEmail.Location = new System.Drawing.Point(416, 278);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(265, 19);
+            this.txtEmail.TabIndex = 29;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
-            // textBox4
+            // txtFullName
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox4.Location = new System.Drawing.Point(36, 278);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(265, 19);
-            this.textBox4.TabIndex = 28;
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtFullName.Location = new System.Drawing.Point(36, 278);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(265, 19);
+            this.txtFullName.TabIndex = 28;
             // 
-            // textBox1
+            // txtAccountName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBox1.Location = new System.Drawing.Point(36, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 19);
-            this.textBox1.TabIndex = 25;
+            this.txtAccountName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAccountName.Enabled = false;
+            this.txtAccountName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtAccountName.Location = new System.Drawing.Point(36, 162);
+            this.txtAccountName.Name = "txtAccountName";
+            this.txtAccountName.ReadOnly = true;
+            this.txtAccountName.Size = new System.Drawing.Size(265, 19);
+            this.txtAccountName.TabIndex = 25;
             // 
             // pictureBox6
             // 
@@ -410,29 +454,29 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // radioButton2
+            // rbFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.radioButton2.Location = new System.Drawing.Point(104, 388);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 24);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.rbFemale.Location = new System.Drawing.Point(104, 388);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(47, 24);
+            this.rbFemale.TabIndex = 6;
+            this.rbFemale.Text = "Nữ";
+            this.rbFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.radioButton1.Location = new System.Drawing.Point(21, 388);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 24);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbMale.AutoSize = true;
+            this.rbMale.Checked = true;
+            this.rbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.rbMale.Location = new System.Drawing.Point(21, 388);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(60, 24);
+            this.rbMale.TabIndex = 5;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Nam";
+            this.rbMale.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -567,45 +611,6 @@
             this.tabForms.TabIndex = 1;
             this.tabForms.SelectedIndexChanged += new System.EventHandler(this.tabForms_SelectedIndexChanged);
             // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
-            this.btnChangePassword.Location = new System.Drawing.Point(394, 566);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(300, 40);
-            this.btnChangePassword.TabIndex = 37;
-            this.btnChangePassword.TabStop = false;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(754, 566);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(300, 40);
-            this.btnUpdate.TabIndex = 38;
-            this.btnUpdate.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::ptudql_project.Properties.Resources.TextBox;
-            this.pictureBox8.Location = new System.Drawing.Point(92, 82);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(300, 40);
-            this.pictureBox8.TabIndex = 12;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(781, 64);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(0, 0);
-            this.pictureBox9.TabIndex = 13;
-            this.pictureBox9.TabStop = false;
-            // 
             // btnRequestQuestion
             // 
             this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
@@ -672,10 +677,14 @@
             this.panel1.ResumeLayout(false);
             this.tabContestResult.ResumeLayout(false);
             this.tabContestResult.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKQHT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -684,10 +693,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabForms.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnChangePassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
     }
@@ -703,8 +708,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage tabInfo;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbFemale;
+        private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -727,15 +732,15 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGrade;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox txtAccountName;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox btnChangePassword;
         private System.Windows.Forms.PictureBox btnUpdate;

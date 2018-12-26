@@ -14,7 +14,6 @@ namespace ptudql_project.Admin
 {
     public partial class AdminMain : Form
     {
-        int selectedRow = 0;
         BindingList<TaiKhoan> bindingList;
 
         public AdminMain()
@@ -111,7 +110,6 @@ namespace ptudql_project.Admin
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            int size = -1;
             DialogResult result = ofdImportStudent.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {

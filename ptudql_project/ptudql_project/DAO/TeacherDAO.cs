@@ -29,7 +29,8 @@ namespace ptudql_project.DAO
                     TeacherUpdate.HoTen = newInfo.HoTen;
                     TeacherUpdate.GioiTinh = newInfo.GioiTinh;
                     TeacherUpdate.Email = newInfo.Email;
-
+                    TeacherUpdate.DiaChi = newInfo.DiaChi;
+                    TeacherUpdate.SoDienThoai = newInfo.SoDienThoai;
                     db.SubmitChanges();
                 }
                 return true;

@@ -60,7 +60,8 @@ namespace ptudql_project.DAO
                     studentToUpdate.HoTen = newStudentInfo.HoTen;
                     studentToUpdate.GioiTinh = newStudentInfo.GioiTinh;
                     studentToUpdate.Email = newStudentInfo.Email;
-
+                    studentToUpdate.SoDienThoai = newStudentInfo.SoDienThoai;
+                    studentToUpdate.DiaChi = newStudentInfo.DiaChi;
                     db.SubmitChanges();
                 }
 

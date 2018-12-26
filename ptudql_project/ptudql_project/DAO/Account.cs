@@ -134,6 +134,21 @@ namespace ptudql_project.DAO
             }
         }
 
+        public static void changePassword(TaiKhoan acc)
+        {
+            using (var db = new QLTNDataContext())
+            {
+                var old = db.TaiKhoans
+                    .Where(tk => tk.TenDangNhap == acc.TenDangNhap)
+                    .SingleOrDefault();
+                if (old != null)
+                {
+                    old.MatKhau = acc.MatKhau;
+                    db.SubmitChanges();
+                }
+            }
+        }
+
         //public static void SaveChange(List<TaiKhoan> listAcc)
         //{
         //    using (var db = new QLTNDataContext())

@@ -269,6 +269,9 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="QLTN.dbml.layout">
+      <DependentUpon>QLTN.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="Student\Info\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,9 +327,6 @@
       <LastGenOutput>QLTN.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLTN.dbml.layout">
-      <DependentUpon>QLTN.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -357,7 +357,7 @@
       <VersionMajor>5</VersionMajor>
       <VersionMinor>3</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
+      <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>

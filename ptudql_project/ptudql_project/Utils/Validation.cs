@@ -40,6 +40,18 @@ namespace ptudql_project.Utils
             }
         }
 
+        public static bool isPhoneNumber(string phone)
+        {
+            if (phone.Length != 10)
+                return false;
+            foreach (char ch in phone)
+            {
+                if (!char.IsDigit(ch))
+                    return false;
+            }
+            return true;
+        }
+
 
         public static bool checkName(string name)
         {

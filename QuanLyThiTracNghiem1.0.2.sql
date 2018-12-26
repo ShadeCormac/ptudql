@@ -18,14 +18,19 @@ create table HocSinh(
 	Lop varchar(10),
 	HoTen nvarchar(50),
 	GioiTinh nvarchar(10),
-	Email varchar(50)
+	Email varchar(50),
+	SoDienThoai varchar(11),
+	DiaChi nvarchar(100)
 )
 go
 create table GiaoVien(
 	TenTK varchar(20) references TaiKhoan(TenDangNhap) primary key,
 	HoTen nvarchar(50),
 	GioiTinh nvarchar(10),
-	Email varchar(50)
+	Email varchar(50),
+	SoDienThoai varchar(11).
+	DiaChi nvarchar(100)
+	
 	--cần thêm gì nữa?
 )
 go
