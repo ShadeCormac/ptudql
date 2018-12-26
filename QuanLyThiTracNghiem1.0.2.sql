@@ -85,11 +85,11 @@ create table KyThi_DeThi(
 
 go
 create table DanhSachThi(
-	TKHocSinh varchar(20) references HocSinh(TenTK),
+	TKThi varchar(20) references TaiKhoan(TenDangNhap),
 	IdDe varchar(10) references DeThi(IdDe),
 	IdKyThi varchar(10) references KyThi(IdKyThi),
 	LanThi int,
-	primary key(TKHocSinh, IdDe, IdKyThi, LanThi), 
+	primary key(TKThi, IdDe, IdKyThi, LanThi), 
 	Diem float
 )
 go
