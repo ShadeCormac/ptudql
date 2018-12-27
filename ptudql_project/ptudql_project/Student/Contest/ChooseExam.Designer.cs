@@ -136,11 +136,10 @@
             this.lbTeacherName.AutoSize = true;
             this.lbTeacherName.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTeacherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbTeacherName.Location = new System.Drawing.Point(165, 15);
+            this.lbTeacherName.Location = new System.Drawing.Point(227, 15);
             this.lbTeacherName.Name = "lbTeacherName";
-            this.lbTeacherName.Size = new System.Drawing.Size(124, 22);
+            this.lbTeacherName.Size = new System.Drawing.Size(0, 22);
             this.lbTeacherName.TabIndex = 4;
-            this.lbTeacherName.Text = "lbTeacherName";
             // 
             // lbLevel
             // 
@@ -148,11 +147,10 @@
             this.lbLevel.AutoSize = true;
             this.lbLevel.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLevel.Location = new System.Drawing.Point(196, 66);
+            this.lbLevel.Location = new System.Drawing.Point(227, 66);
             this.lbLevel.Name = "lbLevel";
-            this.lbLevel.Size = new System.Drawing.Size(61, 22);
+            this.lbLevel.Size = new System.Drawing.Size(0, 22);
             this.lbLevel.TabIndex = 5;
-            this.lbLevel.Text = "lbLevel";
             // 
             // lbExamCount
             // 
@@ -160,11 +158,10 @@
             this.lbExamCount.AutoSize = true;
             this.lbExamCount.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbExamCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.lbExamCount.Location = new System.Drawing.Point(173, 117);
+            this.lbExamCount.Location = new System.Drawing.Point(227, 117);
             this.lbExamCount.Name = "lbExamCount";
-            this.lbExamCount.Size = new System.Drawing.Size(107, 22);
+            this.lbExamCount.Size = new System.Drawing.Size(0, 22);
             this.lbExamCount.TabIndex = 6;
-            this.lbExamCount.Text = "lbExamCount";
             // 
             // lbTime
             // 
@@ -172,11 +169,10 @@
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.lbTime.Location = new System.Drawing.Point(197, 168);
+            this.lbTime.Location = new System.Drawing.Point(227, 168);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(59, 22);
+            this.lbTime.Size = new System.Drawing.Size(0, 22);
             this.lbTime.TabIndex = 7;
-            this.lbTime.Text = "lbTime";
             // 
             // label3
             // 
@@ -270,7 +266,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "ChooseExam";
-            this.Text = "ChooseExam";
+            this.Text = "Chọn đề thi";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

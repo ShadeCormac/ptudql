@@ -19,6 +19,18 @@ namespace ptudql_project.Teacher
         private BindingList<CauHoi> _trackingList = null;
         private BindingList<KyThi> _trackingExamList = null;
         private BindingList<KyThi> _trackingTestExamList = null;
+
+        private int _loaiKT = 1;
+        private int LoaiKT
+        {
+            get { return _loaiKT; }
+            set
+            {
+                _loaiKT = value;
+                LoadExam();
+            }
+        }
+
         public TeacherMain()
         {
             InitializeComponent();
@@ -34,20 +46,10 @@ namespace ptudql_project.Teacher
             txtNameExam.DataBindings.Clear();
             txtParticipants.DataBindings.Clear();
             txtTypeExam.DataBindings.Clear();
-            txtTimeStart.DataBindings.Clear();
-            txtTimeEnd.DataBindings.Clear();
-
+            dtpTimeStart.DataBindings.Clear();
+            dtpTimeEnd.DataBindings.Clear();
         }
-
-        private void UnbindTestExamTxt()
-        {
-            IDExamTest.DataBindings.Clear();
-            txtNameExamTest.DataBindings.Clear();
-            txtParicipantsTest.DataBindings.Clear();
-            txtTypeExamTest.DataBindings.Clear();
-            txtTimeStartTest.DataBindings.Clear();
-            txtTimeEndTest.DataBindings.Clear();
-        }
+        
 
         private void BindExamTxt()
         {
@@ -61,60 +63,22 @@ namespace ptudql_project.Teacher
 
                 IdExam.DataBindings.Add("Text", dgv, "IDKyThi");
 
-                txtNameExam.DataBindings.Add("Text", dgv, "TenKyThi");
+                txtNameExam.DataBindings.Add("Text", dgv, "TenKyThi", true, DataSourceUpdateMode.OnPropertyChanged);
 
-                txtParticipants.DataBindings.Add("Text", dgv, "SLThamGia", true);
+                txtParticipants.DataBindings.Add("Text", dgv, "SLThamGia", true, DataSourceUpdateMode.OnPropertyChanged);
 
-                txtTypeExam.DataBindings.Add("Text", dgv, "LoaiKyThi", true);
+                txtTypeExam.DataBindings.Add("Text", dgv, "LoaiKyThi");
 
-                txtTimeStart.DataBindings.Add("Text", dgv, "ThoiGianBatDau", true);
+                dtpTimeStart.DataBindings.Add("Value", dgv, "ThoiGianBatDau", true, DataSourceUpdateMode.OnPropertyChanged);
 
-                txtTimeEnd.DataBindings.Add("Text", dgv, "ThoiGianKetThuc", true);
+                dtpTimeEnd.DataBindings.Add("Value", dgv, "ThoiGianKetThuc", true, DataSourceUpdateMode.OnPropertyChanged);
             }
             catch (Exception)
             {
                 MessageBox.Show("Lỗi", "Thông báo");
             }
         }
-
-
-
-        private void BindTestExamTxt()
-        {
-            try
-            {
-                dgvExamTest.DataBindings.Clear();
-                var dgv = dgvExamTest.DataSource as BindingList<KyThi>;
-                dgv.ListChanged += Dgv_ListChanged1;
-                UnbindTestExamTxt();
-
-                IDExamTest.DataBindings.Add("Text", dgv, "IDKyThi");
-
-                txtNameExamTest.DataBindings.Add("Text", dgv, "TenKyThi");
-
-                txtParicipantsTest.DataBindings.Add("Text", dgv, "SLThamGia", true);
-
-                txtTypeExamTest.DataBindings.Add("Text", dgv, "LoaiKyThi", true);
-
-                txtTimeStartTest.DataBindings.Add("Text", dgv, "ThoiGianBatDau", true);
-
-                txtTimeEndTest.DataBindings.Add("Text", dgv, "ThoiGianKetThuc", true);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Lỗi", "Thông báo");
-            }
-        }
-        private void Dgv_ListChanged1(object sender, ListChangedEventArgs e)
-        {
-            if (e.ListChangedType == ListChangedType.ItemChanged)
-            {
-                var list = this.dgvExamTest.DataSource as BindingList<KyThi>;
-                if (!_trackingExamList.Contains(list[e.NewIndex]))
-                    _trackingExamList.Add(list[e.NewIndex]);
-            }
-        }
-
+        
         private void Dgv_ListChanged(object sender, ListChangedEventArgs e)
         {
             if (e.ListChangedType == ListChangedType.ItemChanged)
@@ -124,44 +88,40 @@ namespace ptudql_project.Teacher
                     _trackingExamList.Add(list[e.NewIndex]);
             }
         }
+
         private void BindTxt()
         {
             var bl = dgvAllQuest.DataSource as BindingList<CauHoi>;
             txtQuestId.DataBindings.Add("Text", bl, "IdCauHoi");
-            txtNoiDung.DataBindings.Add("Text", bl, "NoiDung");
-            txtA.DataBindings.Add("Text", bl, "CauA");
-            txtB.DataBindings.Add("Text", bl, "CauB");
-            txtC.DataBindings.Add("Text", bl, "CauC");
-            txtD.DataBindings.Add("Text", bl, "CauD");
-            txtCauDung.DataBindings.Add("Text", bl, "CauTLDung");
+            txtNoiDung.DataBindings.Add("Text", bl, "NoiDung", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtA.DataBindings.Add("Text", bl, "CauA", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtB.DataBindings.Add("Text", bl, "CauB", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtC.DataBindings.Add("Text", bl, "CauC", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtD.DataBindings.Add("Text", bl, "CauD", true, DataSourceUpdateMode.OnPropertyChanged);
+            txtCauDung.DataBindings.Add("Text", bl, "CauTLDung", true, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
         void LoadQuestionsForm()
         {
-
             {
                 var data = Question.GetAllQuestions();
                 data.ListChanged += Data_ListChanged;
 
                 this.dgvAllQuest.DataSource = data;
             }
-
         }
+
         void LoadExam()
         {
-            this.dgvExam.DataSource = DAO.Exam.LoadExam();
+            this.dgvExam.DataSource = DAO.Exam.LoadExam(LoaiKT);
             BindExamTxt();
         }
-
-        void LoadExamTest()
-        {
-            this.dgvExamTest.DataSource = DAO.Exam.LoadExamTest();
-            BindTestExamTxt();
-        }
+        
         void LoadStudentRecords()
         {
             if (this.dgvHocSinh.DataSource == null)
@@ -176,13 +136,14 @@ namespace ptudql_project.Teacher
             //if (this.cbKyThi.DataSource == null)
             {
                 List<string> examList = DAO.Student.LoadListExam();
-                this.cbKyThi.Items.Add("ALL");
+                this.cbKyThi.Items.Add("Tất cả");
+                this.cbKyThi.SelectedIndex = 0;
                 foreach (string exam in examList)
                 {
                     this.cbKyThi.Items.Add(exam);
                 }
 
-                if (cbKyThi.SelectedItem == null || cbKyThi.SelectedItem.ToString() == "ALL")
+                if (cbKyThi.SelectedItem == null || cbKyThi.SelectedItem.ToString() == "Tất cả")
                 {
                     this.dgvHocSinh.DataSource = DAO.Student.LoadStudent();
                 }
@@ -217,7 +178,6 @@ namespace ptudql_project.Teacher
             var addForm = new AddTest();
             addForm.FormClosed += AddForm_FormClosed1;
             Router.ChangeForm(this, addForm, true);
-
         }
 
         private void AddForm_FormClosed1(object sender, FormClosedEventArgs e)
@@ -243,7 +203,7 @@ namespace ptudql_project.Teacher
 
         private void cbKyThi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbKyThi.SelectedItem.ToString() != "ALL")
+            if (cbKyThi.SelectedItem.ToString() != "Tất cả")
             {
                 this.dgvHocSinh.DataSource = DAO.Student.LoadListExamStudents(cbKyThi.SelectedItem.ToString());
             }
@@ -253,49 +213,19 @@ namespace ptudql_project.Teacher
                 this.dgvHocSinh.DataSource = DAO.Student.LoadStudent();
             }
         }
-
-        private void btnAddExamTest_Click(object sender, EventArgs e)
-        {
-            var addForm = new AddExam(2);
-            Router.ChangeForm(this, addForm, true);
-            addForm.FormClosed += AddForm1_FormClosed;
-        }
-
+        
         private void btnAddExam_Click(object sender, EventArgs e)
         {
-            var addForm = new AddExam(1);
-            Router.ChangeForm(this, addForm, true);
+            var addForm = new AddExam();
             addForm.FormClosed += AddForm_FormClosed;
+            Router.ShowFormDialog(this, addForm);
         }
 
         private void AddForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadExam();
         }
-        private void AddForm1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            LoadExamTest();
-        }
-
-
-        private void btnRemoveExamTest_Click(object sender, EventArgs e)
-        {
-            var bl = this.dgvExamTest.DataSource as BindingList<KyThi>;
-            var removeItem = bl.Where(Exam => Exam.IDKyThi == IDExamTest.Text).SingleOrDefault();
-            try
-            {
-                Exam.delete(IdExam.Text);
-                bl.Remove(removeItem);
-                MessageBox.Show("Đã xóa thành công", "Thông báo");
-            }
-            catch (SqlException)
-            {
-
-                MessageBox.Show("Xóa không thành công", "Thông báo");
-            }
-        }
-
-
+        
         private void btnUpdateExam_Click(object sender, EventArgs e)
         {
             if (_trackingExamList.Count > 0)
@@ -308,17 +238,28 @@ namespace ptudql_project.Teacher
 
         private void btnRemoveExam_Click(object sender, EventArgs e)
         {
+            var rs = MessageBox.Show("Bạn có thực sự muốn xóa kỳ thi này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs != DialogResult.Yes)
+            {
+                return;
+            }
             var bl = this.dgvExam.DataSource as BindingList<KyThi>;
             var removeItem = bl.Where(exam => exam.IDKyThi == IdExam.Text).SingleOrDefault();
             try
             {
-                Exam.delete(IdExam.Text);
-                bl.Remove(removeItem);
-                MessageBox.Show("Đã xóa thành công", "Thông báo");
+                if (!Exam.delete(IdExam.Text))
+                {
+                    MessageBox.Show("Không thể xóa kỳ thi đã có người thi!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    bl.Remove(removeItem);
+                    MessageBox.Show("Đã xóa thành công", "Thông báo");
+                }
             }
             catch (SqlException)
             {
-                MessageBox.Show("Xóa không thành công", "Thông báo");
+                MessageBox.Show("Xóa thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -340,31 +281,31 @@ namespace ptudql_project.Teacher
             //LoadStudentRecords();
             LoadListExam();
             LoadExam();
-            LoadExamTest();
             BindExamTxt();
-            BindTestExamTxt();
             LoadTests();
-
+            LoadLoaiKT();
         }
 
         private void btnRemoveQuest_Click(object sender, EventArgs e)
         {
+            var rs = MessageBox.Show("Bạn có thực sự muốn xóa câu hỏi này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs != DialogResult.Yes)
+            {
+                return;
+            }
             try
             {
                 int id;
-                foreach (DataGridViewRow row in this.dgvAllQuest.SelectedRows)
-                {
-                    id = (int)row.Cells["IdCauHoi"].Value;
-                    Question.Remove(id);
-                }
-
+                id = (int)dgvAllQuest.CurrentRow.Cells[0].Value;
+                Question.Remove(id);
+                MessageBox.Show("Xoá thành công");
+                var lst = (dgvAllQuest.DataSource as BindingList<CauHoi>);
+                lst.Remove(lst.Where(el => el.IdCauHoi == id).First());
             }
             catch (SqlException)
             {
                 MessageBox.Show("Xoá không thành công");
             }
-            MessageBox.Show("Xoá thành công");
-            LoadQuestionsForm();
         }
 
         private void LoadTests()
@@ -379,32 +320,44 @@ namespace ptudql_project.Teacher
 
         }
 
-        private void btnAddQuestion_Click(object sender, EventArgs e)
-        {
-            Router.ShowFormDialog(this, new RequestQuestion("Thêm câu hỏi"));
-        }
-
         private void btnAddQuest_Click(object sender, EventArgs e)
         {
-            Router.ShowFormDialog(this, new RequestQuestion("Thêm câu hỏi"));
+            var frmAddQuest = new RequestQuestion("Thêm câu hỏi");
+            frmAddQuest.AddSuccess += FrmAddQuest_AddSuccess;
+            Router.ShowFormDialog(this, frmAddQuest);
         }
 
-        private void btnLamBaiThi_Click(object sender, EventArgs e)
+        private void FrmAddQuest_AddSuccess(List<CauHoi> lstQuest)
         {
-            Router.ChangeForm(this, new StudentContest(), true);
+            var lst = dgvAllQuest.DataSource as BindingList<CauHoi>;
+            foreach(var quest in lstQuest)
+            {
+                lst.Add(quest);
+            }
         }
 
         private void btnDeleteTest_Click(object sender, EventArgs e)
         {
+            var rs = MessageBox.Show("Bạn có thực sự muốn xóa đề thi này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs != DialogResult.Yes)
+            {
+                return;
+            }
             try
             {
-                Test.Remove(cbbTestId.SelectedItem.ToString());
-                MessageBox.Show("Xóa thành công", "Thông báo");
-                LoadTests();
+                if (!Test.Remove(cbbTestId.SelectedItem.ToString()))
+                {
+                    MessageBox.Show("Không thể xóa đề thi đã có người thi!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thành công", "Thông báo");
+                    LoadTests();
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Xóa không thành công", "Thông báo");
+                MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -417,17 +370,36 @@ namespace ptudql_project.Teacher
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            Router.ChangeForm(this, new FilterQuestion(), true);
+            int id, daDuyet;
+            var row = dgvAllQuest.CurrentRow;
+
+            DataGridViewCell idCell = row.Cells[0];
+            DataGridViewCell daDuyetCell = row.Cells[8];
+            
+            int.TryParse(idCell.Value.ToString(), out id);
+            int.TryParse(daDuyetCell.Value.ToString(), out daDuyet);
+
+            if (daDuyet == 1)
+            {
+                MessageBox.Show($"Câu hỏi {id} đã được duyệt, không cần thực hiện lại", "Thông báo", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            var rs = MessageBox.Show("Bạn có thực sự muốn duyệt câu hỏi này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs != DialogResult.Yes)
+            {
+                return;
+            }
+            
+            Question.Accept(id);
+            MessageBox.Show("Duyệt thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadQuestionsForm();
         }
 
         private void btnDetailsExam_Click(object sender, EventArgs e)
         {
-            Router.ChangeForm(this, new DetailsExam(dgvExam.CurrentRow.Cells["IDKyThi"].Value.ToString()),true);
-        }
-
-        private void btnDetailsExamTest_Click(object sender, EventArgs e)
-        {
-            Router.ChangeForm(this, new DetailsExam(dgvExamTest.CurrentRow.Cells["IDKyThi"].Value.ToString()), true);
+            Router.ShowFormDialog(this, new DetailsExam(dgvExam.CurrentRow.Cells[0].Value.ToString()));
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -435,13 +407,36 @@ namespace ptudql_project.Teacher
                 Export export = new Export();
                 var list = DAO.Question.GetAllQuestions().ToList();
                 export.ExportQuestions(list);
-                Question.Import(list); 
+                //Question.Import(list); 
                 MessageBox.Show("Xuất thành công");      
         }
 
         private void btnStudentFeature_Click(object sender, EventArgs e)
         {
             Router.ChangeForm(this, new StudentInfo(), true);
+        }
+
+        private void txtCauDung_TextChanged(object sender, EventArgs e)
+        {
+            var txt = sender as TextBox;
+            var ch = txt.Text.Length == 0 ? 'a' : txt.Text.ToLower().ToCharArray()[0];
+
+            if (ch < 'a' || ch > 'd')
+            {
+                txt.Text = "a";
+            }
+        }
+
+
+        private void LoadLoaiKT()
+        {
+            cbLoaiKyThi.Items.AddRange(new string[] { "Thi thật", "Thi thử" });
+            cbLoaiKyThi.SelectedIndex = 0;
+        }
+
+        private void cbLoaiKyThi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoaiKT = cbLoaiKyThi.SelectedIndex + 1;
         }
     }
 }

@@ -190,6 +190,7 @@
             this.dgvListContest.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListContest.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.dgvListContest.Location = new System.Drawing.Point(38, 97);
+            this.dgvListContest.MultiSelect = false;
             this.dgvListContest.Name = "dgvListContest";
             this.dgvListContest.ReadOnly = true;
             this.dgvListContest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -262,7 +263,7 @@
             this.Controls.Add(this.tabForms);
             this.Controls.Add(this.panel1);
             this.Name = "StudentContest";
-            this.Text = "StudentContest";
+            this.Text = "Làm bài trắc nghiệm";
             this.panel1.ResumeLayout(false);
             this.tabForms.ResumeLayout(false);
             this.tabChooseContest.ResumeLayout(false);

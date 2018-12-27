@@ -31,14 +31,21 @@ namespace ptudql_project.Student
             this.contest = contest;
             listExam = Exam.getByContest(username, contest).ToArray();
             txtContest.Text = contest.TenKyThi;
-            cbChooseExam.DataSource = listExam;
-            cbChooseExam.DisplayMember = "IdDe";
-            cbChooseExam.SelectedIndex = 0;
+            if (listExam.Any())
+            {
+                cbChooseExam.DataSource = listExam;
+                cbChooseExam.DisplayMember = "IdDe";
+                cbChooseExam.SelectedIndex = 0;
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             var idx = cbChooseExam.SelectedIndex;
+            if (idx == -1)
+            {
+                return;
+            }
             selectExam(contest, listExam[idx]);
             this.Close();
         }

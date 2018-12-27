@@ -15,12 +15,14 @@ namespace ptudql_project.Student
 {
     public partial class RequestQuestion : Form
     {
+        public event Action<List<CauHoi>> AddSuccess;
+
         public RequestQuestion(string label)
         {
             InitializeComponent();
             this.label2.Text = label;
             this.btnImport.Visible = (label == "Thêm câu hỏi") ? true : false;
-            var routingHandler = StudentRouter.routingBuilder(this);
+            btnSubmit.MyLabel = (label == "Thêm câu hỏi") ? label : btnSubmit.MyLabel;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -73,14 +75,14 @@ namespace ptudql_project.Student
                 CauB = txtCauB.Text,
                 CauC = txtCauC.Text,
                 CauD = txtCauD.Text,
-                CauTLDung = checkedButton.Text.ToLower().ToCharArray().First(),
+                CauTLDung = checkedButton.Tag.ToString().ToLower().ToCharArray().First(),
                 LoaiCauHoi = (this.label2.Text == "Thêm câu hỏi")? 1 : 2,
-                DaDuyet = 0
+                DaDuyet = (this.label2.Text == "Thêm câu hỏi") ? 1 : 0
             };
             Question.AddRequest(requestQuest);
             MessageBox.Show("Bạn đã thêm thành công");
             ResetInput(checkedButton);
-
+            AddSuccess(new List<CauHoi>() { requestQuest });
         }
 
         void ResetInput(RadioButton checkedBtn)
@@ -112,6 +114,7 @@ namespace ptudql_project.Student
                     import.Cleanup();
                     Question.Import(list);
                     MessageBox.Show("Thêm thành công");
+                    AddSuccess(list);
                 }
                 catch (Exception)
                 {

@@ -28,38 +28,174 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.ofdImportStudent = new System.Windows.Forms.OpenFileDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHome = new ptudql_project.CustomControls.SidebarButton();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabAccountManager = new System.Windows.Forms.TabPage();
+            this.btnImport = new System.Windows.Forms.PictureBox();
+            this.btnAddUser = new System.Windows.Forms.PictureBox();
+            this.btnChange = new System.Windows.Forms.PictureBox();
+            this.btnExportExcel = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dtvAdmin = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnDeleteConnection = new System.Windows.Forms.PictureBox();
+            this.btnChangeConnection = new System.Windows.Forms.PictureBox();
+            this.btnAddConnection = new System.Windows.Forms.PictureBox();
+            this.btnDeleteConection = new ptudql_project.CustomControls.MyButton();
+            this.dgvConnections = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhanQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtAccount = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnChange = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ofdImportStudent = new System.Windows.Forms.OpenFileDialog();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtRole = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabAccountManager.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChange)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvAdmin)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteConnection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeConnection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddConnection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConnections)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ofdImportStudent
+            // 
+            this.ofdImportStudent.FileName = "openFileDialog1";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 690);
+            this.panel1.TabIndex = 37;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(86)))), ((int)(((byte)(194)))));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnHome.CustomImage")));
+            this.btnHome.LabelLocation = new System.Drawing.Point(55, 83);
+            this.btnHome.LabelText = "Trang chủ";
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(200, 110);
+            this.btnHome.TabIndex = 2;
+            // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabAccountManager);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.Location = new System.Drawing.Point(200, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.Padding = new System.Drawing.Point(20, 10);
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1080, 690);
+            this.tabControl.TabIndex = 38;
+            // 
+            // tabAccountManager
+            // 
+            this.tabAccountManager.Controls.Add(this.btnImport);
+            this.tabAccountManager.Controls.Add(this.btnAddUser);
+            this.tabAccountManager.Controls.Add(this.btnChange);
+            this.tabAccountManager.Controls.Add(this.btnExportExcel);
+            this.tabAccountManager.Controls.Add(this.label10);
+            this.tabAccountManager.Controls.Add(this.panel3);
+            this.tabAccountManager.Controls.Add(this.dtvAdmin);
+            this.tabAccountManager.Controls.Add(this.label3);
+            this.tabAccountManager.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAccountManager.Location = new System.Drawing.Point(4, 42);
+            this.tabAccountManager.Name = "tabAccountManager";
+            this.tabAccountManager.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAccountManager.Size = new System.Drawing.Size(1072, 644);
+            this.tabAccountManager.TabIndex = 0;
+            this.tabAccountManager.Text = "Quản lý tài khoản";
+            this.tabAccountManager.UseVisualStyleBackColor = true;
+            // 
+            // btnImport
+            // 
+            this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
+            this.btnImport.Location = new System.Drawing.Point(750, 250);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(300, 40);
+            this.btnImport.TabIndex = 55;
+            this.btnImport.TabStop = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
+            this.btnAddUser.Location = new System.Drawing.Point(750, 104);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(300, 40);
+            this.btnAddUser.TabIndex = 54;
+            this.btnAddUser.TabStop = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // btnChange
+            // 
+            this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
+            this.btnChange.Location = new System.Drawing.Point(750, 177);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(300, 40);
+            this.btnChange.TabIndex = 53;
+            this.btnChange.TabStop = false;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
+            this.btnExportExcel.Location = new System.Drawing.Point(750, 323);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(300, 40);
+            this.btnExportExcel.TabIndex = 52;
+            this.btnExportExcel.TabStop = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label10.Location = new System.Drawing.Point(17, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(241, 31);
+            this.label10.TabIndex = 47;
+            this.label10.Text = "Quản lý tài khoản";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.panel3.Location = new System.Drawing.Point(27, 72);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1023, 1);
+            this.panel3.TabIndex = 46;
             // 
             // dtvAdmin
             // 
             this.dtvAdmin.AllowUserToAddRows = false;
             this.dtvAdmin.AllowUserToDeleteRows = false;
             this.dtvAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtvAdmin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.dtvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TaiKhoan,
@@ -67,13 +203,134 @@
             this.PhanQuyen,
             this.Column4,
             this.Column5});
-            this.dtvAdmin.Location = new System.Drawing.Point(0, 142);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtvAdmin.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtvAdmin.Location = new System.Drawing.Point(27, 104);
+            this.dtvAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.dtvAdmin.MultiSelect = false;
             this.dtvAdmin.Name = "dtvAdmin";
             this.dtvAdmin.ReadOnly = true;
             this.dtvAdmin.RowTemplate.Height = 28;
             this.dtvAdmin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtvAdmin.Size = new System.Drawing.Size(1115, 778);
-            this.dtvAdmin.TabIndex = 0;
+            this.dtvAdmin.Size = new System.Drawing.Size(696, 505);
+            this.dtvAdmin.TabIndex = 45;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(257, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 30);
+            this.label3.TabIndex = 44;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnDeleteConnection);
+            this.tabPage2.Controls.Add(this.btnChangeConnection);
+            this.tabPage2.Controls.Add(this.btnAddConnection);
+            this.tabPage2.Controls.Add(this.btnDeleteConection);
+            this.tabPage2.Controls.Add(this.dgvConnections);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Location = new System.Drawing.Point(4, 42);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1072, 644);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Quản lý kết nối CSDL";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteConnection
+            // 
+            this.btnDeleteConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteConnection.Image")));
+            this.btnDeleteConnection.Location = new System.Drawing.Point(746, 577);
+            this.btnDeleteConnection.Name = "btnDeleteConnection";
+            this.btnDeleteConnection.Size = new System.Drawing.Size(300, 40);
+            this.btnDeleteConnection.TabIndex = 11;
+            this.btnDeleteConnection.TabStop = false;
+            this.btnDeleteConnection.Click += new System.EventHandler(this.btnDeleteConection_Click);
+            // 
+            // btnChangeConnection
+            // 
+            this.btnChangeConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeConnection.Image")));
+            this.btnChangeConnection.Location = new System.Drawing.Point(396, 577);
+            this.btnChangeConnection.Name = "btnChangeConnection";
+            this.btnChangeConnection.Size = new System.Drawing.Size(300, 40);
+            this.btnChangeConnection.TabIndex = 10;
+            this.btnChangeConnection.TabStop = false;
+            this.btnChangeConnection.Click += new System.EventHandler(this.btnChangeConnection_Click);
+            // 
+            // btnAddConnection
+            // 
+            this.btnAddConnection.Image = ((System.Drawing.Image)(resources.GetObject("btnAddConnection.Image")));
+            this.btnAddConnection.Location = new System.Drawing.Point(22, 577);
+            this.btnAddConnection.Name = "btnAddConnection";
+            this.btnAddConnection.Size = new System.Drawing.Size(300, 40);
+            this.btnAddConnection.TabIndex = 9;
+            this.btnAddConnection.TabStop = false;
+            this.btnAddConnection.Click += new System.EventHandler(this.btnAddConnection_Click);
+            // 
+            // btnDeleteConection
+            // 
+            this.btnDeleteConection.Location = new System.Drawing.Point(45, 859);
+            this.btnDeleteConection.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteConection.MyLabel = "Xoá Connection";
+            this.btnDeleteConection.MyLabelLocation = new System.Drawing.Point(369, 69);
+            this.btnDeleteConection.Name = "btnDeleteConection";
+            this.btnDeleteConection.Size = new System.Drawing.Size(400, 58);
+            this.btnDeleteConection.TabIndex = 8;
+            this.btnDeleteConection.Click += new System.EventHandler(this.btnDeleteConection_Click);
+            // 
+            // dgvConnections
+            // 
+            this.dgvConnections.AllowUserToAddRows = false;
+            this.dgvConnections.AllowUserToDeleteRows = false;
+            this.dgvConnections.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvConnections.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.dgvConnections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConnections.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvConnections.Location = new System.Drawing.Point(22, 93);
+            this.dgvConnections.MultiSelect = false;
+            this.dgvConnections.Name = "dgvConnections";
+            this.dgvConnections.ReadOnly = true;
+            this.dgvConnections.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConnections.Size = new System.Drawing.Size(1024, 460);
+            this.dgvConnections.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.panel2.Location = new System.Drawing.Point(22, 72);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1024, 1);
+            this.panel2.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label8.Location = new System.Drawing.Point(16, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(286, 31);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Quản lí kết nối CSDL";
             // 
             // TaiKhoan
             // 
@@ -88,6 +345,7 @@
             this.Column2.HeaderText = "Mật Khẩu";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
             // 
             // PhanQuyen
             // 
@@ -112,239 +370,62 @@
             this.Column5.ReadOnly = true;
             this.Column5.Visible = false;
             // 
-            // txtAccount
-            // 
-            this.txtAccount.Enabled = false;
-            this.txtAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccount.Location = new System.Drawing.Point(207, 61);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(271, 39);
-            this.txtAccount.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(628, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 44);
-            this.label3.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel3.Location = new System.Drawing.Point(127, 87);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1490, 5);
-            this.panel3.TabIndex = 23;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label10.Location = new System.Drawing.Point(615, 23);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(312, 46);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Quản Trị Admin";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label11.Location = new System.Drawing.Point(24, 61);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(145, 32);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Tài Khoản";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(24, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 32);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Phân Quyền";
-            // 
-            // btnChange
-            // 
-            this.btnChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChange.ForeColor = System.Drawing.Color.White;
-            this.btnChange.Location = new System.Drawing.Point(313, 314);
-            this.btnChange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(189, 80);
-            this.btnChange.TabIndex = 27;
-            this.btnChange.Text = "Sửa Thông Tin";
-            this.btnChange.UseVisualStyleBackColor = false;
-            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(103, 280);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 29);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "1 : Admin";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 321);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 29);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "2 : Teacher";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(103, 365);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 29);
-            this.label5.TabIndex = 30;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(161, 234);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 29);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "(*) Lưu Ý Phân Quyền";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(103, 365);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 29);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "3 : Student";
-            // 
-            // ofdImportStudent
-            // 
-            this.ofdImportStudent.FileName = "openFileDialog1";
-            // 
-            // btnImport
-            // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Location = new System.Drawing.Point(1185, 157);
-            this.btnImport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(187, 80);
-            this.btnImport.TabIndex = 34;
-            this.btnImport.Text = "Thêm sinh viên từ excel";
-            this.btnImport.UseVisualStyleBackColor = false;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(1494, 157);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(187, 80);
-            this.btnAddUser.TabIndex = 35;
-            this.btnAddUser.Text = "Thêm Người Dùng";
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtRole);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btnChange);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtAccount);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1140, 345);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 421);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Tài Khoản";
-            // 
-            // txtRole
-            // 
-            this.txtRole.Enabled = false;
-            this.txtRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRole.Location = new System.Drawing.Point(207, 145);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(271, 39);
-            this.txtRole.TabIndex = 33;
-            // 
             // AdminMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1728, 920);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAddUser);
-            this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtvAdmin);
+            this.ClientSize = new System.Drawing.Size(1280, 690);
+            this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMain";
+            this.panel1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.tabAccountManager.ResumeLayout(false);
+            this.tabAccountManager.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChange)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExportExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvAdmin)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteConnection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeConnection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddConnection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConnections)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dtvAdmin;
-        private System.Windows.Forms.TextBox txtAccount;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.OpenFileDialog ofdImportStudent;
+        private System.Windows.Forms.Panel panel1;
+        private CustomControls.SidebarButton btnHome;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabAccountManager;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnChange;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dtvAdmin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dgvConnections;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox btnImport;
+        private System.Windows.Forms.PictureBox btnAddUser;
+        private System.Windows.Forms.PictureBox btnChange;
+        private System.Windows.Forms.PictureBox btnExportExcel;
+        private CustomControls.MyButton btnDeleteConection;
+        private System.Windows.Forms.PictureBox btnDeleteConnection;
+        private System.Windows.Forms.PictureBox btnChangeConnection;
+        private System.Windows.Forms.PictureBox btnAddConnection;
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhanQuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.OpenFileDialog ofdImportStudent;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnAddUser;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtRole;
     }
 }

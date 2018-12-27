@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AddConnection.Designer.cs">
+      <DependentUpon>AddConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\addUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,17 +66,11 @@
     <Compile Include="Admin\AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\updateStudentInfo.cs">
+    <Compile Include="Admin\UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\updateStudentInfo.Designer.cs">
-      <DependentUpon>updateStudentInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\updateTeacherInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\updateTeacherInfo.Designer.cs">
-      <DependentUpon>updateTeacherInfo.cs</DependentUpon>
+    <Compile Include="Admin\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\ListQuest.cs">
       <SubType>UserControl</SubType>
@@ -127,6 +127,9 @@
     </Compile>
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTN.cs">
+      <DependentUpon>QLTN.dbml</DependentUpon>
     </Compile>
     <Compile Include="QLTN.designer.cs">
       <AutoGen>True</AutoGen>
@@ -206,12 +209,6 @@
     <Compile Include="Teacher\DetailsExam.Designer.cs">
       <DependentUpon>DetailsExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teacher\FilterQuestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Teacher\FilterQuestion.Designer.cs">
-      <DependentUpon>FilterQuestion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Teacher\TeacherMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +216,7 @@
       <DependentUpon>TeacherMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\BackupData.cs" />
+    <Compile Include="Utils\Connection.cs" />
     <Compile Include="Utils\Crypto.cs" />
     <Compile Include="Utils\Export.cs" />
     <Compile Include="Utils\Extension.cs" />
@@ -227,17 +225,17 @@
     <Compile Include="Utils\MyTimer.cs" />
     <Compile Include="Utils\Session.cs" />
     <Compile Include="Utils\Validation.cs" />
+    <EmbeddedResource Include="Admin\AddConnection.resx">
+      <DependentUpon>AddConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\addUser.resx">
       <DependentUpon>addUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\updateStudentInfo.resx">
-      <DependentUpon>updateStudentInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\updateTeacherInfo.resx">
-      <DependentUpon>updateTeacherInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ListQuest.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -269,6 +267,7 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\CauHoi.datasource" />
     <None Include="QLTN.dbml.layout">
       <DependentUpon>QLTN.dbml</DependentUpon>
     </None>
@@ -292,9 +291,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\DetailsExam.resx">
       <DependentUpon>DetailsExam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Teacher\FilterQuestion.resx">
-      <DependentUpon>FilterQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\TeacherMain.resx">
       <DependentUpon>TeacherMain.cs</DependentUpon>

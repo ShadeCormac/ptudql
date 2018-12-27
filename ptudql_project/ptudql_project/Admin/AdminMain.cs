@@ -14,45 +14,15 @@ namespace ptudql_project.Admin
 {
     public partial class AdminMain : Form
     {
-        BindingList<TaiKhoan> bindingList;
-
         public AdminMain()
         {
             InitializeComponent();
             LoadAccount();
-            DataBind();
-            InitCbbPermission();
-
-        }
-        void InitCbbPermission()
-        {
-            //var cbbList = new[] { new { value = 1, name = "Admin" }, new { value = 2, name ="Teacher"}, new { value = 3, name ="Student"} }.ToList();
-
-            //this.cbDecent.DisplayMember = "name";
-            //this.cbDecent.ValueMember = "value";
-            //this.cbDecent.DataSource = cbbList;
-
-
-        }
-
-        BindingManagerBase BindingManager
-        {
-            get { return BindingContext[bindingList]; }
-        }
-
-        void DataBind()
-        {
-            this.bindingList = this.dtvAdmin.DataSource as BindingList<TaiKhoan>;
-
-            this.txtAccount.DataBindings.Add("Text", bindingList, "TenDangNhap");
-            //this.cbDecent.DataBindings.Add("SelectedValue", bindingList, "LoaiTK", true, DataSourceUpdateMode.OnPropertyChanged);
-            var dbTxtRole = new Binding("Text", bindingList, "LoaiTK");
-            dbTxtRole.Format += DbTxtRole_Format;
-            txtRole.DataBindings.Add(dbTxtRole);
+            LoadListConnection();
         }
 
         void LoadAccount()
-        {      
+        {
             this.dtvAdmin.DataSource = Account.GetAll();
         }
 
@@ -73,39 +43,18 @@ namespace ptudql_project.Admin
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            string PhanQuyen = txtRole.Text;
-            string TaiKhoan = txtAccount.Text;
-            switch (PhanQuyen)
-            {
-                case "Teacher":
-                    updateTeacherInfo frmTeacher = new updateTeacherInfo(TaiKhoan);
-                    frmTeacher.ShowDialog();
-                    break;
-                case "Student":
-                    updateStudentInfo frmStudent = new updateStudentInfo(TaiKhoan);
-                    frmStudent.ShowDialog();
-                    break;
-                case "Admin":
-                    MessageBox.Show("Không được phép sửa thông tin Admin!", "Thông báo");
-                    break;
-            }
-        }
+            var row = dtvAdmin.CurrentRow;
+            string PhanQuyen = row.Cells[2].Value.ToString();
+            string TaiKhoan = row.Cells[0].Value.ToString();
 
-       
+            if (PhanQuyen == "1")
+            {
+                MessageBox.Show("Không được phép sửa thông tin Admin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-        private void btnDel_Click_1(object sender, EventArgs e)
-        {
-            string username = (BindingManager.Current as TaiKhoan).TenDangNhap;
-            bool isSuccess = Account.deleteAccount(username);
-            if (isSuccess)
-            {
-                MessageBox.Show("Xóa Thành Công", "Thông Báo");
-                bindingList.Remove(BindingManager.Current as TaiKhoan);
-            }
-            else
-            {
-                MessageBox.Show("Xóa Không Thành Công , Xin Thử Lại!", "Thông Báo");
-            }
+            UpdateUser frmUpdateUser = new UpdateUser(TaiKhoan, PhanQuyen);
+            Router.ShowFormDialog(this, frmUpdateUser);
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -137,6 +86,46 @@ namespace ptudql_project.Admin
                 LoadAccount();
             };
             Router.ShowFormDialog(this, frmAddUser);
+        }
+
+        private void btnAddConnection_Click(object sender, EventArgs e)
+        {
+            var frm = new AddConnection();
+            frm.AddSuccess += () => { LoadListConnection(); };
+            Router.ShowFormDialog(this, frm);
+        }
+
+        private void btnChangeConnection_Click(object sender, EventArgs e)
+        {
+            if (dgvConnections.CurrentCell != null)
+            {
+                Connection.CurrentIdx = dgvConnections.CurrentCell.RowIndex;
+                MessageBox.Show("Khởi động lại ứng dụng, để thấy thay đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+            }
+        }
+
+        public void LoadListConnection()
+        {
+            dgvConnections.DataSource = Connection.LoadConnection();
+        }
+
+        private void btnDeleteConection_Click(object sender, EventArgs e)
+        {
+            if (dgvConnections.CurrentCell != null)
+            {
+                Connection.DeleteConnection(dgvConnections.CurrentCell.RowIndex);
+                LoadListConnection();
+            }
+        }
+        
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            var list = DAO.Account.GetAll().ToList();
+            export.ExportAccounts(list);
+            //Question.Import(list);
+            MessageBox.Show("Xuất thành công");
         }
     }
 }

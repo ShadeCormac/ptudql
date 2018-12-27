@@ -68,51 +68,14 @@ namespace ptudql_project.Student
         {
             this.label6.Visible = false;
             this.txtAddress.Visible = false;
+            this.picAddress.Visible = false;
             this.label8.Visible = false;
             this.txtGrade.Visible = false;
             this.label9.Visible = false;
-            this.txtClass.Visible = false;     
+            this.txtClass.Visible = false;
+            this.picClass.Visible = false;
+            this.picGrade.Visible = false;
         }
-
-        private void CheckMail(object sender, EventArgs e)
-        {
-            //string mail = "nthiepgk123@gmail.com";
-            TextBox input = sender as TextBox;
-            if (Validation.isEmail(input.Text))
-            {
-                errors.SetError((Control)sender, "");
-            }
-            else
-            {
-                errors.SetError((Control)sender, "Email không hợp lệ ! Kiểm tra lại");
-            }
-        }
-
-        private void CheckName(object sender, EventArgs e)
-        {
-            TextBox input = sender as TextBox;
-            if (Validation.checkName(input.Text))
-            {
-                errors.SetError((Control)sender, "");
-            }
-            else
-            {
-                errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
-            }
-        }
-
-        //private void CheckPassWord(object sender, EventArgs e) 
-        //{
-        //    TextBox input = sender as TextBox;
-        //    if (Validation.checkPassWord(input.Text,tbpassword.Text))
-        //    {
-        //        errors.SetError((Control)sender, "");
-        //    }
-        //    else
-        //    {
-        //        errors.SetError((Control)sender, "Họ tên không hợp lệ ! Kiểm tra lại");
-        //    }
-        //}
 
         private void LoadKQHT()
         {
@@ -155,6 +118,8 @@ namespace ptudql_project.Student
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            bool isSuccess = false;
+
             switch (Session.AccountType)
             {
                 case 2:
@@ -167,8 +132,7 @@ namespace ptudql_project.Student
                         SoDienThoai = txtPhone.Text,
                         DiaChi = txtAddress.Text
                     };
-                    DAO.TeacherDAO.SaveInfo(gv);
-                    MessageBox.Show("Thay đổi thông tin thành công", "Thông báo");
+                    isSuccess = DAO.TeacherDAO.SaveInfo(gv);
                     break;
                 case 3:
                     HocSinh hs = new HocSinh
@@ -182,17 +146,29 @@ namespace ptudql_project.Student
                         SoDienThoai = txtPhone.Text,
                         DiaChi = txtAddress.Text
                     };
-                    DAO.Student.SaveInfo(hs);
-                    MessageBox.Show("Thay đổi thông tin thành công", "Thông báo");
+                    isSuccess = DAO.Student.SaveInfo(hs);
                     break;
                 default:
                     break;
+            }
+
+            if (isSuccess)
+            {
+                MessageBox.Show("Thay đổi thông tin thành công", "Thông báo");
             }
         }
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
-            this.CheckMail(sender, e);
+            TextBox input = sender as TextBox;
+            if (Validation.isEmail(input.Text))
+            {
+                errors.SetError((Control)sender, "");
+            }
+            else
+            {
+                errors.SetError((Control)sender, "Email không hợp lệ ! Kiểm tra lại");
+            }
         }
 
         private void txtPhone_Validating(object sender, CancelEventArgs e)

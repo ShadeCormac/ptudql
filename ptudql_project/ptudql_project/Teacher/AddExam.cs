@@ -13,77 +13,57 @@ namespace ptudql_project.Teacher
 {
     public partial class AddExam : Form
     {
-        public AddExam(int loaiKT)
+        public AddExam()
         {
             InitializeComponent();
-            this.txtTypeExam.Text = loaiKT.ToString();
         }
 
         private void AddExam_Load(object sender, EventArgs e)
         {
+            cbExamType.SelectedIndex = 0;
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            txtTimeStart.Text = dtpTimeStart.Value.ToString("MM-dd-yyyy hh:mm:ss");
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-            txtTimeEnd.Text = dtpTimeEnd.Value.ToString("MM-dd-yyyy hh:mm:ss");
-        }
-
+        
         private void btnCreateExam_Click(object sender, EventArgs e)
         {
             if(txtIdExam.Text == "")
             {
-                MessageBox.Show("Chưa nhập mã kì thi", "Thông báo");
+                MessageBox.Show("Chưa nhập mã kì thi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if(Exam.isExisted(txtIdExam.Text))
             {
-                MessageBox.Show("Mã kỳ thi đã tồn tại", "Thông báo");
+                MessageBox.Show("Mã kỳ thi đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            else if(txtParticipant.Text == "")
+            else if(nbJoin.Text == "")
             {
-                MessageBox.Show("Chưa nhập số lượng học sinh tham gia", "Thông báo");
+                MessageBox.Show("Chưa nhập số lượng học sinh tham gia", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if(txtNameExam.Text =="")
             {
-                MessageBox.Show("Chưa nhập tên kỳ thi", "Thông báo");
+                MessageBox.Show("Chưa nhập tên kỳ thi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }
-            else if(txtTimeStart.Text == "")
+            else if (DateTime.Compare(dtpTimeStart.Value, dtpTimeEnd.Value) > 0)
             {
-                MessageBox.Show("Chưa nhập giờ bắt đầu", "Thông báo");
+                MessageBox.Show("Thời gian bắt đầu không hợp lệ","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if(txtTimeEnd.Text =="")
-            {
-                MessageBox.Show("Chưa nhập giờ kết thúc", "Thông báo");
-                return;
-            }
-            else if (string.Compare(txtTimeStart.Text,txtTimeEnd.Text,true) > 0)
-            {
-                MessageBox.Show("Thời gian không hợp lệ","Thông báo");
-                return;
-            }
-
 
             var exam = new KyThi
             {
                 IDKyThi = txtIdExam.Text,
                 TenKyThi = txtNameExam.Text,
-                SLThamGia = int.Parse(txtParticipant.Text),
-                LoaiKyThi = int.Parse(txtTypeExam.Text),
-                ThoiGianBatDau = DateTime.Parse(txtTimeStart.Text),
-                ThoiGianKetThuc = DateTime.Parse(txtTimeEnd.Text)
+                SLThamGia = int.Parse(nbJoin.Text),
+                LoaiKyThi = cbExamType.SelectedIndex + 1,
+                ThoiGianBatDau = dtpTimeStart.Value,
+                ThoiGianKetThuc = dtpTimeEnd.Value
             };
             Exam.Insert(exam);
-            MessageBox.Show("Tạo kỳ thi thành công");
+            MessageBox.Show("Thêm kỳ thi thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
     }
 }

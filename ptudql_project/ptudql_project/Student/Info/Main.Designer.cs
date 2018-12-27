@@ -29,17 +29,25 @@
     private void InitializeComponent()
     {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfo));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRequestQuestion = new ptudql_project.CustomControls.SidebarButton();
+            this.btnInfo = new ptudql_project.CustomControls.SidebarButton();
+            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
+            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.tabContestResult = new System.Windows.Forms.TabPage();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lbKyThiFilter = new System.Windows.Forms.Label();
             this.cbKyThiFilter = new System.Windows.Forms.ComboBox();
             this.dgvKQHT = new System.Windows.Forms.DataGridView();
+            this.idKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -48,9 +56,9 @@
             this.btnChangePassword = new System.Windows.Forms.PictureBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtClass = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picClass = new System.Windows.Forms.PictureBox();
             this.txtGrade = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picGrade = new System.Windows.Forms.PictureBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -71,33 +79,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.picAddress = new System.Windows.Forms.PictureBox();
             this.tabForms = new System.Windows.Forms.TabControl();
-            this.idKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnRequestQuestion = new ptudql_project.CustomControls.SidebarButton();
-            this.btnInfo = new ptudql_project.CustomControls.SidebarButton();
-            this.btnThiThu = new ptudql_project.CustomControls.SidebarButton();
-            this.btnLamBaiThi = new ptudql_project.CustomControls.SidebarButton();
             this.panel1.SuspendLayout();
             this.tabContestResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKQHT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tabInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChangePassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGrade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddress)).BeginInit();
             this.tabForms.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,6 +112,60 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 690);
             this.panel1.TabIndex = 0;
+            // 
+            // btnRequestQuestion
+            // 
+            this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.btnRequestQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRequestQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnRequestQuestion.CustomImage")));
+            this.btnRequestQuestion.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnRequestQuestion.LabelText = "Đóng góp câu hỏi";
+            this.btnRequestQuestion.Location = new System.Drawing.Point(0, 406);
+            this.btnRequestQuestion.Name = "btnRequestQuestion";
+            this.btnRequestQuestion.Size = new System.Drawing.Size(200, 110);
+            this.btnRequestQuestion.TabIndex = 3;
+            this.btnRequestQuestion.Tag = "RequestQuestion";
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(86)))), ((int)(((byte)(194)))));
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.CustomImage")));
+            this.btnInfo.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnInfo.LabelText = "Thông tin cá nhân";
+            this.btnInfo.Location = new System.Drawing.Point(0, 3);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(200, 110);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.Tag = "Info";
+            // 
+            // btnThiThu
+            // 
+            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
+            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
+            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
+            this.btnThiThu.Location = new System.Drawing.Point(0, 277);
+            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThiThu.Name = "btnThiThu";
+            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
+            this.btnThiThu.TabIndex = 1;
+            this.btnThiThu.Tag = "TrialContest";
+            // 
+            // btnLamBaiThi
+            // 
+            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
+            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
+            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
+            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 137);
+            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLamBaiThi.Name = "btnLamBaiThi";
+            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
+            this.btnLamBaiThi.TabIndex = 0;
+            this.btnLamBaiThi.Tag = "Contest";
             // 
             // tabContestResult
             // 
@@ -214,6 +268,31 @@
             this.dgvKQHT.Size = new System.Drawing.Size(1022, 462);
             this.dgvKQHT.TabIndex = 9;
             // 
+            // idKyThiDataGridViewTextBoxColumn
+            // 
+            this.idKyThiDataGridViewTextBoxColumn.DataPropertyName = "IdKyThi";
+            this.idKyThiDataGridViewTextBoxColumn.HeaderText = "Mã kỳ thi";
+            this.idKyThiDataGridViewTextBoxColumn.Name = "idKyThiDataGridViewTextBoxColumn";
+            this.idKyThiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDeDataGridViewTextBoxColumn
+            // 
+            this.idDeDataGridViewTextBoxColumn.DataPropertyName = "IdDe";
+            this.idDeDataGridViewTextBoxColumn.HeaderText = "Mã đề";
+            this.idDeDataGridViewTextBoxColumn.Name = "idDeDataGridViewTextBoxColumn";
+            this.idDeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diemDataGridViewTextBoxColumn
+            // 
+            this.diemDataGridViewTextBoxColumn.DataPropertyName = "Diem";
+            this.diemDataGridViewTextBoxColumn.HeaderText = "Điểm";
+            this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
+            this.diemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // danhSachThiBindingSource
+            // 
+            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
@@ -251,9 +330,9 @@
             this.tabInfo.Controls.Add(this.btnChangePassword);
             this.tabInfo.Controls.Add(this.txtAddress);
             this.tabInfo.Controls.Add(this.txtClass);
-            this.tabInfo.Controls.Add(this.pictureBox3);
+            this.tabInfo.Controls.Add(this.picClass);
             this.tabInfo.Controls.Add(this.txtGrade);
-            this.tabInfo.Controls.Add(this.pictureBox2);
+            this.tabInfo.Controls.Add(this.picGrade);
             this.tabInfo.Controls.Add(this.txtPhone);
             this.tabInfo.Controls.Add(this.txtEmail);
             this.tabInfo.Controls.Add(this.txtFullName);
@@ -274,7 +353,7 @@
             this.tabInfo.Controls.Add(this.panel2);
             this.tabInfo.Controls.Add(this.label2);
             this.tabInfo.Controls.Add(this.label1);
-            this.tabInfo.Controls.Add(this.pictureBox7);
+            this.tabInfo.Controls.Add(this.picAddress);
             this.tabInfo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.tabInfo.Location = new System.Drawing.Point(4, 39);
             this.tabInfo.Name = "tabInfo";
@@ -319,66 +398,71 @@
             // txtClass
             // 
             this.txtClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClass.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtClass.Location = new System.Drawing.Point(776, 162);
             this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(265, 19);
+            this.txtClass.Size = new System.Drawing.Size(265, 22);
             this.txtClass.TabIndex = 34;
             // 
-            // pictureBox3
+            // picClass
             // 
-            this.pictureBox3.Image = global::ptudql_project.Properties.Resources.TextBox;
-            this.pictureBox3.Location = new System.Drawing.Point(754, 151);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(300, 40);
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
+            this.picClass.Image = global::ptudql_project.Properties.Resources.TextBox;
+            this.picClass.Location = new System.Drawing.Point(754, 151);
+            this.picClass.Name = "picClass";
+            this.picClass.Size = new System.Drawing.Size(300, 40);
+            this.picClass.TabIndex = 33;
+            this.picClass.TabStop = false;
             // 
             // txtGrade
             // 
             this.txtGrade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGrade.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtGrade.Location = new System.Drawing.Point(416, 162);
             this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(265, 19);
+            this.txtGrade.Size = new System.Drawing.Size(265, 22);
             this.txtGrade.TabIndex = 32;
             // 
-            // pictureBox2
+            // picGrade
             // 
-            this.pictureBox2.Image = global::ptudql_project.Properties.Resources.TextBox;
-            this.pictureBox2.Location = new System.Drawing.Point(394, 151);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(300, 40);
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
+            this.picGrade.Image = global::ptudql_project.Properties.Resources.TextBox;
+            this.picGrade.Location = new System.Drawing.Point(394, 151);
+            this.picGrade.Name = "picGrade";
+            this.picGrade.Size = new System.Drawing.Size(300, 40);
+            this.picGrade.TabIndex = 31;
+            this.picGrade.TabStop = false;
             // 
             // txtPhone
             // 
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtPhone.Location = new System.Drawing.Point(771, 278);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(265, 19);
+            this.txtPhone.Size = new System.Drawing.Size(265, 22);
             this.txtPhone.TabIndex = 30;
             this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtEmail.Location = new System.Drawing.Point(416, 278);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(265, 19);
+            this.txtEmail.Size = new System.Drawing.Size(265, 22);
             this.txtEmail.TabIndex = 29;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtFullName
             // 
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFullName.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtFullName.Location = new System.Drawing.Point(36, 278);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(265, 19);
+            this.txtFullName.Size = new System.Drawing.Size(265, 22);
             this.txtFullName.TabIndex = 28;
             // 
             // txtAccountName
@@ -386,11 +470,12 @@
             this.txtAccountName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.txtAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAccountName.Enabled = false;
+            this.txtAccountName.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccountName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txtAccountName.Location = new System.Drawing.Point(36, 162);
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.ReadOnly = true;
-            this.txtAccountName.Size = new System.Drawing.Size(265, 19);
+            this.txtAccountName.Size = new System.Drawing.Size(265, 22);
             this.txtAccountName.TabIndex = 25;
             // 
             // pictureBox6
@@ -432,10 +517,11 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
+            this.rbFemale.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.rbFemale.Location = new System.Drawing.Point(104, 388);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(47, 24);
+            this.rbFemale.Size = new System.Drawing.Size(51, 26);
             this.rbFemale.TabIndex = 6;
             this.rbFemale.Text = "Nữ";
             this.rbFemale.UseVisualStyleBackColor = true;
@@ -444,10 +530,11 @@
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Checked = true;
+            this.rbMale.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.rbMale.Location = new System.Drawing.Point(21, 388);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(60, 24);
+            this.rbMale.Size = new System.Drawing.Size(63, 26);
             this.rbMale.TabIndex = 5;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Nam";
@@ -456,77 +543,77 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label9.Location = new System.Drawing.Point(750, 115);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 20);
+            this.label9.Size = new System.Drawing.Size(42, 22);
             this.label9.TabIndex = 15;
             this.label9.Text = "Lớp:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label8.Location = new System.Drawing.Point(390, 115);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 20);
+            this.label8.Size = new System.Drawing.Size(47, 22);
             this.label8.TabIndex = 13;
             this.label8.Text = "Khối:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label7.Location = new System.Drawing.Point(17, 351);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 20);
+            this.label7.Size = new System.Drawing.Size(76, 22);
             this.label7.TabIndex = 11;
             this.label7.Text = "Giới tính:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label6.Location = new System.Drawing.Point(390, 351);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.Size = new System.Drawing.Size(64, 22);
             this.label6.TabIndex = 9;
             this.label6.Text = "Địa chỉ:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label5.Location = new System.Drawing.Point(750, 234);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 20);
+            this.label5.Size = new System.Drawing.Size(111, 22);
             this.label5.TabIndex = 7;
             this.label5.Text = "Số điện thoại:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label4.Location = new System.Drawing.Point(390, 234);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(55, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "Email:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label3.Location = new System.Drawing.Point(17, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
+            this.label3.Size = new System.Drawing.Size(64, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Họ tên:";
             // 
@@ -553,22 +640,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
             this.label1.Location = new System.Drawing.Point(17, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(112, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên tài khoản:";
             // 
-            // pictureBox7
+            // picAddress
             // 
-            this.pictureBox7.Image = global::ptudql_project.Properties.Resources.TextArea1;
-            this.pictureBox7.Location = new System.Drawing.Point(394, 388);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(660, 140);
-            this.pictureBox7.TabIndex = 36;
-            this.pictureBox7.TabStop = false;
+            this.picAddress.Image = global::ptudql_project.Properties.Resources.TextArea1;
+            this.picAddress.Location = new System.Drawing.Point(394, 388);
+            this.picAddress.Name = "picAddress";
+            this.picAddress.Size = new System.Drawing.Size(660, 140);
+            this.picAddress.TabIndex = 36;
+            this.picAddress.TabStop = false;
             // 
             // tabForms
             // 
@@ -586,85 +673,6 @@
             this.tabForms.TabIndex = 1;
             this.tabForms.SelectedIndexChanged += new System.EventHandler(this.tabForms_SelectedIndexChanged);
             // 
-            // idKyThiDataGridViewTextBoxColumn
-            // 
-            this.idKyThiDataGridViewTextBoxColumn.DataPropertyName = "IdKyThi";
-            this.idKyThiDataGridViewTextBoxColumn.HeaderText = "Mã kỳ thi";
-            this.idKyThiDataGridViewTextBoxColumn.Name = "idKyThiDataGridViewTextBoxColumn";
-            this.idKyThiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idDeDataGridViewTextBoxColumn
-            // 
-            this.idDeDataGridViewTextBoxColumn.DataPropertyName = "IdDe";
-            this.idDeDataGridViewTextBoxColumn.HeaderText = "Mã đề";
-            this.idDeDataGridViewTextBoxColumn.Name = "idDeDataGridViewTextBoxColumn";
-            this.idDeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diemDataGridViewTextBoxColumn
-            // 
-            this.diemDataGridViewTextBoxColumn.DataPropertyName = "Diem";
-            this.diemDataGridViewTextBoxColumn.HeaderText = "Điểm";
-            this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
-            this.diemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // danhSachThiBindingSource
-            // 
-            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
-            // 
-            // btnRequestQuestion
-            // 
-            this.btnRequestQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.btnRequestQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRequestQuestion.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnRequestQuestion.CustomImage")));
-            this.btnRequestQuestion.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnRequestQuestion.LabelText = "Đóng góp câu hỏi";
-            this.btnRequestQuestion.Location = new System.Drawing.Point(0, 406);
-            this.btnRequestQuestion.Name = "btnRequestQuestion";
-            this.btnRequestQuestion.Size = new System.Drawing.Size(200, 110);
-            this.btnRequestQuestion.TabIndex = 3;
-            this.btnRequestQuestion.Tag = "RequestQuestion";
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(86)))), ((int)(((byte)(194)))));
-            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfo.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.CustomImage")));
-            this.btnInfo.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnInfo.LabelText = "Thông tin cá nhân";
-            this.btnInfo.Location = new System.Drawing.Point(0, 3);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(200, 110);
-            this.btnInfo.TabIndex = 2;
-            this.btnInfo.Tag = "Info";
-            // 
-            // btnThiThu
-            // 
-            this.btnThiThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.btnThiThu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThiThu.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnThiThu.CustomImage")));
-            this.btnThiThu.LabelLocation = new System.Drawing.Point(30, 83);
-            this.btnThiThu.LabelText = "Ôn luyện, thi thử";
-            this.btnThiThu.Location = new System.Drawing.Point(0, 277);
-            this.btnThiThu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThiThu.Name = "btnThiThu";
-            this.btnThiThu.Size = new System.Drawing.Size(200, 110);
-            this.btnThiThu.TabIndex = 1;
-            this.btnThiThu.Tag = "TrialContest";
-            // 
-            // btnLamBaiThi
-            // 
-            this.btnLamBaiThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.btnLamBaiThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLamBaiThi.CustomImage = ((System.Drawing.Image)(resources.GetObject("btnLamBaiThi.CustomImage")));
-            this.btnLamBaiThi.LabelLocation = new System.Drawing.Point(20, 83);
-            this.btnLamBaiThi.LabelText = "Làm bài trắc nghiệm";
-            this.btnLamBaiThi.Location = new System.Drawing.Point(0, 137);
-            this.btnLamBaiThi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLamBaiThi.Name = "btnLamBaiThi";
-            this.btnLamBaiThi.Size = new System.Drawing.Size(200, 110);
-            this.btnLamBaiThi.TabIndex = 0;
-            this.btnLamBaiThi.Tag = "Contest";
-            // 
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,26 +681,26 @@
             this.Controls.Add(this.tabForms);
             this.Controls.Add(this.panel1);
             this.Name = "StudentInfo";
-            this.Text = "StudentLayout";
+            this.Text = "Thông tin cá nhân";
             this.panel1.ResumeLayout(false);
             this.tabContestResult.ResumeLayout(false);
             this.tabContestResult.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKQHT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnChangePassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGrade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddress)).EndInit();
             this.tabForms.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
             this.ResumeLayout(false);
 
     }
@@ -733,15 +741,15 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtClass;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picClass;
         private System.Windows.Forms.TextBox txtGrade;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picGrade;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtAccountName;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox picAddress;
         private System.Windows.Forms.PictureBox btnChangePassword;
         private System.Windows.Forms.PictureBox btnUpdate;
         private System.Windows.Forms.PictureBox pictureBox9;

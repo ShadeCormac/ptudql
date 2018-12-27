@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ptudql_project.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace ptudql_project.DAO
     {
         public static void removeTests(string idKyThi)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var query = db.KyThi_DeThis.Where(k => k.IdKyThi == idKyThi).ToList();
                 db.KyThi_DeThis.DeleteAllOnSubmit(query);
@@ -20,7 +21,7 @@ namespace ptudql_project.DAO
         }
         public static void insertTests(string idKyThi, List<string> listIdDe)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 KyThi_DeThi curTest = null;
                 foreach (string idDe in listIdDe)

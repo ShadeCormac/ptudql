@@ -372,6 +372,7 @@
             this.pbGoiY.Size = new System.Drawing.Size(25, 25);
             this.pbGoiY.TabIndex = 66;
             this.pbGoiY.TabStop = false;
+            this.pbGoiY.Click += new System.EventHandler(this.goiY_Click);
             // 
             // btnSubmit
             // 
@@ -414,7 +415,7 @@
             this.Controls.Add(this.conAnsB);
             this.Name = "DoExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DoContest";
+            this.Text = "Làm bài thi";
             this.Load += new System.EventHandler(this.DoExam_Load);
             this.panelTips.ResumeLayout(false);
             this.panelTips.PerformLayout();

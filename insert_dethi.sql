@@ -1,6 +1,7 @@
 use QLThiTracNghiem
 go
 
+insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('admin123', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 1)
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien1', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2) -- MK: 123123
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien2', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2)
 insert into TaiKhoan(TenDangNhap, MatKhau, LoaiTK) values('giaovien3', 'dvYG0jhm8Ah79b8tv0xSBIFSqzQS8/FTnKe3nFt6xDHVr0aV', 2)

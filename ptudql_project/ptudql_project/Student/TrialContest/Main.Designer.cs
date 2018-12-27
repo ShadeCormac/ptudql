@@ -52,7 +52,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbChooseContestTitle = new System.Windows.Forms.Label();
             this.tabTKKQ = new System.Windows.Forms.TabPage();
-            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lbKyThiFilter = new System.Windows.Forms.Label();
             this.cbKyThiFilter = new System.Windows.Forms.ComboBox();
@@ -60,6 +59,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -70,9 +70,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).BeginInit();
             this.tabTKKQ.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKKQ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,6 +203,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListContest.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListContest.Location = new System.Drawing.Point(38, 97);
+            this.dgvListContest.MultiSelect = false;
             this.dgvListContest.Name = "dgvListContest";
             this.dgvListContest.ReadOnly = true;
             this.dgvListContest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -288,10 +289,6 @@
             this.tabTKKQ.TabIndex = 5;
             this.tabTKKQ.Text = "Thống kê kết quả";
             this.tabTKKQ.UseVisualStyleBackColor = true;
-            // 
-            // danhSachThiBindingSource
-            // 
-            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
             // 
             // pictureBox9
             // 
@@ -396,6 +393,10 @@
             this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
             this.diemDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // danhSachThiBindingSource
+            // 
+            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
@@ -435,7 +436,7 @@
             this.Controls.Add(this.tabForms);
             this.Controls.Add(this.panel1);
             this.Name = "StudentTrialContest";
-            this.Text = "Main";
+            this.Text = "Ôn luyện, thi thử";
             this.panel1.ResumeLayout(false);
             this.tabForms.ResumeLayout(false);
             this.tabChooseContest.ResumeLayout(false);
@@ -445,9 +446,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).EndInit();
             this.tabTKKQ.ResumeLayout(false);
             this.tabTKKQ.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKKQ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 

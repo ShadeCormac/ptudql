@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ptudql_project.DAO;
+using ptudql_project.Utils;
 
 namespace ptudql_project.Student
 {
     public partial class StudentTrialContest : Form
     {
-        private string username = "test";
+        private string username = Session.AccountName;
 
         private List<string> lstIdKyThi;
         private List<DanhSachThi> lstDST;

@@ -12,14 +12,14 @@ namespace ptudql_project.DAO
     {
         public static bool isRegisterd(string userName)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return (db.TaiKhoans.Where(account => account.TenDangNhap == userName).SingleOrDefault() == null) ? false : true;
             }
         }
         public static void Register(TaiKhoan account)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.TaiKhoans.InsertOnSubmit(account);
                 db.SubmitChanges();
@@ -30,7 +30,7 @@ namespace ptudql_project.DAO
         // add them tai khoan cua admin
         public static void Register_admin(TaiKhoan account)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.TaiKhoans.InsertOnSubmit(account);
                 db.SubmitChanges();
@@ -48,7 +48,7 @@ namespace ptudql_project.DAO
 
         public static string getPassword(string userName)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return db.TaiKhoans.Where(account => account.TenDangNhap == userName).Single().MatKhau;
             }
@@ -56,7 +56,7 @@ namespace ptudql_project.DAO
 
         public static BindingList<TaiKhoan> GetAll()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return new BindingList<TaiKhoan>(db.TaiKhoans.ToList());
             }
@@ -64,7 +64,7 @@ namespace ptudql_project.DAO
 
         public static bool deleteAccount(string username)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var userToDelete = db.TaiKhoans.Where(user => user.TenDangNhap == username).FirstOrDefault();
                 if (userToDelete == null)
@@ -80,7 +80,7 @@ namespace ptudql_project.DAO
         // cap nhat lai danh sach sau khi thay doi
         public static void updateListAccount(BindingList<TaiKhoan> Accounts)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 foreach (TaiKhoan Acc in Accounts)
                 {
@@ -101,7 +101,7 @@ namespace ptudql_project.DAO
 
         public static void Import(List<TaiKhoan> listAcc)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 foreach (TaiKhoan Acc in listAcc)
                 {
@@ -136,7 +136,7 @@ namespace ptudql_project.DAO
 
         public static void changePassword(TaiKhoan acc)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var old = db.TaiKhoans
                     .Where(tk => tk.TenDangNhap == acc.TenDangNhap)
@@ -149,22 +149,9 @@ namespace ptudql_project.DAO
             }
         }
 
-        //public static void SaveChange(List<TaiKhoan> listAcc)
-        //{
-        //    using (var db = new QLTNDataContext())
-        //    {
-        //        foreach (TaiKhoan Acc in listAcc)
-        //        {
-        //            if (db.TaiKhoans.Where(acc => )
-        //            {
-
-        //            }
-        //        }
-        //    }
-        //}
         public static int getAccountType(string username)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return (int)db.TaiKhoans.Where(acc => acc.TenDangNhap == username).Single().LoaiTK;
             }

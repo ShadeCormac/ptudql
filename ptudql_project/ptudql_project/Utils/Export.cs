@@ -33,6 +33,27 @@ namespace ptudql_project.Utils
             Marshal.ReleaseComObject(_xlApp);
         }
 
+        public void ExportAccounts(List<TaiKhoan> list)
+        {
+            Init();
+            _xlworksheet.Cells[1, 1] = "Tên TK";
+            _xlworksheet.Cells[1, 2] = "Mật khẩu";
+            _xlworksheet.Cells[1, 3] = "PHân Quyền";
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                _xlworksheet.Cells[i + 2, 1] = list[i].TenDangNhap;
+                _xlworksheet.Cells[i + 2, 2] = list[i].MatKhau;
+                _xlworksheet.Cells[i + 2, 3] = list[i].LoaiTK;
+                
+            }
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            _xlWorkbook.SaveAs(path + @"\TaiKhoan.xlsx", Microsoft.Office.Interop.Excel.XlFileFormat.xlOpenXMLWorkbook
+                , misVal, misVal, misVal, misVal, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive,
+                misVal, misVal, misVal, misVal, misVal);
+            Cleanup();
+        }
+
         public void ExportQuestions(List<CauHoi> list)
         {
             Init();

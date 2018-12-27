@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ptudql_project.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace ptudql_project.DAO
     {
         public static GiaoVien GetInfo(string Username)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return db.GiaoViens.Where(use => use.TenTK == Username).FirstOrDefault();
             }
@@ -21,7 +22,7 @@ namespace ptudql_project.DAO
         {
             try
             {
-                using (var db = new QLTNDataContext())
+                using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
                 {
                     var TeacherUpdate = db.GiaoViens
                         .Where(user => user.TenTK == newInfo.TenTK)
@@ -44,7 +45,7 @@ namespace ptudql_project.DAO
 
         public static void Insert(TaiKhoan account)
         {
-            using(var db = new QLTNDataContext())
+            using(var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 GiaoVien newGV = new GiaoVien
                 {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ptudql_project.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace ptudql_project.DAO
     {
         public static bool isExisted(string testId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return (db.DeThis.Where(test => test.IdDe == testId).SingleOrDefault() == null) ? false : true;
             }
         }
         public static void Create(DeThi test)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.DeThis.InsertOnSubmit(test);
                 db.SubmitChanges();
@@ -26,7 +27,7 @@ namespace ptudql_project.DAO
         }
         public static void addQuestions(List<BoDeThi> bdtList)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.BoDeThis.InsertAllOnSubmit(bdtList);
                 db.SubmitChanges();
@@ -35,7 +36,7 @@ namespace ptudql_project.DAO
 
         public static List<string> getAllTestId()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return db.DeThis.Select(d => d.IdDe).ToList();
             }
@@ -43,7 +44,7 @@ namespace ptudql_project.DAO
 
         public static BindingList<CauHoi> loadQuestions(string testId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return new BindingList<CauHoi>(db.BoDeThis.Where(bdt => bdt.IdDe == testId)
                     .Join(db.CauHois,
@@ -55,7 +56,7 @@ namespace ptudql_project.DAO
 
         public static BindingList<string> loadQuestionsId(string testId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return new BindingList<string>(db.BoDeThis.Where(bdt => bdt.IdDe == testId)
                     .Join(db.CauHois,
@@ -66,14 +67,14 @@ namespace ptudql_project.DAO
         }
         public static BindingList<string> loadQuestionsId()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return new BindingList<string>(db.DeThis.Select(d => d.IdDe).ToList());
             }
         }
         public static int? getTime(string testId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return db.DeThis.Where(d => d.IdDe == testId).Single().ThoiGian;
             }
@@ -81,7 +82,7 @@ namespace ptudql_project.DAO
 
         public static void removeQuestions(string testId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var test = db.DeThis.Where(t => t.IdDe == testId).Single();
                 foreach (BoDeThi b in test.BoDeThis)
@@ -91,12 +92,18 @@ namespace ptudql_project.DAO
                 db.SubmitChanges();
             }
         }
-        public static void Remove(string testId)
+        public static bool Remove(string testId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
+                
                 var test = db.DeThis.Where(t => t.IdDe == testId).Single();
                 
+                if (test.DanhSachThis.Any())
+                {
+                    return false;
+                }
+
                 foreach (KyThi_DeThi tx in test.KyThi_DeThis)
                 {
                     db.KyThi_DeThis.DeleteOnSubmit(tx);
@@ -113,11 +120,12 @@ namespace ptudql_project.DAO
                 db.SubmitChanges();
             }
 
+            return true;
         }
 
         public static void Update(DeThi test)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var oldTest = db.DeThis.Where(t => t.IdDe == test.IdDe).Single();
                 oldTest.ThoiGian = test.ThoiGian;

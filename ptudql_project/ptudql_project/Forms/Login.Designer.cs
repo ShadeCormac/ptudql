@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Location = new System.Drawing.Point(435, 94);
+            this.panel1.Location = new System.Drawing.Point(455, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 500);
             this.panel1.TabIndex = 5;
@@ -212,6 +212,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Đăng nhập";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

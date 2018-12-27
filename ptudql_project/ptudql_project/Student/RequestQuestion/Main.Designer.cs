@@ -35,8 +35,6 @@
             this.rbCauC = new System.Windows.Forms.RadioButton();
             this.rbCauD = new System.Windows.Forms.RadioButton();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
-            this.myButton1 = new ptudql_project.CustomControls.MyButton();
-            this.btnImport = new ptudql_project.CustomControls.MyButton();
             this.txtCauD = new System.Windows.Forms.TextBox();
             this.txtCauC = new System.Windows.Forms.TextBox();
             this.txtCauA = new System.Windows.Forms.TextBox();
@@ -52,6 +50,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnImport = new ptudql_project.CustomControls.MyButton();
+            this.btnSubmit = new ptudql_project.CustomControls.MyButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conAnsA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conAnsC)).BeginInit();
@@ -64,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(416, 22);
+            this.label2.Location = new System.Drawing.Point(402, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 33);
             this.label2.TabIndex = 5;
@@ -78,6 +78,7 @@
             this.rbCauA.Size = new System.Drawing.Size(14, 13);
             this.rbCauA.TabIndex = 17;
             this.rbCauA.TabStop = true;
+            this.rbCauA.Tag = "a";
             this.rbCauA.UseVisualStyleBackColor = true;
             this.rbCauA.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -89,6 +90,7 @@
             this.rbCauB.Size = new System.Drawing.Size(14, 13);
             this.rbCauB.TabIndex = 18;
             this.rbCauB.TabStop = true;
+            this.rbCauB.Tag = "b";
             this.rbCauB.UseVisualStyleBackColor = true;
             this.rbCauB.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -100,6 +102,7 @@
             this.rbCauC.Size = new System.Drawing.Size(14, 13);
             this.rbCauC.TabIndex = 19;
             this.rbCauC.TabStop = true;
+            this.rbCauC.Tag = "c";
             this.rbCauC.UseVisualStyleBackColor = true;
             // 
             // rbCauD
@@ -110,31 +113,12 @@
             this.rbCauD.Size = new System.Drawing.Size(14, 13);
             this.rbCauD.TabIndex = 20;
             this.rbCauD.TabStop = true;
+            this.rbCauD.Tag = "d";
             this.rbCauD.UseVisualStyleBackColor = true;
             // 
             // ofdImport
             // 
             this.ofdImport.FileName = "openFileDialog1";
-            // 
-            // myButton1
-            // 
-            this.myButton1.Location = new System.Drawing.Point(667, 606);
-            this.myButton1.MyLabel = "Gửi câu hỏi";
-            this.myButton1.MyLabelLocation = new System.Drawing.Point(100, 10);
-            this.myButton1.Name = "myButton1";
-            this.myButton1.Size = new System.Drawing.Size(300, 40);
-            this.myButton1.TabIndex = 21;
-            this.myButton1.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.Location = new System.Drawing.Point(310, 606);
-            this.btnImport.MyLabel = "Nhập từ excel";
-            this.btnImport.MyLabelLocation = new System.Drawing.Point(95, 10);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(300, 40);
-            this.btnImport.TabIndex = 22;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // txtCauD
             // 
@@ -145,7 +129,6 @@
             this.txtCauD.Location = new System.Drawing.Point(91, 527);
             this.txtCauD.Multiline = true;
             this.txtCauD.Name = "txtCauD";
-            this.txtCauD.ReadOnly = true;
             this.txtCauD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCauD.Size = new System.Drawing.Size(860, 44);
             this.txtCauD.TabIndex = 69;
@@ -159,7 +142,6 @@
             this.txtCauC.Location = new System.Drawing.Point(91, 435);
             this.txtCauC.Multiline = true;
             this.txtCauC.Name = "txtCauC";
-            this.txtCauC.ReadOnly = true;
             this.txtCauC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCauC.Size = new System.Drawing.Size(860, 44);
             this.txtCauC.TabIndex = 68;
@@ -173,7 +155,6 @@
             this.txtCauA.Location = new System.Drawing.Point(91, 243);
             this.txtCauA.Multiline = true;
             this.txtCauA.Name = "txtCauA";
-            this.txtCauA.ReadOnly = true;
             this.txtCauA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCauA.Size = new System.Drawing.Size(860, 44);
             this.txtCauA.TabIndex = 66;
@@ -188,7 +169,6 @@
             this.txtNoiDung.Location = new System.Drawing.Point(91, 115);
             this.txtNoiDung.Multiline = true;
             this.txtNoiDung.Name = "txtNoiDung";
-            this.txtNoiDung.ReadOnly = true;
             this.txtNoiDung.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNoiDung.Size = new System.Drawing.Size(860, 86);
             this.txtNoiDung.TabIndex = 65;
@@ -229,7 +209,6 @@
             this.txtCauB.Location = new System.Drawing.Point(91, 340);
             this.txtCauB.Multiline = true;
             this.txtCauB.Name = "txtCauB";
-            this.txtCauB.ReadOnly = true;
             this.txtCauB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCauB.Size = new System.Drawing.Size(860, 44);
             this.txtCauB.TabIndex = 67;
@@ -307,6 +286,26 @@
             this.label6.TabIndex = 79;
             this.label6.Text = "Đáp án D";
             // 
+            // btnImport
+            // 
+            this.btnImport.Location = new System.Drawing.Point(310, 606);
+            this.btnImport.MyLabel = "Nhập từ excel";
+            this.btnImport.MyLabelLocation = new System.Drawing.Point(95, 10);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(300, 40);
+            this.btnImport.TabIndex = 22;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(667, 606);
+            this.btnSubmit.MyLabel = "Gửi câu hỏi";
+            this.btnSubmit.MyLabelLocation = new System.Drawing.Point(100, 10);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(300, 40);
+            this.btnSubmit.TabIndex = 21;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // RequestQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,7 +328,7 @@
             this.Controls.Add(this.conAnsD);
             this.Controls.Add(this.conAnsB);
             this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.myButton1);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.rbCauD);
             this.Controls.Add(this.rbCauC);
             this.Controls.Add(this.rbCauB);
@@ -354,7 +353,7 @@
         private System.Windows.Forms.RadioButton rbCauC;
         private System.Windows.Forms.RadioButton rbCauD;
         private System.Windows.Forms.OpenFileDialog ofdImport;
-        private CustomControls.MyButton myButton1;
+        private CustomControls.MyButton btnSubmit;
         private CustomControls.MyButton btnImport;
         private System.Windows.Forms.TextBox txtCauD;
         private System.Windows.Forms.TextBox txtCauC;

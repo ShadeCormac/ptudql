@@ -29,6 +29,7 @@
     private void InitializeComponent()
     {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegister = new ptudql_project.CustomControls.MyButton();
             this.login = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRegister = new ptudql_project.CustomControls.MyButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,10 +69,20 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Location = new System.Drawing.Point(435, 37);
+            this.panel1.Location = new System.Drawing.Point(445, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 600);
             this.panel1.TabIndex = 8;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(50, 450);
+            this.btnRegister.MyLabel = "Tạo tài khoản";
+            this.btnRegister.MyLabelLocation = new System.Drawing.Point(98, 10);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(300, 40);
+            this.btnRegister.TabIndex = 17;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // login
             // 
@@ -226,16 +236,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(50, 450);
-            this.btnRegister.MyLabel = "Tạo tài khoản";
-            this.btnRegister.MyLabelLocation = new System.Drawing.Point(98, 10);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(300, 40);
-            this.btnRegister.TabIndex = 17;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +248,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Register";
-            this.Text = "Register";
+            this.Text = "Đăng ký";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -15,7 +15,7 @@ namespace ptudql_project.DAO
     {
         public static void Import(List<CauHoi> listQuests)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 foreach (CauHoi q in listQuests)
                 {
@@ -36,7 +36,7 @@ namespace ptudql_project.DAO
         }
         public static List<CauHoi> LoadQuestion()
         {
-            using(var db = new QLTNDataContext())
+            using(var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return (from cauHoi in db.CauHois
                         select cauHoi).Take(40).ToList();
@@ -45,7 +45,7 @@ namespace ptudql_project.DAO
 
         public static List<CauHoi> getByDeThi(string idDeThi)
         {
-            using(var db = new QLTNDataContext())
+            using(var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return (from bd in db.BoDeThis
                 join c in db.CauHois on bd.IdCauHoi equals c.IdCauHoi
@@ -56,7 +56,7 @@ namespace ptudql_project.DAO
 
         public static void AddRequest(CauHoi request)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.CauHois.InsertOnSubmit(request);
                 db.SubmitChanges();
@@ -65,7 +65,7 @@ namespace ptudql_project.DAO
 
         public static BindingList<CauHoi> GetAllQuestions()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 
                 return new BindingList<CauHoi>(db.CauHois
@@ -76,7 +76,7 @@ namespace ptudql_project.DAO
 
         public static BindingList<CauHoi> GetAllRequestedQuestions()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return new BindingList<CauHoi>(db.CauHois
                     .Where(c => c.LoaiCauHoi == 2 && c.DaDuyet == 0)
@@ -86,7 +86,7 @@ namespace ptudql_project.DAO
 
         public static void SaveChanges(List<CauHoi> updatedList)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 List<int> id = updatedList.Select(quest => quest.IdCauHoi).ToList();
                 var uul = db.CauHois.Where(quest => id.Contains(quest.IdCauHoi)).ToList();
@@ -106,7 +106,7 @@ namespace ptudql_project.DAO
 
         public static void Remove(int IdQuestion)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 try
                 {
@@ -127,7 +127,7 @@ namespace ptudql_project.DAO
 
         public static void Accept(int questId)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var quest = db.CauHois
                     .Where(q => q.IdCauHoi == questId)

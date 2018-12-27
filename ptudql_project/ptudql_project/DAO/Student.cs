@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ptudql_project.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace ptudql_project.DAO
     {
         public static List<DanhSachThi> LoadStudent()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.DeferredLoadingEnabled = false;
                 return (from hocSinh in db.DanhSachThis
@@ -20,7 +21,7 @@ namespace ptudql_project.DAO
         }
         public static List<DanhSachThi> LoadListExamStudents(string tenKyThi)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 db.DeferredLoadingEnabled = false;
                 return db.KyThis.Where(kt => kt.TenKyThi == tenKyThi)
@@ -29,7 +30,7 @@ namespace ptudql_project.DAO
         }
         public static List<string> LoadListExam()
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 //db.DeferredLoadingEnabled = false;
                 return (from kyThi in db.KyThis
@@ -39,7 +40,7 @@ namespace ptudql_project.DAO
 
         public static HocSinh getInfo(string username)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return db.HocSinhs.Where(hs => hs.TenTK == username).FirstOrDefault();
             }
@@ -49,7 +50,7 @@ namespace ptudql_project.DAO
         {
             try
             {
-                using (var db = new QLTNDataContext())
+                using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
                 {
                     var studentToUpdate = db.HocSinhs
                         .Where(st => st.TenTK == newStudentInfo.TenTK)
@@ -76,7 +77,7 @@ namespace ptudql_project.DAO
 
         public static void Insert(TaiKhoan account)
         {
-            using(var db = new QLTNDataContext())
+            using(var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 HocSinh newHS = new HocSinh
                 {

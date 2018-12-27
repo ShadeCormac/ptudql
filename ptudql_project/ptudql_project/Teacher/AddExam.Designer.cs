@@ -28,270 +28,379 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCreateExam = new System.Windows.Forms.Button();
-            this.txtTimeEnd = new System.Windows.Forms.TextBox();
-            this.txtTimeStart = new System.Windows.Forms.TextBox();
-            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddExam));
             this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtTypeExam = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtNameExam = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtIdExam = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtParticipant = new ptudql_project.CustomControls.NumberInputBox();
+            this.txtIdExam = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbExamType = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNameExam = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.nbJoin = new ptudql_project.CustomControls.NumberInputBox();
+            this.btnCreateExam = new ptudql_project.CustomControls.MyButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCreateExam
-            // 
-            this.btnCreateExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.btnCreateExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateExam.ForeColor = System.Drawing.Color.White;
-            this.btnCreateExam.Location = new System.Drawing.Point(357, 486);
-            this.btnCreateExam.Name = "btnCreateExam";
-            this.btnCreateExam.Size = new System.Drawing.Size(294, 62);
-            this.btnCreateExam.TabIndex = 40;
-            this.btnCreateExam.Text = "Tạo kỳ thi";
-            this.btnCreateExam.UseVisualStyleBackColor = false;
-            this.btnCreateExam.Click += new System.EventHandler(this.btnCreateExam_Click);
-            // 
-            // txtTimeEnd
-            // 
-            this.txtTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeEnd.Location = new System.Drawing.Point(748, 395);
-            this.txtTimeEnd.Name = "txtTimeEnd";
-            this.txtTimeEnd.Size = new System.Drawing.Size(205, 26);
-            this.txtTimeEnd.TabIndex = 39;
-            // 
-            // txtTimeStart
-            // 
-            this.txtTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeStart.Location = new System.Drawing.Point(748, 300);
-            this.txtTimeStart.Name = "txtTimeStart";
-            this.txtTimeStart.Size = new System.Drawing.Size(205, 26);
-            this.txtTimeStart.TabIndex = 38;
-            // 
-            // dtpTimeEnd
-            // 
-            this.dtpTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTimeEnd.Location = new System.Drawing.Point(254, 395);
-            this.dtpTimeEnd.Name = "dtpTimeEnd";
-            this.dtpTimeEnd.Size = new System.Drawing.Size(266, 26);
-            this.dtpTimeEnd.TabIndex = 37;
-            this.dtpTimeEnd.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // dtpTimeStart
             // 
-            this.dtpTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTimeStart.Location = new System.Drawing.Point(251, 300);
+            this.dtpTimeStart.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dtpTimeStart.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTimeStart.Location = new System.Drawing.Point(55, 453);
             this.dtpTimeStart.Name = "dtpTimeStart";
-            this.dtpTimeStart.Size = new System.Drawing.Size(266, 26);
+            this.dtpTimeStart.Size = new System.Drawing.Size(258, 27);
             this.dtpTimeStart.TabIndex = 36;
-            this.dtpTimeStart.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // label15
-            // 
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(55, 397);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(160, 26);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "Ngày kết thúc";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(52, 302);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(160, 26);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Ngày bắt đầu";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTypeExam
-            // 
-            this.txtTypeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeExam.Location = new System.Drawing.Point(748, 212);
-            this.txtTypeExam.Name = "txtTypeExam";
-            this.txtTypeExam.ReadOnly = true;
-            this.txtTypeExam.Size = new System.Drawing.Size(205, 26);
-            this.txtTypeExam.TabIndex = 33;
-            // 
-            // label13
-            // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(557, 212);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(160, 26);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Loại kỳ thi";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(55, 212);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 26);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Số lượng tham gia";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNameExam
-            // 
-            this.txtNameExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameExam.Location = new System.Drawing.Point(748, 125);
-            this.txtNameExam.MaxLength = 50;
-            this.txtNameExam.Name = "txtNameExam";
-            this.txtNameExam.Size = new System.Drawing.Size(205, 26);
-            this.txtNameExam.TabIndex = 29;
-            // 
-            // label11
-            // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(560, 125);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 26);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Tên kỳ thi";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtIdExam
-            // 
-            this.txtIdExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdExam.Location = new System.Drawing.Point(254, 125);
-            this.txtIdExam.MaxLength = 10;
-            this.txtIdExam.Name = "txtIdExam";
-            this.txtIdExam.Size = new System.Drawing.Size(266, 26);
-            this.txtIdExam.TabIndex = 27;
-            // 
-            // label9
-            // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(55, 125);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(160, 26);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "IdKyThi";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.panel2.Location = new System.Drawing.Point(14, 66);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(993, 3);
-            this.panel2.TabIndex = 24;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(220)))));
-            this.label7.Location = new System.Drawing.Point(438, 22);
+            this.label7.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label7.Location = new System.Drawing.Point(105, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 31);
+            this.label7.Size = new System.Drawing.Size(146, 33);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Tạo kỳ thi";
+            this.label7.Text = "Thêm kỳ thi";
             // 
-            // label1
+            // txtIdExam
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(557, 395);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 26);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Thời gian bắt đầu";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtIdExam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdExam.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdExam.Location = new System.Drawing.Point(55, 112);
+            this.txtIdExam.MaxLength = 10;
+            this.txtIdExam.Name = "txtIdExam";
+            this.txtIdExam.Size = new System.Drawing.Size(258, 20);
+            this.txtIdExam.TabIndex = 88;
             // 
-            // label2
+            // label16
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(557, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 26);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Thời gian bắt đầu";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label16.Location = new System.Drawing.Point(38, 501);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(138, 22);
+            this.label16.TabIndex = 86;
+            this.label16.Text = "Thời gian kết thúc";
             // 
-            // txtParticipant
+            // label17
             // 
-            this.txtParticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParticipant.Location = new System.Drawing.Point(254, 212);
-            this.txtParticipant.MaxLength = 3;
-            this.txtParticipant.Name = "txtParticipant";
-            this.txtParticipant.Size = new System.Drawing.Size(266, 26);
-            this.txtParticipant.TabIndex = 43;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label17.Location = new System.Drawing.Point(35, 421);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(136, 22);
+            this.label17.TabIndex = 84;
+            this.label17.Text = "Thời gian bắt đầu";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label18.Location = new System.Drawing.Point(35, 250);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 22);
+            this.label18.TabIndex = 82;
+            this.label18.Text = "Loại kỳ thi";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label19.Location = new System.Drawing.Point(35, 335);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(141, 22);
+            this.label19.TabIndex = 81;
+            this.label19.Text = "Số lượng tham gia";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label20.Location = new System.Drawing.Point(35, 162);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(85, 22);
+            this.label20.TabIndex = 79;
+            this.label20.Text = "Tên  Kỳ Thi";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label21.Location = new System.Drawing.Point(35, 76);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 22);
+            this.label21.TabIndex = 78;
+            this.label21.Text = "ID Kỳ Thi";
+            // 
+            // cbExamType
+            // 
+            this.cbExamType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbExamType.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbExamType.FormattingEnabled = true;
+            this.cbExamType.Items.AddRange(new object[] {
+            "Thi thật",
+            "Thi thử"});
+            this.cbExamType.Location = new System.Drawing.Point(55, 282);
+            this.cbExamType.Name = "cbExamType";
+            this.cbExamType.Size = new System.Drawing.Size(258, 27);
+            this.cbExamType.TabIndex = 122;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(35, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox1.TabIndex = 123;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtNameExam
+            // 
+            this.txtNameExam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNameExam.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameExam.Location = new System.Drawing.Point(55, 198);
+            this.txtNameExam.MaxLength = 10;
+            this.txtNameExam.Name = "txtNameExam";
+            this.txtNameExam.Size = new System.Drawing.Size(258, 20);
+            this.txtNameExam.TabIndex = 124;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(35, 188);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox2.TabIndex = 125;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(35, 276);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox3.TabIndex = 126;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(35, 446);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox4.TabIndex = 127;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(35, 360);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox5.TabIndex = 130;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(55, 453);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(258, 1);
+            this.panel1.TabIndex = 132;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(55, 479);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(258, 1);
+            this.panel2.TabIndex = 133;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(55, 453);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 27);
+            this.panel3.TabIndex = 134;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(312, 453);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 27);
+            this.panel4.TabIndex = 135;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(312, 533);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 27);
+            this.panel5.TabIndex = 141;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(55, 533);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 27);
+            this.panel6.TabIndex = 140;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(55, 559);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(258, 1);
+            this.panel7.TabIndex = 139;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(55, 533);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(258, 1);
+            this.panel8.TabIndex = 138;
+            // 
+            // dtpTimeEnd
+            // 
+            this.dtpTimeEnd.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dtpTimeEnd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTimeEnd.Location = new System.Drawing.Point(55, 533);
+            this.dtpTimeEnd.Name = "dtpTimeEnd";
+            this.dtpTimeEnd.Size = new System.Drawing.Size(258, 27);
+            this.dtpTimeEnd.TabIndex = 136;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(35, 526);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(300, 40);
+            this.pictureBox6.TabIndex = 137;
+            this.pictureBox6.TabStop = false;
+            // 
+            // nbJoin
+            // 
+            this.nbJoin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nbJoin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbJoin.Location = new System.Drawing.Point(55, 369);
+            this.nbJoin.Name = "nbJoin";
+            this.nbJoin.Size = new System.Drawing.Size(258, 20);
+            this.nbJoin.TabIndex = 131;
+            this.nbJoin.Text = "0";
+            // 
+            // btnCreateExam
+            // 
+            this.btnCreateExam.Location = new System.Drawing.Point(35, 590);
+            this.btnCreateExam.MyLabel = "Thêm";
+            this.btnCreateExam.MyLabelLocation = new System.Drawing.Point(123, 10);
+            this.btnCreateExam.Name = "btnCreateExam";
+            this.btnCreateExam.Size = new System.Drawing.Size(300, 40);
+            this.btnCreateExam.TabIndex = 107;
+            this.btnCreateExam.Click += new System.EventHandler(this.btnCreateExam_Click);
             // 
             // AddExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1021, 568);
-            this.Controls.Add(this.txtParticipant);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCreateExam);
-            this.Controls.Add(this.txtTimeEnd);
-            this.Controls.Add(this.txtTimeStart);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(371, 661);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.dtpTimeEnd);
-            this.Controls.Add(this.dtpTimeStart);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtTypeExam);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtNameExam);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtIdExam);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.nbJoin);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.txtNameExam);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.cbExamType);
+            this.Controls.Add(this.btnCreateExam);
+            this.Controls.Add(this.txtIdExam);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.dtpTimeStart);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox4);
             this.Name = "AddExam";
-            this.Text = "AddExam";
+            this.Text = "Thêm kỳ thi";
             this.Load += new System.EventHandler(this.AddExam_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCreateExam;
-        private System.Windows.Forms.TextBox txtTimeEnd;
-        private System.Windows.Forms.TextBox txtTimeStart;
-        private System.Windows.Forms.DateTimePicker dtpTimeEnd;
         private System.Windows.Forms.DateTimePicker dtpTimeStart;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtTypeExam;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtNameExam;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtIdExam;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private CustomControls.NumberInputBox txtParticipant;
+        private System.Windows.Forms.TextBox txtIdExam;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private CustomControls.MyButton btnCreateExam;
+        private System.Windows.Forms.ComboBox cbExamType;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtNameExam;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private CustomControls.NumberInputBox nbJoin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DateTimePicker dtpTimeEnd;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

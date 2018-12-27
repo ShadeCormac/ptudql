@@ -18,8 +18,6 @@ namespace ptudql_project.Admin
         private string _username = "";
         private string _password = "";
         private string _rePassword = "";
-        private int _loaiTK;
-
         public event Action AddUserSuccess;
 
         public addUser()

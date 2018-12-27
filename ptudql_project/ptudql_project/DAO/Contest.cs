@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ptudql_project.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace ptudql_project.DAO
     {
         public static List<KyThi> getContestByType(int type, string username = "")
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 var now = DateTime.Now;
                 return db.KyThis
@@ -35,7 +36,7 @@ namespace ptudql_project.DAO
 
         public static List<DanhSachThi> getListContestResult(int type, string username)
         {
-            using (var db = new QLTNDataContext())
+            using (var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 return (from dst in db.DanhSachThis
                         join k in db.KyThis on dst.IdKyThi equals k.IDKyThi
@@ -53,7 +54,7 @@ namespace ptudql_project.DAO
 
         public static bool saveContestResult(string username, string idKyThi, string idDe, float score, bool isTrial)
         {
-            using(var db = new QLTNDataContext())
+            using(var db = new QLTNDataContext(Connection.CurrentConnectionString))
             {
                 try
                 {
