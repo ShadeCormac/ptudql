@@ -1,4 +1,5 @@
 ﻿using ptudql_project.DAO;
+using ptudql_project.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,9 +26,9 @@ namespace ptudql_project.Teacher
         
         private void btnCreateExam_Click(object sender, EventArgs e)
         {
-            if(txtIdExam.Text == "")
+            if(txtIdExam.Text == "" || !Validation.checkName(txtIdExam.Text))
             {
-                MessageBox.Show("Chưa nhập mã kì thi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mã kỳ thi không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if(Exam.isExisted(txtIdExam.Text))
@@ -41,9 +42,9 @@ namespace ptudql_project.Teacher
                 MessageBox.Show("Chưa nhập số lượng học sinh tham gia", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if(txtNameExam.Text =="")
+            else if(txtNameExam.Text =="" || !Validation.checkName(txtNameExam.Text))
             {
-                MessageBox.Show("Chưa nhập tên kỳ thi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên kỳ thi không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }
             else if (DateTime.Compare(dtpTimeStart.Value, dtpTimeEnd.Value) > 0)

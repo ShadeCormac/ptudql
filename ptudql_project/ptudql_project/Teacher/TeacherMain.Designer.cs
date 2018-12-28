@@ -88,6 +88,20 @@
             this.cbbTestId = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.qlKyThi = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
+            this.cbLoaiKyThi = new System.Windows.Forms.ComboBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnDetailsExam = new System.Windows.Forms.PictureBox();
             this.btnRemoveExam = new System.Windows.Forms.PictureBox();
             this.btnUpdateExam = new System.Windows.Forms.PictureBox();
@@ -104,6 +118,13 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dgvExam = new System.Windows.Forms.DataGridView();
+            this.iDKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLThamGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiGianBatDauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiGianKetThucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kyThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtParticipants = new ptudql_project.CustomControls.NumberInputBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -116,34 +137,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbKyThi = new System.Windows.Forms.ComboBox();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.cbLoaiKyThi = new System.Windows.Forms.ComboBox();
-            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.kyThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sLThamGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiKyThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoiGianBatDauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoiGianKetThucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tKThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idKyThiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lanThiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.danhSachThiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.qlCauHoi.SuspendLayout();
@@ -164,11 +164,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.qlKyThi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetailsExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdateExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -176,11 +179,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.qlHocSinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -434,6 +434,7 @@
             // 
             this.txtA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtA.Location = new System.Drawing.Point(331, 251);
+            this.txtA.MaxLength = 255;
             this.txtA.Multiline = true;
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(705, 45);
@@ -443,6 +444,7 @@
             // 
             this.txtB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtB.Location = new System.Drawing.Point(331, 328);
+            this.txtB.MaxLength = 255;
             this.txtB.Multiline = true;
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(705, 45);
@@ -452,6 +454,7 @@
             // 
             this.txtC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtC.Location = new System.Drawing.Point(331, 409);
+            this.txtC.MaxLength = 255;
             this.txtC.Multiline = true;
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(705, 45);
@@ -461,6 +464,7 @@
             // 
             this.txtD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtD.Location = new System.Drawing.Point(331, 488);
+            this.txtD.MaxLength = 255;
             this.txtD.Multiline = true;
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(705, 45);
@@ -470,6 +474,7 @@
             // 
             this.txtNoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNoiDung.Location = new System.Drawing.Point(331, 125);
+            this.txtNoiDung.MaxLength = 255;
             this.txtNoiDung.Multiline = true;
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(705, 86);
@@ -818,6 +823,121 @@
             this.qlKyThi.Text = "Kỳ thi";
             this.qlKyThi.UseVisualStyleBackColor = true;
             // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(1044, 513);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1, 22);
+            this.panel10.TabIndex = 91;
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(879, 514);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1, 22);
+            this.panel11.TabIndex = 90;
+            // 
+            // panel12
+            // 
+            this.panel12.Location = new System.Drawing.Point(879, 534);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(166, 1);
+            this.panel12.TabIndex = 89;
+            // 
+            // panel13
+            // 
+            this.panel13.Location = new System.Drawing.Point(879, 513);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(166, 1);
+            this.panel13.TabIndex = 88;
+            // 
+            // dtpTimeEnd
+            // 
+            this.dtpTimeEnd.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dtpTimeEnd.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTimeEnd.Location = new System.Drawing.Point(879, 513);
+            this.dtpTimeEnd.Name = "dtpTimeEnd";
+            this.dtpTimeEnd.Size = new System.Drawing.Size(166, 22);
+            this.dtpTimeEnd.TabIndex = 87;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(858, 500);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(200, 45);
+            this.pictureBox13.TabIndex = 86;
+            this.pictureBox13.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(1044, 445);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1, 22);
+            this.panel9.TabIndex = 85;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(879, 446);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1, 22);
+            this.panel8.TabIndex = 84;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(879, 466);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(166, 1);
+            this.panel5.TabIndex = 83;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(879, 445);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(166, 1);
+            this.panel2.TabIndex = 82;
+            // 
+            // dtpTimeStart
+            // 
+            this.dtpTimeStart.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dtpTimeStart.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTimeStart.Location = new System.Drawing.Point(879, 445);
+            this.dtpTimeStart.Name = "dtpTimeStart";
+            this.dtpTimeStart.Size = new System.Drawing.Size(166, 22);
+            this.dtpTimeStart.TabIndex = 81;
+            // 
+            // cbLoaiKyThi
+            // 
+            this.cbLoaiKyThi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLoaiKyThi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiKyThi.FormattingEnabled = true;
+            this.cbLoaiKyThi.Location = new System.Drawing.Point(129, 73);
+            this.cbLoaiKyThi.Name = "cbLoaiKyThi";
+            this.cbLoaiKyThi.Size = new System.Drawing.Size(179, 27);
+            this.cbLoaiKyThi.TabIndex = 80;
+            this.cbLoaiKyThi.SelectedIndexChanged += new System.EventHandler(this.cbLoaiKyThi_SelectedIndexChanged);
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(117, 64);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(200, 45);
+            this.pictureBox15.TabIndex = 79;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
+            this.label7.Location = new System.Drawing.Point(18, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 23);
+            this.label7.TabIndex = 78;
+            this.label7.Text = "Loại kỳ thi:";
+            // 
             // btnDetailsExam
             // 
             this.btnDetailsExam.Image = ((System.Drawing.Image)(resources.GetObject("btnDetailsExam.Image")));
@@ -1009,6 +1129,61 @@
             this.dgvExam.Size = new System.Drawing.Size(1034, 280);
             this.dgvExam.TabIndex = 46;
             // 
+            // iDKyThiDataGridViewTextBoxColumn
+            // 
+            this.iDKyThiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.iDKyThiDataGridViewTextBoxColumn.DataPropertyName = "IDKyThi";
+            this.iDKyThiDataGridViewTextBoxColumn.FillWeight = 253.8071F;
+            this.iDKyThiDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDKyThiDataGridViewTextBoxColumn.Name = "iDKyThiDataGridViewTextBoxColumn";
+            this.iDKyThiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenKyThiDataGridViewTextBoxColumn
+            // 
+            this.tenKyThiDataGridViewTextBoxColumn.DataPropertyName = "TenKyThi";
+            this.tenKyThiDataGridViewTextBoxColumn.FillWeight = 61.54822F;
+            this.tenKyThiDataGridViewTextBoxColumn.HeaderText = "Tên kỳ thi";
+            this.tenKyThiDataGridViewTextBoxColumn.Name = "tenKyThiDataGridViewTextBoxColumn";
+            this.tenKyThiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sLThamGiaDataGridViewTextBoxColumn
+            // 
+            this.sLThamGiaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.sLThamGiaDataGridViewTextBoxColumn.DataPropertyName = "SLThamGia";
+            this.sLThamGiaDataGridViewTextBoxColumn.FillWeight = 61.54822F;
+            this.sLThamGiaDataGridViewTextBoxColumn.HeaderText = "SL Tham gia";
+            this.sLThamGiaDataGridViewTextBoxColumn.Name = "sLThamGiaDataGridViewTextBoxColumn";
+            this.sLThamGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sLThamGiaDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // loaiKyThiDataGridViewTextBoxColumn
+            // 
+            this.loaiKyThiDataGridViewTextBoxColumn.DataPropertyName = "LoaiKyThi";
+            this.loaiKyThiDataGridViewTextBoxColumn.HeaderText = "LoaiKyThi";
+            this.loaiKyThiDataGridViewTextBoxColumn.Name = "loaiKyThiDataGridViewTextBoxColumn";
+            this.loaiKyThiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loaiKyThiDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // thoiGianBatDauDataGridViewTextBoxColumn
+            // 
+            this.thoiGianBatDauDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianBatDau";
+            this.thoiGianBatDauDataGridViewTextBoxColumn.FillWeight = 61.54822F;
+            this.thoiGianBatDauDataGridViewTextBoxColumn.HeaderText = "Thời gian bắt đầu";
+            this.thoiGianBatDauDataGridViewTextBoxColumn.Name = "thoiGianBatDauDataGridViewTextBoxColumn";
+            this.thoiGianBatDauDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // thoiGianKetThucDataGridViewTextBoxColumn
+            // 
+            this.thoiGianKetThucDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianKetThuc";
+            this.thoiGianKetThucDataGridViewTextBoxColumn.FillWeight = 61.54822F;
+            this.thoiGianKetThucDataGridViewTextBoxColumn.HeaderText = "Thời gian kết thúc";
+            this.thoiGianKetThucDataGridViewTextBoxColumn.Name = "thoiGianKetThucDataGridViewTextBoxColumn";
+            this.thoiGianKetThucDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kyThiBindingSource
+            // 
+            this.kyThiBindingSource.DataSource = typeof(ptudql_project.KyThi);
+            // 
             // txtParticipants
             // 
             this.txtParticipants.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1150,189 +1325,6 @@
             this.dgvHocSinh.Size = new System.Drawing.Size(1034, 479);
             this.dgvHocSinh.TabIndex = 0;
             // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(125, 71);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(200, 45);
-            this.pictureBox14.TabIndex = 48;
-            this.pictureBox14.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(251)))));
-            this.label7.Location = new System.Drawing.Point(18, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 23);
-            this.label7.TabIndex = 78;
-            this.label7.Text = "Loại kỳ thi:";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(117, 64);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(200, 45);
-            this.pictureBox15.TabIndex = 79;
-            this.pictureBox15.TabStop = false;
-            // 
-            // cbLoaiKyThi
-            // 
-            this.cbLoaiKyThi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLoaiKyThi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLoaiKyThi.FormattingEnabled = true;
-            this.cbLoaiKyThi.Location = new System.Drawing.Point(129, 73);
-            this.cbLoaiKyThi.Name = "cbLoaiKyThi";
-            this.cbLoaiKyThi.Size = new System.Drawing.Size(179, 27);
-            this.cbLoaiKyThi.TabIndex = 80;
-            this.cbLoaiKyThi.SelectedIndexChanged += new System.EventHandler(this.cbLoaiKyThi_SelectedIndexChanged);
-            // 
-            // dtpTimeStart
-            // 
-            this.dtpTimeStart.CustomFormat = "dd/MM/yyyy hh:mm:ss";
-            this.dtpTimeStart.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeStart.Location = new System.Drawing.Point(879, 445);
-            this.dtpTimeStart.Name = "dtpTimeStart";
-            this.dtpTimeStart.Size = new System.Drawing.Size(166, 22);
-            this.dtpTimeStart.TabIndex = 81;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(879, 445);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 1);
-            this.panel2.TabIndex = 82;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(879, 466);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(166, 1);
-            this.panel5.TabIndex = 83;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(879, 446);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 22);
-            this.panel8.TabIndex = 84;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(1044, 445);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1, 22);
-            this.panel9.TabIndex = 85;
-            // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(1044, 513);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 22);
-            this.panel10.TabIndex = 91;
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(879, 514);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 22);
-            this.panel11.TabIndex = 90;
-            // 
-            // panel12
-            // 
-            this.panel12.Location = new System.Drawing.Point(879, 534);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(166, 1);
-            this.panel12.TabIndex = 89;
-            // 
-            // panel13
-            // 
-            this.panel13.Location = new System.Drawing.Point(879, 513);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(166, 1);
-            this.panel13.TabIndex = 88;
-            // 
-            // dtpTimeEnd
-            // 
-            this.dtpTimeEnd.CustomFormat = "dd/MM/yyyy hh:mm:ss";
-            this.dtpTimeEnd.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(879, 513);
-            this.dtpTimeEnd.Name = "dtpTimeEnd";
-            this.dtpTimeEnd.Size = new System.Drawing.Size(166, 22);
-            this.dtpTimeEnd.TabIndex = 87;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(858, 500);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(200, 45);
-            this.pictureBox13.TabIndex = 86;
-            this.pictureBox13.TabStop = false;
-            // 
-            // kyThiBindingSource
-            // 
-            this.kyThiBindingSource.DataSource = typeof(ptudql_project.KyThi);
-            // 
-            // iDKyThiDataGridViewTextBoxColumn
-            // 
-            this.iDKyThiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.iDKyThiDataGridViewTextBoxColumn.DataPropertyName = "IDKyThi";
-            this.iDKyThiDataGridViewTextBoxColumn.FillWeight = 253.8071F;
-            this.iDKyThiDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDKyThiDataGridViewTextBoxColumn.Name = "iDKyThiDataGridViewTextBoxColumn";
-            this.iDKyThiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenKyThiDataGridViewTextBoxColumn
-            // 
-            this.tenKyThiDataGridViewTextBoxColumn.DataPropertyName = "TenKyThi";
-            this.tenKyThiDataGridViewTextBoxColumn.FillWeight = 61.54822F;
-            this.tenKyThiDataGridViewTextBoxColumn.HeaderText = "Tên kỳ thi";
-            this.tenKyThiDataGridViewTextBoxColumn.Name = "tenKyThiDataGridViewTextBoxColumn";
-            this.tenKyThiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sLThamGiaDataGridViewTextBoxColumn
-            // 
-            this.sLThamGiaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.sLThamGiaDataGridViewTextBoxColumn.DataPropertyName = "SLThamGia";
-            this.sLThamGiaDataGridViewTextBoxColumn.FillWeight = 61.54822F;
-            this.sLThamGiaDataGridViewTextBoxColumn.HeaderText = "SL Tham gia";
-            this.sLThamGiaDataGridViewTextBoxColumn.Name = "sLThamGiaDataGridViewTextBoxColumn";
-            this.sLThamGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sLThamGiaDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // loaiKyThiDataGridViewTextBoxColumn
-            // 
-            this.loaiKyThiDataGridViewTextBoxColumn.DataPropertyName = "LoaiKyThi";
-            this.loaiKyThiDataGridViewTextBoxColumn.HeaderText = "LoaiKyThi";
-            this.loaiKyThiDataGridViewTextBoxColumn.Name = "loaiKyThiDataGridViewTextBoxColumn";
-            this.loaiKyThiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.loaiKyThiDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // thoiGianBatDauDataGridViewTextBoxColumn
-            // 
-            this.thoiGianBatDauDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianBatDau";
-            this.thoiGianBatDauDataGridViewTextBoxColumn.FillWeight = 61.54822F;
-            this.thoiGianBatDauDataGridViewTextBoxColumn.HeaderText = "Thời gian bắt đầu";
-            this.thoiGianBatDauDataGridViewTextBoxColumn.Name = "thoiGianBatDauDataGridViewTextBoxColumn";
-            this.thoiGianBatDauDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thoiGianKetThucDataGridViewTextBoxColumn
-            // 
-            this.thoiGianKetThucDataGridViewTextBoxColumn.DataPropertyName = "ThoiGianKetThuc";
-            this.thoiGianKetThucDataGridViewTextBoxColumn.FillWeight = 61.54822F;
-            this.thoiGianKetThucDataGridViewTextBoxColumn.HeaderText = "Thời gian kết thúc";
-            this.thoiGianKetThucDataGridViewTextBoxColumn.Name = "thoiGianKetThucDataGridViewTextBoxColumn";
-            this.thoiGianKetThucDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // danhSachThiBindingSource
-            // 
-            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
-            // 
             // tKThiDataGridViewTextBoxColumn
             // 
             this.tKThiDataGridViewTextBoxColumn.DataPropertyName = "TKThi";
@@ -1368,6 +1360,19 @@
             this.diemDataGridViewTextBoxColumn.Name = "diemDataGridViewTextBoxColumn";
             this.diemDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // danhSachThiBindingSource
+            // 
+            this.danhSachThiBindingSource.DataSource = typeof(ptudql_project.DanhSachThi);
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(125, 71);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(200, 45);
+            this.pictureBox14.TabIndex = 48;
+            this.pictureBox14.TabStop = false;
+            // 
             // TeacherMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1401,11 +1406,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.qlKyThi.ResumeLayout(false);
             this.qlKyThi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetailsExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdateExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -1414,11 +1422,8 @@
             this.qlHocSinh.ResumeLayout(false);
             this.qlHocSinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kyThiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachThiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
 
         }

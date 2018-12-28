@@ -95,7 +95,7 @@ namespace ptudql_project.Teacher
         private void btnCreateTest_Click(object sender, EventArgs e)
         {
             
-            if (txtBoDeThi.Text == "")
+            if (txtBoDeThi.Text == "" || !Validation.checkName(txtBoDeThi.Text))
             {
                 MessageBox.Show("Chưa nhập bộ đề thi", "Thông báo");
                 return;

@@ -121,6 +121,7 @@
             this.txtAccount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccount.Location = new System.Drawing.Point(59, 136);
             this.txtAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAccount.MaxLength = 20;
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(269, 20);
             this.txtAccount.TabIndex = 38;
@@ -133,6 +134,7 @@
             this.txtPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(59, 236);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPass.MaxLength = 20;
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(269, 20);
             this.txtPass.TabIndex = 39;
@@ -146,6 +148,7 @@
             this.txtrePass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrePass.Location = new System.Drawing.Point(59, 337);
             this.txtrePass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtrePass.MaxLength = 20;
             this.txtrePass.Name = "txtrePass";
             this.txtrePass.Size = new System.Drawing.Size(269, 20);
             this.txtrePass.TabIndex = 40;

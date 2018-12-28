@@ -189,7 +189,7 @@
             this.txtNameExam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNameExam.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameExam.Location = new System.Drawing.Point(55, 198);
-            this.txtNameExam.MaxLength = 10;
+            this.txtNameExam.MaxLength = 50;
             this.txtNameExam.Name = "txtNameExam";
             this.txtNameExam.Size = new System.Drawing.Size(258, 20);
             this.txtNameExam.TabIndex = 124;
@@ -310,6 +310,7 @@
             this.nbJoin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nbJoin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nbJoin.Location = new System.Drawing.Point(55, 369);
+            this.nbJoin.MaxLength = 3;
             this.nbJoin.Name = "nbJoin";
             this.nbJoin.Size = new System.Drawing.Size(258, 20);
             this.nbJoin.TabIndex = 131;

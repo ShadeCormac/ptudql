@@ -41,7 +41,7 @@ namespace ptudql_project.Admin
             Control control = sender as Control;
             if (control.Text.Length == 0)
             {
-                errors.SetError(control, "Tên tài khoản không được trống");
+                errors.SetError(control, "Tên tài khoản không hợp lệ");
             }
             else if (control.Text.Length < 6)
             {
